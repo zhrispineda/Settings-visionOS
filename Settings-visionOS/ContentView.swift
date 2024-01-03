@@ -50,6 +50,8 @@ struct ContentView: View {
             switch self {
             case .general:
                 return AnyView(GeneralView())
+            case .apps:
+                return AnyView(AppsView())
             default:
                 return AnyView(EmptyView())
             }
@@ -73,7 +75,7 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text("Sign in to Apple Vision Pro")
                                     .font(.subheadline)
-                                    .fontWeight(.bold)
+                                    .bold()
                                 Text("Set up iCloud, the App Store, and more.")
                                     .font(.footnote)
                             }

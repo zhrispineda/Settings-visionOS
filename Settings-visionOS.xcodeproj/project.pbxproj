@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
+		834A448D2B461BE100690818 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448C2B461BE100690818 /* AppsView.swift */; };
 		83AB15AE2B44CB37002DCD7E /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 83AB15AD2B44CB37002DCD7E /* RealityKitContent */; };
 		83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
+		834A448C2B461BE100690818 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Settings-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Settings-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB15AC2B44CB37002DCD7E /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_visionOSApp.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
+				834A448C2B461BE100690818 /* AppsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
