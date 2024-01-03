@@ -22,12 +22,14 @@ struct ContentView: View {
             switch self {
             case .general:
                 return "gear.circle.fill"
+            case .apps:
+                return "logo.appstore.circle.fill"
             case .people:
                 return "person.2.circle.fill"
             case .environments:
                 return "mountain.2.circle.fill"
-            default:
-                return "questionmark.circle.fill"
+//            default:
+//                return "questionmark.circle.fill"
             }
         }
         
@@ -81,11 +83,19 @@ struct ContentView: View {
                 
                 ForEach(Setting.allCases) { setting in
                     NavigationLink(value: setting, label: {
-                        Image(systemName: setting.icon)
-                            .font(.largeTitle)
-                            .fontWeight(.light)
-                            .symbolRenderingMode(.palette)
-                            .foregroundStyle(.white.gradient, setting.color.gradient)
+                        if setting.icon == "logo.appstore.circle.fill" {
+                            Image(setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                        } else {
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                        }
                         Text(setting.id)
                     })
                 }
