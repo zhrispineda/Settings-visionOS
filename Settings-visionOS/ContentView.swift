@@ -37,7 +37,7 @@ struct ContentView: View {
         var destination: some View {
             switch self {
             case .general:
-                return AnyView(EmptyView())
+                return AnyView(GeneralView())
             case .apps:
                 return AnyView(EmptyView())
             }
@@ -63,10 +63,8 @@ struct ContentView: View {
                 
                 NavigationLink("Label", destination: EmptyView())
             }
-            // Find a way to hide navigation bar title but keep the search bar
             .navigationBarTitle("Settings")
-            .navigationBarHidden(false)
-            // Change search bar to rounded
+            // Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         } detail: {
             selection?.destination
