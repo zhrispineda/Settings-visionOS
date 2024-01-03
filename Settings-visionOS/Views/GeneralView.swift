@@ -31,6 +31,7 @@ struct GeneralView: View {
                 }
             }
             .padding([.leading, .trailing], 25)
+            .navigationTitle("General")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {
                     HStack {

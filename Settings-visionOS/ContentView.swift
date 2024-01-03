@@ -13,6 +13,8 @@ struct ContentView: View {
     enum Setting: String, CaseIterable, Identifiable {
         case general = "General"
         case apps = "Apps"
+        case people = "People"
+        case environments = "Environments"
         
         var id: String { rawValue }
         
@@ -20,17 +22,25 @@ struct ContentView: View {
             switch self {
             case .general:
                 return "gear.circle.fill"
-            case .apps:
+            case .people:
+                return "person.2.circle.fill"
+            case .environments:
+                return "mountain.2.circle.fill"
+            default:
                 return "questionmark.circle.fill"
             }
         }
         
         var color: Color {
             switch self {
-            case .general:
-                return .gray
             case .apps:
                 return .blue
+            case .people:
+                return .green
+            case .environments:
+                return .indigo
+            default:
+                return .gray
             }
         }
         
@@ -38,7 +48,7 @@ struct ContentView: View {
             switch self {
             case .general:
                 return AnyView(GeneralView())
-            case .apps:
+            default:
                 return AnyView(EmptyView())
             }
         }
@@ -50,6 +60,25 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
+                Section {
+                    Button(action: {}, label: {
+                        HStack {
+                            Image(systemName: "person.crop.circle.fill")
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, .gray.gradient)
+                                .font(.system(size: 40))
+                                .padding(.leading, -5)
+                            VStack(alignment: .leading) {
+                                Text("Sign in to Apple Vision Pro")
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Text("Set up iCloud, the App Store, and more.")
+                                    .font(.footnote)
+                            }
+                        }
+                    })
+                }
+                
                 ForEach(Setting.allCases) { setting in
                     NavigationLink(value: setting, label: {
                         Image(systemName: setting.icon)
@@ -60,8 +89,6 @@ struct ContentView: View {
                         Text(setting.id)
                     })
                 }
-                
-                NavigationLink("Label", destination: EmptyView())
             }
             .navigationBarTitle("Settings")
             // Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
@@ -72,6 +99,6 @@ struct ContentView: View {
     }
 }
 
-#Preview(windowStyle: .automatic) {
+#Preview(windowStyle: .plain) {
     ContentView()
 }
