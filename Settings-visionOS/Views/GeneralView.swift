@@ -12,7 +12,7 @@ struct GeneralView: View {
         NavigationStack {
             List {
                 Section {
-                    NavigationLink("About", destination: {})
+                    NavigationLink("About", destination: AboutView())
                 }
                 
                 Section {

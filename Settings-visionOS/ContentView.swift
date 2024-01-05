@@ -65,7 +65,9 @@ struct ContentView: View {
         NavigationSplitView {
             List(selection: $selection) {
                 Section {
-                    Button(action: {}, label: {
+                    Button(action: {
+                        print("Toggling Apple ID Popover")
+                    }, label: {
                         HStack {
                             Image(systemName: "person.crop.circle.fill")
                                 .symbolRenderingMode(.palette)
