@@ -17,17 +17,17 @@ struct GeneralView: View {
                 
                 Section {
                     NavigationLink("Keyboard", destination: {})
-                    NavigationLink("Game Controller", destination: {})
+                    NavigationLink("Game Controller", destination: GameControllerView())
                     NavigationLink("Fonts", destination: {})
                     NavigationLink("Dictionary", destination: {})
                 }
                 
                 Section {
-                    NavigationLink("VPN & Device Management", destination: {})
+                    NavigationLink("VPN & Device Management", destination: VPNDeviceManagementView())
                 }
                 
                 Section {
-                    NavigationLink("Transfer or Reset This Apple Vision Pro", destination: {})
+                    NavigationLink("Transfer or Reset This Apple Vision Pro", destination: TransferResetView())
                 }
             }
             .padding([.leading, .trailing], 25)
