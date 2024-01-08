@@ -13,5 +13,6 @@ struct Settings_visionOSApp: App {
         WindowGroup {
             ContentView()
         }
+        // TODO: Restrict resizing of window
     }
 }

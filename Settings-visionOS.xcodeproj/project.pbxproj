@@ -15,6 +15,7 @@
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
 		83AB15B72B44CB39002DCD7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */; };
+		83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		83AB15B32B44CB39002DCD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83AB15B82B44CB39002DCD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,21 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		835B93462B48950800E96BE3 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		835B93472B48951300E96BE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		83AB159F2B44CB37002DCD7E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +95,8 @@
 		83AB15AA2B44CB37002DCD7E /* Settings-visionOS */ = {
 			isa = PBXGroup;
 			children = (
+				835B93472B48951300E96BE3 /* Models */,
+				835B93462B48950800E96BE3 /* Templates */,
 				83AB15C32B44F6DE002DCD7E /* Views */,
 				83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */,
 				83AB15B12B44CB37002DCD7E /* ContentView.swift */,
@@ -187,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,

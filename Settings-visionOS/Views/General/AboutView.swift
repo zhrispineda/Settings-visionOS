@@ -46,9 +46,11 @@ struct AboutView: View {
                             .font(.title)
                     }
                     .frame(maxWidth: .infinity)
+                    .offset(x: -40)
                 })
             }
         }
+        .padding([.leading, .trailing], 25)
     }
 }
 

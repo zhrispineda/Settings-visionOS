@@ -10,56 +10,9 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    enum Setting: String, CaseIterable, Identifiable {
-        case general = "General"
-        case apps = "Apps"
-        case people = "People"
-        case environments = "Environments"
-        
-        var id: String { rawValue }
-        
-        var icon: String {
-            switch self {
-            case .general:
-                return "gear.circle.fill"
-            case .apps:
-                return "logo.appstore.circle.fill"
-            case .people:
-                return "person.2.circle.fill"
-            case .environments:
-                return "mountain.2.circle.fill"
-//            default:
-//                return "questionmark.circle.fill"
-            }
-        }
-        
-        var color: Color {
-            switch self {
-            case .apps:
-                return .blue
-            case .people:
-                return .green
-            case .environments:
-                return .indigo
-            default:
-                return .gray
-            }
-        }
-        
-        var destination: some View {
-            switch self {
-            case .general:
-                return AnyView(GeneralView())
-            case .apps:
-                return AnyView(AppsView())
-            default:
-                return AnyView(EmptyView())
-            }
-        }
-    }
-    
     @State private var searchText = ""
-    @State private var selection: Setting? = .general
+    @State private var selection: SettingsModel? = .general
+    @State private var destination = AnyView(GeneralView())
 
     var body: some View {
         NavigationSplitView {
@@ -85,8 +38,8 @@ struct ContentView: View {
                     })
                 }
                 
-                ForEach(Setting.allCases) { setting in
-                    NavigationLink(value: setting, label: {
+                ForEach(mainSettings) { setting in
+                    NavigationLink(value: setting.type, label: {
                         if setting.icon == "logo.appstore.circle.fill" {
                             Image(setting.icon)
                                 .font(.largeTitle)
@@ -108,7 +61,12 @@ struct ContentView: View {
             // Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         } detail: {
-            selection?.destination
+            destination
+                .onChange(of: selection, { // Change views when sidebar navigation links are tapped
+                    if let selectedSettingsItem = mainSettings.first(where: { $0.type == selection }) {
+                        destination = selectedSettingsItem.destination
+                    }
+                })
         }
     }
 }
