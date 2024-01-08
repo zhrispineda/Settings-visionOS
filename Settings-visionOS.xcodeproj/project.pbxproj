@@ -16,6 +16,7 @@
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
 		83AB15B72B44CB39002DCD7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */; };
 		83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */; };
+		83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB44E72B4C4CC50081852F /* VersionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83AB15B82B44CB39002DCD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		83DB44E72B4C4CC50081852F /* VersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		835B93452B48923700E96BE3 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				83DB44E72B4C4CC50081852F /* VersionView.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
+				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Settings-visionOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Q4MRN2FMC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -355,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "is.zhr.Settings-visionOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Settings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -372,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Settings-visionOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Q4MRN2FMC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -382,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "is.zhr.Settings-visionOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Settings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;

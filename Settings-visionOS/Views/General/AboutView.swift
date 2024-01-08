@@ -17,13 +17,13 @@ struct AboutView: View {
             List {
                 Section {
                     ListRowLabel(title: "Name", subtitle: UIDevice().name)
-                    ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion)
+                    ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion, content: AnyView(VersionView()))
                     ListRowLabel(title: "Model Name", subtitle: UIDevice().name)
                     ListRowLabel(title: "Model Number", subtitle: (showingModelNumber ? "A2117LL/A" : "A2117"))
                         .onTapGesture {
                             showingModelNumber.toggle()
                         }
-                    ListRowLabel(title: "Serial Number", subtitle: "OQPWJ00ABC")
+                    ListRowLabel(title: "Serial Number", subtitle: "XXXXX00XXX")
                 }
                 
                 Section {
@@ -71,9 +71,12 @@ struct ListRowLabel: View {
 struct ListRowNavigationLabel: View {
     var title: String = "Title"
     var subtitle: String = "Subtitle"
+    var content: AnyView
     
     var body: some View {
-        NavigationLink(destination: {}, label: {
+        NavigationLink(destination: {
+            content
+        }, label: {
             HStack {
                 Text(title)
                 Spacer()
