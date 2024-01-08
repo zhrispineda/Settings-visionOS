@@ -54,39 +54,6 @@ struct AboutView: View {
     }
 }
 
-struct ListRowLabel: View {
-    var title: String = "Title"
-    var subtitle: String = "Subtitle"
-    
-    var body: some View {
-        HStack {
-            Text(title)
-            Spacer()
-            Text(subtitle)
-                .foregroundStyle(.secondary)
-        }
-    }
-}
-
-struct ListRowNavigationLabel: View {
-    var title: String = "Title"
-    var subtitle: String = "Subtitle"
-    var content: AnyView
-    
-    var body: some View {
-        NavigationLink(destination: {
-            content
-        }, label: {
-            HStack {
-                Text(title)
-                Spacer()
-                Text(subtitle)
-                    .foregroundStyle(.secondary)
-            }
-        })
-    }
-}
-
 func getAvailableStorage() -> String? {
     let fileManager = FileManager.default
     do {
