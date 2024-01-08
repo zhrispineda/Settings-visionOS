@@ -26,6 +26,6 @@ enum SettingsModel: String, CaseIterable {
 let mainSettings: [SettingsItem] = [
     SettingsItem(type: .general, title: "General", icon: "gear.circle.fill", color: .gray, destination: AnyView(GeneralView())),
     SettingsItem(type: .apps, title: "Apps", icon: "logo.appstore.circle.fill", color: .blue, destination: AnyView(AppsView())),
-    SettingsItem(type: .people, title: "People", icon: "person.2.circle.fill", color: .green, destination: AnyView(EmptyView())),
-    SettingsItem(type: .environments, title: "Environments", icon: "mountain.2.circle.fill", color: .indigo, destination: AnyView(EmptyView())),
+    SettingsItem(type: .people, title: "People", icon: "person.2.circle.fill", color: .green, destination: AnyView(PeopleView())),
+    SettingsItem(type: .environments, title: "Environments", icon: "mountain.2.circle.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
 ]

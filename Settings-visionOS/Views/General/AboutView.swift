@@ -35,7 +35,7 @@ struct AboutView: View {
                 }
                 
                 Section {
-                    NavigationLink("Certificate Trust Settings", destination: {})
+                    NavigationLink("Certificate Trust Settings", destination: CertificateTrustSettingsView())
                 }
             }
             .navigationTitle("About")
