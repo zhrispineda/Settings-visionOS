@@ -38,22 +38,93 @@ struct ContentView: View {
                     })
                 }
                 
-                ForEach(mainSettings) { setting in
-                    NavigationLink(value: setting.type, label: {
-                        if setting.icon == "logo.appstore.circle.fill" {
-                            Image(setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
-                        } else {
+                // Main Section
+                Section {
+                    ForEach(mainSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
+                            if setting.icon == "logo.appstore.circle.fill" {
+                                Image(setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            } else {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            }
+                            Text(setting.id)
+                        })
+                    }
+                }
+                
+                // Focus Section
+                Section {
+                    ForEach(focusSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
                             Image(systemName: setting.icon)
                                 .font(.largeTitle)
                                 .fontWeight(.light)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.white.gradient, setting.color.gradient)
-                        }
-                        Text(setting.id)
+                            Text(setting.id)
+                        })
+                    }
+                }
+                
+                // Usage Section
+                Section {
+                    ForEach(usageSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            Text(setting.id)
+                        })
+                    }
+                }
+                
+                // Device Section
+                Section {
+                    ForEach(deviceSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            Text(setting.id)
+                        })
+                    }
+                }
+                
+                // Account Section
+                Section {
+                    ForEach(accountSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            Text(setting.id)
+                        })
+                    }
+                }
+                
+                // Developer Section
+                Section {
+                    NavigationLink(value: developerSettings.type, label: {
+                        Image(systemName: developerSettings.icon)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.white.gradient, developerSettings.color.gradient)
+                        Text(developerSettings.id)
                     })
                 }
             }
@@ -64,6 +135,9 @@ struct ContentView: View {
             destination
                 .onChange(of: selection, { // Change views when sidebar navigation links are tapped
                     if let selectedSettingsItem = mainSettings.first(where: { $0.type == selection }) {
+                        destination = selectedSettingsItem.destination
+                    }
+                    if let selectedSettingsItem = focusSettings.first(where: { $0.type == selection }) {
                         destination = selectedSettingsItem.destination
                     }
                 })
