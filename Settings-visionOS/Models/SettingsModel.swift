@@ -59,7 +59,7 @@ let focusSettings: [SettingsItem] = [
 // Usage Settings: Accessibility, Control Center, Siri & Search, Privacy & Security
 let usageSettings: [SettingsItem] = [
     SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility.fill", color: .blue, destination: AnyView(EmptyView())),
-    SettingsItem(type: .controlCenter, title: "Control Center", icon: "switch.2.fill", color: .gray, destination: AnyView(EmptyView())),
+    SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(EmptyView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "mic.circle.fill", color: .purple, destination: AnyView(EmptyView())),
     SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(EmptyView())),
 ]
@@ -67,12 +67,12 @@ let usageSettings: [SettingsItem] = [
 // Device Settings: Display, Storage
 let deviceSettings: [SettingsItem] = [
     SettingsItem(type: .display, title: "Display", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(EmptyView())),
-    SettingsItem(type: .storage, title: "Storage", icon: "externaldrive.fill", color: .gray, destination: AnyView(EmptyView())),
+    SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(EmptyView())),
 ]
 
 // Account Settings: Passwords, Game Center, Wallet & Apple Pay
 let accountSettings: [SettingsItem] = [
-    SettingsItem(type: .passwords, title: "Passwords", icon: "key.fill", color: .blue, destination: AnyView(EmptyView())),
+    SettingsItem(type: .passwords, title: "Passwords", icon: "custom.key.circle.fill", color: .gray, destination: AnyView(EmptyView())),
     SettingsItem(type: .gameCenter, title: "Game Center", icon: "gamecontroller.fill", color: .white, destination: AnyView(EmptyView())),
     SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "wallet.pass.fill", color: .black, destination: AnyView(EmptyView())),
 ]

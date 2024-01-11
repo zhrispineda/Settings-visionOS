@@ -78,11 +78,19 @@ struct ContentView: View {
                 Section {
                     ForEach(usageSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            if setting.icon == "custom.switch.2.circle.fill" {
+                                Image(setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            } else {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            }
                             Text(setting.id)
                         })
                     }
@@ -92,11 +100,19 @@ struct ContentView: View {
                 Section {
                     ForEach(deviceSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            if setting.icon == "custom.externaldrive.circle.fill" {
+                                Image(setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            } else {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            }
                             Text(setting.id)
                         })
                     }
@@ -106,11 +122,19 @@ struct ContentView: View {
                 Section {
                     ForEach(accountSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            if setting.icon == "custom.key.circle.fill" {
+                                Image(setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            } else {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            }
                             Text(setting.id)
                         })
                     }
@@ -139,6 +163,18 @@ struct ContentView: View {
                     }
                     if let selectedSettingsItem = focusSettings.first(where: { $0.type == selection }) {
                         destination = selectedSettingsItem.destination
+                    }
+                    if let selectedSettingsItem = usageSettings.first(where: { $0.type == selection }) {
+                        destination = selectedSettingsItem.destination
+                    }
+                    if let selectedSettingsItem = deviceSettings.first(where: { $0.type == selection }) {
+                        destination = selectedSettingsItem.destination
+                    }
+                    if let selectedSettingsItem = accountSettings.first(where: { $0.type == selection }) {
+                        destination = selectedSettingsItem.destination
+                    }
+                    if developerSettings.type == selection {
+                        destination = developerSettings.destination
                     }
                 })
         }
