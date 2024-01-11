@@ -12,6 +12,7 @@
 		831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6D2B4C77A90071E539 /* TransferResetView.swift */; };
 		831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */; };
 		831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F712B4C7A9A0071E539 /* GameControllerView.swift */; };
+		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
 		834A448D2B461BE100690818 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448C2B461BE100690818 /* AppsView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
@@ -33,6 +34,7 @@
 		831D1F6D2B4C77A90071E539 /* TransferResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResetView.swift; sourceTree = "<group>"; };
 		831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNDeviceManagementView.swift; sourceTree = "<group>"; };
 		831D1F712B4C7A9A0071E539 /* GameControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerView.swift; sourceTree = "<group>"; };
+		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		834A448C2B461BE100690818 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				834A448C2B461BE100690818 /* AppsView.swift */,
 				831D1F692B4C76140071E539 /* PeopleView.swift */,
 				831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */,
+				8347ACDE2B4F8468002B980C /* NotificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
+				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,
 				831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
