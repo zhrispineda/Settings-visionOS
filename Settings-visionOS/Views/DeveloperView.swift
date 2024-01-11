@@ -1,0 +1,88 @@
+//
+//  DeveloperView.swift
+//  Settings-visionOS
+//
+//  Created by Chris on 1/10/24.
+//
+
+import SwiftUI
+
+struct DeveloperView: View {
+    @State private var resetNewsLocalDataOnNextLaunch = false
+    @State private var allowAnyDomain = false
+    @State private var allowUnverifiedSources = false
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                Section(content: {
+                    Toggle("Reset Local Data on Next Launch", isOn: $resetNewsLocalDataOnNextLaunch)
+                }, header: {
+                    Text("News Testing")
+                }, footer: {
+                    Text("Reset layouts, images, and other cached elements. Private data will not be affected.")
+                })
+                
+                Section(content: {
+                    NavigationLink("TV Provider", value: 0)
+                }, header: {
+                    Text("TV Provider Testing")
+                })
+                
+                Section(content: {
+                    NavigationLink("TV App", destination: {
+                        List {
+                            VStack(alignment: .center) {
+                                Text("No developer user accounts added. User accounts written by developer\napps will be listed here.")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                                    .listRowBackground(Color.clear)
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
+                        .navigationTitle("TV App")
+                    })
+                }, header: {
+                    Text("TV Provider Testing")
+                })
+                
+                Section(content: {
+                    Button("Reset Alert", action: {})
+                }, header: {
+                    Text("Reset Surroundings Awareness Alert")
+                })
+                
+                Section(content: {
+                    Button("Reindex All Items", action: {})
+                    Button("Reindex all Items with Identifiers", action: {})
+                }, header: {
+                    Text("CoreSpotlight Testing")
+                })
+                
+                Section(content: {
+                    Toggle("Allow Any Domain", isOn: $allowAnyDomain)
+                    Toggle("Allow Unverified Sources", isOn: $allowUnverifiedSources)
+                }, header: {
+                    Text("Siri Event Suggestions Testing")
+                }, footer: {
+                    Text("These settings affect Siri Event Suggestions from Mail and Safari. Enable Allow Any Domain to allow e-mails or web pages which have not yet been approved for Siri Event Suggestions by Apple. Enable Allow Unverified Sources to bypass DKIM or SSL authenticity verification for Siri Event Suggestions in Mail and Safari.")
+                })
+            }
+            .padding([.leading, .trailing], 25)
+            .navigationTitle("Developer")
+            .toolbar {
+                ToolbarItem(placement: .principal, content: {
+                    HStack {
+                        Text("Developer")
+                            .font(.title)
+                    }
+                    .frame(maxWidth: .infinity)
+                })
+            }
+        }
+    }
+}
+
+#Preview {
+    DeveloperView()
+}

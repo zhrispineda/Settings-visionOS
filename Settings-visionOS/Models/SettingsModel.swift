@@ -78,4 +78,4 @@ let accountSettings: [SettingsItem] = [
 ]
 
 // Developer Settings
-let developerSettings: SettingsItem = SettingsItem(type: .developer, title: "Developer", icon: "hammer.circle.fill", color: .gray, destination: AnyView(EmptyView()))
+let developerSettings: SettingsItem = SettingsItem(type: .developer, title: "Developer", icon: "hammer.circle.fill", color: .gray, destination: AnyView(DeveloperView()))
