@@ -2,7 +2,7 @@
 //  SettingsModel.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/7/24.
+//  A model that holds data for navigation on the sidebar.
 //
 
 import SwiftUI
@@ -73,8 +73,8 @@ let deviceSettings: [SettingsItem] = [
 // Account Settings: Passwords, Game Center, Wallet & Apple Pay
 let accountSettings: [SettingsItem] = [
     SettingsItem(type: .passwords, title: "Passwords", icon: "custom.key.circle.fill", color: .gray, destination: AnyView(EmptyView())),
-    SettingsItem(type: .gameCenter, title: "Game Center", icon: "gamecontroller.fill", color: .white, destination: AnyView(EmptyView())),
-    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "wallet.pass.fill", color: .black, destination: AnyView(EmptyView())),
+    SettingsItem(type: .gameCenter, title: "Game Center", icon: "applegamecenter", color: .white, destination: AnyView(EmptyView())),
+    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", color: .black, destination: AnyView(EmptyView())),
 ]
 
 // Developer Settings

@@ -2,7 +2,10 @@
 //  ListRowLabel.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  A template to have a row label with a title and subtitle on each side.
+//
+//  Parameters:
+//  title: String, subtitle: String
 //
 
 import SwiftUI

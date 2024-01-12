@@ -2,7 +2,10 @@
 //  ListRowNavigationLabel.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  A template to have a NavigationLink with a title and subtitle on each side.
+//
+//  Parameters:
+//  title: String, subtitle: String, content: AnyView
 //
 
 import SwiftUI

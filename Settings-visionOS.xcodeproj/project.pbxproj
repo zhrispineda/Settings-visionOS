@@ -27,6 +27,8 @@
 		83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB44E92B4C4F6D0081852F /* ListRowLabel.swift */; };
 		83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB44EB2B4C4F9D0081852F /* ListRowNavigationLabel.swift */; };
 		83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB44ED2B4C5C1A0081852F /* CertificateTrustSettingsView.swift */; };
+		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
+		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		83DB44E92B4C4F6D0081852F /* ListRowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLabel.swift; sourceTree = "<group>"; };
 		83DB44EB2B4C4F9D0081852F /* ListRowNavigationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationLabel.swift; sourceTree = "<group>"; };
 		83DB44ED2B4C5C1A0081852F /* CertificateTrustSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTrustSettingsView.swift; sourceTree = "<group>"; };
+		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
+		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				835B93422B48904100E96BE3 /* General */,
+				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
 				831D1F692B4C76140071E539 /* PeopleView.swift */,
@@ -164,6 +169,15 @@
 				8347ACE02B4F8750002B980C /* DeveloperView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		83FF013D2B52019500CC2CE8 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				83FF01402B52026B00CC2CE8 /* TVProviderView.swift */,
+				83FF013E2B52023200CC2CE8 /* TVAppView.swift */,
+			);
+			path = Developer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +263,10 @@
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,
 				831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */,
+				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
+				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,

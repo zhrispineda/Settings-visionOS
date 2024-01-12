@@ -2,7 +2,7 @@
 //  AppsView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/3/24.
+//  Settings > Apps
 //
 
 import SwiftUI

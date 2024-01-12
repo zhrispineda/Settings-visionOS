@@ -2,7 +2,7 @@
 //  GeneralView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/3/24.
+//  Settings > General
 //
 
 import SwiftUI

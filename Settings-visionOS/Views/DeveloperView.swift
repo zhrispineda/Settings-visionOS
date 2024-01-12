@@ -24,24 +24,13 @@ struct DeveloperView: View {
                 })
                 
                 Section(content: {
-                    NavigationLink("TV Provider", value: 0)
+                    NavigationLink("TV Provider", destination: TVProviderView())
                 }, header: {
                     Text("TV Provider Testing")
                 })
                 
                 Section(content: {
-                    NavigationLink("TV App", destination: {
-                        List {
-                            VStack(alignment: .center) {
-                                Text("No developer user accounts added. User accounts written by developer\napps will be listed here.")
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                                    .listRowBackground(Color.clear)
-                                    .multilineTextAlignment(.center)
-                            }
-                        }
-                        .navigationTitle("TV App")
-                    })
+                    NavigationLink("TV App", destination: TVAppView())
                 }, header: {
                     Text("TV Provider Testing")
                 })

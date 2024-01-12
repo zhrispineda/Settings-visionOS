@@ -2,7 +2,7 @@
 //  NotificationsView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/10/24.
+//  Settings > Notifications
 //
 
 import SwiftUI
