@@ -17,6 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
+                // TODO: Clean the loops for listing every navigation button
                 Section {
                     Button(action: {
                         print("Toggling Apple ID Popover")
@@ -84,6 +85,12 @@ struct ContentView: View {
                                     .fontWeight(.light)
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
+                            } else if setting.icon == "applesiri" {
+                                Image(setting.icon)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 30)
+                                    .padding(.leading, 2)
                             } else {
                                 Image(systemName: setting.icon)
                                     .font(.largeTitle)
@@ -177,6 +184,7 @@ struct ContentView: View {
                         destination = developerSettings.destination
                     }
                 })
+            // TODO: Clean the .onChange function to be cleaner
         }
     }
 }
