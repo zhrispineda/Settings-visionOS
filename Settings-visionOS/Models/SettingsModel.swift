@@ -74,7 +74,7 @@ let deviceSettings: [SettingsItem] = [
 let accountSettings: [SettingsItem] = [
     SettingsItem(type: .passwords, title: "Passwords", icon: "custom.key.circle.fill", color: .gray, destination: AnyView(EmptyView())),
     SettingsItem(type: .gameCenter, title: "Game Center", icon: "applegamecenter", color: .white, destination: AnyView(EmptyView())),
-    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", color: .black, destination: AnyView(EmptyView())),
+    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", color: .black, destination: AnyView(WalletApplePayView())),
 ]
 
 // Developer Settings

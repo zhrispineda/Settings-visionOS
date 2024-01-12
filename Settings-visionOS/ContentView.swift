@@ -2,8 +2,6 @@
 //  ContentView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/2/24.
-//
 
 import SwiftUI
 import RealityKit
