@@ -12,7 +12,7 @@ struct SettingsItem: Identifiable {
     let type: SettingsModel
     let title: String
     let icon: String
-    let color: Color
+    var color: Color = Color(.gray)
     let destination: AnyView
 }
 
@@ -67,14 +67,14 @@ let usageSettings: [SettingsItem] = [
 // Device Settings: Display, Storage
 let deviceSettings: [SettingsItem] = [
     SettingsItem(type: .display, title: "Display", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(EmptyView())),
-    SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(EmptyView())),
+    SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
 ]
 
 // Account Settings: Passwords, Game Center, Wallet & Apple Pay
 let accountSettings: [SettingsItem] = [
     SettingsItem(type: .passwords, title: "Passwords", icon: "custom.key.circle.fill", color: .gray, destination: AnyView(PasswordsView())),
     SettingsItem(type: .gameCenter, title: "Game Center", icon: "applegamecenter", color: .white, destination: AnyView(GameCenterView())),
-    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", color: .black, destination: AnyView(WalletApplePayView())),
+    SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", destination: AnyView(WalletApplePayView())),
 ]
 
 // Developer Settings
