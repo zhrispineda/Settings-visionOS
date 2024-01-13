@@ -20,6 +20,7 @@
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
 		834A448D2B461BE100690818 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448C2B461BE100690818 /* AppsView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
+		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		83AB15AE2B44CB37002DCD7E /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 83AB15AD2B44CB37002DCD7E /* RealityKitContent */; };
 		83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
@@ -52,6 +53,7 @@
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		834A448C2B461BE100690818 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Settings-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Settings-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB15AC2B44CB37002DCD7E /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_visionOSApp.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				831D1F692B4C76140071E539 /* PeopleView.swift */,
 				831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */,
 				8347ACDE2B4F8468002B980C /* NotificationsView.swift */,
+				837F104C2B5330A900CB8FCD /* SiriSearchView.swift */,
 				8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */,
 				8309585A2B5301B000DD47D4 /* DisplayView.swift */,
 				83C55CAA2B5229E500569896 /* StorageView.swift */,
@@ -287,6 +290,7 @@
 				831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
+				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
