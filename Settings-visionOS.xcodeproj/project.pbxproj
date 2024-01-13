@@ -31,6 +31,7 @@
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
 		83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01442B52082800CC2CE8 /* GameCenterView.swift */; };
+		83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01462B5209D200CC2CE8 /* PasswordsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
 		83FF01442B52082800CC2CE8 /* GameCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterView.swift; sourceTree = "<group>"; };
+		83FF01462B5209D200CC2CE8 /* PasswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				831D1F692B4C76140071E539 /* PeopleView.swift */,
 				831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */,
 				8347ACDE2B4F8468002B980C /* NotificationsView.swift */,
+				83FF01462B5209D200CC2CE8 /* PasswordsView.swift */,
 				83FF01442B52082800CC2CE8 /* GameCenterView.swift */,
 				83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */,
 				8347ACE02B4F8750002B980C /* DeveloperView.swift */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
+				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
 				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
