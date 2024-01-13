@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
 		831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6D2B4C77A90071E539 /* TransferResetView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
 		831D1F6D2B4C77A90071E539 /* TransferResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResetView.swift; sourceTree = "<group>"; };
@@ -174,11 +176,12 @@
 				831D1F692B4C76140071E539 /* PeopleView.swift */,
 				831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */,
 				8347ACDE2B4F8468002B980C /* NotificationsView.swift */,
+				8309585A2B5301B000DD47D4 /* DisplayView.swift */,
+				83C55CAA2B5229E500569896 /* StorageView.swift */,
 				83FF01462B5209D200CC2CE8 /* PasswordsView.swift */,
 				83FF01442B52082800CC2CE8 /* GameCenterView.swift */,
 				83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */,
 				8347ACE02B4F8750002B980C /* DeveloperView.swift */,
-				83C55CAA2B5229E500569896 /* StorageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
+				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 			);

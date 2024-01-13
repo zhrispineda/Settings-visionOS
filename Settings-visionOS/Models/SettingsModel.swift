@@ -66,7 +66,7 @@ let usageSettings: [SettingsItem] = [
 
 // Device Settings: Display, Storage
 let deviceSettings: [SettingsItem] = [
-    SettingsItem(type: .display, title: "Display", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(EmptyView())),
+    SettingsItem(type: .display, title: "Display", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(DisplayView())),
     SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
 ]
 
