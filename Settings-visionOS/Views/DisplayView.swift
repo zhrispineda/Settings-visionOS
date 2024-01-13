@@ -2,7 +2,7 @@
 //  DisplayView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/13/24.
+//  Settings > Display
 //
 
 import SwiftUI

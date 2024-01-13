@@ -61,7 +61,7 @@ let usageSettings: [SettingsItem] = [
     SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility.fill", color: .blue, destination: AnyView(EmptyView())),
     SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(EmptyView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(EmptyView())),
-    SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(EmptyView())),
+    SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),
 ]
 
 // Device Settings: Display, Storage
