@@ -51,14 +51,14 @@ let mainSettings: [SettingsItem] = [
 
 // Focus Settings: Notifications, Focus, Screen Time
 let focusSettings: [SettingsItem] = [
-    SettingsItem(type: .notifications, title: "Notifications", icon: "bell.badge.circle.fill", color: .red, destination: AnyView(EmptyView())),
-    SettingsItem(type: .focus, title: "Focus", icon: "moon.circle.fill", color: .indigo, destination: AnyView(EmptyView())),
-    SettingsItem(type: .screenTime, title: "Screen Time", icon: "hourglass.circle.fill", color: .indigo, destination: AnyView(EmptyView())),
+    SettingsItem(type: .notifications, title: "Notifications", icon: "bell.badge.circle.fill", color: .red, destination: AnyView(NotificationsView())),
+    SettingsItem(type: .focus, title: "Focus", icon: "moon.circle.fill", color: .indigo, destination: AnyView(FocusView())),
+    SettingsItem(type: .screenTime, title: "Screen Time", icon: "hourglass.circle.fill", color: .indigo, destination: AnyView(ScreenTimeView())),
 ]
 
 // Usage Settings: Accessibility, Control Center, Siri & Search, Privacy & Security
 let usageSettings: [SettingsItem] = [
-    SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility.fill", color: .blue, destination: AnyView(EmptyView())),
+    SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility.fill", color: .blue, destination: AnyView(AccessibilityView())),
     SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(SiriSearchView())),
     SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),

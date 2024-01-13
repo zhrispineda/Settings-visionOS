@@ -1,32 +1,45 @@
 //
-//  ControlCenterView.swift
+//  AccessibilityView.swift
 //  Settings-visionOS
 //
-//  Settings > Control Center
+//  Settings > Accessibility
 //
 
 import SwiftUI
 
-struct ControlCenterView: View {
+struct AccessibilityView: View {
     var body: some View {
         List {
             Section(content: {
                 
             }, header: {
-                Text("Included Controls")
+                Text("Vision")
             })
             
             Section(content: {
                 
             }, header: {
-                Text("More Controls")
+                Text("Physical and Motor")
+            })
+            
+            Section(content: {
+                
+            }, header: {
+                Text("Hearing")
+            })
+            
+            Section(content: {
+                
+            }, header: {
+                Text("General")
             })
         }
         .padding([.leading, .trailing], 25)
+        .navigationTitle("Accessibility")
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {
-                    Text("Control Center")
+                    Text("Accessibility")
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
@@ -36,5 +49,5 @@ struct ControlCenterView: View {
 }
 
 #Preview {
-    ControlCenterView()
+    AccessibilityView()
 }
