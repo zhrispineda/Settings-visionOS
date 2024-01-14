@@ -12,16 +12,16 @@ struct AppsView: View {
         NavigationStack {
             List {
                 Section {
-                    NavigationLink(destination: {}, label: { Text("Freeform") })
-                    NavigationLink(destination: {}, label: { Text("Photos") })
-                    NavigationLink(destination: {}, label: { Text("Safari") })
+                    ListRowNavigationImageLabel(image: "applefreeform", title: "Freeform")
+                    ListRowNavigationImageLabel(image: "applephotos", title: "Photos")
+                    ListRowNavigationImageLabel(image: "applesafari", title: "Safari")
                 }
                 
                 Section(content: {
-                    NavigationLink(destination: {}, label: { Text("Calendar") })
-                    NavigationLink(destination: {}, label: { Text("Maps") })
-                    NavigationLink(destination: {}, label: { Text("News") })
-                    NavigationLink(destination: {}, label: { Text("Shortcuts") })
+                    ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar")
+                    ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps")
+                    ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News")
+                    ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts")
                 }, header: {
                     Text("Compatible Apps")
                 })

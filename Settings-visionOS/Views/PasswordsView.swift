@@ -51,8 +51,8 @@ struct PasswordsView: View {
             }
         }
         .padding([.leading, .trailing], 25)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Passwords")
-        .searchable(text: $searchText, placement: .navigationBarDrawer)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

@@ -5,17 +5,17 @@
 //  A template to have a NavigationLink with an icon and title.
 //
 //  Parameters:
-//  icon: String, title: String
+//  color: Color, icon: String, title: String
 //
 
 import SwiftUI
 
 struct ListRowNavigationIconLabel: View {
     // Variables
-    var color: Color = Color.green
+    var color: Color = Color.gray
     var icon: String = "questionmark.circle.fill"
     var title: String = "Title"
-    var content: AnyView
+    var content: AnyView = AnyView(EmptyView())
     
     var body: some View {
         NavigationLink(destination: {
