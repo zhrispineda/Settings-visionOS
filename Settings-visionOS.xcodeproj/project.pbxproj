@@ -10,7 +10,7 @@
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
-		831485D82B560A46007E72E0 /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardsView.swift */; };
+		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
 		831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6D2B4C77A90071E539 /* TransferResetView.swift */; };
@@ -21,6 +21,7 @@
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
 		834A448D2B461BE100690818 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448C2B461BE100690818 /* AppsView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
+		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -49,7 +50,7 @@
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
-		831485D72B560A46007E72E0 /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
+		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
 		831D1F6D2B4C77A90071E539 /* TransferResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResetView.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		834A448C2B461BE100690818 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 		831485D62B560A21007E72E0 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				831485D72B560A46007E72E0 /* KeyboardsView.swift */,
+				83713ADD2B57337500948E7A /* KeyboardsView.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -113,6 +115,7 @@
 				835B93452B48923700E96BE3 /* About */,
 				831485D62B560A21007E72E0 /* Keyboard */,
 				835B93432B48904A00E96BE3 /* AboutView.swift */,
+				831485D72B560A46007E72E0 /* KeyboardView.swift */,
 				831D1F712B4C7A9A0071E539 /* GameControllerView.swift */,
 				831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */,
 				831D1F6D2B4C77A90071E539 /* TransferResetView.swift */,
@@ -330,13 +333,14 @@
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
+				83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
-				831485D82B560A46007E72E0 /* KeyboardsView.swift in Sources */,
+				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
