@@ -26,7 +26,7 @@ struct KeyboardView: View {
         List {
             Section {
                 ListRowNavigationLabel(title: "Keyboards", subtitle: "2", content: AnyView(KeyboardsView()))
-                NavigationLink("Hardware Keyboard", destination: {})
+                NavigationLink("Hardware Keyboard", destination: AnyView(HardwareKeyboardView()))
             }
             
             Section {

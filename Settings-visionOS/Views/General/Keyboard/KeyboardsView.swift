@@ -2,7 +2,7 @@
 //  KeyboardsView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/16/24.
+//  Settings > Keyboard > Keyboards
 //
 
 import SwiftUI
@@ -13,8 +13,8 @@ struct KeyboardsView: View {
     
     var body: some View {
         List {
-            ForEach(keyboards, id: \.self) { item in
-                Text(item)
+            ForEach(keyboards, id: \.self) { keyboard in
+                Text(keyboard)
             }
             .onMove { prev, new in
                 keyboards.move(fromOffsets: prev, toOffset: new)
@@ -37,6 +37,6 @@ struct KeyboardsView: View {
     }
 }
 
-//#Preview {
-//    KeyboardsView()
-//}
+#Preview {
+    KeyboardsView()
+}
