@@ -32,7 +32,7 @@ struct HardwareKeyboardView: View {
             }
             
             Section(content: {
-                ListRowNavigationLabel(title: "Keyboard Type", subtitle: "ANSI", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Keyboard Type", subtitle: "ANSI", content: AnyView(KeyboardTypeView()))
             }, footer: {
                 Text("Your keyboard has been identified. IF this isn't the correct type for your keyboard, select the type.")
             })
