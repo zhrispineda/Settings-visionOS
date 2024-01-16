@@ -2,7 +2,7 @@
 //  VersionView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  Settings > General > About > visionOS Version
 //
 
 import SwiftUI

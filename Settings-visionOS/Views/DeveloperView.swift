@@ -2,7 +2,7 @@
 //  DeveloperView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/10/24.
+//  Settings > Developer
 //
 
 import SwiftUI

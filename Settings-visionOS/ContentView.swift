@@ -2,6 +2,8 @@
 //  ContentView.swift
 //  Settings-visionOS
 //
+//  Settings
+//
 
 import SwiftUI
 import RealityKit

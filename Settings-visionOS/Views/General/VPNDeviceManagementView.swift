@@ -2,7 +2,7 @@
 //  VPNDeviceManagementView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  Settings > General > VPN & Device Management
 //
 
 import SwiftUI

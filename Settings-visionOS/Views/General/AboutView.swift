@@ -2,7 +2,7 @@
 //  AboutView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/5/24.
+//  Settings > General > About
 //
 
 import SwiftUI

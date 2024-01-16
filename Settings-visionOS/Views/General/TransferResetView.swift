@@ -2,7 +2,7 @@
 //  TransferResetView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  Settings > General > Transfer or Reset This Apple Vision Pro
 //
 
 import SwiftUI

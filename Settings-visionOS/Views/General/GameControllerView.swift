@@ -2,7 +2,7 @@
 //  GameControllerView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/8/24.
+//  Settings > General > Game Controller
 //
 
 import SwiftUI
