@@ -28,7 +28,7 @@ struct HardwareKeyboardView: View {
             })
             
             Section {
-                NavigationLink("Modifier Keys", destination: {})
+                NavigationLink("Modifier Keys", destination: ModifierKeysView())
             }
             
             Section(content: {
