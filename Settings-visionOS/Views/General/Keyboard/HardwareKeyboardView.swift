@@ -16,7 +16,7 @@ struct HardwareKeyboardView: View {
     var body: some View {
         List {
             Section {
-                ListRowNavigationLabel(title: "English", subtitle: "Automatic — U.S.", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "English", subtitle: "Automatic — U.S.", content: AnyView(LanguageView()))
             }
             
             Section(content: {

@@ -23,6 +23,7 @@
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
+		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -65,6 +66,7 @@
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
+		83713AE22B573FFE00948E7A /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		831485D62B560A21007E72E0 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				83713AE12B573FEE00948E7A /* Hardware Keyboard */,
 				83713ADD2B57337500948E7A /* KeyboardsView.swift */,
 				83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */,
 			);
@@ -152,6 +155,14 @@
 				83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				83713AE22B573FFE00948E7A /* LanguageView.swift */,
+			);
+			path = "Hardware Keyboard";
 			sourceTree = "<group>";
 		};
 		83AB159F2B44CB37002DCD7E = {
@@ -339,6 +350,7 @@
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
 				83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
+				83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
