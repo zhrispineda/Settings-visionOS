@@ -30,7 +30,7 @@ struct KeyboardView: View {
             }
             
             Section {
-                NavigationLink("Text Replacement", destination: {})
+                NavigationLink("Text Replacement", destination: TextReplacementView())
             }
             
             Section(content: {
