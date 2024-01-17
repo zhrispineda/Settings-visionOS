@@ -30,7 +30,7 @@ struct GeneralView: View {
                     NavigationLink("Transfer or Reset This Apple Vision Pro", destination: TransferResetView())
                 }
             }
-            .padding([.leading, .trailing], 25)
+            .padding([.leading, .trailing], 30)
             .navigationTitle("General")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {

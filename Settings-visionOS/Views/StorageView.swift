@@ -117,7 +117,7 @@ struct StorageView: View {
                 })
             }
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .searchable(text: $searchText, placement: .navigationBarDrawer)
         .toolbar {
             ToolbarItem(placement: .principal, content: {

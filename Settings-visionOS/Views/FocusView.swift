@@ -102,7 +102,7 @@ struct FocusView: View {
                 Text("When you give an app permission, it can share that you have notifications silenced when using Focus.")
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .navigationTitle("Focus")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

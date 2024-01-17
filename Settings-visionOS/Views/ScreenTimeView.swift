@@ -39,7 +39,7 @@ struct ScreenTimeView: View {
                 Text("Sign in to iCloud to report your screen time on any iPad or iPhone, or set up Family Sharing to use Screen Time with your family's devices.")
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

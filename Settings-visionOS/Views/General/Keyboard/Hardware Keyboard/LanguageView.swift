@@ -25,7 +25,7 @@ struct LanguageView: View {
                 }
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .navigationTitle("English")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

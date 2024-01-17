@@ -25,6 +25,7 @@ struct DictionaryView: View {
                 }
             )
         }
+        .padding([.leading, .trailing], 30)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

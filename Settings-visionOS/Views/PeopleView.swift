@@ -23,7 +23,7 @@ struct PeopleView: View {
                     NavigationLink("Blocked Contacts", destination: EmptyView())
                 }
             }
-            .padding([.leading, .trailing], 25)
+            .padding([.leading, .trailing], 30)
             .navigationTitle("People")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {

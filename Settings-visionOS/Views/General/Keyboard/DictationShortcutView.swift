@@ -34,7 +34,7 @@ struct DictationShortcutView: View {
                 Text("Press twice to start dictation:")
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

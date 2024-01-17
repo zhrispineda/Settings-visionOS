@@ -30,7 +30,7 @@ struct NotificationsView: View {
                     Text("Notification Style")
                 })
             }
-            .padding([.leading, .trailing], 25)
+            .padding([.leading, .trailing], 30)
             .navigationTitle("Notifications")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {

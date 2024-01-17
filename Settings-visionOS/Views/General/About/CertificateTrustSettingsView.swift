@@ -18,7 +18,7 @@ struct CertificateTrustSettingsView: View {
                     .tint(.cyan)
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .navigationTitle("Certificate Trust Settings")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

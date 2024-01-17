@@ -25,7 +25,7 @@ struct KeyboardTypeView: View {
                 }
             })
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

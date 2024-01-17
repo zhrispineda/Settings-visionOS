@@ -57,7 +57,7 @@ struct DeveloperView: View {
                     Text("These settings affect Siri Event Suggestions from Mail and Safari. Enable Allow Any Domain to allow e-mails or web pages which have not yet been approved for Siri Event Suggestions by Apple. Enable Allow Unverified Sources to bypass DKIM or SSL authenticity verification for Siri Event Suggestions in Mail and Safari.")
                 })
             }
-            .padding([.leading, .trailing], 25)
+            .padding([.leading, .trailing], 30)
             .navigationTitle("Developer")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {

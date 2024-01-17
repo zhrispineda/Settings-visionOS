@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    // Variables
     @State private var searchText = String()
     @State private var selection: SettingsModel? = .general
     @State private var destination = AnyView(GeneralView())

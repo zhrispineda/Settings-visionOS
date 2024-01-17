@@ -20,7 +20,7 @@ struct KeyboardsView: View {
                 keyboards.move(fromOffsets: prev, toOffset: new)
             }
         }
-        .padding([.leading, .trailing], 25)
+        .padding([.leading, .trailing], 30)
         .navigationTitle("Keyboards")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

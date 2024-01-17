@@ -27,7 +27,7 @@ struct EnvironmentsView: View {
                     Text("Adjust the volume of the Environment's ambient sounds.")
                 })
             }
-            .padding([.leading, .trailing], 25)
+            .padding([.leading, .trailing], 30)
             .navigationTitle("Environments")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {
