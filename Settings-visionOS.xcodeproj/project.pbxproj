@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		830602E82B5837B0007B7529 /* TextReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602E72B5837B0007B7529 /* TextReplacementView.swift */; };
 		830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EA2B583B1B007B7529 /* AddTextReplacementView.swift */; };
+		830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EC2B583E23007B7529 /* DictationShortcutView.swift */; };
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		830602E72B5837B0007B7529 /* TextReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReplacementView.swift; sourceTree = "<group>"; };
 		830602EA2B583B1B007B7529 /* AddTextReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextReplacementView.swift; sourceTree = "<group>"; };
+		830602EC2B583E23007B7529 /* DictationShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationShortcutView.swift; sourceTree = "<group>"; };
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				83713ADD2B57337500948E7A /* KeyboardsView.swift */,
 				83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */,
 				830602E72B5837B0007B7529 /* TextReplacementView.swift */,
+				830602EC2B583E23007B7529 /* DictationShortcutView.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
+				830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */,
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,

@@ -50,7 +50,7 @@ struct KeyboardView: View {
             Section(content: {
                 Toggle("Enable Dictation", isOn: $dictationEnabled)
                 Toggle("Auto-Punctuation", isOn: $autoPunctuationEnabled)
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: DictationShortcutView(), label: {
                     HStack {
                         Text("Dictation Shortcut")
                         Spacer()
