@@ -19,7 +19,7 @@ struct GeneralView: View {
                     NavigationLink("Keyboard", destination: KeyboardView())
                     NavigationLink("Game Controller", destination: GameControllerView())
                     NavigationLink("Fonts", destination: FontsView())
-                    NavigationLink("Dictionary", destination: {})
+                    NavigationLink("Dictionary", destination: DictionaryView())
                 }
                 
                 Section {

@@ -2,7 +2,7 @@
 //  FontsView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/17/24.
+//  Settings > General > Fonts
 //
 
 import SwiftUI
