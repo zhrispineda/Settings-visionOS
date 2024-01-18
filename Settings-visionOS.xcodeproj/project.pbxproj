@@ -40,6 +40,7 @@
 		839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */; };
 		839EA81F2B59CE520099BCAA /* SiriSearchAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */; };
 		839EA8212B59D1860099BCAA /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA8202B59D1860099BCAA /* PhotosView.swift */; };
+		839EA8232B59D8340099BCAA /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA8222B59D8340099BCAA /* SafariView.swift */; };
 		83AB15AE2B44CB37002DCD7E /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 83AB15AD2B44CB37002DCD7E /* RealityKitContent */; };
 		83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
@@ -94,6 +95,7 @@
 		839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchAccessNavigationLabel.swift; sourceTree = "<group>"; };
 		839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchAppView.swift; sourceTree = "<group>"; };
 		839EA8202B59D1860099BCAA /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		839EA8222B59D8340099BCAA /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Settings-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Settings-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB15AC2B44CB37002DCD7E /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_visionOSApp.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				839EA81A2B59C85E0099BCAA /* FreeformView.swift */,
 				839EA8202B59D1860099BCAA /* PhotosView.swift */,
+				839EA8222B59D8340099BCAA /* SafariView.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
+				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
