@@ -13,7 +13,7 @@ struct AppsView: View {
             List {
                 Section {
                     ListRowNavigationImageLabel(image: "applefreeform", title: "Freeform", content: AnyView(FreeformView()))
-                    ListRowNavigationImageLabel(image: "applephotos", title: "Photos")
+                    ListRowNavigationImageLabel(image: "applephotos", title: "Photos", content: AnyView(PhotosView()))
                     ListRowNavigationImageLabel(image: "applesafari", title: "Safari")
                 }
                 

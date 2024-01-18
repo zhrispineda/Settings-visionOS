@@ -2,7 +2,10 @@
 //  SiriSearchAppView.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/18/24.
+//  A template to have controls for an app's access to Siri & Search.
+//
+//  Parameters:
+//  appName: String
 //
 
 import SwiftUI
