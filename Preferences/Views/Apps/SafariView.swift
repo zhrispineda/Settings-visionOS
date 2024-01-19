@@ -35,7 +35,7 @@ struct SafariView: View {
             // Search Section
             Section(content: {
                 ListRowNavigationLabel(title: "Search Engine", subtitle: "Google", content: AnyView(SearchEngineView()))
-                ListRowNavigationLabel(title: "Private Search Engine", subtitle: "Default", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Private Search Engine", subtitle: "Default", content: AnyView(PrivateSearchEngineView()))
                 Toggle("Search Engine Suggestions", isOn: $searchEngineSuggestionsEnabled)
                 Toggle("Safari Suggestions", isOn: $safariSuggestionsEnabled)
                 ListRowNavigationLabel(title: "Quick Website Search", subtitle: "On", content: AnyView(EmptyView()))
