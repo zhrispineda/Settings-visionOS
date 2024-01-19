@@ -63,6 +63,8 @@
 		83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB70E2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift */; };
 		83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */; };
 		83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */; };
+		83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7142B5AE6EF0028D308 /* HideIPAddressView.swift */; };
+		83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7162B5AE8010028D308 /* PageZoomView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -130,6 +132,8 @@
 		83FEB70E2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDownloadListItemsView.swift; sourceTree = "<group>"; };
 		83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenUsingNewKeyboardShortcutView.swift; sourceTree = "<group>"; };
 		83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseTabsView.swift; sourceTree = "<group>"; };
+		83FEB7142B5AE6EF0028D308 /* HideIPAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideIPAddressView.swift; sourceTree = "<group>"; };
+		83FEB7162B5AE8010028D308 /* PageZoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageZoomView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				83FEB7092B5AE1860028D308 /* DownloadsView.swift */,
 				83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */,
 				83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */,
+				83FEB7142B5AE6EF0028D308 /* HideIPAddressView.swift */,
+				83FEB7162B5AE8010028D308 /* PageZoomView.swift */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
+				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
 				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
@@ -468,6 +475,7 @@
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
 				839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
+				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,

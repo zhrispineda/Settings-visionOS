@@ -97,7 +97,7 @@ struct SafariView: View {
             // Privacy & Security Section
             Section(content: {
                 Toggle("Prevent Cross-Site Tracking", isOn: $preventCrossSiteTrackingEnabled)
-                ListRowNavigationLabel(title: "Hide IP Address", subtitle: "Off", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Hide IP Address", subtitle: "Off", content: AnyView(HideIPAddressView()))
                 Toggle("Fradulent Website Warning", isOn: $fraudelentWebsiteWarningEnabled)
             }, header: {
                 Text("Privacy & Security")
@@ -121,7 +121,7 @@ struct SafariView: View {
             
             // Settings for Websites Section
             Section(content: {
-                NavigationLink("Page Zoom", destination: {})
+                NavigationLink("Page Zoom", destination: PageZoomView())
                 NavigationLink("Request Desktop Website", destination: {})
                 NavigationLink("Reader", destination: {})
                 NavigationLink("Camera", destination: {})
