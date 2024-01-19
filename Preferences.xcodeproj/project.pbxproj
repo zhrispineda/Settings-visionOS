@@ -70,6 +70,7 @@
 		83FEB71D2B5AEA080028D308 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB71C2B5AEA080028D308 /* CameraView.swift */; };
 		83FEB71F2B5AEA6D0028D308 /* MicrophoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */; };
 		83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7202B5AEADA0028D308 /* LocationView.swift */; };
+		83FEB7232B5AEBC50028D308 /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7222B5AEBC50028D308 /* AdvancedView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -144,6 +145,7 @@
 		83FEB71C2B5AEA080028D308 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneView.swift; sourceTree = "<group>"; };
 		83FEB7202B5AEADA0028D308 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		83FEB7222B5AEBC50028D308 /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				83FEB71C2B5AEA080028D308 /* CameraView.swift */,
 				83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */,
 				83FEB7202B5AEADA0028D308 /* LocationView.swift */,
+				83FEB7222B5AEBC50028D308 /* AdvancedView.swift */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
 				83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
+				83FEB7232B5AEBC50028D308 /* AdvancedView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
 				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
