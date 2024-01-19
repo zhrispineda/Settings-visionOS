@@ -53,7 +53,7 @@ struct SafariView: View {
                 Toggle("Block Pop-ups", isOn: $blockPopUpsEnabled)
                 Toggle("Request Dark Mode", isOn: $requestDarkModeEnabled)
                 NavigationLink("Extensions", destination: ExtensionsView())
-                ListRowNavigationLabel(title: "Downloads", subtitle: "On My Apple Vision Pro", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Downloads", subtitle: "On My Apple Vision Pro", content: AnyView(DownloadsView()))
             }, header: {
                 Text("General")
             })
