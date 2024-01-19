@@ -43,7 +43,7 @@ struct DownloadsView: View {
             })
             
             Section {
-                ListRowNavigationLabel(title: "Remove Download List Items", subtitle: "After one day", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Remove Download List Items", subtitle: "After one day", content: AnyView(RemoveDownloadListItemsView()))
             }
         }
         .navigationTitle("Downloads")
