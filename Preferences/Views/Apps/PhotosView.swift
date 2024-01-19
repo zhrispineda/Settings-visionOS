@@ -78,7 +78,7 @@ struct PhotosView: View {
                 Text("[About Photos & Privacy...](#)")
             })
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Photos")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

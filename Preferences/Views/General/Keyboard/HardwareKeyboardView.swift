@@ -37,7 +37,7 @@ struct HardwareKeyboardView: View {
                 Text("Your keyboard has been identified. IF this isn't the correct type for your keyboard, select the type.")
             })
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Hardware Keyboard")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

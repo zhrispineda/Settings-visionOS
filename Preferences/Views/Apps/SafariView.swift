@@ -38,7 +38,7 @@ struct SafariView: View {
                 ListRowNavigationLabel(title: "Private Search Engine", subtitle: "Default", content: AnyView(PrivateSearchEngineView()))
                 Toggle("Search Engine Suggestions", isOn: $searchEngineSuggestionsEnabled)
                 Toggle("Safari Suggestions", isOn: $safariSuggestionsEnabled)
-                ListRowNavigationLabel(title: "Quick Website Search", subtitle: "On", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Quick Website Search", subtitle: "On", content: AnyView(QuickWebsiteSearchView()))
                 Toggle("Preload Top Hit", isOn: $preloadTopHitEnabled)
             }, header: {
                 Text("Search")
@@ -144,7 +144,7 @@ struct SafariView: View {
                 NavigationLink("Advanced", destination: {})
             }
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Safari")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

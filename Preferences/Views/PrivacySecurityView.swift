@@ -28,7 +28,7 @@ struct PrivacySecurityView: View {
                 NavigationLink("Apple Advertising", destination: {})
             }
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Privacy & Security")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

@@ -41,7 +41,7 @@ struct DisplayView: View {
                 Text("Display")
             })
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Display")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

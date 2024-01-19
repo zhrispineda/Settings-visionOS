@@ -22,7 +22,7 @@ struct WalletApplePayView: View {
                 Text("Verifies that your saved cards in Safari AutoFill are compatible with Apple Pay and allows you to use them in Wallet.")
             })
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Wallet & Apple Pay")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

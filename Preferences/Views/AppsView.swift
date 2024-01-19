@@ -26,7 +26,7 @@ struct AppsView: View {
                     Text("Compatible Apps")
                 })
             }
-            .padding([.leading, .trailing], 30)
+            .padding([.leading, .trailing], 40)
             .navigationTitle("Apps")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {

@@ -25,7 +25,7 @@ struct FreeformView: View {
                 Text("Alignment Guides")
             })
         }
-        .padding([.leading, .trailing], 30)
+        .padding([.leading, .trailing], 40)
         .navigationTitle("Freeform")
         .toolbar {
             ToolbarItem(placement: .principal, content: {
