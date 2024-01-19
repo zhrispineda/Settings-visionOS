@@ -86,8 +86,8 @@ struct SafariView: View {
                     Spacer()
                 }
                 Toggle("Open New Tabs in Background", isOn: $openNewTabsInBackgroundEnabled)
-                ListRowNavigationLabel(title: "When Using New Keyboard Shortcut", subtitle: "New Tab", content: AnyView(EmptyView()))
-                ListRowNavigationLabel(title: "Close Tabs", subtitle: "Manually", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "When Using New Keyboard Shortcut", subtitle: "Open Tab", content: AnyView(WhenUsingNewKeyboardShortcutView()))
+                ListRowNavigationLabel(title: "Close Tabs", subtitle: "Manually", content: AnyView(CloseTabsView()))
             }, header: {
                 Text("Tabs")
             }, footer: {

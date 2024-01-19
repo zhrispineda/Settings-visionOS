@@ -61,6 +61,8 @@
 		83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */; };
 		83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7092B5AE1860028D308 /* DownloadsView.swift */; };
 		83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB70E2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift */; };
+		83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */; };
+		83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -126,6 +128,8 @@
 		83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		83FEB7092B5AE1860028D308 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
 		83FEB70E2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDownloadListItemsView.swift; sourceTree = "<group>"; };
+		83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenUsingNewKeyboardShortcutView.swift; sourceTree = "<group>"; };
+		83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseTabsView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				83FEB7052B5ADDD10028D308 /* FavoritesView.swift */,
 				83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */,
 				83FEB7092B5AE1860028D308 /* DownloadsView.swift */,
+				83FEB7102B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift */,
+				83FEB7122B5AE62C0028D308 /* CloseTabsView.swift */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */,
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
+				83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
@@ -455,6 +462,7 @@
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
 				830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */,
 				83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */,
+				83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
