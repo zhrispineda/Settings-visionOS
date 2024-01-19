@@ -2,7 +2,7 @@
 //  Settings_visionOSApp.swift
 //  Settings-visionOS
 //
-//  Created by Chris on 1/2/24.
+//  Settings
 //
 
 import SwiftUI

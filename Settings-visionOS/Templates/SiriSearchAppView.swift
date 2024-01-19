@@ -15,6 +15,7 @@ struct SiriSearchAppView: View {
     @State private var learnFromAppEnabled = true
     @State private var showAppInSearchEnabled = true
     @State private var showContentInSearchEnabled = true
+    @State private var suggestInAppEnabled = true
     @State private var suggestAppEnabled = true
     var appName: String = "App"
     
@@ -38,6 +39,9 @@ struct SiriSearchAppView: View {
             })
             
             Section(content: {
+                if showInAppApps.contains(appName) {
+                    Toggle("Suggest in App", isOn: $suggestInAppEnabled)
+                }
                 Toggle("Suggest App", isOn: $suggestAppEnabled)
             }, header: {
                 Text("Suggestions")
