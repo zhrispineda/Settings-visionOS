@@ -58,6 +58,7 @@
 		83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */; };
 		83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7012B5ADC570028D308 /* SavedCreditCardsView.swift */; };
 		83FEB7062B5ADDD10028D308 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7052B5ADDD10028D308 /* FavoritesView.swift */; };
+		83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -120,6 +121,7 @@
 		83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillView.swift; sourceTree = "<group>"; };
 		83FEB7012B5ADC570028D308 /* SavedCreditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCreditCardsView.swift; sourceTree = "<group>"; };
 		83FEB7052B5ADDD10028D308 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */,
 				83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */,
 				83FEB7052B5ADDD10028D308 /* FavoritesView.swift */,
+				83FEB7072B5AE0BE0028D308 /* ExtensionsView.swift */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
+				83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */,
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
