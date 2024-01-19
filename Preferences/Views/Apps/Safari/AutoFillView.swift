@@ -35,7 +35,8 @@ struct AutoFillView: View {
             
             Section {
                 Toggle("Credit Cards", isOn: $creditCardsEnabled)
-                NavigationLink("Saved Credit Cards", destination: {})
+                // TODO: Add authentication to view SavedCreditCardsView
+                NavigationLink("Saved Credit Cards", destination: SavedCreditCardsView())
             }
         }
         .padding([.leading, .trailing], 40)

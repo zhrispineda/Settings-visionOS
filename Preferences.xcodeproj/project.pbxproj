@@ -56,6 +56,7 @@
 		83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6F82B5AD59D0028D308 /* PrivateSearchEngineView.swift */; };
 		83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */; };
 		83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */; };
+		83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7012B5ADC570028D308 /* SavedCreditCardsView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -116,6 +117,7 @@
 		83FEB6F82B5AD59D0028D308 /* PrivateSearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSearchEngineView.swift; sourceTree = "<group>"; };
 		83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickWebsiteSearchView.swift; sourceTree = "<group>"; };
 		83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillView.swift; sourceTree = "<group>"; };
+		83FEB7012B5ADC570028D308 /* SavedCreditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCreditCardsView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -292,12 +294,21 @@
 		83CAF1372B5A0550007A5E22 /* Safari */ = {
 			isa = PBXGroup;
 			children = (
+				83FEB7002B5ADC4B0028D308 /* AutoFill */,
 				83CAF1382B5A0563007A5E22 /* SearchEngineView.swift */,
 				83FEB6F82B5AD59D0028D308 /* PrivateSearchEngineView.swift */,
 				83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */,
 				83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */,
 			);
 			path = Safari;
+			sourceTree = "<group>";
+		};
+		83FEB7002B5ADC4B0028D308 /* AutoFill */ = {
+			isa = PBXGroup;
+			children = (
+				83FEB7012B5ADC570028D308 /* SavedCreditCardsView.swift */,
+			);
+			path = AutoFill;
 			sourceTree = "<group>";
 		};
 		83FF013D2B52019500CC2CE8 /* Developer */ = {
@@ -427,6 +438,7 @@
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
+				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
