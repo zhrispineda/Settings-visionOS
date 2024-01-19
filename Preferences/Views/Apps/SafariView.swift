@@ -48,7 +48,7 @@ struct SafariView: View {
             
             // General Section
             Section(content: {
-                NavigationLink("AutoFill", destination: {})
+                NavigationLink("AutoFill", destination: AutoFillView())
                 ListRowNavigationLabel(title: "Favorites", subtitle: "Favorites", content: AnyView(EmptyView()))
                 Toggle("Block Pop-ups", isOn: $blockPopUpsEnabled)
                 Toggle("Request Dark Mode", isOn: $requestDarkModeEnabled)
