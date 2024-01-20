@@ -36,7 +36,7 @@ struct AdvancedView: View {
             }
             
             Section {
-                NavigationLink("Feature Flags", destination: {})
+                NavigationLink("Feature Flags", destination: FeatureFlagsView())
             }
         }
         .padding([.leading, .trailing], 45)

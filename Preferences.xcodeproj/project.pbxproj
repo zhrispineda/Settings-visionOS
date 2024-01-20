@@ -23,6 +23,7 @@
 		831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F712B4C7A9A0071E539 /* GameControllerView.swift */; };
 		832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54532B5C2E0B00BC877C /* WebsiteDataView.swift */; };
 		832A54562B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54552B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift */; };
+		832A54582B5C30C600BC877C /* FeatureFlagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54572B5C30C600BC877C /* FeatureFlagsView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -97,6 +98,7 @@
 		831D1F712B4C7A9A0071E539 /* GameControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerView.swift; sourceTree = "<group>"; };
 		832A54532B5C2E0B00BC877C /* WebsiteDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDataView.swift; sourceTree = "<group>"; };
 		832A54552B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedTrackingFingerprintingProtectionView.swift; sourceTree = "<group>"; };
+		832A54572B5C30C600BC877C /* FeatureFlagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagsView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				832A54532B5C2E0B00BC877C /* WebsiteDataView.swift */,
 				832A54552B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift */,
+				832A54572B5C30C600BC877C /* FeatureFlagsView.swift */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
+				832A54582B5C30C600BC877C /* FeatureFlagsView.swift in Sources */,
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */,
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,

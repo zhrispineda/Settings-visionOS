@@ -21,6 +21,7 @@ struct ListRowNavigationLabel: View {
         }, label: {
             HStack {
                 Text(title)
+                    .lineLimit(1)
                 Spacer()
                 Text(subtitle)
                     .foregroundStyle(.secondary)
