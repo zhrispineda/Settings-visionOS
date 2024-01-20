@@ -19,7 +19,7 @@ struct AddAccountView: View {
             ListRowAccountLabel(service: "Outlook")  // Safari View Controller
             // Other: NavigationLink
             ZStack(alignment: .leading) {
-                NavigationLink("", destination: {}).opacity(0)
+                NavigationLink("", destination: AddOtherAccountView()).opacity(0)
                 HStack {
                     Spacer()
                     Text("Other")
