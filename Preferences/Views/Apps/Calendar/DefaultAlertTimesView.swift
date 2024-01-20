@@ -14,9 +14,9 @@ struct DefaultAlertTimesView: View {
     var body: some View {
         List {
             Section {
-                ListRowNavigationLabel(title: "Birthdays", subtitle: "None", content: AnyView(EmptyView()))
-                ListRowNavigationLabel(title: "Events", subtitle: "None", content: AnyView(EmptyView()))
-                ListRowNavigationLabel(title: "All-Day Events", subtitle: "None", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Birthdays", subtitle: "None", content: AnyView(BirthdaysView()))
+                ListRowNavigationLabel(title: "Events", subtitle: "None", content: AnyView(EventsView()))
+                ListRowNavigationLabel(title: "All-Day Events", subtitle: "None", content: AnyView(AllDayEventsView()))
             }
             
             Section(content: {

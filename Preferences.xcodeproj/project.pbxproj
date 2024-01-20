@@ -33,6 +33,9 @@
 		832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */; };
 		832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A546A2B5C8FCF00BC877C /* SyncView.swift */; };
 		832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A546C2B5C907000BC877C /* DefaultAlertTimesView.swift */; };
+		832A54702B5C91F100BC877C /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A546F2B5C91F100BC877C /* BirthdaysView.swift */; };
+		832A54722B5C92FA00BC877C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54712B5C92FA00BC877C /* EventsView.swift */; };
+		832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54732B5C930100BC877C /* AllDayEventsView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -117,6 +120,9 @@
 		832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternateCalendarsView.swift; sourceTree = "<group>"; };
 		832A546A2B5C8FCF00BC877C /* SyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncView.swift; sourceTree = "<group>"; };
 		832A546C2B5C907000BC877C /* DefaultAlertTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlertTimesView.swift; sourceTree = "<group>"; };
+		832A546F2B5C91F100BC877C /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
+		832A54712B5C92FA00BC877C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		832A54732B5C930100BC877C /* AllDayEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDayEventsView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 			children = (
 				832A54602B5C8B3F00BC877C /* Add Account */,
 				832A54652B5C8DD900BC877C /* Time Zone Override */,
+				832A546E2B5C91DB00BC877C /* Default Alert Times */,
 				832A545C2B5C841D00BC877C /* AddAccountView.swift */,
 				832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */,
 				832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */,
@@ -247,6 +254,16 @@
 				832A54662B5C8DE800BC877C /* TimeZoneView.swift */,
 			);
 			path = "Time Zone Override";
+			sourceTree = "<group>";
+		};
+		832A546E2B5C91DB00BC877C /* Default Alert Times */ = {
+			isa = PBXGroup;
+			children = (
+				832A546F2B5C91F100BC877C /* BirthdaysView.swift */,
+				832A54712B5C92FA00BC877C /* EventsView.swift */,
+				832A54732B5C930100BC877C /* AllDayEventsView.swift */,
+			);
+			path = "Default Alert Times";
 			sourceTree = "<group>";
 		};
 		835B93422B48904100E96BE3 /* General */ = {
@@ -538,6 +555,7 @@
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
+				832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */,
 				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,
 				831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */,
 				837F10552B533F3400CB8FCD /* FocusView.swift in Sources */,
@@ -545,6 +563,7 @@
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */,
+				832A54702B5C91F100BC877C /* BirthdaysView.swift in Sources */,
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,
@@ -562,6 +581,7 @@
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
+				832A54722B5C92FA00BC877C /* EventsView.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
 				83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */,
 				832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */,
