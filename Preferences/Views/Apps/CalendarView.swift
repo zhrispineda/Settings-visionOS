@@ -27,7 +27,7 @@ struct CalendarView: View {
             }
             
             Section {
-                ListRowNavigationLabel(title: "Time Zone Override", subtitle: "Off", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Time Zone Override", subtitle: "Off", content: AnyView(TimeZoneOverrideView()))
                 ListRowNavigationLabel(title: "Alternate Calendars", subtitle: "Off", content: AnyView(EmptyView()))
                 Toggle("Week Numbers", isOn: $weekNumbersEnabled)
                 Toggle("Week View Starts On Today", isOn: $weekViewStartsOnTodayEnabled)

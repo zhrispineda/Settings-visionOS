@@ -28,6 +28,8 @@
 		832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A545C2B5C841D00BC877C /* AddAccountView.swift */; };
 		832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */; };
 		832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */; };
+		832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */; };
+		832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54662B5C8DE800BC877C /* TimeZoneView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -107,6 +109,8 @@
 		832A545C2B5C841D00BC877C /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
 		832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowAccountLabel.swift; sourceTree = "<group>"; };
 		832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOtherAccountView.swift; sourceTree = "<group>"; };
+		832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneOverrideView.swift; sourceTree = "<group>"; };
+		832A54662B5C8DE800BC877C /* TimeZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -213,7 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				832A54602B5C8B3F00BC877C /* Add Account */,
+				832A54652B5C8DD900BC877C /* Time Zone Override */,
 				832A545C2B5C841D00BC877C /* AddAccountView.swift */,
+				832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -224,6 +230,14 @@
 				832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */,
 			);
 			path = "Add Account";
+			sourceTree = "<group>";
+		};
+		832A54652B5C8DD900BC877C /* Time Zone Override */ = {
+			isa = PBXGroup;
+			children = (
+				832A54662B5C8DE800BC877C /* TimeZoneView.swift */,
+			);
+			path = "Time Zone Override";
 			sourceTree = "<group>";
 		};
 		835B93422B48904100E96BE3 /* General */ = {
@@ -525,10 +539,12 @@
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
 				839EA8212B59D1860099BCAA /* PhotosView.swift in Sources */,
+				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
 				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
+				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
 				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
