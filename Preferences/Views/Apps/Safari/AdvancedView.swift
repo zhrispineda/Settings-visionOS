@@ -17,7 +17,7 @@ struct AdvancedView: View {
     var body: some View {
         List {
             Section {
-                NavigationLink("Website Data", destination: {})
+                NavigationLink("Website Data", destination: WebsiteDataView())
             }
             
             Section(content: {
