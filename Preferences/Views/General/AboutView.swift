@@ -50,7 +50,7 @@ struct AboutView: View {
                 })
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
     }
 }
 

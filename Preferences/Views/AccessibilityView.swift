@@ -34,7 +34,7 @@ struct AccessibilityView: View {
                 Text("General")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("Accessibility")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

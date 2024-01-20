@@ -39,7 +39,7 @@ struct AdvancedView: View {
                 NavigationLink("Feature Flags", destination: {})
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Advanced")

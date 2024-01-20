@@ -23,7 +23,7 @@ struct QuickWebsiteSearchView: View {
                 Text("Quick website search shortcuts are added automatically by searching within a website.")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Quick Website Search")

@@ -73,7 +73,7 @@ struct SiriSearchView: View {
                 })
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("Siri & Search")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

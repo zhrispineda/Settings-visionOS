@@ -16,7 +16,7 @@ struct ExtensionsView: View {
                 Text("Extensions customize the way Safari works. Extensions can change the appearance or behavior of web content, add buttons to Safari, and more.")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Extensions")

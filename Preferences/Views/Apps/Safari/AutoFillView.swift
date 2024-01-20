@@ -39,7 +39,7 @@ struct AutoFillView: View {
                 NavigationLink("Saved Credit Cards", destination: SavedCreditCardsView())
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("AutoFill")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

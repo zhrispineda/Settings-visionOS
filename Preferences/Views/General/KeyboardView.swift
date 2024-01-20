@@ -69,7 +69,7 @@ struct KeyboardView: View {
                 Text("In Safari and supported search fields, focusing your eyes on the microphone will start Dictation.")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("Keyboards")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

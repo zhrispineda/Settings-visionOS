@@ -49,7 +49,7 @@ struct SiriSearchAppView: View {
                 Text("Allow suggestions and content from \u{201C}\(appName)\u{201D} and Shortcuts for the app to appear \(showInAppApps.contains(appName) ? "in the app and " : "")in Search. These suggestions and Shortcuts are based on how you use the app.")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

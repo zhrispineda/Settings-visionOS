@@ -18,7 +18,7 @@ struct ModifierKeysView: View {
                 Button("Restore Defaults", action: {})
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

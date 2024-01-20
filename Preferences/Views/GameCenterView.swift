@@ -19,7 +19,7 @@ struct GameCenterView: View {
                 Text("A social gaming service that lets you interact with friends, track and compare scores and achievements, challenge other players, and compete in multiplayer games.\n[See how your data is managed...](#)")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("Game Center")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

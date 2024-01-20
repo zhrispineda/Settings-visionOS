@@ -19,7 +19,7 @@ struct ReaderView: View {
                 Text("Automatically Use Reader On")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Reader")

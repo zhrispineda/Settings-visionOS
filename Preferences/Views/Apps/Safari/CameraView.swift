@@ -31,7 +31,7 @@ struct CameraView: View {
                 Text("Camera Access On All Websites")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Camera")

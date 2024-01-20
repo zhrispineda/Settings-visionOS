@@ -144,7 +144,7 @@ struct SafariView: View {
                 NavigationLink("Advanced", destination: AdvancedView())
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("Safari")
         .toolbar {
             ToolbarItem(placement: .principal, content: {

@@ -20,7 +20,7 @@ struct VersionView: View {
                 Text("visionOS Version")
             })
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], 45)
         .navigationTitle("visionOS Version")
         .toolbar {
             ToolbarItem(placement: .principal, content: {
