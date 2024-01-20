@@ -30,6 +30,9 @@
 		832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */; };
 		832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */; };
 		832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54662B5C8DE800BC877C /* TimeZoneView.swift */; };
+		832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */; };
+		832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A546A2B5C8FCF00BC877C /* SyncView.swift */; };
+		832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A546C2B5C907000BC877C /* DefaultAlertTimesView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -111,6 +114,9 @@
 		832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOtherAccountView.swift; sourceTree = "<group>"; };
 		832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneOverrideView.swift; sourceTree = "<group>"; };
 		832A54662B5C8DE800BC877C /* TimeZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneView.swift; sourceTree = "<group>"; };
+		832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternateCalendarsView.swift; sourceTree = "<group>"; };
+		832A546A2B5C8FCF00BC877C /* SyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncView.swift; sourceTree = "<group>"; };
+		832A546C2B5C907000BC877C /* DefaultAlertTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlertTimesView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -220,6 +226,9 @@
 				832A54652B5C8DD900BC877C /* Time Zone Override */,
 				832A545C2B5C841D00BC877C /* AddAccountView.swift */,
 				832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */,
+				832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */,
+				832A546A2B5C8FCF00BC877C /* SyncView.swift */,
+				832A546C2B5C907000BC877C /* DefaultAlertTimesView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -523,6 +532,7 @@
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
@@ -537,8 +547,10 @@
 				830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */,
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
+				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
 				839EA8212B59D1860099BCAA /* PhotosView.swift in Sources */,
+				832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
