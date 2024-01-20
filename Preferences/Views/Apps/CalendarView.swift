@@ -20,7 +20,7 @@ struct CalendarView: View {
             
             Section {
                 ZStack(alignment: .leading) {
-                    NavigationLink("", destination: {})
+                    NavigationLink("", destination: AddAccountView())
                     .opacity(0)
                     Text("Add Account...")
                 }
