@@ -21,7 +21,7 @@ struct AdvancedView: View {
             }
             
             Section(content: {
-                ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AnyView(AdvancedTrackingFingerprintingProtectionView()))
                 Toggle("Block All Cookies", isOn: $blockAllCookiesEnabled)
                 Toggle("Privacy Preseving Ad Measurement", isOn: $privacyPreservingAdMeasurementEnabled)
                 Toggle("Check for Apple Pay", isOn: $checkForApplePayEnabled)
