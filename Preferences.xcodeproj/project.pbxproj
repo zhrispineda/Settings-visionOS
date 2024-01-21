@@ -39,6 +39,10 @@
 		832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54752B5C946000BC877C /* DurationNewEventsView.swift */; };
 		832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54772B5C950A00BC877C /* StartWeekOnView.swift */; };
 		834111CD2B5D9D5300366689 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111CC2B5D9D5300366689 /* MapsView.swift */; };
+		834111D02B5DA05C00366689 /* DrivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111CF2B5DA05C00366689 /* DrivingView.swift */; };
+		834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D12B5DA0EA00366689 /* WalkingView.swift */; };
+		834111D42B5DA17600366689 /* TransitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D32B5DA17600366689 /* TransitView.swift */; };
+		834111D62B5DA46500366689 /* CyclingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D52B5DA46500366689 /* CyclingView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -129,6 +133,10 @@
 		832A54752B5C946000BC877C /* DurationNewEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationNewEventsView.swift; sourceTree = "<group>"; };
 		832A54772B5C950A00BC877C /* StartWeekOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWeekOnView.swift; sourceTree = "<group>"; };
 		834111CC2B5D9D5300366689 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		834111CF2B5DA05C00366689 /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
+		834111D12B5DA0EA00366689 /* WalkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingView.swift; sourceTree = "<group>"; };
+		834111D32B5DA17600366689 /* TransitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitView.swift; sourceTree = "<group>"; };
+		834111D52B5DA46500366689 /* CyclingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -274,6 +282,17 @@
 			path = "Default Alert Times";
 			sourceTree = "<group>";
 		};
+		834111CE2B5DA02900366689 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				834111CF2B5DA05C00366689 /* DrivingView.swift */,
+				834111D12B5DA0EA00366689 /* WalkingView.swift */,
+				834111D32B5DA17600366689 /* TransitView.swift */,
+				834111D52B5DA46500366689 /* CyclingView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		835B93422B48904100E96BE3 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +355,7 @@
 			children = (
 				83CAF1372B5A0550007A5E22 /* Safari */,
 				832A54592B5C7E2300BC877C /* Calendar */,
+				834111CE2B5DA02900366689 /* Maps */,
 				839EA81A2B59C85E0099BCAA /* FreeformView.swift */,
 				839EA8202B59D1860099BCAA /* PhotosView.swift */,
 				839EA8222B59D8340099BCAA /* SafariView.swift */,
@@ -554,6 +574,7 @@
 				83FEB71F2B5AEA6D0028D308 /* MicrophoneView.swift in Sources */,
 				83FEB7062B5ADDD10028D308 /* FavoritesView.swift in Sources */,
 				839EA81F2B59CE520099BCAA /* SiriSearchAppView.swift in Sources */,
+				834111D62B5DA46500366689 /* CyclingView.swift in Sources */,
 				830602E82B5837B0007B7529 /* TextReplacementView.swift in Sources */,
 				83FEB71D2B5AEA080028D308 /* CameraView.swift in Sources */,
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
@@ -566,6 +587,7 @@
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
+				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
 				832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */,
 				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,
@@ -608,6 +630,7 @@
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
 				839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */,
+				834111D02B5DA05C00366689 /* DrivingView.swift in Sources */,
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
@@ -618,6 +641,7 @@
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
+				834111D42B5DA17600366689 /* TransitView.swift in Sources */,
 				83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */,
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,

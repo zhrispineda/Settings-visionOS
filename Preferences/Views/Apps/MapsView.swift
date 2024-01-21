@@ -10,7 +10,6 @@ import SwiftUI
 struct MapsView: View {
     // Variables
     @State private var selectedOption: String? = "Driving"
-
     let options = ["Driving", "Walking", "Transit", "Cycling"]
     
     @State private var airQualityIndexEnabled = true
@@ -40,10 +39,10 @@ struct MapsView: View {
             })
             
             Section(content: {
-                NavigationLink("Driving", destination: {})
-                NavigationLink("Walking", destination: {})
-                NavigationLink("Transit", destination: {})
-                NavigationLink("Cycling", destination: {})
+                NavigationLink("Driving", destination: DrivingView())
+                NavigationLink("Walking", destination: WalkingView())
+                NavigationLink("Transit", destination: TransitView())
+                NavigationLink("Cycling", destination: CyclingView())
             }, header: {
                 Text("Directions")
             })
