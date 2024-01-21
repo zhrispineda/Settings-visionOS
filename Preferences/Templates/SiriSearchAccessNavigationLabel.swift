@@ -25,8 +25,22 @@ struct SiriSearchAccessNavigationLabel: View {
                     Text("Siri & Search")
                 }
             })
+            if appName == "Maps" {
+                HStack {
+                    Image(systemName: "gear.circle.fill")
+                        .font(.largeTitle)
+                        .fontWeight(.light)
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(.white.gradient, .gray.gradient)
+                    Toggle("Background App Refresh", isOn: .constant(true))
+                }
+            }
         }, header: {
             Text("Allow \(appName) To Access")
+        }, footer: {
+            if appName == "Maps" {
+                Text("[About Apple Maps & Privacy](#)")
+            }
         })
     }
 }
