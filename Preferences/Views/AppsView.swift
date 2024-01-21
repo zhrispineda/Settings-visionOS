@@ -20,7 +20,7 @@ struct AppsView: View {
                 Section(content: {
                     ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: AnyView(CalendarView()))
                     ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps", content: AnyView(MapsView()))
-                    ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News")
+                    ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News", content: AnyView(NewsView()))
                     ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts")
                 }, header: {
                     Text("Compatible Apps")

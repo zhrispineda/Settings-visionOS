@@ -13,6 +13,8 @@ import SwiftUI
 struct SiriSearchAccessNavigationLabel: View {
     var appName: String = "App"
     
+    let backgroundAppRefreshApps: [String] = ["Maps", "News"]
+    
     var body: some View {
         Section(content: {
             NavigationLink(destination: SiriSearchAppView(appName: appName), label: {
@@ -25,7 +27,7 @@ struct SiriSearchAccessNavigationLabel: View {
                     Text("Siri & Search")
                 }
             })
-            if appName == "Maps" {
+            if backgroundAppRefreshApps.contains(appName) {
                 HStack {
                     Image(systemName: "gear.circle.fill")
                         .font(.largeTitle)
