@@ -38,6 +38,7 @@ struct DisplayOrderView: View {
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
+                .offset(x: -40)
             })
         }
     }

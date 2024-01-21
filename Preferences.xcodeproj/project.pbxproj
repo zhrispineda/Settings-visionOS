@@ -52,6 +52,7 @@
 		834111E72B5DB29500366689 /* ShortNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111E62B5DB29500366689 /* ShortNameView.swift */; };
 		834111E92B5DB39000366689 /* BlockedContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111E82B5DB39000366689 /* BlockedContacts.swift */; };
 		834111EC2B5DB49400366689 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111EB2B5DB49400366689 /* AppearanceView.swift */; };
+		834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111EE2B5DB5A600366689 /* ScreenSharingView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -155,6 +156,7 @@
 		834111E62B5DB29500366689 /* ShortNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNameView.swift; sourceTree = "<group>"; };
 		834111E82B5DB39000366689 /* BlockedContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedContacts.swift; sourceTree = "<group>"; };
 		834111EB2B5DB49400366689 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		834111EE2B5DB5A600366689 /* ScreenSharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSharingView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -338,6 +340,14 @@
 			path = Environments;
 			sourceTree = "<group>";
 		};
+		834111ED2B5DB54E00366689 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				834111EE2B5DB5A600366689 /* ScreenSharingView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		835B93422B48904100E96BE3 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +471,7 @@
 				839EA8192B59C83F0099BCAA /* Apps */,
 				834111E12B5DB0DA00366689 /* People */,
 				834111EA2B5DB47A00366689 /* Environments */,
+				834111ED2B5DB54E00366689 /* Notifications */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
@@ -649,6 +660,7 @@
 				837F10552B533F3400CB8FCD /* FocusView.swift in Sources */,
 				837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
+				834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */,
 				832A54702B5C91F100BC877C /* BirthdaysView.swift in Sources */,

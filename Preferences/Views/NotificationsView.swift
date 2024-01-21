@@ -11,7 +11,7 @@ struct NotificationsView: View {
     var body: some View {
         NavigationStack {
             List {
-                ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: AnyView(ScreenSharingView()))
                 
                 Section(content: {
                     NavigationLink(destination: {}, label: {
