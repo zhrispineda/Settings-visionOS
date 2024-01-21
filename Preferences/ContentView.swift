@@ -135,21 +135,19 @@ struct ContentView: View {
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                             } else if setting.icon == "applegamecenter" {
-                                ZStack {
-                                    Circle().foregroundColor(.white)
-                                        .frame(height: 30)
-                                    Image(setting.icon)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 20)
-                                        .padding(.leading, 2)
-                                }
+                                Image(setting.icon)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 27, height: 27)
+                                    .clipShape(Circle())
+                                    .padding(.horizontal, 3)
                             } else if setting.icon == "applewallet" {
                                 Image(setting.icon)
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 30)
-                                    .padding(.leading, 2)
+                                    .padding(.leading, 1)
+                                    .padding(.trailing, 3)
                             } else {
                                 Image(systemName: setting.icon)
                                     .font(.largeTitle)

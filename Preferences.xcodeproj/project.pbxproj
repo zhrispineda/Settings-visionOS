@@ -53,6 +53,7 @@
 		834111E92B5DB39000366689 /* BlockedContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111E82B5DB39000366689 /* BlockedContacts.swift */; };
 		834111EC2B5DB49400366689 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111EB2B5DB49400366689 /* AppearanceView.swift */; };
 		834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111EE2B5DB5A600366689 /* ScreenSharingView.swift */; };
+		834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111F02B5DB7FA00366689 /* AppNotificationsView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -157,6 +158,7 @@
 		834111E82B5DB39000366689 /* BlockedContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedContacts.swift; sourceTree = "<group>"; };
 		834111EB2B5DB49400366689 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		834111EE2B5DB5A600366689 /* ScreenSharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSharingView.swift; sourceTree = "<group>"; };
+		834111F02B5DB7FA00366689 /* AppNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationsView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */,
 				839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */,
 				832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */,
+				834111F02B5DB7FA00366689 /* AppNotificationsView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
+				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,

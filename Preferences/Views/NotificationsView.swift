@@ -11,21 +11,16 @@ struct NotificationsView: View {
     var body: some View {
         NavigationStack {
             List {
-                ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: AnyView(ScreenSharingView()))
+                Section {
+                    ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: AnyView(ScreenSharingView()))
+                }
                 
                 Section(content: {
-                    NavigationLink(destination: {}, label: {
-                        HStack(alignment: .center) {
-                            Image(systemName: "questionmark.circle.fill")
-                                .font(.largeTitle)
-                            VStack(alignment: .leading) {
-                                Text("FaceTime")
-                                Text("Banners, Sounds, Badges")
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    })
+                    ListRowNavigationImageLabel(image: "appicon", title: "FaceTime", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "FaceTime")))
+                    ListRowNavigationImageLabel(image: "applegamecenter", title: "Game Center", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "Game Center")))
+                    ListRowNavigationImageLabel(image: "applehome", title: "Home", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(appName: "Home")))
+                    ListRowNavigationImageLabel(image: "applephotos", title: "Photos", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "Photos")))
+                    ListRowNavigationImageLabel(image: "applewallet", title: "Wallet", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(appName: "Wallet")))
                 }, header: {
                     Text("Notification Style")
                 })
