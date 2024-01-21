@@ -20,11 +20,18 @@ struct PeopleView: View {
                 }
                 
                 Section {
-                    ListRowNavigationLabel(title: "Sort Order", subtitle: "Last, First", content: AnyView(EmptyView()))
-                    ListRowNavigationLabel(title: "Display Order", subtitle: "First, Last", content: AnyView(EmptyView()))
-                    NavigationLink("Short Name", destination: EmptyView())
-                    NavigationLink("My Info", destination: EmptyView())
-                    NavigationLink("Blocked Contacts", destination: EmptyView())
+                    ListRowNavigationLabel(title: "Sort Order", subtitle: "Last, First", content: AnyView(SortOrderView()))
+                    ListRowNavigationLabel(title: "Display Order", subtitle: "First, Last", content: AnyView(DisplayOrderView()))
+                    NavigationLink("Short Name", destination: ShortNameView())
+                    // TODO: Popover for My Info
+                    Button(action: {}, label: {
+                        HStack {
+                            Text("My Info")
+                            Spacer()
+                            Image(systemName: "chevron.right").foregroundStyle(.secondary)
+                        }
+                    })
+                    NavigationLink("Blocked Contacts", destination: BlockedContacts())
                 }
             }
             .padding([.leading, .trailing], 45)
