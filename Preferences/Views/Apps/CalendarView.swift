@@ -34,8 +34,8 @@ struct CalendarView: View {
                 Toggle("Show Invitee Declines", isOn: $showInviteeDeclinesEnabled)
                 ListRowNavigationLabel(title: "Sync", subtitle: "All Events", content: AnyView(SyncView()))
                 NavigationLink("Default Alert Times", destination: DefaultAlertTimesView())
-                ListRowNavigationLabel(title: "Duration for New Events", subtitle: "1 hour", content: AnyView(EmptyView()))
-                NavigationLink("Start Week On", destination: {})
+                ListRowNavigationLabel(title: "Duration for New Events", subtitle: "1 hour", content: AnyView(DurationNewEventsView()))
+                NavigationLink("Start Week On", destination: StartWeekOnView())
                 Toggle("Location Suggestions", isOn: $locationSuggestionsEnabled)
             }
         }
