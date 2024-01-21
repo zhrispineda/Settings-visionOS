@@ -12,7 +12,11 @@ struct PeopleView: View {
         NavigationStack {
             List {
                 Section {
-                    Button("Add Account...", action: { print("Add Account pressed") })
+                    ZStack(alignment: .leading) {
+                        NavigationLink("", destination: AddAccountView())
+                        .opacity(0)
+                        Text("Add Account...")
+                    }
                 }
                 
                 Section {

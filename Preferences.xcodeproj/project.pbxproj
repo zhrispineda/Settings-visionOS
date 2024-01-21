@@ -250,10 +250,8 @@
 		832A54592B5C7E2300BC877C /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				832A54602B5C8B3F00BC877C /* Add Account */,
 				832A54652B5C8DD900BC877C /* Time Zone Override */,
 				832A546E2B5C91DB00BC877C /* Default Alert Times */,
-				832A545C2B5C841D00BC877C /* AddAccountView.swift */,
 				832A54632B5C8CD900BC877C /* TimeZoneOverrideView.swift */,
 				832A54682B5C8E9F00BC877C /* AlternateCalendarsView.swift */,
 				832A546A2B5C8FCF00BC877C /* SyncView.swift */,
@@ -262,14 +260,6 @@
 				832A54772B5C950A00BC877C /* StartWeekOnView.swift */,
 			);
 			path = Calendar;
-			sourceTree = "<group>";
-		};
-		832A54602B5C8B3F00BC877C /* Add Account */ = {
-			isa = PBXGroup;
-			children = (
-				832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */,
-			);
-			path = "Add Account";
 			sourceTree = "<group>";
 		};
 		832A54652B5C8DD900BC877C /* Time Zone Override */ = {
@@ -308,6 +298,15 @@
 				834111DE2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift */,
 			);
 			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		834111E02B5DAFB400366689 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				832A54612B5C8B5000BC877C /* AddOtherAccountView.swift */,
+				832A545C2B5C841D00BC877C /* AddAccountView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		835B93422B48904100E96BE3 /* General */ = {
@@ -428,6 +427,7 @@
 		83AB15C32B44F6DE002DCD7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				834111E02B5DAFB400366689 /* Shared */,
 				835B93422B48904100E96BE3 /* General */,
 				839EA8192B59C83F0099BCAA /* Apps */,
 				83FF013D2B52019500CC2CE8 /* Developer */,

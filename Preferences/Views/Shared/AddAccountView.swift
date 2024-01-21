@@ -3,6 +3,7 @@
 //  Preferences
 //
 //  Settings > Apps > Calendar > Add Account
+//  Settings > People > Add Account
 //
 
 import SwiftUI
