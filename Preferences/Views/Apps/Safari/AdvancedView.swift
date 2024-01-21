@@ -10,6 +10,7 @@ import SwiftUI
 struct AdvancedView: View {
     // Variables
     @State private var blockAllCookiesEnabled = false
+    @State private var showingBlockCookiesAlert = false
     @State private var privacyPreservingAdMeasurementEnabled = true
     @State private var checkForApplePayEnabled = true
     @State private var javaScriptEnabled = true
@@ -23,6 +24,15 @@ struct AdvancedView: View {
             Section(content: {
                 ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AnyView(AdvancedTrackingFingerprintingProtectionView()))
                 Toggle("Block All Cookies", isOn: $blockAllCookiesEnabled)
+                    .onChange(of: blockAllCookiesEnabled, {
+                        showingBlockCookiesAlert = blockAllCookiesEnabled
+                    })
+                    .alert("Are you sure you want to\nblock all cookies?", isPresented: $showingBlockCookiesAlert) {
+                        Button("Block All", role: .destructive) {}
+                        Button("Cancel", role: .cancel) { blockAllCookiesEnabled = false }
+                    } message: {
+                        Text("Websites may not work if you do this.\nIt will remove existing cookies and website data. Safari will quit and your tabs will be reloaded.")
+                    }
                 Toggle("Privacy Preseving Ad Measurement", isOn: $privacyPreservingAdMeasurementEnabled)
                 Toggle("Check for Apple Pay", isOn: $checkForApplePayEnabled)
             }, header: {

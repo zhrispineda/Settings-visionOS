@@ -31,7 +31,9 @@ struct SiriSearchAppView: View {
             
             Section(content: {
                 Toggle("Show App in Search", isOn: $showAppInSearchEnabled)
-                Toggle("Show Content in Search", isOn: $showAppInSearchEnabled)
+                if showAppInSearchEnabled {
+                    Toggle("Show Content in Search", isOn: $showContentInSearchEnabled)
+                }
             }, header: {
                 Text("While Searching")
             }, footer: {
