@@ -141,7 +141,7 @@ struct SafariView: View {
             })
             
             Section {
-                NavigationLink("Advanced", destination: AdvancedView())
+                NavigationLink("Advanced", destination: SafariAdvancedView())
             }
         }
         .padding([.leading, .trailing], 45)

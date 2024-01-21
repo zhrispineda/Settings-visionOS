@@ -21,7 +21,7 @@ struct AppsView: View {
                     ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: AnyView(CalendarView()))
                     ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps", content: AnyView(MapsView()))
                     ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News", content: AnyView(NewsView()))
-                    ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts")
+                    ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts", content: AnyView(ShortcutsView()))
                 }, header: {
                     Text("Compatible Apps")
                 })

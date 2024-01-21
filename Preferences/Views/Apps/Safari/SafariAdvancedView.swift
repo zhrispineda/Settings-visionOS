@@ -1,5 +1,5 @@
 //
-//  AdvancedView.swift
+//  SafariAdvancedView.swift
 //  Preferences
 //
 //  Settings > Apps > Safari > Advanced
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AdvancedView: View {
+struct SafariAdvancedView: View {
     // Variables
     @State private var blockAllCookiesEnabled = false
     @State private var showingBlockCookiesAlert = false
@@ -62,5 +62,5 @@ struct AdvancedView: View {
 }
 
 #Preview {
-    AdvancedView()
+    SafariAdvancedView()
 }

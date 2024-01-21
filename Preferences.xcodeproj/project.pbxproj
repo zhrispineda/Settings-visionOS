@@ -44,6 +44,9 @@
 		834111D42B5DA17600366689 /* TransitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D32B5DA17600366689 /* TransitView.swift */; };
 		834111D62B5DA46500366689 /* CyclingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D52B5DA46500366689 /* CyclingView.swift */; };
 		834111D82B5DA68B00366689 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D72B5DA68B00366689 /* NewsView.swift */; };
+		834111DA2B5DA8B200366689 /* ShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111D92B5DA8B200366689 /* ShortcutsView.swift */; };
+		834111DD2B5DA9BC00366689 /* ShortcutsAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111DC2B5DA9BC00366689 /* ShortcutsAdvancedView.swift */; };
+		834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834111DE2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift */; };
 		8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACDE2B4F8468002B980C /* NotificationsView.swift */; };
 		8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347ACE02B4F8750002B980C /* DeveloperView.swift */; };
 		834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A448A2B45FC2A00690818 /* GeneralView.swift */; };
@@ -93,7 +96,7 @@
 		83FEB71D2B5AEA080028D308 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB71C2B5AEA080028D308 /* CameraView.swift */; };
 		83FEB71F2B5AEA6D0028D308 /* MicrophoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */; };
 		83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7202B5AEADA0028D308 /* LocationView.swift */; };
-		83FEB7232B5AEBC50028D308 /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7222B5AEBC50028D308 /* AdvancedView.swift */; };
+		83FEB7232B5AEBC50028D308 /* SafariAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB7222B5AEBC50028D308 /* SafariAdvancedView.swift */; };
 		83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF013E2B52023200CC2CE8 /* TVAppView.swift */; };
 		83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01402B52026B00CC2CE8 /* TVProviderView.swift */; };
 		83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */; };
@@ -139,6 +142,9 @@
 		834111D32B5DA17600366689 /* TransitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitView.swift; sourceTree = "<group>"; };
 		834111D52B5DA46500366689 /* CyclingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingView.swift; sourceTree = "<group>"; };
 		834111D72B5DA68B00366689 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		834111D92B5DA8B200366689 /* ShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsView.swift; sourceTree = "<group>"; };
+		834111DC2B5DA9BC00366689 /* ShortcutsAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsAdvancedView.swift; sourceTree = "<group>"; };
+		834111DE2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsLegalNoticesView.swift; sourceTree = "<group>"; };
 		8347ACDE2B4F8468002B980C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		8347ACE02B4F8750002B980C /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		834A448A2B45FC2A00690818 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -191,7 +197,7 @@
 		83FEB71C2B5AEA080028D308 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneView.swift; sourceTree = "<group>"; };
 		83FEB7202B5AEADA0028D308 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
-		83FEB7222B5AEBC50028D308 /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
+		83FEB7222B5AEBC50028D308 /* SafariAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariAdvancedView.swift; sourceTree = "<group>"; };
 		83FF013E2B52023200CC2CE8 /* TVAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppView.swift; sourceTree = "<group>"; };
 		83FF01402B52026B00CC2CE8 /* TVProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProviderView.swift; sourceTree = "<group>"; };
 		83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApplePayView.swift; sourceTree = "<group>"; };
@@ -295,6 +301,15 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		834111DB2B5DA9A700366689 /* Shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				834111DC2B5DA9BC00366689 /* ShortcutsAdvancedView.swift */,
+				834111DE2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift */,
+			);
+			path = Shortcuts;
+			sourceTree = "<group>";
+		};
 		835B93422B48904100E96BE3 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,12 +373,14 @@
 				83CAF1372B5A0550007A5E22 /* Safari */,
 				832A54592B5C7E2300BC877C /* Calendar */,
 				834111CE2B5DA02900366689 /* Maps */,
+				834111DB2B5DA9A700366689 /* Shortcuts */,
 				839EA81A2B59C85E0099BCAA /* FreeformView.swift */,
 				839EA8202B59D1860099BCAA /* PhotosView.swift */,
 				839EA8222B59D8340099BCAA /* SafariView.swift */,
 				832A545A2B5C7E6800BC877C /* CalendarView.swift */,
 				834111CC2B5D9D5300366689 /* MapsView.swift */,
 				834111D72B5DA68B00366689 /* NewsView.swift */,
+				834111D92B5DA8B200366689 /* ShortcutsView.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -457,7 +474,7 @@
 				83FEB71C2B5AEA080028D308 /* CameraView.swift */,
 				83FEB71E2B5AEA6D0028D308 /* MicrophoneView.swift */,
 				83FEB7202B5AEADA0028D308 /* LocationView.swift */,
-				83FEB7222B5AEBC50028D308 /* AdvancedView.swift */,
+				83FEB7222B5AEBC50028D308 /* SafariAdvancedView.swift */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -567,7 +584,7 @@
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
 				83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
-				83FEB7232B5AEBC50028D308 /* AdvancedView.swift in Sources */,
+				83FEB7232B5AEBC50028D308 /* SafariAdvancedView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
 				834111CD2B5D9D5300366689 /* MapsView.swift in Sources */,
@@ -584,6 +601,7 @@
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */,
 				832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */,
 				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
@@ -605,12 +623,14 @@
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,
+				834111DD2B5DA9BC00366689 /* ShortcutsAdvancedView.swift in Sources */,
 				83DB44EC2B4C4F9D0081852F /* ListRowNavigationLabel.swift in Sources */,
 				839EA8212B59D1860099BCAA /* PhotosView.swift in Sources */,
 				832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
+				834111DA2B5DA8B200366689 /* ShortcutsView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
 				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
 				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
