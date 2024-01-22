@@ -86,6 +86,7 @@
 		83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175682B5EFBE200BA98FA /* ScheduleView.swift */; };
 		83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1756A2B5F085B00BA98FA /* MindfulnessView.swift */; };
 		83C1756D2B5F0A8000BA98FA /* SmartActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1756C2B5F0A8000BA98FA /* SmartActivationView.swift */; };
+		83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175702B5F11B900BA98FA /* FocusStatusView.swift */; };
 		83C55CAB2B5229E500569896 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55CAA2B5229E500569896 /* StorageView.swift */; };
 		83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAF1382B5A0563007A5E22 /* SearchEngineView.swift */; };
 		83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D4D9642B5DF05000081A31 /* BannerStyleView.swift */; };
@@ -205,6 +206,7 @@
 		83C175682B5EFBE200BA98FA /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		83C1756A2B5F085B00BA98FA /* MindfulnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessView.swift; sourceTree = "<group>"; };
 		83C1756C2B5F0A8000BA98FA /* SmartActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartActivationView.swift; sourceTree = "<group>"; };
+		83C175702B5F11B900BA98FA /* FocusStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStatusView.swift; sourceTree = "<group>"; };
 		83C55CAA2B5229E500569896 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		83CAF1382B5A0563007A5E22 /* SearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineView.swift; sourceTree = "<group>"; };
 		83D4D9642B5DF05000081A31 /* BannerStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerStyleView.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				83C175612B5EF0DE00BA98FA /* Subviews */,
+				83C175702B5F11B900BA98FA /* FocusStatusView.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
+				83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
 				83D4D9672B5DF05C00081A31 /* SoundsView.swift in Sources */,
 				834111DA2B5DA8B200366689 /* ShortcutsView.swift in Sources */,
