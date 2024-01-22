@@ -22,7 +22,7 @@ struct FocusPreferencesView: View {
         List {
             Section(content: {
                 ListRowNavigationIconLabel(title: "Allowed People", subtitle: "None allowed", content: AnyView(AllowedPeopleView()))
-                ListRowNavigationIconLabel(title: "Allowed Apps", subtitle: "None allowed")
+                ListRowNavigationIconLabel(title: "Allowed Apps", subtitle: "None allowed", content: AnyView(AllowedAppsView()))
             }, header: {
                 VStack {
                     HStack {
