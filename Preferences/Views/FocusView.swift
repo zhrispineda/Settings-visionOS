@@ -13,7 +13,7 @@ struct FocusView: View {
             Section(content: {
                 // Do Not Disturb
                 NavigationLink {
-                    Text("Do Not Disturb")
+                    FocusPreferencesView(focusName: "Do Not Disturb", icon: "moon.circle.fill", color: .indigo)
                 } label: {
                     HStack {
                         Image(systemName: "moon.fill").imageScale(.large)
@@ -111,6 +111,7 @@ struct FocusView: View {
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
+                .offset(x: 40)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 Button("\(Image(systemName: "plus"))", action: {})

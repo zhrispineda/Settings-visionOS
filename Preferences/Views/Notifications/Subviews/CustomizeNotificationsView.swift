@@ -2,7 +2,7 @@
 //  CustomizeNotificationsView.swift
 //  Preferences
 //
-//  Created by Chris on 1/21/24.
+//  Settings > Notifications > Photos > Customize Notifications
 //
 
 import SwiftUI

@@ -13,29 +13,50 @@ import SwiftUI
 struct ListRowNavigationIconLabel: View {
     // Variables
     var color: Color = Color.gray
-    var icon: String = "questionmark.circle.fill"
-    var title: String = "Title"
+    var icon: String = String()
+    var title: String = String()
+    var subtitle: String = String()
+    var status: String = String()
     var content: AnyView = AnyView(EmptyView())
     
     var body: some View {
         NavigationLink(destination: {
             content
         }, label: {
-            if UIImage(systemName: icon) != nil { // If an SF Symbol
-                Image(systemName: icon)
-                    .font(.largeTitle)
-                    .fontWeight(.light)
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(.white.gradient, color.gradient)
-            } else { // If an image asset
-                Image(icon)
-                    .font(.largeTitle)
-                    .fontWeight(.light)
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(.white.gradient, color.gradient)
+            HStack {
+                if UIImage(systemName: icon) != nil { // If SF Symbol
+                    if icon == "clock.fill" {
+                        Image(systemName: icon)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .foregroundStyle(color)
+                    } else {
+                        Image(systemName: icon)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.white.gradient, color.gradient)
+                    }
+                } else { // If image asset
+                    Image(icon)
+                        .font(.largeTitle)
+                        .fontWeight(.light)
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(.white.gradient, color.gradient)
+                }
+                VStack(alignment: .leading) {
+                    Text(title)
+                    if !subtitle.isEmpty {
+                        Text(subtitle)
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                Spacer()
+                if !status.isEmpty {
+                    Text(status).foregroundStyle(.secondary)
+                }
             }
-            
-            Text(title)
         })
     }
 }
