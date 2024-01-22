@@ -42,7 +42,7 @@ struct FocusPreferencesView: View {
             })
             
             Section(content: {
-                ListRowNavigationIconLabel(color: .indigo, icon: "clock.fill", title: "12:00 AM", subtitle: "Every day", status: "Off")
+                ListRowNavigationIconLabel(color: .indigo, icon: "clock.fill", title: "12:00 AM", subtitle: "Every day", status: "Off", content: AnyView(ScheduleView()))
                 // Add popover for button
                 Button(action: {}, label: {
                     Label("Add Schedule", image: "")
