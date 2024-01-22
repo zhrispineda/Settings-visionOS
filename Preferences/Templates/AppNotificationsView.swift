@@ -15,8 +15,9 @@ struct AppNotificationsView: View {
     @State private var allowNotificationsEnabled = true
     @State private var timeSensitiveNotificationsEnabled = true
     @State private var notificationCenterEnabled = true
-    @State private var bannersEnabled = true
-    @State private var badgesEnabled = true
+    @State var bannersEnabled = true
+    @State var soundsEnabled = true
+    @State var badgesEnabled = true
     var appName: String = "App"
     
     var body: some View {
@@ -25,18 +26,20 @@ struct AppNotificationsView: View {
                 Toggle("Allow Notifications", isOn: $allowNotificationsEnabled)
             }
             
-            Section(content: {
-                Toggle(isOn: $timeSensitiveNotificationsEnabled, label: {
-                    HStack(spacing: 15) {
-                        Image(systemName: "clock.fill")
-                            .font(.title2)
-                            .foregroundStyle(.yellow)
-                        Text("Time Sensitive Notifications")
-                    }
+            if appName != "Photos" {
+                Section(content: {
+                    Toggle(isOn: $timeSensitiveNotificationsEnabled, label: {
+                        HStack(spacing: 15) {
+                            Image(systemName: "clock.fill")
+                                .font(.title2)
+                                .foregroundStyle(.yellow)
+                            Text("Time Sensitive Notifications")
+                        }
+                    })
+                }, header: {
+                    Text("Always Deliver Immediately")
                 })
-            }, header: {
-                Text("Always Deliver Immediately")
-            })
+            }
             
             Section(content: {
                 Toggle("Notification Center", isOn: $notificationCenterEnabled)
@@ -45,17 +48,30 @@ struct AppNotificationsView: View {
                 Text("Alerts")
             })
             
-            Section {
-                ListRowNavigationLabel(title: "Banner Style", subtitle: "Temporary", content: AnyView(EmptyView()))
+            
+            if bannersEnabled {
+                Section {
+                    ListRowNavigationLabel(title: "Banner Style", subtitle: "Temporary", content: AnyView(BannerStyleView()))
+                }
             }
             
             Section {
-                ListRowNavigationLabel(title: "Sounds", subtitle: "Reflection", content: AnyView(EmptyView()))
+                if appName == "FaceTime" {
+                    ListRowNavigationLabel(title: "Sounds", subtitle: "Reflection", content: AnyView(SoundsView()))
+                } else {
+                    Toggle("Sounds", isOn: $soundsEnabled)
+                }
                 Toggle("Badges", isOn: $badgesEnabled)
             }
             
             Section {
-                ListRowNavigationLabel(title: "Notification Grouping", subtitle: "Automatic", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Notification Grouping", subtitle: "Automatic", content: AnyView(NotificationGroupingView()))
+            }
+            
+            if appName == "Photos" {
+                Section {
+                    NavigationLink("Customize Notifications", destination: CustomizeNotificationsView())
+                }
             }
         }
         .padding([.leading, .trailing], 45)
@@ -69,6 +85,7 @@ struct AppNotificationsView: View {
                 .offset(x: -40)
             })
         }
+        .navigationTitle(appName)
     }
 }
 

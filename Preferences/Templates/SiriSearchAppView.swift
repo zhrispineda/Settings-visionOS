@@ -66,8 +66,5 @@ struct SiriSearchAppView: View {
 }
 
 #Preview {
-    List {
-        SiriSearchAppView()
-    }
-    .padding()
+    SiriSearchAppView()
 }

@@ -18,9 +18,9 @@ struct NotificationsView: View {
                 Section(content: {
                     ListRowNavigationImageLabel(image: "appicon", title: "FaceTime", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "FaceTime")))
                     ListRowNavigationImageLabel(image: "applegamecenter", title: "Game Center", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "Game Center")))
-                    ListRowNavigationImageLabel(image: "applehome", title: "Home", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(appName: "Home")))
+                    ListRowNavigationImageLabel(image: "applehome", title: "Home", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(bannersEnabled: false, soundsEnabled: false, badgesEnabled: false, appName: "Home")))
                     ListRowNavigationImageLabel(image: "applephotos", title: "Photos", subtitle: "Banners, Sounds, Badges", content: AnyView(AppNotificationsView(appName: "Photos")))
-                    ListRowNavigationImageLabel(image: "applewallet", title: "Wallet", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(appName: "Wallet")))
+                    ListRowNavigationImageLabel(image: "applewallet", title: "Wallet", subtitle: "Deliver Quietly", content: AnyView(AppNotificationsView(bannersEnabled: false, soundsEnabled: false, badgesEnabled: false, appName: "Wallet")))
                 }, header: {
                     Text("Notification Style")
                 })
