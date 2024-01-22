@@ -26,7 +26,7 @@ struct FocusView: View {
                 
                 // Mindfulness
                 NavigationLink {
-                    Text("Mindfulness")
+                    FocusPreferencesView(focusName: "Mindfulness", icon: "circle.hexagongrid.circle.fill", color: .mint)
                 } label: {
                     HStack {
                         Image(systemName: "circle.hexagonpath").imageScale(.large)
@@ -41,7 +41,7 @@ struct FocusView: View {
                 
                 // Personal
                 NavigationLink {
-                    Text("Personal")
+                    FocusPreferencesView(focusName: "Personal", icon: "person.circle.fill", color: .purple)
                 } label: {
                     HStack {
                         Image(systemName: "person.fill").imageScale(.large)
@@ -56,7 +56,7 @@ struct FocusView: View {
                 
                 // Sleep
                 NavigationLink {
-                    Text("Sleep")
+                    FocusPreferencesView(focusName: "Sleep", icon: "bed.double.circle.fill", color: .cyan)
                 } label: {
                     HStack {
                         Image(systemName: "bed.double.fill").imageScale(.large)
@@ -71,7 +71,7 @@ struct FocusView: View {
                 
                 // Work
                 NavigationLink {
-                    Text("Work")
+                    FocusPreferencesView(focusName: "Work", icon: "person.crop.square.fill", color: .cyan)
                 } label: {
                     HStack {
                         Image(systemName: "person.crop.square.fill").imageScale(.large)

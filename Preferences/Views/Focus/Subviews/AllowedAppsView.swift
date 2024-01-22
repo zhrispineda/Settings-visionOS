@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AllowedAppsView: View {
     // Variables
+    var focusName = String()
     let notificationsFromSelections = ["Allow Some Apps", "Silence Some Apps"]
     @State private var notificationsFromSelection = "Allow Some Apps"
     @State private var timeSensitiveNotificationsEnabled = false
@@ -19,7 +20,7 @@ struct AllowedAppsView: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Notifications")
-                        Text("When Do Not Disturb in on, notifications from \(notificationsFromSelection == "Allow Some Apps" ? "apps you select will be allowed. All others" : "selected apps") will be silenced and sent to Notification Center.")
+                        Text("When \(focusName == "Do Not Disturb" ? "Do Not Disturb" : "\(focusName) Focus") in on, notifications from \(notificationsFromSelection == "Allow Some Apps" ? "apps you select will be allowed. All others" : "selected apps") will be silenced and sent to Notification Center.")
                             .foregroundStyle(.secondary)
                             .font(.subheadline)
                     }
@@ -50,7 +51,7 @@ struct AllowedAppsView: View {
             Section {
                 Toggle(isOn: $timeSensitiveNotificationsEnabled, label: {
                     Text("Time Sensitive Notifications")
-                    Text("Allow apps that are silenced to send notifications marked as Time Sensitive immediately.")
+                    Text("Allow apps \(focusName == "Personal" ? "not in your allowed list" : "that are silenced") to send notifications marked as Time Sensitive immediately.")
                 })
             }
         }

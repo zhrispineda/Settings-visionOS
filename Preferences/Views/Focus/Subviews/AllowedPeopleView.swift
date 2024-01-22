@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AllowedPeopleView: View {
     // Variables
+    var focusName = String()
     let notificationsFromSelections = ["Allow Some People", "Silence Some People"]
     let callsFromSelections = ["Everybody", "Allowed People Only", "Favorites", "Contacts Only"]
     @State private var notificationsFromSelection = "Allow Some People"
@@ -22,7 +23,7 @@ struct AllowedPeopleView: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Notifications")
-                        Text("When Do Not Disturb in on, notifications from \(notificationsFromSelection == "Allow Some People" ? "people you select will be allowed. All others" : "selected people") will be silenced and sent to Notification Center.")
+                        Text("When \(focusName == "Do Not Disturb" ? "Do Not Disturb" : "\(focusName) Focus") in on, notifications from \(notificationsFromSelection == "Allow Some People" ? "people you select will be allowed. All others" : "selected people") will be silenced and sent to Notification Center.")
                             .foregroundStyle(.secondary)
                             .font(.subheadline)
                     }
@@ -51,7 +52,7 @@ struct AllowedPeopleView: View {
             }
             
             Section {
-                if notificationsFromSelection == "Allow Some People" {
+                if notificationsFromSelection == "Allow Some People" && focusName != "Work" {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Allow calls from")
@@ -84,6 +85,12 @@ struct AllowedPeopleView: View {
                     }
                 } else {
                     Toggle("Allow Calls from Silenced People", isOn: $allowCallsSilencedPeopleEnabled)
+                    if focusName == "Work" {
+                        Toggle(isOn: $allowRepeatedCallsEnabled, label: {
+                            Text("Allow repeated calls")
+                            Text("A second call from the same person within three minutes will not be silenced.")
+                        })
+                    }
                 }
             }
         }
