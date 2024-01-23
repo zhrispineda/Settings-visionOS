@@ -40,7 +40,12 @@ struct TVProviderView: View {
                 Text("Development TV Providers")
             })
         }
-        .navigationTitle("TV Provider")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading, content: {
+                Text("TV Provider").font(.title2)
+            })
+        }
+        .padding([.leading, .trailing], 45)
     }
 }
 

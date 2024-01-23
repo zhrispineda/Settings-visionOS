@@ -66,9 +66,11 @@ struct StorageView: View {
             // Applications Section
             Section(content: {
                 NavigationLink(destination: {}, label: {
-                    HStack {
-                        Image(systemName: "calendar.circle.fill")
-                            .font(.title)
+                    HStack(spacing: 15) {
+                        Image("applecalendar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 32)
                         VStack(alignment: .leading) {
                             Text("Calendar")
                             Text("4.6 MB")
@@ -77,9 +79,11 @@ struct StorageView: View {
                     }
                 })
                 NavigationLink(destination: {}, label: {
-                    HStack {
-                        Image(systemName: "safari.fill")
-                            .font(.title)
+                    HStack(spacing: 15) {
+                        Image("applesafari")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 32)
                         VStack(alignment: .leading) {
                             Text("Safari")
                             Text("308 KB")
@@ -94,7 +98,7 @@ struct StorageView: View {
             // System Section
             Section {
                 NavigationLink(destination: {}, label: {
-                    HStack {
+                    HStack(spacing: 15) {
                         Image(systemName: "gear.circle.fill")
                             .font(.title)
                         VStack(alignment: .leading) {
@@ -105,7 +109,7 @@ struct StorageView: View {
                     }
                 })
                 NavigationLink(destination: {}, label: {
-                    HStack {
+                    HStack(spacing: 15) {
                         Image(systemName: "gear.circle.fill")
                             .font(.title)
                         VStack(alignment: .leading) {

@@ -24,7 +24,7 @@ struct FocusPreferencesView: View {
         List {
             Section(content: {
                 ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") People", subtitle: "None \(focusName == "Personal" ? "silenced" : "allowed")", content: AnyView(AllowedPeopleView(focusName: focusName)))
-                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") Apps", subtitle: "None\(focusName == "Personal" ? "" : " allowed")", content: AnyView(AllowedAppsView(focusName: focusName)))
+                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") Apps", subtitle: "None\(focusName == "Personal" ? "" : " allowed")", content: AnyView(FocusAllowedAppsView(focusName: focusName)))
             }, header: {
                 VStack {
                     HStack {

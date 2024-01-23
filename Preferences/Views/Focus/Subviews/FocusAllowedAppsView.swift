@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AllowedAppsView: View {
+struct FocusAllowedAppsView: View {
     // Variables
     var focusName = String()
     let notificationsFromSelections = ["Allow Some Apps", "Silence Some Apps"]
@@ -70,5 +70,5 @@ struct AllowedAppsView: View {
 }
 
 #Preview {
-    AllowedAppsView()
+    FocusAllowedAppsView()
 }

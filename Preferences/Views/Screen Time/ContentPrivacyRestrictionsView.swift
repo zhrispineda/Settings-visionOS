@@ -18,8 +18,8 @@ struct ContentPrivacyRestrictionsView: View {
             }
             
             Section {
-                NavigationLink("iTunes & App Store Purchases", destination: {})
-                NavigationLink("Allowed Apps", destination: {})
+                NavigationLink("iTunes & App Store Purchases", destination: PurchasesView())
+                NavigationLink("Allowed Apps", destination: RestrictionsAllowedAppsView())
                 NavigationLink("Content Restrictions", destination: {})
             }
             .disabled(!contentPrivacyRestrictionsEnabled)
@@ -63,6 +63,7 @@ struct ContentPrivacyRestrictionsView: View {
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
+                .offset(x: -40)
             })
         }
     }
