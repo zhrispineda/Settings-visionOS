@@ -11,7 +11,7 @@ struct ScreenTimeView: View {
     var body: some View {
         List {
             Section(content: {
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: ContentPrivacyRestrictionsView(), label: {
                     HStack {
                         Image("custom.nosign.circle.fill")
                             .font(.largeTitle)
@@ -28,12 +28,14 @@ struct ScreenTimeView: View {
             })
             
             Section(content: {
+                // TODO: Popover
                 Button("Lock Screen Time Settings", action: {})
             }, footer: {
                 Text("Use a passcode to secure Screen Time settings.")
             })
             
             Section(content: {
+                // TODO: Popover
                 Button("Use with Other Devices", action: {})
             }, footer: {
                 Text("Sign in to iCloud to report your screen time on any iPad or iPhone, or set up Family Sharing to use Screen Time with your family's devices.")
