@@ -9,18 +9,9 @@ import SwiftUI
 
 struct VPNDeviceManagementView: View {
     var body: some View {
-        Text("")
-            .navigationTitle("VPN & Device Management")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("VPN & Device Management")
-                            .font(.title)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .offset(x: -40)
-                })
-            }
+        CustomList(title: "VPN & Device Management") {
+            // Empty
+        }
     }
 }
 

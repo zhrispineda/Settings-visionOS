@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddAccountView: View {
     var body: some View {
-        List {
+        CustomList(title: "Add Account") {
             // TODO: Get transparent images for each service.
             ListRowAccountLabel(service: "iCloud") // Popover for Apple ID
             ListRowAccountLabel(service: "Microsoft Exchange") // Popover for Exchange
@@ -30,18 +30,6 @@ struct AddAccountView: View {
                 }
                 .padding(.vertical, 10)
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Add Account")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Add Account")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

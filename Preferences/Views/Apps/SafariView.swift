@@ -67,10 +67,13 @@ struct SafariView: View {
                         Text("Look to Show")
                             .padding(.bottom, 1)
                         // TODO: Missing functional radio buttons
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(.white, .blue)
-                            .font(.title)
-                            .fontWeight(.light)
+                        Button(action: { tabDisplayMode = 0 }, label: {
+                            Image(systemName: tabDisplayMode == 0 ? "checkmark.circle.fill" : "circle")
+                                .foregroundStyle(.white, .blue)
+                                .font(.title)
+                                .fontWeight(.light)
+                        })
+                        .buttonStyle(.plain)
                     }
                     Spacer()
                     VStack {
@@ -78,10 +81,13 @@ struct SafariView: View {
                         Text("Always Show")
                             .padding(.bottom, 1)
                         // TODO: Missing functional radio buttons
-                        Image(systemName: "circle")
-                            .foregroundStyle(.secondary)
-                            .font(.title)
-                            .fontWeight(.light)
+                        Button(action: { tabDisplayMode = 1 }, label: {
+                            Image(systemName: tabDisplayMode == 1 ? "checkmark.circle.fill" : "circle")
+                                .foregroundStyle(.white, .blue)
+                                .font(.title)
+                                .fontWeight(.light)
+                        })
+                        .buttonStyle(.plain)
                     }
                     Spacer()
                 }

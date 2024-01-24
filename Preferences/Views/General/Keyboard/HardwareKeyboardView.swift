@@ -14,7 +14,7 @@ struct HardwareKeyboardView: View {
     @State private var periodShortcutEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Hardware Keyboard") {
             Section {
                 ListRowNavigationLabel(title: "English", subtitle: "Automatic — U.S.", content: LanguageView())
             }
@@ -35,17 +35,6 @@ struct HardwareKeyboardView: View {
                 ListRowNavigationLabel(title: "Keyboard Type", subtitle: "ANSI", content: KeyboardTypeView())
             }, footer: {
                 Text("Your keyboard has been identified. IF this isn't the correct type for your keyboard, select the type.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Hardware Keyboard")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Hardware Keyboard")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

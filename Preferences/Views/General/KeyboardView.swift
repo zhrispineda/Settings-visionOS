@@ -25,7 +25,7 @@ struct KeyboardView: View {
     @State private var lookToDictateEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Keyboards") {
             Section {
                 ListRowNavigationLabel(title: "Keyboards", subtitle: "2", content: KeyboardsView())
                 NavigationLink("Hardware Keyboard", destination: HardwareKeyboardView())
@@ -91,18 +91,6 @@ struct KeyboardView: View {
                     Text("In Safari and supported search fields, focusing your eyes on the microphone will start Dictation.")
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Keyboards")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Keyboards")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

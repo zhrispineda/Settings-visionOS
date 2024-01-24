@@ -32,11 +32,9 @@ struct AddTextReplacementView: View {
         .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Text Replacement")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
+                Text("Text Replacement")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 Button("Save", action: {})

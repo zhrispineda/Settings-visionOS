@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddOtherAccountView: View {
     var body: some View {
-        List {
+        CustomList(title: "Add Account") {
             // TODO: Popovers for buttons
             Section(content: {
                 Button(action: {}, label: {
@@ -60,17 +60,6 @@ struct AddOtherAccountView: View {
                 })
             }, header: {
                 Text("Calendars")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Add Account")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

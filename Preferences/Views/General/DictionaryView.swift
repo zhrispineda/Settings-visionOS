@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DictionaryView: View {
     var body: some View {
-        List {
+        CustomList(title: "Dictionary") {
             // TODO: Create list of dictionaries and support selection.
             Label(
                 title: {
@@ -24,17 +24,6 @@ struct DictionaryView: View {
                         .offset(y: 10)
                 }
             )
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Dictionary")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

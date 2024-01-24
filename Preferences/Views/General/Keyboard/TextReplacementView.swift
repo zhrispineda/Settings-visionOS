@@ -20,7 +20,7 @@ struct TextReplacementView: View {
                 ForEach(0 ..< characters.count, id: \.self) { character in
                     Text(self.characters[character])
                         .foregroundStyle(.secondary)
-                        .font(.caption2)
+                        .font(.system(size: 12))
                 }
             }
         }

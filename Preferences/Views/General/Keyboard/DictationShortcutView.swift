@@ -13,7 +13,7 @@ struct DictationShortcutView: View {
     let options = ["Control", "Command", "None"]
     
     var body: some View {
-        List {
+        CustomList(title: "Dictation Shortcut") {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -32,16 +32,6 @@ struct DictationShortcutView: View {
                 }
             }, header: {
                 Text("Press twice to start dictation:")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Dictation Shortcut")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

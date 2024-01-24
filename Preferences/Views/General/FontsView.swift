@@ -26,6 +26,7 @@ struct FontsView: View {
                 Text("Fonts")
                     .font(.title)
                     .frame(maxWidth: .infinity)
+                    .offset(x: 15)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()

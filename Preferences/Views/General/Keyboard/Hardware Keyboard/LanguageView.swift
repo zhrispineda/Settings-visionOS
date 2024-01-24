@@ -26,14 +26,12 @@ struct LanguageView: View {
             })
         }
         .padding([.leading, .trailing], 45)
-        .navigationTitle("English")
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("English")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
+                Text("English")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

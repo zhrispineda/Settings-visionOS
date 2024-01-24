@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ModifierKeysView: View {
     var body: some View {
-        List {
+        CustomList(title: "Modifier Keys") {
             Section(content: {}, footer: {
                 Text("For each modifier key, choose the action you want it to perform.")
             })
@@ -17,16 +17,6 @@ struct ModifierKeysView: View {
             Section {
                 Button("Restore Defaults", action: {})
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Modifier Keys")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-            })
         }
     }
 }
