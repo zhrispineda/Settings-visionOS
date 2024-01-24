@@ -5,18 +5,18 @@
 //  A template to have a NavigationLink with an image made to a circle shape and title with an optional subtitle.
 //
 //  Parameters:
-//  isRounded: Bool, image: String, title: String, subtitle: String, content: AnyView
+//  isRounded: Bool, image: String, title: String, subtitle: String, content: Content
 //
 
 import SwiftUI
 
-struct ListRowNavigationImageLabel: View {
+struct ListRowNavigationImageLabel<Content: View>: View {
     // Variables
     var isRounded: Bool = true
     var image: String = "applefreeform"
     var title: String = "Title"
     var subtitle: String = String()
-    var content: AnyView = AnyView(EmptyView())
+    var content: Content
     
     var body: some View {
         NavigationLink(destination: {
@@ -50,5 +50,5 @@ struct ListRowNavigationImageLabel: View {
 }
 
 #Preview {
-    ListRowNavigationImageLabel()
+    ListRowNavigationImageLabel(content: EmptyView())
 }
