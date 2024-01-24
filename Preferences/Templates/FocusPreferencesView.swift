@@ -23,8 +23,8 @@ struct FocusPreferencesView: View {
     var body: some View {
         List {
             Section(content: {
-                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") People", subtitle: "None \(focusName == "Personal" ? "silenced" : "allowed")", content: AnyView(AllowedPeopleView(focusName: focusName)))
-                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") Apps", subtitle: "None\(focusName == "Personal" ? "" : " allowed")", content: AnyView(FocusAllowedAppsView(focusName: focusName)))
+                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") People", subtitle: "None \(focusName == "Personal" ? "silenced" : "allowed")", content: AllowedPeopleView(focusName: focusName))
+                ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") Apps", subtitle: "None\(focusName == "Personal" ? "" : " allowed")", content: FocusAllowedAppsView(focusName: focusName))
             }, header: {
                 VStack {
                     HStack {
@@ -59,13 +59,13 @@ struct FocusPreferencesView: View {
                     }
                 } else {
                     if focusName == "Mindfulness" {
-                        ListRowNavigationIconLabel(color: .mint, icon: "circle.hexagongrid.circle.fill", title: "Mindfulness", subtitle: "When you start a session", status: "On", content: AnyView(MindfulnessView()))
+                        ListRowNavigationIconLabel(color: .mint, icon: "circle.hexagongrid.circle.fill", title: "Mindfulness", subtitle: "When you start a session", status: "On", content: MindfulnessView())
                     } else if focusName == "Personal" {
-                        ListRowNavigationIconLabel(color: .purple, icon: "power.circle.fill", title: "Smart Activation", subtitle: "Turns on automatically", status: "Off", content: AnyView(SmartActivationView(focusName: focusName)))
+                        ListRowNavigationIconLabel(color: .purple, icon: "power.circle.fill", title: "Smart Activation", subtitle: "Turns on automatically", status: "Off", content: SmartActivationView(focusName: focusName))
                     } else if focusName == "Work" {
-                        ListRowNavigationIconLabel(color: .cyan, icon: "power.circle.fill", title: "Smart Activation", subtitle: "Turns on automatically", status: "Off", content: AnyView(SmartActivationView(focusName: focusName)))
+                        ListRowNavigationIconLabel(color: .cyan, icon: "power.circle.fill", title: "Smart Activation", subtitle: "Turns on automatically", status: "Off", content: SmartActivationView(focusName: focusName))
                     } else {
-                        ListRowNavigationIconLabel(color: .indigo, icon: "clock.fill", title: "12:00 AM", subtitle: "Every day", status: "Off", content: AnyView(ScheduleView()))
+                        ListRowNavigationIconLabel(color: .indigo, icon: "clock.fill", title: "12:00 AM", subtitle: "Every day", status: "Off", content: ScheduleView())
                     }
                     // Add popover for button
                     Button(action: {}, label: {

@@ -12,13 +12,13 @@ struct PrivacySecurityView: View {
         List {
             // Tracking Section
             Section {
-                ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", content: AnyView(EmptyView()))
+                ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", content: EmptyView())
             }
             
             // Apps Privacy Controls Section
             Section(content: {
-                ListRowNavigationIconLabel(color: .blue, icon: "viewfinder.circle.fill", title: "Surroundings", content: AnyView(EmptyView()))
-                ListRowNavigationIconLabel(color: .blue, icon: "custom.hand.point.up.left.circle.fill", title: "Hand Structures & Movements", content: AnyView(EmptyView()))
+                ListRowNavigationIconLabel(color: .blue, icon: "viewfinder.circle.fill", title: "Surroundings", content: EmptyView())
+                ListRowNavigationIconLabel(color: .blue, icon: "custom.hand.point.up.left.circle.fill", title: "Hand Structures & Movements", content: EmptyView())
             }, footer: {
                 Text("As apps request access, they will be added in the categories above.")
             })
