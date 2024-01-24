@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct SettingsItem: Identifiable {
+struct SettingsItem<Content: View>: Identifiable {
     var id: String { title }
     let type: SettingsModel
     let title: String
     let icon: String
     var color: Color = Color(.gray)
-    let destination: AnyView
+    let destination: Content
 }
 
 enum SettingsModel: String, CaseIterable {

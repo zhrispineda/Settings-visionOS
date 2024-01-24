@@ -32,6 +32,8 @@ struct AllowDenyView: View {
                     Text("Disallowing prevents you from sending custom messages to other players and using voice chat in games.")
                 } else if title == "Connect with Friends" {
                     Text("By selecting \u{201C}Allow,\u{201D} apps can for permission to connect you with your Game Center friends.")
+                } else if title == "Account Changes" {
+                    Text("Disallowing changes prevents adding, removing, or modifying accounts in Passwords & Accounts.")
                 }
             })
             
