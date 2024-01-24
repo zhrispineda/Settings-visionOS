@@ -19,6 +19,7 @@ struct DisplayTextSizeView: View {
     @State private var preferHorizontalTextEnabled = false
     @State private var classicInvertEnabled = false
     @State private var reduceWhitePointEnabled = false
+    @State private var whitePoint: Double = 25
     
     var body: some View {
         CustomList(title: "Display & Text Size") {
@@ -67,6 +68,13 @@ struct DisplayTextSizeView: View {
             
             Section(content: {
                 Toggle("Reduce White Point", isOn: $reduceWhitePointEnabled)
+                if reduceWhitePointEnabled {
+                    HStack(spacing: 15) {
+                        Slider(value: $whitePoint, in: 25...100)
+                        Text("\(whitePoint, specifier: "%.0f")%")
+                        // Changing whitePoint value on Slider sometimes causes 100% CPU and freezes slider
+                    }
+                }
             }, footer: {
                 Text("Reduce the intensity of bright colors.")
             })

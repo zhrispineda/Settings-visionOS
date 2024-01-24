@@ -10,6 +10,7 @@ import SwiftUI
 struct MotionView: View {
     // Variables
     @State private var reduceMotionEnabled = false
+    @State private var preferCrossFadeAnimationsEnabled = false
     @State private var autoPlayMessageEffectsEnabled = true
     @State private var autoPlayAnimatedImagesEnabled = true
     @State private var autoPlayVideoPreviews = true
@@ -22,6 +23,14 @@ struct MotionView: View {
             }, footer: {
                 Text("Reduce the motion of the user interface, including the parallax effect of icons.")
             })
+            
+            if reduceMotionEnabled {
+                Section(content: {
+                    Toggle("Prefer Cross-Fade Transitions", isOn: $preferCrossFadeAnimationsEnabled)
+                }, footer: {
+                    Text("Reduce the motion for user interface controls that slide in when appearing and disappearing.")
+                })
+            }
             
             Section(content: {
                 Toggle("Auto-Play Message Effects", isOn: $autoPlayMessageEffectsEnabled)

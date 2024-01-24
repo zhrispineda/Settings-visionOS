@@ -16,6 +16,8 @@
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
 		83080E9A2B61C48100771ACC /* MotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E992B61C48100771ACC /* MotionView.swift */; };
+		83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */; };
+		83080E9E2B61D03400771ACC /* AudioDescriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */; };
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
@@ -151,6 +153,8 @@
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
 		83080E992B61C48100771ACC /* MotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionView.swift; sourceTree = "<group>"; };
+		83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenContentView.swift; sourceTree = "<group>"; };
+		83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDescriptionsView.swift; sourceTree = "<group>"; };
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
+				83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */,
+				83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */,
 			);
 			path = Accessibility;
 			sourceTree = "<group>";
@@ -813,6 +819,7 @@
 				83FEB7232B5AEBC50028D308 /* SafariAdvancedView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
 				834111EC2B5DB49400366689 /* AppearanceView.swift in Sources */,
+				83080E9E2B61D03400771ACC /* AudioDescriptionsView.swift in Sources */,
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
 				83E7DC382B6095E2002B9087 /* MoviesView.swift in Sources */,
 				834111CD2B5D9D5300366689 /* MapsView.swift in Sources */,
@@ -915,6 +922,7 @@
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
+				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
