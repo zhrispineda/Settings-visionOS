@@ -27,8 +27,8 @@ struct KeyboardView: View {
     var body: some View {
         List {
             Section {
-                ListRowNavigationLabel(title: "Keyboards", subtitle: "2", content: AnyView(KeyboardsView()))
-                NavigationLink("Hardware Keyboard", destination: AnyView(HardwareKeyboardView()))
+                ListRowNavigationLabel(title: "Keyboards", subtitle: "2", content: KeyboardsView())
+                NavigationLink("Hardware Keyboard", destination: HardwareKeyboardView())
             }
             
             Section {

@@ -436,6 +436,9 @@
 				832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */,
 				834111F02B5DB7FA00366689 /* AppNotificationsView.swift */,
 				83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */,
+				83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */,
+				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
+				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -622,8 +625,6 @@
 			children = (
 				83E7DC2F2B608DA9002B9087 /* MultiplayerGamesView.swift */,
 				83E7DC312B608EBA002B9087 /* WebContentView.swift */,
-				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
-				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
 				83E7DC372B6095E2002B9087 /* MoviesView.swift */,
 				83E7DC392B60967C002B9087 /* TVView.swift */,
 				83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */,
@@ -644,7 +645,6 @@
 			isa = PBXGroup;
 			children = (
 				83E7DC2E2B608D97002B9087 /* Content Restrictions */,
-				83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */,
 				83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */,
 				83F20FF72B5F42EB00164ACF /* RestrictionsAllowedAppsView.swift */,
 				83F20FF92B5F8A6500164ACF /* ContentRestrictionsView.swift */,

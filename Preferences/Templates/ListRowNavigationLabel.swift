@@ -5,15 +5,15 @@
 //  A template to have a NavigationLink with a title and subtitle on each side.
 //
 //  Parameters:
-//  title: String, subtitle: String, content: AnyView
+//  title: String, subtitle: String, destination: Content
 //
 
 import SwiftUI
 
-struct ListRowNavigationLabel: View {
+struct ListRowNavigationLabel<Content: View>: View {
     var title: String = "Title"
     var subtitle: String = "Subtitle"
-    var content: AnyView
+    var content: Content
     
     var body: some View {
         NavigationLink(destination: {
@@ -31,5 +31,5 @@ struct ListRowNavigationLabel: View {
 }
 
 #Preview {
-    ListRowNavigationLabel(content: AnyView(EmptyView()))
+    ListRowNavigationLabel(content: EmptyView())
 }

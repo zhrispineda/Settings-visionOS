@@ -36,7 +36,7 @@ struct DisplayView: View {
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: EmptyView())
             }, header: {
                 Text("Display")
             })

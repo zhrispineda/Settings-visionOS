@@ -34,11 +34,11 @@ struct SafariView: View {
             
             // Search Section
             Section(content: {
-                ListRowNavigationLabel(title: "Search Engine", subtitle: "Google", content: AnyView(SearchEngineView()))
-                ListRowNavigationLabel(title: "Private Search Engine", subtitle: "Default", content: AnyView(PrivateSearchEngineView()))
+                ListRowNavigationLabel(title: "Search Engine", subtitle: "Google", content: SearchEngineView())
+                ListRowNavigationLabel(title: "Private Search Engine", subtitle: "Default", content: PrivateSearchEngineView())
                 Toggle("Search Engine Suggestions", isOn: $searchEngineSuggestionsEnabled)
                 Toggle("Safari Suggestions", isOn: $safariSuggestionsEnabled)
-                ListRowNavigationLabel(title: "Quick Website Search", subtitle: "On", content: AnyView(QuickWebsiteSearchView()))
+                ListRowNavigationLabel(title: "Quick Website Search", subtitle: "On", content: QuickWebsiteSearchView())
                 Toggle("Preload Top Hit", isOn: $preloadTopHitEnabled)
             }, header: {
                 Text("Search")
@@ -49,11 +49,11 @@ struct SafariView: View {
             // General Section
             Section(content: {
                 NavigationLink("AutoFill", destination: AutoFillView())
-                ListRowNavigationLabel(title: "Favorites", subtitle: "Favorites", content: AnyView(FavoritesView()))
+                ListRowNavigationLabel(title: "Favorites", subtitle: "Favorites", content: FavoritesView())
                 Toggle("Block Pop-ups", isOn: $blockPopUpsEnabled)
                 Toggle("Request Dark Mode", isOn: $requestDarkModeEnabled)
                 NavigationLink("Extensions", destination: ExtensionsView())
-                ListRowNavigationLabel(title: "Downloads", subtitle: "On My Apple Vision Pro", content: AnyView(DownloadsView()))
+                ListRowNavigationLabel(title: "Downloads", subtitle: "On My Apple Vision Pro", content: DownloadsView())
             }, header: {
                 Text("General")
             })
@@ -86,8 +86,8 @@ struct SafariView: View {
                     Spacer()
                 }
                 Toggle("Open New Tabs in Background", isOn: $openNewTabsInBackgroundEnabled)
-                ListRowNavigationLabel(title: "When Using New Keyboard Shortcut", subtitle: "Open Tab", content: AnyView(WhenUsingNewKeyboardShortcutView()))
-                ListRowNavigationLabel(title: "Close Tabs", subtitle: "Manually", content: AnyView(CloseTabsView()))
+                ListRowNavigationLabel(title: "When Using New Keyboard Shortcut", subtitle: "Open Tab", content: WhenUsingNewKeyboardShortcutView())
+                ListRowNavigationLabel(title: "Close Tabs", subtitle: "Manually", content: CloseTabsView())
             }, header: {
                 Text("Tabs")
             }, footer: {
@@ -97,7 +97,7 @@ struct SafariView: View {
             // Privacy & Security Section
             Section(content: {
                 Toggle("Prevent Cross-Site Tracking", isOn: $preventCrossSiteTrackingEnabled)
-                ListRowNavigationLabel(title: "Hide IP Address", subtitle: "Off", content: AnyView(HideIPAddressView()))
+                ListRowNavigationLabel(title: "Hide IP Address", subtitle: "Off", content: HideIPAddressView())
                 Toggle("Fradulent Website Warning", isOn: $fraudelentWebsiteWarningEnabled)
             }, header: {
                 Text("Privacy & Security")

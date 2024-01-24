@@ -97,7 +97,7 @@ struct FocusView: View {
             
             // Focus Status
             Section(content: {
-                ListRowNavigationLabel(title: "Focus Status", subtitle: "Off", content: AnyView(FocusStatusView()))
+                ListRowNavigationLabel(title: "Focus Status", subtitle: "Off", content: FocusStatusView())
             }, footer: {
                 Text("When you give an app permission, it can share that you have notifications silenced when using Focus.")
             })

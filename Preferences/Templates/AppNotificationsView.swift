@@ -51,13 +51,13 @@ struct AppNotificationsView: View {
             
             if bannersEnabled {
                 Section {
-                    ListRowNavigationLabel(title: "Banner Style", subtitle: "Temporary", content: AnyView(BannerStyleView()))
+                    ListRowNavigationLabel(title: "Banner Style", subtitle: "Temporary", content: BannerStyleView())
                 }
             }
             
             Section {
                 if appName == "FaceTime" {
-                    ListRowNavigationLabel(title: "Sounds", subtitle: "Reflection", content: AnyView(SoundsView()))
+                    ListRowNavigationLabel(title: "Sounds", subtitle: "Reflection", content: SoundsView())
                 } else {
                     Toggle("Sounds", isOn: $soundsEnabled)
                 }
@@ -65,7 +65,7 @@ struct AppNotificationsView: View {
             }
             
             Section {
-                ListRowNavigationLabel(title: "Notification Grouping", subtitle: "Automatic", content: AnyView(NotificationGroupingView()))
+                ListRowNavigationLabel(title: "Notification Grouping", subtitle: "Automatic", content: NotificationGroupingView())
             }
             
             if appName == "Photos" {

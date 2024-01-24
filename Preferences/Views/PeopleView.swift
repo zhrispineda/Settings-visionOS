@@ -20,8 +20,8 @@ struct PeopleView: View {
                 }
                 
                 Section {
-                    ListRowNavigationLabel(title: "Sort Order", subtitle: "Last, First", content: AnyView(SortOrderView()))
-                    ListRowNavigationLabel(title: "Display Order", subtitle: "First, Last", content: AnyView(DisplayOrderView()))
+                    ListRowNavigationLabel(title: "Sort Order", subtitle: "Last, First", content: SortOrderView())
+                    ListRowNavigationLabel(title: "Display Order", subtitle: "First, Last", content: DisplayOrderView())
                     NavigationLink("Short Name", destination: ShortNameView())
                     // TODO: Popover for My Info
                     Button(action: {}, label: {

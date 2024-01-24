@@ -27,14 +27,14 @@ struct CalendarView: View {
             }
             
             Section {
-                ListRowNavigationLabel(title: "Time Zone Override", subtitle: "Off", content: AnyView(TimeZoneOverrideView()))
-                ListRowNavigationLabel(title: "Alternate Calendars", subtitle: "Off", content: AnyView(AlternateCalendarsView()))
+                ListRowNavigationLabel(title: "Time Zone Override", subtitle: "Off", content: TimeZoneOverrideView())
+                ListRowNavigationLabel(title: "Alternate Calendars", subtitle: "Off", content: AlternateCalendarsView())
                 Toggle("Week Numbers", isOn: $weekNumbersEnabled)
                 Toggle("Week View Starts On Today", isOn: $weekViewStartsOnTodayEnabled)
                 Toggle("Show Invitee Declines", isOn: $showInviteeDeclinesEnabled)
-                ListRowNavigationLabel(title: "Sync", subtitle: "All Events", content: AnyView(SyncView()))
+                ListRowNavigationLabel(title: "Sync", subtitle: "All Events", content: SyncView())
                 NavigationLink("Default Alert Times", destination: DefaultAlertTimesView())
-                ListRowNavigationLabel(title: "Duration for New Events", subtitle: "1 hour", content: AnyView(DurationNewEventsView()))
+                ListRowNavigationLabel(title: "Duration for New Events", subtitle: "1 hour", content: DurationNewEventsView())
                 NavigationLink("Start Week On", destination: StartWeekOnView())
                 Toggle("Location Suggestions", isOn: $locationSuggestionsEnabled)
             }

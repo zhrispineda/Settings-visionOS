@@ -21,11 +21,11 @@ struct SiriSearchView: View {
     var body: some View {
         List {
             Section(content: {
-                ListRowNavigationLabel(title: "Language", subtitle: "English", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Language", subtitle: "English", content: EmptyView())
                     .disabled(true)
-                ListRowNavigationLabel(title: "Siri Voice", subtitle: "American (Voice 4)", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "Siri Voice", subtitle: "American (Voice 4)", content: EmptyView())
                 NavigationLink("Siri Responses", destination: {})
-                ListRowNavigationLabel(title: "My Information", subtitle: "None", content: AnyView(EmptyView()))
+                ListRowNavigationLabel(title: "My Information", subtitle: "None", content: EmptyView())
                 NavigationLink("Siri & Dictation History", destination: {})
                 NavigationLink("Automatically Send Messages", destination: {})
             }, header: {

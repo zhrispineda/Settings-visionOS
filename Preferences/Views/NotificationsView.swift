@@ -12,7 +12,7 @@ struct NotificationsView: View {
         NavigationStack {
             List {
                 Section {
-                    ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: AnyView(ScreenSharingView()))
+                    ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: ScreenSharingView())
                 }
                 
                 Section(content: {

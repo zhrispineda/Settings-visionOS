@@ -22,7 +22,7 @@ struct SafariAdvancedView: View {
             }
             
             Section(content: {
-                ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AnyView(AdvancedTrackingFingerprintingProtectionView()))
+                ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AdvancedTrackingFingerprintingProtectionView())
                 Toggle("Block All Cookies", isOn: $blockAllCookiesEnabled)
                     .onChange(of: blockAllCookiesEnabled, {
                         showingBlockCookiesAlert = blockAllCookiesEnabled

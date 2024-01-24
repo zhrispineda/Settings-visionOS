@@ -18,7 +18,7 @@ struct TimeZoneOverrideView: View {
             }
             
             Section(content: {
-                ListRowNavigationLabel(title: "Time Zone", subtitle: "\(timeZoneOverrideEnabled ? "Chicago" : "Off")", content: AnyView(TimeZoneView()))
+                ListRowNavigationLabel(title: "Time Zone", subtitle: "\(timeZoneOverrideEnabled ? "Chicago" : "Off")", content: TimeZoneView())
                     .disabled(!timeZoneOverrideEnabled)
             }, footer: {
                 Text("The Time Zone Override always shows event dates and times in the selected time zone.\n\nWhen off, events will display according to the time zone of your current location.")

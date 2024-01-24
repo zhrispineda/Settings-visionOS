@@ -14,7 +14,7 @@ struct EnvironmentsView: View {
         NavigationStack {
             List {
                 Section(content: {
-                    ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: AnyView(AppearanceView()))
+                    ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: AppearanceView())
                 }, footer: {
                     Text("Automatically adjust the Environment appearance based on your time of day, or choose a default. Shared Environments will not be affected.")
                 })

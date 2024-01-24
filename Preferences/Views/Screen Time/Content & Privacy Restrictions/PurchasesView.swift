@@ -16,9 +16,9 @@ struct PurchasesView: View {
     var body: some View {
         List {
             Section(content: {
-                ListRowNavigationLabel(title: "Installing Apps", subtitle: "Allow", content: AnyView(AllowDenyView(title: "Installing Apps")))
-                ListRowNavigationLabel(title: "Deleting Apps", subtitle: "Allow", content: AnyView(AllowDenyView(title: "Deleting Apps")))
-                ListRowNavigationLabel(title: "In-app Purchases", subtitle: "Allow", content: AnyView(AllowDenyView(title: "In-app Purchases")))
+                ListRowNavigationLabel(title: "Installing Apps", subtitle: "Allow", content: AllowDenyView(title: "Installing Apps"))
+                ListRowNavigationLabel(title: "Deleting Apps", subtitle: "Allow", content: AllowDenyView(title: "Deleting Apps"))
+                ListRowNavigationLabel(title: "In-app Purchases", subtitle: "Allow", content: AllowDenyView(title: "In-app Purchases"))
             }, header: {
                 Text("Store Purchases & Redownloads")
             })
