@@ -15,6 +15,7 @@
 		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
+		83080E9A2B61C48100771ACC /* MotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E992B61C48100771ACC /* MotionView.swift */; };
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
@@ -149,6 +150,7 @@
 		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
+		83080E992B61C48100771ACC /* MotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionView.swift; sourceTree = "<group>"; };
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
+				83080E992B61C48100771ACC /* MotionView.swift */,
 			);
 			path = Accessibility;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,
 				83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */,
 				83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */,
+				83080E9A2B61C48100771ACC /* MotionView.swift in Sources */,
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,
 				834111E32B5DB0ED00366689 /* SortOrderView.swift in Sources */,

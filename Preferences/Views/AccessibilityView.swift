@@ -13,7 +13,7 @@ struct AccessibilityView: View {
             Section(content: {
                 ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "voiceover", title: "VoiceOver", status: "Off", content: VoiceOverView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "textformat.size", title: "Display & Text Size", content: DisplayTextSizeView())
-                ListRowNavigationSymbolLabel(color: .green, symbol: "circle.dotted.and.circle", title: "Motion", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: .green, symbol: "circle.dotted.and.circle", title: "Motion", content: MotionView())
                 ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "rectangle.3.group.bubble.fill", title: "Spoken Content", content: EmptyView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "quote.bubble.fill", title: "Audio Descriptions", status: "Off", content: EmptyView())
             }, header: {
