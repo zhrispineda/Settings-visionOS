@@ -12,6 +12,7 @@
 		830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EC2B583E23007B7529 /* DictationShortcutView.swift */; };
 		830602EF2B584852007B7529 /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EE2B584852007B7529 /* FontsView.swift */; };
 		830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602F02B5849AB007B7529 /* DictionaryView.swift */; };
+		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
@@ -143,6 +144,7 @@
 		830602EC2B583E23007B7529 /* DictationShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationShortcutView.swift; sourceTree = "<group>"; };
 		830602EE2B584852007B7529 /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
 		830602F02B5849AB007B7529 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 				8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */,
 				83B28A2F2B5456DC00474189 /* ListRowNavigationImageLabel.swift */,
 				839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */,
+				83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -901,6 +904,7 @@
 				834111E72B5DB29500366689 /* ShortNameView.swift in Sources */,
 				834111D42B5DA17600366689 /* TransitView.swift in Sources */,
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,
+				83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */,
 				83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */,
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,
