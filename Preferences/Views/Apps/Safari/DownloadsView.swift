@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DownloadsView: View {
     var body: some View {
-        List {
+        CustomList(title: "Downloads") {
             Section(content: {
                 Button(action: {}, label: {
                     HStack(spacing: 15) {
@@ -45,16 +45,6 @@ struct DownloadsView: View {
             Section {
                 ListRowNavigationLabel(title: "Remove Download List Items", subtitle: "After one day", content: RemoveDownloadListItemsView())
             }
-        }
-        .navigationTitle("Downloads")
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("Downloads")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

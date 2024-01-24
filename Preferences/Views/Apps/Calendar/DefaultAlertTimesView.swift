@@ -12,7 +12,7 @@ struct DefaultAlertTimesView: View {
     @State private var timeToLeaveEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Default Alert Times") {
             Section {
                 ListRowNavigationLabel(title: "Birthdays", subtitle: "None", content: BirthdaysView())
                 ListRowNavigationLabel(title: "Events", subtitle: "None", content: EventsView())
@@ -23,17 +23,6 @@ struct DefaultAlertTimesView: View {
                 Toggle("Time to Leave", isOn: $timeToLeaveEnabled).disabled(true)
             }, footer: {
                 Text("Time to leave alerts are not available because Calendar does not have access to your precise location.")
-            })
-        }
-        .navigationTitle("Default Alert Times")
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Default Alert Times").font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

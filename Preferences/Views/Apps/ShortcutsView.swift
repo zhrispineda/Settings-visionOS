@@ -13,7 +13,7 @@ struct ShortcutsView: View {
     @State private var privateSharingEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Shortcuts") {
             Section {
                 Toggle("iCloud Sync", isOn: $iCloudSyncEnabled)
             }
@@ -31,18 +31,6 @@ struct ShortcutsView: View {
             Section {
                 NavigationLink("Legal Notices", destination: ShortcutsLegalNoticesView())
             }
-        }
-        .navigationTitle("Shortcuts")
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Shortcuts")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

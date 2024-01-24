@@ -24,8 +24,8 @@ struct WebsiteDataView: View {
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Website Data")
-                .font(.title)
-                .frame(maxWidth: .infinity)
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()

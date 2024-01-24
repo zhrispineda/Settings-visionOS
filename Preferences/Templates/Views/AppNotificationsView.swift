@@ -21,7 +21,7 @@ struct AppNotificationsView: View {
     var appName: String = "App"
     
     var body: some View {
-        List {
+        CustomList(title: appName) {
             Section {
                 Toggle("Allow Notifications", isOn: $allowNotificationsEnabled)
             }
@@ -74,18 +74,6 @@ struct AppNotificationsView: View {
                 }
             }
         }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text(appName)
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
-        }
-        .navigationTitle(appName)
     }
 }
 

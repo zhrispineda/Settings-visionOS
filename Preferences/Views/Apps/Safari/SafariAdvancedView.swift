@@ -16,7 +16,7 @@ struct SafariAdvancedView: View {
     @State private var javaScriptEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Advanced") {
             Section {
                 NavigationLink("Website Data", destination: WebsiteDataView())
             }
@@ -48,15 +48,6 @@ struct SafariAdvancedView: View {
             Section {
                 NavigationLink("Feature Flags", destination: FeatureFlagsView())
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("Advanced")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

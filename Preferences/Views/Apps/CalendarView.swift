@@ -15,7 +15,7 @@ struct CalendarView: View {
     @State private var locationSuggestionsEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Calendar") {
             SiriSearchAccessNavigationLabel(appName: "Calendar")
             
             Section {
@@ -38,18 +38,6 @@ struct CalendarView: View {
                 NavigationLink("Start Week On", destination: StartWeekOnView())
                 Toggle("Location Suggestions", isOn: $locationSuggestionsEnabled)
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Calendar")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Calendar")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

@@ -29,7 +29,7 @@ struct SafariView: View {
     @State private var automaticallySaveOfflineEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Safari") {
             SiriSearchAccessNavigationLabel(appName: "Safari")
             
             // Search Section
@@ -149,18 +149,6 @@ struct SafariView: View {
             Section {
                 NavigationLink("Advanced", destination: SafariAdvancedView())
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Safari")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Safari")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

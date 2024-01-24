@@ -14,7 +14,7 @@ struct AllowDontAllowChangesView: View {
     let options = ["Allow Changes", "Don't Allow Changes"]
     
     var body: some View {
-        List {
+        CustomList(title: title) {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -74,17 +74,6 @@ struct AllowDontAllowChangesView: View {
                 default:
                     Text("Applications that have requested access to your \(title.lowercased()) will appear here.")
                 }
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text(title)
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

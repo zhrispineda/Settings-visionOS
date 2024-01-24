@@ -13,7 +13,7 @@ struct TransitView: View {
     let options = ["Bus", "Subway & Light Rail", "Commuter Rail", "Ferry"]
     
     var body: some View {
-        List {
+        CustomList(title: "Transit") {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: {
@@ -37,17 +37,6 @@ struct TransitView: View {
                 Text("Prefer Trips Using")
             }, footer: {
                 Text("Prefer these vehicles when planning transit trips.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Transit")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

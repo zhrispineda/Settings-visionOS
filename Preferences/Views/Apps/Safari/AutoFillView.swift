@@ -13,7 +13,7 @@ struct AutoFillView: View {
     @State private var creditCardsEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "AutoFill") {
             Section(content: {}, footer: {
                 Text("Automatically fill out web forms using your contact or credit card info.")
             })
@@ -38,18 +38,6 @@ struct AutoFillView: View {
                 // TODO: Add authentication to view SavedCreditCardsView
                 NavigationLink("Saved Credit Cards", destination: SavedCreditCardsView())
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("AutoFill")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("AutoFill")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

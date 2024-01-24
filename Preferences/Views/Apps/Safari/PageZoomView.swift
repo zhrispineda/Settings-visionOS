@@ -35,8 +35,8 @@ struct PageZoomView: View {
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Page Zoom")
-                .font(.title)
-                .frame(maxWidth: .infinity)
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()

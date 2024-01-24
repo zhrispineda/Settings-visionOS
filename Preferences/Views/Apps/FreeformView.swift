@@ -14,7 +14,7 @@ struct FreeformView: View {
     @State private var spacingGuidesEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Freeform") {
             SiriSearchAccessNavigationLabel(appName: "Freeform")
             
             Section(content: {
@@ -23,18 +23,6 @@ struct FreeformView: View {
                 Toggle("Spacing Guides", isOn: $spacingGuidesEnabled)
             }, header: {
                 Text("Alignment Guides")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Freeform")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Freeform")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

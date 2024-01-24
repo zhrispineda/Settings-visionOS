@@ -12,7 +12,7 @@ struct TimeZoneOverrideView: View {
     @State private var timeZoneOverrideEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Time Zone Override") {
             Section {
                 Toggle("Time Zone Override", isOn: $timeZoneOverrideEnabled)
             }
@@ -22,18 +22,6 @@ struct TimeZoneOverrideView: View {
                     .disabled(!timeZoneOverrideEnabled)
             }, footer: {
                 Text("The Time Zone Override always shows event dates and times in the selected time zone.\n\nWhen off, events will display according to the time zone of your current location.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Time Zone Override")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Time Zone Override")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

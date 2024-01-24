@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoritesView: View {
     var body: some View {
-        List {
+        CustomList(title: "Favorites") {
             Section(content: {}, footer: {
                 Text("Quickly access Favorite bookmarks when you enter an address, search, or create a new tab.")
             })
@@ -28,15 +28,6 @@ struct FavoritesView: View {
                     }
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("Favorites")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

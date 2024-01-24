@@ -13,23 +13,12 @@ struct CyclingView: View {
     @State private var avoidBusyRoads = false
     
     var body: some View {
-        List {
+        CustomList(title: "Cycling") {
             Section(content: {
                 Toggle("Hills", isOn: $avoidHillsEnabled)
                 Toggle("Busy Roads", isOn: $avoidBusyRoads)
             }, header: {
                 Text("Avoid")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Cycling")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

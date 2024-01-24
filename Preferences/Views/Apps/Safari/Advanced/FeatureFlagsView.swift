@@ -191,7 +191,7 @@ struct FeatureFlagsView: View {
     ]
     
     var body: some View {
-        List {
+        CustomList(title: "WebKit Feature Flags") {
             Section(content: {
                 ForEach($experimentalFlags) { $flag in
                     Toggle(flag.title, isOn: $flag.isOn)
@@ -211,15 +211,6 @@ struct FeatureFlagsView: View {
             Section {
                 Button("Reset All to Defaults", action: {})
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("WebKit Feature Flags")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

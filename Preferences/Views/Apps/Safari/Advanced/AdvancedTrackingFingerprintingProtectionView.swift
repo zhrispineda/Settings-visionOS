@@ -29,9 +29,9 @@ struct AdvancedTrackingFingerprintingProtectionView: View {
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Advanced Tracking and Fingerprinting Protection")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

@@ -15,11 +15,11 @@ struct ShortcutsAdvancedView: View {
     @State private var allowDeletingLargeDataEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Advanced") {
             Section(content: {
                 Toggle("Allow Running Scripts", isOn: $allowRunningScriptsEnabled)
             }, footer: {
-                Text("When enabled, the actions \u{201C}Run JavaScript on Web Page\u{201D} and  \u{201C}Run SSH Script Over SSH\u{201D} can be run.")
+                Text("When enabled, the actions \u{201C}Run JavaScript on Web Page\u{201D} and \u{201C}Run SSH Script Over SSH\u{201D} can be run.")
             })
             
             Section {
@@ -30,17 +30,6 @@ struct ShortcutsAdvancedView: View {
                 Toggle("Allow Deleting Without Confirmation", isOn: $allowDeletingWithoutConfirmationEnabled)
                 Toggle("Allow Deleting Large Amounts of Data", isOn: $allowDeletingLargeDataEnabled)
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Advanced")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

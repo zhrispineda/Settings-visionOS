@@ -19,7 +19,7 @@ struct PhotosView: View {
     @State private var showingResetAlert = false
     
     var body: some View {
-        List {
+        CustomList(title: "Photos") {
             SiriSearchAccessNavigationLabel(appName: "Photos")
             
             Section(content: {
@@ -76,18 +76,6 @@ struct PhotosView: View {
             
             Section(content: {}, footer: {
                 Text("[About Photos & Privacy...](#)")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Photos")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Photos")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

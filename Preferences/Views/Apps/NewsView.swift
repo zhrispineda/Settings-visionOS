@@ -15,7 +15,7 @@ struct NewsView: View {
     @State private var resetIdentifierEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "News") {
             SiriSearchAccessNavigationLabel(appName: "News")
             
             Section(content: {
@@ -47,18 +47,6 @@ struct NewsView: View {
                 Toggle("Reset Identifier", isOn: $resetIdentifierEnabled)
             }, footer: {
                 Text("Turn on to reset the identifier used by Apple News and Stocks to report statistics to news publishers. The identifier will be reset the next time you open Apple News.")
-            })
-        }
-        .navigationTitle("News")
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("News")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

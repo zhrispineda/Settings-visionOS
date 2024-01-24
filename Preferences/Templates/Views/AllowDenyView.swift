@@ -14,7 +14,7 @@ struct AllowDenyView: View {
     let options = ["Allow", "Don't Allow"]
     
     var body: some View {
-        List {
+        CustomList(title: title) {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -42,17 +42,6 @@ struct AllowDenyView: View {
                     Text("Disallowing prevents apps from asking if they can connect you with your Game Center friends and restricts this device from sharing your Game Center friends list with other apps.")
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text(title)
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

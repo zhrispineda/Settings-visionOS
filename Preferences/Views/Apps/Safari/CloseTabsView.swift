@@ -27,9 +27,9 @@ struct CloseTabsView: View {
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Close Tabs")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

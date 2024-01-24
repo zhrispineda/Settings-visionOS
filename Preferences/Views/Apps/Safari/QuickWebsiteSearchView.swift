@@ -27,8 +27,8 @@ struct QuickWebsiteSearchView: View {
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Quick Website Search")
-                .font(.title)
-                .frame(maxWidth: .infinity)
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()

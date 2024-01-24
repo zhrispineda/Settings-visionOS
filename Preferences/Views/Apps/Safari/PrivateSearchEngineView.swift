@@ -26,10 +26,10 @@ struct PrivateSearchEngineView: View {
         .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                Text("Private Search Engine")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                Text("")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

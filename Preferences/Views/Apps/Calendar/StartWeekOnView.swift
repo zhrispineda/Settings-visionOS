@@ -14,7 +14,7 @@ struct StartWeekOnView: View {
     let options = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     var body: some View {
-        List {
+        CustomList(title: "Start Week On") {
             Section(content: {
                 Button(action: { selectedOption = "System Setting (Sunday)" }, label: {
                     HStack {
@@ -47,16 +47,6 @@ struct StartWeekOnView: View {
                 Text("Calendar App Only")
             }, footer: {
                 Text("This setting will apply in Calendar only. Other apps will use the system setting.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Start Week On").font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

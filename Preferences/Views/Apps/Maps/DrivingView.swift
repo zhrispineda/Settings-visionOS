@@ -13,23 +13,12 @@ struct DrivingView: View {
     @State private var avoidHighwaysEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Driving") {
             Section(content: {
                 Toggle("Tolls", isOn: $avoidTollsEnabled)
                 Toggle("Highways", isOn: $avoidHighwaysEnabled)
             }, header: {
                 Text("Avoid")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Driving")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

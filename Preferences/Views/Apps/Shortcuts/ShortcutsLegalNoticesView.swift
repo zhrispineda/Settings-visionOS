@@ -9,22 +9,11 @@ import SwiftUI
 
 struct ShortcutsLegalNoticesView: View {
     var body: some View {
-        List {
+        CustomList(title: "Legal Notices") {
             Section(content: {}, footer: {
                 Text("Legal Notices:")
                     .foregroundStyle(.secondary)
                     .listRowBackground(Color.clear)
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Legal Notices")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }
