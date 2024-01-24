@@ -20,7 +20,7 @@ struct ContentPrivacyRestrictionsView: View {
             Section {
                 NavigationLink("iTunes & App Store Purchases", destination: PurchasesView())
                 NavigationLink("Allowed Apps", destination: RestrictionsAllowedAppsView())
-                NavigationLink("Content Restrictions", destination: {})
+                NavigationLink("Content Restrictions", destination: ContentRestrictionsView())
             }
             .disabled(!contentPrivacyRestrictionsEnabled)
             
