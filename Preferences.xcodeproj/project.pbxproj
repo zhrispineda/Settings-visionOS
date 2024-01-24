@@ -105,6 +105,7 @@
 		83E7DC382B6095E2002B9087 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC372B6095E2002B9087 /* MoviesView.swift */; };
 		83E7DC3A2B60967C002B9087 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC392B60967C002B9087 /* TVView.swift */; };
 		83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */; };
+		83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */; };
 		83F20FF02B5F356200164ACF /* ContentPrivacyRestrictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FEF2B5F356200164ACF /* ContentPrivacyRestrictionsView.swift */; };
 		83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */; };
 		83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */; };
@@ -237,6 +238,7 @@
 		83E7DC372B6095E2002B9087 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		83E7DC392B60967C002B9087 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
 		83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictionsAppsView.swift; sourceTree = "<group>"; };
+		83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowDontAllowChangesView.swift; sourceTree = "<group>"; };
 		83F20FEF2B5F356200164ACF /* ContentPrivacyRestrictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPrivacyRestrictionsView.swift; sourceTree = "<group>"; };
 		83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
 		83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowDenyView.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */,
 				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
 				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
+				83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */,
 				834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */,
 				832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */,
 				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,

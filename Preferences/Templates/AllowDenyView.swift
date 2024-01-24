@@ -48,7 +48,7 @@ struct AllowDenyView: View {
             ToolbarItem(placement: .principal, content: {
                 HStack {
                     Text(title)
-                        .font(.title)
+                        .font(.title2)
                 }
                 .frame(maxWidth: .infinity)
                 .offset(x: -40)
