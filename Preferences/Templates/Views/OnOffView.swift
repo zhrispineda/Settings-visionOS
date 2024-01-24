@@ -2,6 +2,8 @@
 //  OnOffView.swift
 //  Preferences
 //
+//  Template for On Off list views.
+//
 //  Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions > Music Videos
 //
 //  Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions > Music Profiles

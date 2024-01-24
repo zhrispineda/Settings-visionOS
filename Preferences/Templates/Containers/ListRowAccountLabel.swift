@@ -16,14 +16,11 @@ struct ListRowAccountLabel: View {
     var service: String = String()
     
     var body: some View {
-        HStack {
-            Spacer()
-            Text(service)
-                .font(.system(size: 32))
-                .foregroundStyle(.blue)
-            Spacer()
-        }
-        .padding(.vertical, 10)
+        Text(service)
+            .font(.system(size: 32))
+            .foregroundStyle(.blue)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 10)
     }
 }
 

@@ -55,11 +55,10 @@ struct PasswordsView: View {
         .navigationTitle("Passwords")
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Passwords")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
+                Text("Passwords")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: 80)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 Button("\(Image(systemName: "plus"))", action: {})

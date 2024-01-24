@@ -2,7 +2,7 @@
 //  AllowDontAllowChangesView.swift
 //  Preferences
 //
-//  Template for Allow Changes or Don't Allow Changes views
+//  Template for Allow Changes or Don't Allow Changes views.
 //
 
 import SwiftUI

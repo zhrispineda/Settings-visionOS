@@ -10,7 +10,6 @@ import SwiftUI
 struct PurchasesView: View {
     // Variables
     @State private var selectedOption: String? = "Don't Require"
-
     let options = ["Always Require", "Don't Require"]
     
     var body: some View {

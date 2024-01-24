@@ -106,6 +106,7 @@
 		83E7DC3A2B60967C002B9087 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC392B60967C002B9087 /* TVView.swift */; };
 		83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */; };
 		83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */; };
+		83E7DC422B60FF7A002B9087 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7DC412B60FF7A002B9087 /* CustomList.swift */; };
 		83F20FF02B5F356200164ACF /* ContentPrivacyRestrictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FEF2B5F356200164ACF /* ContentPrivacyRestrictionsView.swift */; };
 		83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */; };
 		83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */; };
@@ -239,6 +240,7 @@
 		83E7DC392B60967C002B9087 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
 		83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictionsAppsView.swift; sourceTree = "<group>"; };
 		83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowDontAllowChangesView.swift; sourceTree = "<group>"; };
+		83E7DC412B60FF7A002B9087 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		83F20FEF2B5F356200164ACF /* ContentPrivacyRestrictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPrivacyRestrictionsView.swift; sourceTree = "<group>"; };
 		83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
 		83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowDenyView.swift; sourceTree = "<group>"; };
@@ -429,19 +431,9 @@
 		835B93462B48950800E96BE3 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				83DB44E92B4C4F6D0081852F /* ListRowLabel.swift */,
-				83DB44EB2B4C4F9D0081852F /* ListRowNavigationLabel.swift */,
-				8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */,
-				83B28A2F2B5456DC00474189 /* ListRowNavigationImageLabel.swift */,
-				839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */,
-				839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */,
-				832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */,
-				834111F02B5DB7FA00366689 /* AppNotificationsView.swift */,
-				83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */,
-				83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */,
-				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
-				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
-				83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */,
+				83E7DC442B61042F002B9087 /* Containers */,
+				83E7DC432B610428002B9087 /* Navigation */,
+				83E7DC452B61045A002B9087 /* Views */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -633,6 +625,41 @@
 				83E7DC3B2B609747002B9087 /* RestrictionsAppsView.swift */,
 			);
 			path = "Content Restrictions";
+			sourceTree = "<group>";
+		};
+		83E7DC432B610428002B9087 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				83DB44EB2B4C4F9D0081852F /* ListRowNavigationLabel.swift */,
+				8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */,
+				83B28A2F2B5456DC00474189 /* ListRowNavigationImageLabel.swift */,
+				839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		83E7DC442B61042F002B9087 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				83DB44E92B4C4F6D0081852F /* ListRowLabel.swift */,
+				832A545E2B5C895600BC877C /* ListRowAccountLabel.swift */,
+				83E7DC412B60FF7A002B9087 /* CustomList.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		83E7DC452B61045A002B9087 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */,
+				834111F02B5DB7FA00366689 /* AppNotificationsView.swift */,
+				83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */,
+				83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */,
+				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
+				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
+				83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		83F20FEE2B5F354100164ACF /* Screen Time */ = {
@@ -870,6 +897,7 @@
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
+				83E7DC422B60FF7A002B9087 /* CustomList.swift in Sources */,
 				834111E72B5DB29500366689 /* ShortNameView.swift in Sources */,
 				834111D42B5DA17600366689 /* TransitView.swift in Sources */,
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,

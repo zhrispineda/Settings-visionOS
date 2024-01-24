@@ -30,10 +30,8 @@ struct AppsView: View {
             .navigationTitle("Apps")
             .toolbar {
                 ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("Apps")
-                            .font(.title)
-                    }
+                    Text("Apps")
+                    .font(.title)
                     .frame(maxWidth: .infinity)
                 })
             }

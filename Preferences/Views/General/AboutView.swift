@@ -13,44 +13,30 @@ struct AboutView: View {
     @State private var totalStorage: String = getTotalStorage() ?? "N/A"
     
     var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    ListRowLabel(title: "Name", subtitle: UIDevice().name)
-                    ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion, content: VersionView())
-                    ListRowLabel(title: "Model Name", subtitle: UIDevice().name)
-                    ListRowLabel(title: "Model Number", subtitle: (showingModelNumber ? "A2117LL/A" : "A2117"))
-                        .onTapGesture {
-                            showingModelNumber.toggle()
-                        }
-                    ListRowLabel(title: "Serial Number", subtitle: "XXXXX00XXX")
-                }
-                
-                Section {
-                    ListRowLabel(title: "Songs", subtitle: "0")
-                    ListRowLabel(title: "Videos", subtitle: "0")
-                    ListRowLabel(title: "Photos", subtitle: "0")
-                    ListRowLabel(title: "Capacity", subtitle: totalStorage)
-                    ListRowLabel(title: "Available", subtitle: availableStorage)
-                }
-                
-                Section {
-                    NavigationLink("Certificate Trust Settings", destination: CertificateTrustSettingsView())
-                }
-            }
-            .navigationTitle("About")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("About")
-                            .font(.title)
+        CustomList(title: "About") {
+            Section {
+                ListRowLabel(title: "Name", subtitle: UIDevice().name)
+                ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion, content: VersionView())
+                ListRowLabel(title: "Model Name", subtitle: UIDevice().name)
+                ListRowLabel(title: "Model Number", subtitle: (showingModelNumber ? "A2117LL/A" : "A2117"))
+                    .onTapGesture {
+                        showingModelNumber.toggle()
                     }
-                    .frame(maxWidth: .infinity)
-                    .offset(x: -40)
-                })
+                ListRowLabel(title: "Serial Number", subtitle: "XXXXX00XXX")
+            }
+            
+            Section {
+                ListRowLabel(title: "Songs", subtitle: "0")
+                ListRowLabel(title: "Videos", subtitle: "0")
+                ListRowLabel(title: "Photos", subtitle: "0")
+                ListRowLabel(title: "Capacity", subtitle: totalStorage)
+                ListRowLabel(title: "Available", subtitle: availableStorage)
+            }
+            
+            Section {
+                NavigationLink("Certificate Trust Settings", destination: CertificateTrustSettingsView())
             }
         }
-        .padding([.leading, .trailing], 45)
     }
 }
 

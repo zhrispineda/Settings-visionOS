@@ -10,7 +10,7 @@ import SwiftUI
 struct GeneralView: View {
     var body: some View {
         NavigationStack {
-            List {
+            CustomList(title: "General") {
                 Section {
                     NavigationLink("About", destination: AboutView())
                 }
@@ -29,17 +29,6 @@ struct GeneralView: View {
                 Section {
                     NavigationLink("Transfer or Reset This Apple Vision Pro", destination: TransferResetView())
                 }
-            }
-            .padding([.leading, .trailing], 45)
-            .navigationTitle("General")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("General")
-                            .font(.title)
-                    }
-                    .frame(maxWidth: .infinity)
-                })
             }
         }
     }

@@ -11,7 +11,8 @@ struct FontsView: View {
     var body: some View {
         VStack {
             Group {
-                Text("No Fonts Installed").font(.title)
+                Text("No Fonts Installed")
+                    .font(.title)
                 Text("You can download apps that install fonts from the App Store.")
             }
             .foregroundStyle(.secondary)
@@ -22,11 +23,9 @@ struct FontsView: View {
         }
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Fonts")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
+                Text("Fonts")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()

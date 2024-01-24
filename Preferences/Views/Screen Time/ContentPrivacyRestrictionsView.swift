@@ -60,7 +60,7 @@ struct ContentPrivacyRestrictionsView: View {
             ToolbarItem(placement: .principal, content: {
                 HStack {
                     Text("Content & Privacy Restrictions")
-                        .font(.title)
+                        .font(.title2)
                 }
                 .frame(maxWidth: .infinity)
                 .offset(x: -40)

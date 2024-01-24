@@ -2,7 +2,7 @@
 //  AllowDenyView.swift
 //  Preferences
 //
-//  Template for Allow or Deny lists
+//  Template for Allow or Deny lists.
 //
 
 import SwiftUI
