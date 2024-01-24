@@ -12,7 +12,7 @@ struct SoundsView: View {
     let soundNames = ["Arpeggio", "Breaking", "Canopy", "Chalet", "Chirp", "Daybreak", "Departure", "Dollop", "Journey", "Kettle", "Mercury", "Milky Way", "Quad", "Radial", "Scavenger", "Seedling", "Shelter", "Sprinkles", "Steps", "Storytime", "Tease", "Tilt", "Unfold", "Valley"]
     
     var body: some View {
-        List {
+        CustomList(title: "Sounds") {
             Section {
                 // This view is mostly non-functional in the current beta of visionOS (21N305)
                 Button(action: {}, label: {
@@ -36,16 +36,6 @@ struct SoundsView: View {
                     Label("Classic", systemImage: "empty")
                 })
             }
-        }
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Sounds")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

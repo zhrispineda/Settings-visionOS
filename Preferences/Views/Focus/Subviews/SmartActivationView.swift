@@ -32,12 +32,10 @@ struct SmartActivationView: View {
         }
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Smart Activation")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                Text("Smart Activation")
+                    .font(.title2)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

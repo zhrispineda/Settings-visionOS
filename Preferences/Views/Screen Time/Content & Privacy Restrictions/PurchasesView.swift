@@ -13,7 +13,7 @@ struct PurchasesView: View {
     let options = ["Always Require", "Don't Require"]
     
     var body: some View {
-        List {
+        CustomList(title: "iTunes & App Store Purchases") {
             Section(content: {
                 ListRowNavigationLabel(title: "Installing Apps", subtitle: "Allow", content: AllowDenyView(title: "Installing Apps"))
                 ListRowNavigationLabel(title: "Deleting Apps", subtitle: "Allow", content: AllowDenyView(title: "Deleting Apps"))
@@ -38,17 +38,6 @@ struct PurchasesView: View {
                 Text("Require Password")
             }, footer: {
                 Text("Require a password for additional purchases after making a purchase from the iTunes, Book, or App Store.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("iTunes & App Store Purchases")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

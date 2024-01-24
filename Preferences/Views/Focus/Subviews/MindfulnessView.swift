@@ -21,12 +21,10 @@ struct MindfulnessView: View {
         }
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Mindfulness")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                Text("Mindfulness")
+                    .font(.title2)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

@@ -16,7 +16,7 @@ struct RestrictionsAllowedAppsView: View {
     @State private var newsEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Allowed Apps") {
             Section {
                 Toggle(isOn: $safariEnabled, label: {
                     HStack(spacing: 15) {
@@ -63,17 +63,6 @@ struct RestrictionsAllowedAppsView: View {
                     }
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Allowed Apps")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

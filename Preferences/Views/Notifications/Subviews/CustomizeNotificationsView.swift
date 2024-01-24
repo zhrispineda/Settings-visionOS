@@ -12,19 +12,8 @@ struct CustomizeNotificationsView: View {
     @State private var memoriesEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Customize Notifications") {
             Toggle("Memories", isOn: $memoriesEnabled)
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Customize Notifications")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

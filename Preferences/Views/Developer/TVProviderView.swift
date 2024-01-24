@@ -13,7 +13,7 @@ struct TVProviderView: View {
     @State private var simulateExpiredTokenEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "TV Provider") {
             Section(content: {
                 Toggle("Cache Buster", isOn: $cacheBusterEnabled)
             }, header: {
@@ -40,12 +40,6 @@ struct TVProviderView: View {
                 Text("Development TV Providers")
             })
         }
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
-                Text("TV Provider").font(.title2)
-            })
-        }
-        .padding([.leading, .trailing], 45)
     }
 }
 

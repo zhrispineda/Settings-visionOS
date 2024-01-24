@@ -36,7 +36,8 @@ struct FocusStatusView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading, content: {
-                Text("Focus Status").font(.title2)
+                Text("Focus Status")
+                    .font(.title2)
             })
         }
     }

@@ -96,12 +96,10 @@ struct ScheduleView: View {
         }
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("12:00 AM")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                Text("12:00 AM")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

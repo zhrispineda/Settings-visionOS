@@ -12,7 +12,7 @@ struct ContentPrivacyRestrictionsView: View {
     @State private var contentPrivacyRestrictionsEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Content & Privacy Restrictions") {
             Section {
                 Toggle("Content & Privacy Restrictions", isOn: $contentPrivacyRestrictionsEnabled)
             }
@@ -54,17 +54,6 @@ struct ContentPrivacyRestrictionsView: View {
                 Text("Allow Changes:")
             })
             .disabled(!contentPrivacyRestrictionsEnabled)
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Content & Privacy Restrictions")
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

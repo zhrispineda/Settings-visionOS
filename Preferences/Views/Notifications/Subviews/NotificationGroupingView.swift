@@ -27,12 +27,10 @@ struct NotificationGroupingView: View {
         .padding([.leading, .trailing], 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Notification Grouping")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
+                Text("Notification Grouping")
+                    .font(.title)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: -40)
             })
         }
     }

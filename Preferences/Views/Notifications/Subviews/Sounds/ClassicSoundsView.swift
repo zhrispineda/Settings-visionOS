@@ -17,7 +17,8 @@ struct ClassicSoundsView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading, content: {
-                Text("Classic").font(.title2)
+                Text("Classic")
+                    .font(.title2)
             })
         }
     }

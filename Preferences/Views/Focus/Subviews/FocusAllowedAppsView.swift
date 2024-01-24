@@ -15,7 +15,7 @@ struct FocusAllowedAppsView: View {
     @State private var timeSensitiveNotificationsEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Notifications") {
             Section {
                 HStack {
                     VStack(alignment: .leading) {
@@ -54,17 +54,6 @@ struct FocusAllowedAppsView: View {
                     Text("Allow apps \(focusName == "Personal" ? "not in your allowed list" : "that are silenced") to send notifications marked as Time Sensitive immediately.")
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Notifications")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

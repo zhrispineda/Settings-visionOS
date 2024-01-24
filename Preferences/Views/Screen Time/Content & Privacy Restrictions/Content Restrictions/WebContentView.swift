@@ -15,7 +15,7 @@ struct WebContentView: View {
     @State private var allowedWebsites = ["Apple – Start", "CBeebies (by BBC", "Disney", "HowStuffWorks", "National Geographic - Kids", "PBS Kids", "Scholastic.com", "Smithsonian Institution", "Time for Kids"]
     
     var body: some View {
-        List {
+        CustomList(title: "Web Content") {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -74,17 +74,6 @@ struct WebContentView: View {
                     Text("Never Allow:")
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Web Content")
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

@@ -13,7 +13,7 @@ struct AppearanceView: View {
     let options = ["Automatic", "Light", "Dark"]
     
     var body: some View {
-        List {
+        CustomList(title: "Appearance") {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -28,17 +28,6 @@ struct AppearanceView: View {
                 }
             }, footer: {
                 Text("Automatically adjust the Ennvironment appearance based on your time of day, or choose a default. Shared Environments will not be affected.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Appearance")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

@@ -18,7 +18,7 @@ struct TVAppView: View {
                     .foregroundStyle(.secondary)
                 Spacer()
             }
-                .listRowBackground(Color.clear)
+            .listRowBackground(Color.clear)
         }
         .navigationTitle("TV App")
     }

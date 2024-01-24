@@ -15,7 +15,7 @@ struct MoviesView: View {
     @State private var showMoviesCloudEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Movies") {
             ForEach(options, id: \.self) { option in
                 Button(action: { selectedOption = option }, label: {
                     HStack {
@@ -31,17 +31,6 @@ struct MoviesView: View {
             Section {
                 Toggle("Show Movies in the Cloud", isOn: $showMoviesCloudEnabled)
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Movies")
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
         }
     }
 }

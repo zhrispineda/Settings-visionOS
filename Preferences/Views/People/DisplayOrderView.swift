@@ -13,7 +13,7 @@ struct DisplayOrderView: View {
     let options = ["First, Last", "Last, First"]
     
     var body: some View {
-        List {
+        CustomList(title: "Display Order") {
             Section(content: {
                 ForEach(options, id: \.self) { option in
                     Button(action: { selectedOption = option }, label: {
@@ -28,17 +28,6 @@ struct DisplayOrderView: View {
                 }
             }, footer: {
                 Text("Names in some languages such as Chinese, Japanese, and Korean follow a fixed order and will not be affected.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Display Order")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

@@ -17,7 +17,7 @@ struct ShortNameView: View {
     @State private var preferNicknamesEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Short Name") {
             Section {
                 Toggle("Short Name", isOn: $shortNameEnabled)
             }
@@ -44,17 +44,6 @@ struct ShortNameView: View {
                 Toggle("Prefer Nicknames", isOn: $preferNicknamesEnabled)
             }, footer: {
                 Text("Always use nicknames when available.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Short Name")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }

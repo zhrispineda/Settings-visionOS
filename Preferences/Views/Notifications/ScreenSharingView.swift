@@ -12,22 +12,11 @@ struct ScreenSharingView: View {
     @State private var allowNotificationsEnabled = false
     
     var body: some View {
-        List {
+        CustomList(title: "Screen Sharing") {
             Section(content: {
                 Toggle("Allow Notifications", isOn: $allowNotificationsEnabled)
             }, footer: {
                 Text("Allow notifications while using SharePlay or Screen Mirroring.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Screen Sharing")
-                        .font(.title)
-                        .offset(x: -40)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

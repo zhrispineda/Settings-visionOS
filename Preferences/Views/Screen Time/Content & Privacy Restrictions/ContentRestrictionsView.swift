@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentRestrictionsView: View {
     var body: some View {
-        List {
+        CustomList(title: "Content Restrictions") {
             Section(content: {
                 ListRowNavigationLabel(title: "Music, Podcasts, News, Fitness", subtitle: "Explicit", content: CleanExplicitView(title: "Music, Podcasts, News, Fitness"))
                 ListRowNavigationLabel(title: "Music Videos", subtitle: "On", content: OnOffView(title: "Music Videos"))
@@ -47,17 +47,6 @@ struct ContentRestrictionsView: View {
                 ListRowNavigationLabel(title: "Avatar & Nickname Changes", subtitle: "Allow", content: AllowDenyView(title: "Avatar & Nickname Changes"))
             }, header: {
                 Text("Game Center")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Content Restrictions")
-                        .font(.title2)
-                }
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
         }
     }
