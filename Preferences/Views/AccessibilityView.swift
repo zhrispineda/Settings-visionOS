@@ -11,7 +11,7 @@ struct AccessibilityView: View {
     var body: some View {
         CustomList(title: "Accessibility") {
             Section(content: {
-                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "voiceover", title: "VoiceOver", status: "Off", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "voiceover", title: "VoiceOver", status: "Off", content: VoiceOverView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "textformat.size", title: "Display & Text Size", content: EmptyView())
                 ListRowNavigationSymbolLabel(color: .green, symbol: "circle.dotted.and.circle", title: "Motion", content: EmptyView())
                 ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "rectangle.3.group.bubble.fill", title: "Spoken Content", content: EmptyView())
