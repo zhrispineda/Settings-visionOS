@@ -10,7 +10,7 @@ import SwiftUI
 struct NotificationsView: View {
     var body: some View {
         NavigationStack {
-            List {
+            CustomList(title: "Notifications") {
                 Section {
                     ListRowNavigationLabel(title: "Screen Sharing", subtitle: "Notifications Off", content: ScreenSharingView())
                 }
@@ -23,17 +23,6 @@ struct NotificationsView: View {
                     ListRowNavigationImageLabel(image: "applewallet", title: "Wallet", subtitle: "Deliver Quietly", content: AppNotificationsView(bannersEnabled: false, soundsEnabled: false, badgesEnabled: false, appName: "Wallet"))
                 }, header: {
                     Text("Notification Style")
-                })
-            }
-            .padding([.leading, .trailing], 45)
-            .navigationTitle("Notifications")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("Notifications")
-                            .font(.title)
-                    }
-                    .frame(maxWidth: .infinity)
                 })
             }
         }

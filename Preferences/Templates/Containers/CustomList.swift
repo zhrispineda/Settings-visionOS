@@ -17,7 +17,7 @@ import SwiftUI
 
 struct CustomList<Content: View>: View {
     // Variables
-    let parentViews = ["General"]
+    let parentViews = ["General", "Apps", "People", "Environments", "Notifications", "Screen Time", "Accessibility", "Control Center", "Siri & Search", "Privacy & Security", "Display", "Apple Vision Pro Storage", "Game Center", "Wallet & Apple Pay", "Developer"]
     var title: String = String()
     @ViewBuilder let content: Content
     
@@ -34,7 +34,7 @@ struct CustomList<Content: View>: View {
                 Text(title)
                     .font(.title2)
                     .frame(maxWidth: .infinity)
-                    .offset(x: parentViews.contains(title) ? 0 : -40) // Adjust for back button
+                    .offset(x: parentViews.contains(title) ? 0 : -40) // Adjust for back button if parent view or not
             })
         }
     }

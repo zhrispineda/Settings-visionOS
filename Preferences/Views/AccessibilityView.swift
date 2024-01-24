@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccessibilityView: View {
     var body: some View {
-        List {
+        CustomList(title: "Accessibility") {
             Section(content: {
                 
             }, header: {
@@ -32,17 +32,6 @@ struct AccessibilityView: View {
                 
             }, header: {
                 Text("General")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Accessibility")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Accessibility")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

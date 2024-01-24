@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScreenTimeView: View {
     var body: some View {
-        List {
+        CustomList(title: "Screen Time") {
             Section(content: {
                 NavigationLink(destination: ContentPrivacyRestrictionsView(), label: {
                     HStack {
@@ -39,16 +39,6 @@ struct ScreenTimeView: View {
                 Button("Use with Other Devices", action: {})
             }, footer: {
                 Text("Sign in to iCloud to report your screen time on any iPad or iPhone, or set up Family Sharing to use Screen Time with your family's devices.")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Screen Time")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

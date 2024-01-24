@@ -10,7 +10,7 @@ import SwiftUI
 struct AppsView: View {
     var body: some View {
         NavigationStack {
-            List {
+            CustomList(title: "Apps") {
                 Section {
                     ListRowNavigationImageLabel(image: "applefreeform", title: "Freeform", content: FreeformView())
                     ListRowNavigationImageLabel(image: "applephotos", title: "Photos", content: PhotosView())
@@ -24,15 +24,6 @@ struct AppsView: View {
                     ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts", content: ShortcutsView())
                 }, header: {
                     Text("Compatible Apps")
-                })
-            }
-            .padding([.leading, .trailing], 45)
-            .navigationTitle("Apps")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    Text("Apps")
-                    .font(.title)
-                    .frame(maxWidth: .infinity)
                 })
             }
         }

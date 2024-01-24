@@ -12,7 +12,7 @@ struct EnvironmentsView: View {
     
     var body: some View {
         NavigationStack {
-            List {
+            CustomList(title: "Environments") {
                 Section(content: {
                     ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: AppearanceView())
                 }, footer: {
@@ -25,17 +25,6 @@ struct EnvironmentsView: View {
                     Text("Volume")
                 }, footer: {
                     Text("Adjust the volume of the Environment's ambient sounds.")
-                })
-            }
-            .padding([.leading, .trailing], 45)
-            .navigationTitle("Environments")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("Environments")
-                            .font(.title)
-                    }
-                    .frame(maxWidth: .infinity)
                 })
             }
         }

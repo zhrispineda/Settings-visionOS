@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PrivacySecurityView: View {
     var body: some View {
-        List {
+        CustomList(title: "Privacy & Security") {
             // Tracking Section
             Section {
                 ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", content: EmptyView())
@@ -27,17 +27,6 @@ struct PrivacySecurityView: View {
             Section {
                 NavigationLink("Apple Advertising", destination: {})
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Privacy & Security")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Privacy & Security")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-            })
         }
     }
 }

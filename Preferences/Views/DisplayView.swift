@@ -13,7 +13,7 @@ struct DisplayView: View {
     @State private var brightness = CGFloat(0.5)
     
     var body: some View {
-        List {
+        CustomList(title: "Display") {
             Section {
                 NavigationLink("Text Size", destination: {})
                 Toggle("Bold Text", isOn: $boldTextEnabled)
@@ -39,17 +39,6 @@ struct DisplayView: View {
                 ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: EmptyView())
             }, header: {
                 Text("Display")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Display")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Display")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

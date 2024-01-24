@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ControlCenterView: View {
     var body: some View {
-        List {
+        CustomList(title: "Control Center") {
             Section(content: {
                 
             }, header: {
@@ -20,16 +20,6 @@ struct ControlCenterView: View {
                 
             }, header: {
                 Text("More Controls")
-            })
-        }
-        .padding([.leading, .trailing], 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Control Center")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
             })
         }
     }

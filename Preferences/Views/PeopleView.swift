@@ -10,7 +10,7 @@ import SwiftUI
 struct PeopleView: View {
     var body: some View {
         NavigationStack {
-            List {
+            CustomList(title: "People") {
                 Section {
                     ZStack(alignment: .leading) {
                         NavigationLink("", destination: AddAccountView())
@@ -33,17 +33,6 @@ struct PeopleView: View {
                     })
                     NavigationLink("Blocked Contacts", destination: BlockedContacts())
                 }
-            }
-            .padding([.leading, .trailing], 45)
-            .navigationTitle("People")
-            .toolbar {
-                ToolbarItem(placement: .principal, content: {
-                    HStack {
-                        Text("People")
-                            .font(.title)
-                    }
-                    .frame(maxWidth: .infinity)
-                })
             }
         }
     }

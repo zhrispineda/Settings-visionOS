@@ -19,7 +19,7 @@ struct SiriSearchView: View {
     @State private var showWhenListeningEnabled = true
     
     var body: some View {
-        List {
+        CustomList(title: "Siri & Search") {
             Section(content: {
                 ListRowNavigationLabel(title: "Language", subtitle: "English", content: EmptyView())
                     .disabled(true)
@@ -72,17 +72,6 @@ struct SiriSearchView: View {
                     Text("Files")
                 })
             }
-        }
-        .padding([.leading, .trailing], 45)
-        .navigationTitle("Siri & Search")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Siri & Search")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-            })
         }
     }
 }

@@ -28,7 +28,7 @@ struct StorageView: View {
     }
     
     var body: some View {
-        List {
+        CustomList(title: "Apple Vision Pro Storage") {
             // Graph Section
             Section {
                 VStack {
@@ -121,17 +121,7 @@ struct StorageView: View {
                 })
             }
         }
-        .padding([.leading, .trailing], 45)
         .searchable(text: $searchText, placement: .navigationBarDrawer)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Apple Vision Pro Storage")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-            })
-        }
     }
 }
 
