@@ -32,16 +32,16 @@ struct AccessibilityView: View {
             Section(content: {
                 ListRowNavigationSymbolLabel(color: .red, symbol: "waveform.badge.magnifyingglass", title: "Sound Recognition", status: "Off", content: SoundRecognitionView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "eye.fill", title: "Audio & Visual", content: AudioVisualView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "captions.bubble.fill", title: "Subtitles & Captioning", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "captions.bubble.fill", title: "Subtitles & Captioning", content: SubtitlesCaptioningView())
             }, header: {
                 Text("Hearing")
             })
             
             Section(content: {
-                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "lock.circle.dotted", title: "Guided Access", status: "Off", content: EmptyView())
-                ListRowNavigationImageLabel(isRounded: true, image: "applesiri", title: "Siri", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "accessibility", title: "Accessibility Shortcut", status: "Off", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "circle.badge.checkmark", title: "Per-App Settings", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "lock.circle.dotted", title: "Guided Access", status: "Off", content: GuidedAccessView())
+                ListRowNavigationImageLabel(isRounded: true, image: "applesiri", title: "Siri", content: SiriView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "accessibility", title: "Accessibility Shortcut", status: "Off", content: AccessibilityShortcutView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "circle.badge.checkmark", title: "Per-App Settings", content: PerAppSettingsView())
             }, header: {
                 Text("General")
             })
