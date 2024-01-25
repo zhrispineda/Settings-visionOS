@@ -65,7 +65,7 @@ struct StorageView: View {
             
             // Applications Section
             Section(content: {
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: AppStorageInfoView(appName: "Calendar"), label: {
                     HStack(spacing: 15) {
                         Image("applecalendar")
                             .resizable()
@@ -80,7 +80,7 @@ struct StorageView: View {
                     }
                     .padding(.vertical, 5)
                 })
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: AppStorageInfoView(appName: "Safari"), label: {
                     HStack(spacing: 15) {
                         Image("applesafari")
                             .resizable()
@@ -101,7 +101,7 @@ struct StorageView: View {
             
             // System Section
             Section {
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: SystemInfoView(title: "visionOS (1.0)"), label: {
                     HStack(spacing: 15) {
                         Image("applesettings")
                             .resizable()
@@ -116,7 +116,7 @@ struct StorageView: View {
                     }
                     .padding(.vertical, 5)
                 })
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: SystemInfoView(title: "System Data"), label: {
                     HStack(spacing: 15) {
                         Image("applesettings")
                             .resizable()

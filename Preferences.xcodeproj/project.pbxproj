@@ -34,6 +34,8 @@
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
 		8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17A2B62F8680039BDEC /* TextSizeView.swift */; };
 		8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */; };
+		8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */; };
+		8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1812B6300F00039BDEC /* SystemInfoView.swift */; };
 		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
@@ -188,6 +190,8 @@
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
 		8309A17A2B62F8680039BDEC /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
 		8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAppearanceView.swift; sourceTree = "<group>"; };
+		8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageInfoView.swift; sourceTree = "<group>"; };
+		8309A1812B6300F00039BDEC /* SystemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoView.swift; sourceTree = "<group>"; };
 		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
@@ -366,6 +370,14 @@
 				8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */,
 			);
 			path = Display;
+			sourceTree = "<group>";
+		};
+		8309A1802B6300D80039BDEC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8309A1812B6300F00039BDEC /* SystemInfoView.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		831485D62B560A21007E72E0 /* Keyboard */ = {
@@ -617,6 +629,7 @@
 				83080E942B61B62E00771ACC /* Accessibility */,
 				83A9C8EF2B62D45300CF4C4B /* Siri & Search */,
 				8309A1792B62F6D70039BDEC /* Display */,
+				8309A1802B6300D80039BDEC /* Storage */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
@@ -751,6 +764,7 @@
 				83E7DC332B6093F2002B9087 /* CleanExplicitView.swift */,
 				83E7DC352B6094EB002B9087 /* OnOffView.swift */,
 				83E7DC3D2B60A1A6002B9087 /* AllowDontAllowChangesView.swift */,
+				8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -919,6 +933,7 @@
 				832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */,
 				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
+				8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */,
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
@@ -968,6 +983,7 @@
 				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
 				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
+				8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
