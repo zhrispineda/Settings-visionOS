@@ -15,7 +15,7 @@ struct DisplayView: View {
     var body: some View {
         CustomList(title: "Display") {
             Section {
-                NavigationLink("Text Size", destination: {})
+                NavigationLink("Text Size", destination: TextSizeView())
                 Toggle("Bold Text", isOn: $boldTextEnabled)
             }
             
@@ -36,7 +36,7 @@ struct DisplayView: View {
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: EmptyView())
+                ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: DisplayAppearanceView())
             }, header: {
                 Text("Display")
             })

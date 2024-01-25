@@ -32,6 +32,8 @@
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
+		8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17A2B62F8680039BDEC /* TextSizeView.swift */; };
+		8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */; };
 		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
@@ -184,6 +186,8 @@
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
+		8309A17A2B62F8680039BDEC /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
+		8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAppearanceView.swift; sourceTree = "<group>"; };
 		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
@@ -353,6 +357,15 @@
 				83080EB32B61FD7500771ACC /* PerAppSettingsView.swift */,
 			);
 			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		8309A1792B62F6D70039BDEC /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				8309A17A2B62F8680039BDEC /* TextSizeView.swift */,
+				8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */,
+			);
+			path = Display;
 			sourceTree = "<group>";
 		};
 		831485D62B560A21007E72E0 /* Keyboard */ = {
@@ -603,6 +616,7 @@
 				83F20FEE2B5F354100164ACF /* Screen Time */,
 				83080E942B61B62E00771ACC /* Accessibility */,
 				83A9C8EF2B62D45300CF4C4B /* Siri & Search */,
+				8309A1792B62F6D70039BDEC /* Display */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
@@ -898,6 +912,7 @@
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				83080EAE2B61ECFB00771ACC /* GuidedAccessView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */,
 				83A9C8F12B62D47B00CF4C4B /* SiriVoiceView.swift in Sources */,
 				83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */,
 				834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */,
@@ -928,6 +943,7 @@
 				832A54702B5C91F100BC877C /* BirthdaysView.swift in Sources */,
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
+				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
 				834111E52B5DB18100366689 /* DisplayOrderView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,

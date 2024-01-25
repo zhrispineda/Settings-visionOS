@@ -70,26 +70,30 @@ struct StorageView: View {
                         Image("applecalendar")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 32)
+                            .frame(height: 40)
                         VStack(alignment: .leading) {
                             Text("Calendar")
                             Text("4.6 MB")
+                                .font(.caption)
                                 .foregroundStyle(.gray)
                         }
                     }
+                    .padding(.vertical, 5)
                 })
                 NavigationLink(destination: {}, label: {
                     HStack(spacing: 15) {
                         Image("applesafari")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 32)
+                            .frame(height: 40)
                         VStack(alignment: .leading) {
                             Text("Safari")
                             Text("308 KB")
+                                .font(.caption)
                                 .foregroundStyle(.gray)
                         }
                     }
+                    .padding(.vertical, 5)
                 })
             }, header: {
                 Text("Applications")
@@ -99,25 +103,33 @@ struct StorageView: View {
             Section {
                 NavigationLink(destination: {}, label: {
                     HStack(spacing: 15) {
-                        Image(systemName: "gear.circle.fill")
-                            .font(.title)
+                        Image("applesettings")
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
                             Text("visionOS (1.0)")
                             Text("9.97 GB")
+                                .font(.caption)
                                 .foregroundStyle(.gray)
                         }
                     }
+                    .padding(.vertical, 5)
                 })
                 NavigationLink(destination: {}, label: {
                     HStack(spacing: 15) {
-                        Image(systemName: "gear.circle.fill")
-                            .font(.title)
+                        Image("applesettings")
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
                             Text("System Data")
                             Text("22.33 GB")
+                                .font(.caption)
                                 .foregroundStyle(.gray)
                         }
                     }
+                    .padding(.vertical, 5)
                 })
             }
         }
