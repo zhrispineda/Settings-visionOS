@@ -32,9 +32,6 @@ struct AccessibilityShortcutView: View {
                                 .foregroundStyle(.blue)
                                 .opacity(selected.contains(shortcut) ? 1.0 : 0.0)
                             Text(shortcut)
-                            Spacer()
-                            Image(systemName: "line.3.horizontal")
-                                .foregroundStyle(.secondary)
                         }
                     })
                 }
@@ -45,6 +42,7 @@ struct AccessibilityShortcutView: View {
                 Text("Triple-click the Digital Crown for:")
             })
         }
+        .environment(\.editMode, Binding.constant(EditMode.active))
     }
 }
 
