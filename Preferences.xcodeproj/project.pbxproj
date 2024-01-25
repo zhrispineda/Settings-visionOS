@@ -91,6 +91,10 @@
 		839EA81F2B59CE520099BCAA /* SiriSearchAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */; };
 		839EA8212B59D1860099BCAA /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA8202B59D1860099BCAA /* PhotosView.swift */; };
 		839EA8232B59D8340099BCAA /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA8222B59D8340099BCAA /* SafariView.swift */; };
+		83A9C8F12B62D47B00CF4C4B /* SiriVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F02B62D47B00CF4C4B /* SiriVoiceView.swift */; };
+		83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */; };
+		83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */; };
+		83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */; };
 		83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
@@ -240,6 +244,10 @@
 		839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchAppView.swift; sourceTree = "<group>"; };
 		839EA8202B59D1860099BCAA /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		839EA8222B59D8340099BCAA /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		83A9C8F02B62D47B00CF4C4B /* SiriVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriVoiceView.swift; sourceTree = "<group>"; };
+		83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriResponsesView.swift; sourceTree = "<group>"; };
+		83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriDictationHistoryView.swift; sourceTree = "<group>"; };
+		83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticallySendMessagesView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Preferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_visionOSApp.swift; sourceTree = "<group>"; };
 		83AB15B12B44CB37002DCD7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -531,6 +539,17 @@
 			path = Apps;
 			sourceTree = "<group>";
 		};
+		83A9C8EF2B62D45300CF4C4B /* Siri & Search */ = {
+			isa = PBXGroup;
+			children = (
+				83A9C8F02B62D47B00CF4C4B /* SiriVoiceView.swift */,
+				83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */,
+				83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */,
+				83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */,
+			);
+			path = "Siri & Search";
+			sourceTree = "<group>";
+		};
 		83AB159F2B44CB37002DCD7E = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +602,7 @@
 				83C175602B5EF0D200BA98FA /* Focus */,
 				83F20FEE2B5F354100164ACF /* Screen Time */,
 				83080E942B61B62E00771ACC /* Accessibility */,
+				83A9C8EF2B62D45300CF4C4B /* Siri & Search */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
@@ -843,6 +863,7 @@
 				83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */,
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83E7DC302B608DA9002B9087 /* MultiplayerGamesView.swift in Sources */,
+				83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */,
 				83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */,
 				83080EB42B61FD7500771ACC /* PerAppSettingsView.swift in Sources */,
 				834111D82B5DA68B00366689 /* NewsView.swift in Sources */,
@@ -877,6 +898,7 @@
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				83080EAE2B61ECFB00771ACC /* GuidedAccessView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				83A9C8F12B62D47B00CF4C4B /* SiriVoiceView.swift in Sources */,
 				83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */,
 				834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */,
 				832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */,
@@ -916,6 +938,7 @@
 				832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */,
 				83080EAA2B61E50F00771ACC /* AudioVisualView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
+				83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				83080EAC2B61EC0700771ACC /* SubtitlesCaptioningView.swift in Sources */,
@@ -960,6 +983,7 @@
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
+				83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,

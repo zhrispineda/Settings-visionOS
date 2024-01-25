@@ -23,11 +23,20 @@ struct SiriSearchView: View {
             Section(content: {
                 ListRowNavigationLabel(title: "Language", subtitle: "English", content: EmptyView())
                     .disabled(true)
-                ListRowNavigationLabel(title: "Siri Voice", subtitle: "American (Voice 4)", content: EmptyView())
-                NavigationLink("Siri Responses", destination: {})
-                ListRowNavigationLabel(title: "My Information", subtitle: "None", content: EmptyView())
-                NavigationLink("Siri & Dictation History", destination: {})
-                NavigationLink("Automatically Send Messages", destination: {})
+                ListRowNavigationLabel(title: "Siri Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
+                NavigationLink("Siri Responses", destination: SiriResponsesView())
+                Button(action: {}, label: { // TODO: Popover
+                    HStack {
+                        Text("My Information")
+                        Spacer()
+                        Text("None")
+                            .foregroundStyle(.secondary)
+                        Image(systemName: "chevron.right")
+                            .foregroundStyle(.secondary)
+                    }
+                })
+                NavigationLink("Siri & Dictation History", destination: SiriDictationHistoryView())
+                NavigationLink("Automatically Send Messages", destination: AutomaticallySendMessagesView())
             }, header: {
                 Text("Ask Siri")
             }, footer: {
