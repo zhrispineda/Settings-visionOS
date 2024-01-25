@@ -30,8 +30,8 @@ struct AccessibilityView: View {
             })
             
             Section(content: {
-                ListRowNavigationSymbolLabel(color: .red, symbol: "waveform.badge.magnifyingglass", title: "Sound Recognition", status: "Off", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "eye.fill", title: "Audio & Visual", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: .red, symbol: "waveform.badge.magnifyingglass", title: "Sound Recognition", status: "Off", content: SoundRecognitionView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "eye.fill", title: "Audio & Visual", content: AudioVisualView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "captions.bubble.fill", title: "Subtitles & Captioning", content: EmptyView())
             }, header: {
                 Text("Hearing")
