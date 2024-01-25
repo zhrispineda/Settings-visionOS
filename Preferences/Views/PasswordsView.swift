@@ -13,7 +13,7 @@ struct PasswordsView: View {
     var body: some View {
         List {
             Section {
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: SecurityRecommendationsView(), label: {
                     HStack {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
@@ -33,7 +33,7 @@ struct PasswordsView: View {
                             .foregroundStyle(.secondary)
                     }
                 })
-                NavigationLink(destination: {}, label: {
+                NavigationLink(destination: PasswordOptionsView(), label: {
                     HStack {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))

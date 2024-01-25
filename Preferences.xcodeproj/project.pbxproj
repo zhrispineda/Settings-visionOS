@@ -36,6 +36,8 @@
 		8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */; };
 		8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */; };
 		8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1812B6300F00039BDEC /* SystemInfoView.swift */; };
+		8309A1852B6303BA0039BDEC /* SecurityRecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1842B6303BA0039BDEC /* SecurityRecommendationsView.swift */; };
+		8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1862B6304470039BDEC /* PasswordOptionsView.swift */; };
 		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
@@ -192,6 +194,8 @@
 		8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAppearanceView.swift; sourceTree = "<group>"; };
 		8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageInfoView.swift; sourceTree = "<group>"; };
 		8309A1812B6300F00039BDEC /* SystemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoView.swift; sourceTree = "<group>"; };
+		8309A1842B6303BA0039BDEC /* SecurityRecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityRecommendationsView.swift; sourceTree = "<group>"; };
+		8309A1862B6304470039BDEC /* PasswordOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOptionsView.swift; sourceTree = "<group>"; };
 		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
@@ -378,6 +382,15 @@
 				8309A1812B6300F00039BDEC /* SystemInfoView.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		8309A1832B63038A0039BDEC /* Passwords */ = {
+			isa = PBXGroup;
+			children = (
+				8309A1842B6303BA0039BDEC /* SecurityRecommendationsView.swift */,
+				8309A1862B6304470039BDEC /* PasswordOptionsView.swift */,
+			);
+			path = Passwords;
 			sourceTree = "<group>";
 		};
 		831485D62B560A21007E72E0 /* Keyboard */ = {
@@ -630,6 +643,7 @@
 				83A9C8EF2B62D45300CF4C4B /* Siri & Search */,
 				8309A1792B62F6D70039BDEC /* Display */,
 				8309A1802B6300D80039BDEC /* Storage */,
+				8309A1832B63038A0039BDEC /* Passwords */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
 				834A448C2B461BE100690818 /* AppsView.swift */,
@@ -1019,10 +1033,12 @@
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
+				8309A1852B6303BA0039BDEC /* SecurityRecommendationsView.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
+				8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */,
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
