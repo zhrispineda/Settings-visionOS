@@ -24,9 +24,9 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
         }, label: {
             HStack(spacing: 15) {
                 ZStack {
-                    color
+                    Circle()
+                        .foregroundStyle(color.gradient)
                         .frame(width: 32, height: 32)
-                        .clipShape(Circle())
                     if title == "Audio & Visual" {
                         VStack(spacing: 1) {
                             Image(systemName: "speaker.2.fill")
