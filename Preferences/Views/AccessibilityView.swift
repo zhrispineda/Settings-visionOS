@@ -21,10 +21,10 @@ struct AccessibilityView: View {
             })
             
             Section(content: {
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "hand.point.up.left.fill", title: "Interaction", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "square.grid.2x2", title: "Switch Control", status: "Off", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "digitalcrown.horizontal.press.fill", title: "Digital Crown", content: EmptyView())
-                ListRowNavigationSymbolLabel(color: .gray, symbol: "keyboard", title: "Keyboards", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "hand.point.up.left.fill", title: "Interaction", content: InteractionView())
+                ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "square.grid.2x2", title: "Switch Control", status: "Off", content: SwitchControlView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "digitalcrown.horizontal.press.fill", title: "Digital Crown", content: DigitalCrownView())
+                ListRowNavigationSymbolLabel(color: .gray, symbol: "keyboard", title: "Keyboards", content: AccessibilityKeyboardsView())
             }, header: {
                 Text("Physical and Motor")
             })

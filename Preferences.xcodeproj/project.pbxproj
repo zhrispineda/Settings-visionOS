@@ -18,6 +18,10 @@
 		83080E9A2B61C48100771ACC /* MotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E992B61C48100771ACC /* MotionView.swift */; };
 		83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */; };
 		83080E9E2B61D03400771ACC /* AudioDescriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */; };
+		83080EA02B61D56C00771ACC /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9F2B61D56C00771ACC /* InteractionView.swift */; };
+		83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA12B61D86A00771ACC /* SwitchControlView.swift */; };
+		83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA32B61DF7000771ACC /* DigitalCrownView.swift */; };
+		83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */; };
 		8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585A2B5301B000DD47D4 /* DisplayView.swift */; };
 		8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */; };
 		8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */; };
@@ -155,6 +159,10 @@
 		83080E992B61C48100771ACC /* MotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionView.swift; sourceTree = "<group>"; };
 		83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenContentView.swift; sourceTree = "<group>"; };
 		83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDescriptionsView.swift; sourceTree = "<group>"; };
+		83080E9F2B61D56C00771ACC /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		83080EA12B61D86A00771ACC /* SwitchControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchControlView.swift; sourceTree = "<group>"; };
+		83080EA32B61DF7000771ACC /* DigitalCrownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalCrownView.swift; sourceTree = "<group>"; };
+		83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityKeyboardsView.swift; sourceTree = "<group>"; };
 		8309585A2B5301B000DD47D4 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySecurityView.swift; sourceTree = "<group>"; };
 		8309585E2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationIconLabel.swift; sourceTree = "<group>"; };
@@ -310,6 +318,10 @@
 				83080E992B61C48100771ACC /* MotionView.swift */,
 				83080E9B2B61CDEC00771ACC /* SpokenContentView.swift */,
 				83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */,
+				83080E9F2B61D56C00771ACC /* InteractionView.swift */,
+				83080EA12B61D86A00771ACC /* SwitchControlView.swift */,
+				83080EA32B61DF7000771ACC /* DigitalCrownView.swift */,
+				83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */,
 			);
 			path = Accessibility;
 			sourceTree = "<group>";
@@ -807,6 +819,7 @@
 			files = (
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
 				832A54582B5C30C600BC877C /* FeatureFlagsView.swift in Sources */,
+				83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */,
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83E7DC302B608DA9002B9087 /* MultiplayerGamesView.swift in Sources */,
 				83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */,
@@ -836,6 +849,7 @@
 				83D4D96E2B5DFA6300081A31 /* CustomizeNotificationsView.swift in Sources */,
 				83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */,
 				830602E82B5837B0007B7529 /* TextReplacementView.swift in Sources */,
+				83080EA02B61D56C00771ACC /* InteractionView.swift in Sources */,
 				83FEB71D2B5AEA080028D308 /* CameraView.swift in Sources */,
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
@@ -910,6 +924,8 @@
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
 				83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */,
+				83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */,
+				83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */,
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
 				839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */,
 				83E7DC322B608EBA002B9087 /* WebContentView.swift in Sources */,
