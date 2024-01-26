@@ -21,7 +21,6 @@ struct SavedCreditCardsView: View {
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
-                .offset(x: -40)
             })
             ToolbarItem(placement: .topBarTrailing, content: {
                 EditButton()
@@ -32,5 +31,7 @@ struct SavedCreditCardsView: View {
 }
 
 #Preview {
-    SavedCreditCardsView()
+    NavigationStack {
+        SavedCreditCardsView()
+    }
 }
