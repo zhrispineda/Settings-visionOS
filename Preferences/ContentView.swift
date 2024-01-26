@@ -162,14 +162,16 @@ struct ContentView: View {
                 
                 // Developer Section
                 Section {
-                    NavigationLink(value: developerSettings.type, label: {
-                        Image(systemName: developerSettings.icon)
-                            .font(.largeTitle)
-                            .fontWeight(.light)
-                            .symbolRenderingMode(.palette)
-                            .foregroundStyle(.white.gradient, developerSettings.color.gradient)
-                        Text(developerSettings.id)
-                    })
+                    ForEach(developerSettings) { setting in
+                        NavigationLink(value: setting.type, label: {
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                            Text(setting.id)
+                        })
+                    }
                 }
             }
             .navigationBarTitle("Settings")
@@ -178,26 +180,11 @@ struct ContentView: View {
         } detail: {
             destination
                 .onChange(of: selection, { // Change views when sidebar navigation links are tapped
-                    if let selectedSettingsItem = mainSettings.first(where: { $0.type == selection }) {
+                    if let selectedSettingsItem = combinedSettings.first(where: { $0.type == selection }) {
                         destination = selectedSettingsItem.destination
-                    }
-                    if let selectedSettingsItem = focusSettings.first(where: { $0.type == selection }) {
-                        destination = selectedSettingsItem.destination
-                    }
-                    if let selectedSettingsItem = usageSettings.first(where: { $0.type == selection }) {
-                        destination = selectedSettingsItem.destination
-                    }
-                    if let selectedSettingsItem = deviceSettings.first(where: { $0.type == selection }) {
-                        destination = selectedSettingsItem.destination
-                    }
-                    if let selectedSettingsItem = accountSettings.first(where: { $0.type == selection }) {
-                        destination = selectedSettingsItem.destination
-                    }
-                    if developerSettings.type == selection {
-                        destination = developerSettings.destination
+                        print("Changed to \(selectedSettingsItem.id)")
                     }
                 })
-            // TODO: Clean the .onChange function to be cleaner
         }
     }
 }

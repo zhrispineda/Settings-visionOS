@@ -78,4 +78,9 @@ let accountSettings: [SettingsItem] = [
 ]
 
 // Developer Settings
-let developerSettings: SettingsItem = SettingsItem(type: .developer, title: "Developer", icon: "hammer.circle.fill", color: .gray, destination: AnyView(DeveloperView()))
+let developerSettings: [SettingsItem] = [
+    SettingsItem(type: .developer, title: "Developer", icon: "hammer.circle.fill", color: .gray, destination: AnyView(DeveloperView()))
+]
+
+// Combined Settings Array
+let combinedSettings = mainSettings + focusSettings + usageSettings + deviceSettings + accountSettings + developerSettings
