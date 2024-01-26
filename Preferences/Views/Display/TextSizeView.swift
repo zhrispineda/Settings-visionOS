@@ -9,17 +9,17 @@ import SwiftUI
 
 struct TextSizeView: View {
     // Variables
-    @State private var speakingRate = 3.0
+    @State private var textSize = 3.0
     
     var body: some View {
         VStack {
             ZStack {
-                Slider(value: $speakingRate,
+                Slider(value: $textSize,
                        in: 0.0...6.0,
                        step: 1.0,
                        minimumValueLabel: Image(systemName: "textformat.size.smaller"),
                        maximumValueLabel: Image(systemName: "textformat.size.larger"),
-                       label: { Text("Speaking Rate") }
+                       label: { Text("Text Size") }
                 )
                 .padding()
                 .background(

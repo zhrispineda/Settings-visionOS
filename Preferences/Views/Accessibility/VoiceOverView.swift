@@ -42,7 +42,7 @@ struct VoiceOverView: View {
             })
             
             Section {
-                NavigationLink("Speech", destination: {})
+                NavigationLink("Speech", destination: SpeechView())
                 NavigationLink("Braille", destination: {})
             }
             
