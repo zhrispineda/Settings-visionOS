@@ -1,5 +1,5 @@
 //
-//  Settings_visionOSApp.swift
+//  PreferencesApp.swift
 //  Settings-visionOS
 //
 //  Settings
@@ -8,11 +8,12 @@
 import SwiftUI
 
 @main
-struct Settings_visionOSApp: App {
+struct PreferencesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(width: 1000, height: 730)
         }
-        // TODO: Restrict resizing of window
+        .windowResizability(.contentSize)
     }
 }

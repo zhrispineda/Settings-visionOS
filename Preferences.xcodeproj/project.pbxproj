@@ -104,7 +104,7 @@
 		83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */; };
 		83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */; };
 		83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */; };
-		83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */; };
+		83AB15B02B44CB37002DCD7E /* PreferencesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* PreferencesApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
 		83AB15B72B44CB39002DCD7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */; };
@@ -267,7 +267,7 @@
 		83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriDictationHistoryView.swift; sourceTree = "<group>"; };
 		83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticallySendMessagesView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Preferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_visionOSApp.swift; sourceTree = "<group>"; };
+		83AB15AF2B44CB37002DCD7E /* PreferencesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesApp.swift; sourceTree = "<group>"; };
 		83AB15B12B44CB37002DCD7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		83AB15B32B44CB39002DCD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -626,7 +626,7 @@
 				835B93472B48951300E96BE3 /* Models */,
 				835B93462B48950800E96BE3 /* Templates */,
 				83AB15C32B44F6DE002DCD7E /* Views */,
-				83AB15AF2B44CB37002DCD7E /* Settings_visionOSApp.swift */,
+				83AB15AF2B44CB37002DCD7E /* PreferencesApp.swift */,
 				83AB15B12B44CB37002DCD7E /* ContentView.swift */,
 				83AB15B32B44CB39002DCD7E /* Assets.xcassets */,
 				83AB15B82B44CB39002DCD7E /* Info.plist */,
@@ -1020,7 +1020,7 @@
 				8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
-				83AB15B02B44CB37002DCD7E /* Settings_visionOSApp.swift in Sources */,
+				83AB15B02B44CB37002DCD7E /* PreferencesApp.swift in Sources */,
 				832A54722B5C92FA00BC877C /* EventsView.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
 				83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */,

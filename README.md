@@ -19,4 +19,4 @@ Contributions such as pull requests that help make the app more accurate and bet
 ## Disclaimers
 - This app is a recreation of one of Apple's own apps and its designs.
 - All assets such as icons including those of Apple's and the Bluetooth symbol are not my own in any way.
-- This personal project started on January 2024, feel free to look through the commit history to see the project evolve from a single view to its current state.
+- This personal project started on January 2, 2024. Feel free to look through the commit history to see the project evolve from a single view to its current state.
