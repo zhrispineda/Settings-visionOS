@@ -17,6 +17,7 @@ struct ContentView: View {
         NavigationSplitView {
             List(selection: $selection) {
                 // TODO: Clean the loops for listing every navigation button
+                // TODO: Pop to root detail view on tapping NavigationLink within its own destination view
                 Section {
                     Button(action: {
                         print("Toggling Apple ID Popover")
@@ -175,14 +176,13 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Settings")
-            // Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
+            // TODO: Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         } detail: {
             destination
                 .onChange(of: selection, { // Change views when sidebar navigation links are tapped
                     if let selectedSettingsItem = combinedSettings.first(where: { $0.type == selection }) {
                         destination = selectedSettingsItem.destination
-                        print("Changed to \(selectedSettingsItem.id)")
                     }
                 })
         }

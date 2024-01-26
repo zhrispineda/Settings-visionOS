@@ -45,6 +45,7 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                                 .frame(width: 32, height: 32)
                             Image(icon)
                                 .fontWeight(.light)
+                                .imageScale(.large)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.white.gradient, color.gradient)
                         }
