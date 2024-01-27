@@ -110,6 +110,8 @@
 		8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */; };
 		8372E4AF2B64AD6D00C1ABDC /* PunctuationSomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AE2B64AD6D00C1ABDC /* PunctuationSomeView.swift */; };
 		8372E4B12B64AF4600C1ABDC /* PunctuationNoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B02B64AF4600C1ABDC /* PunctuationNoneView.swift */; };
+		8372E4B32B64B10100C1ABDC /* SystemNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B22B64B10100C1ABDC /* SystemNotificationsView.swift */; };
+		8372E4B52B64B37900C1ABDC /* QuickNavAnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B42B64B37900C1ABDC /* QuickNavAnnouncementsView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -292,6 +294,8 @@
 		8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationAllView.swift; sourceTree = "<group>"; };
 		8372E4AE2B64AD6D00C1ABDC /* PunctuationSomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationSomeView.swift; sourceTree = "<group>"; };
 		8372E4B02B64AF4600C1ABDC /* PunctuationNoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationNoneView.swift; sourceTree = "<group>"; };
+		8372E4B22B64B10100C1ABDC /* SystemNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNotificationsView.swift; sourceTree = "<group>"; };
+		8372E4B42B64B37900C1ABDC /* QuickNavAnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNavAnnouncementsView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -613,6 +617,8 @@
 			children = (
 				8372E4A92B649C5B00C1ABDC /* Punctuation */,
 				8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */,
+				8372E4B22B64B10100C1ABDC /* SystemNotificationsView.swift */,
+				8372E4B42B64B37900C1ABDC /* QuickNavAnnouncementsView.swift */,
 			);
 			path = Verbosity;
 			sourceTree = "<group>";
@@ -1074,6 +1080,7 @@
 				83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */,
 				834111DF2B5DA9C500366689 /* ShortcutsLegalNoticesView.swift in Sources */,
 				832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */,
+				8372E4B32B64B10100C1ABDC /* SystemNotificationsView.swift in Sources */,
 				8328F51E2B6451F8004C6220 /* SpeechView.swift in Sources */,
 				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
@@ -1195,6 +1202,7 @@
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,
 				83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */,
 				834E6CF02B6476B300B81150 /* AddNewLanguageView.swift in Sources */,
+				8372E4B52B64B37900C1ABDC /* QuickNavAnnouncementsView.swift in Sources */,
 				83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */,
 				83080E9A2B61C48100771ACC /* MotionView.swift in Sources */,
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,

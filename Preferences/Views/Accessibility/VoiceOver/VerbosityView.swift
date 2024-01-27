@@ -25,8 +25,8 @@ struct VerbosityView: View {
             
             Section {
                 Toggle("Speak Hints", isOn: $speakHintsEnabled)
-                NavigationLink("System Notifications", destination: {})
-                ListRowNavigationLabel(title: "QuickNav Announcements", subtitle: "Play Sound", content: EmptyView())
+                NavigationLink("System Notifications", destination: SystemNotificationsView())
+                ListRowNavigationLabel(title: "QuickNav Announcements", subtitle: "Play Sound", content: QuickNavAnnouncementsView())
             }
             
             Section {
