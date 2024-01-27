@@ -19,8 +19,8 @@ struct PunctuationView: View {
             
             Section(content: {
                 NavigationLink("All", destination: PunctuationAllView())
-                NavigationLink("Some", destination: PunctuationSomeView)
-                NavigationLink("None", destination: PunctuationNoneView)
+                NavigationLink("Some", destination: PunctuationSomeView())
+                NavigationLink("None", destination: PunctuationNoneView())
             }, header: {
                 Text("System Groups")
             })

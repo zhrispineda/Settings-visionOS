@@ -18,7 +18,7 @@ struct VerbosityView: View {
     var body: some View {
         CustomList(title: "Verbosity") {
             Section(content: {
-                NavigationLink("Punctuation", destination: {})
+                NavigationLink("Punctuation", destination: PunctuationView())
             }, footer: {
                 Text("Customize how punctuation is output.")
             })
