@@ -2,17 +2,19 @@
 //  QuickNavAnnouncementsView.swift
 //  Preferences
 //
-//  Settings > Accessibility > VoiceOver > Verbosity > QuickNav Announcements
+//  Template for selecting which verbosity methods to use.
 //
 
 import SwiftUI
 
-struct QuickNavAnnouncementsView: View {
-    let options = ["Speak", "Play Sound", "Change Pitch", "Braille", "Do Nothing"]
-    @State private var selected = ["Play Sound"]
+struct VerbosityMethodsView: View {
+    var title = String()
+    var options = ["Speak", "Play Sound", "Change Pitch", "Braille", "Do Nothing"]
+    @State var selected = ["Play Sound"]
+    @State private var firstItemOnlyEnabled = false
     
     var body: some View {
-        CustomList(title: "QuickNav Announcements") {
+        CustomList(title: title) {
             Section {
                 ForEach(options, id: \.self) { option in
                     Button(action: {
@@ -56,10 +58,14 @@ struct QuickNavAnnouncementsView: View {
                     })
                 }
             }
+            
+            if title == "Actions" {
+                Toggle("First Item Only", isOn: $firstItemOnlyEnabled)
+            }
         }
     }
 }
 
 #Preview {
-    QuickNavAnnouncementsView()
+    VerbosityMethodsView()
 }
