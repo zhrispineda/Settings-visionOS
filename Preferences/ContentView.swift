@@ -43,20 +43,22 @@ struct ContentView: View {
                 Section {
                     ForEach(mainSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            if setting.icon == "logo.appstore.circle.fill" {
-                                Image(setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                            } else {
-                                Image(systemName: setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            HStack(spacing: 15) {
+                                if setting.icon == "logo.appstore.circle.fill" {
+                                    Image(setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                } else {
+                                    Image(systemName: setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                }
+                                Text(setting.id)
                             }
-                            Text(setting.id)
                         })
                     }
                 }
@@ -65,12 +67,14 @@ struct ContentView: View {
                 Section {
                     ForEach(focusSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
-                            Text(setting.id)
+                            HStack(spacing: 15) {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                                Text(setting.id)
+                            }
                         })
                     }
                 }
@@ -79,26 +83,38 @@ struct ContentView: View {
                 Section {
                     ForEach(usageSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            if setting.icon == "custom.switch.2.circle.fill" {
-                                Image(setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                            } else if setting.icon == "applesiri" {
-                                Image(setting.icon)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 30)
-                                    .padding(.leading, 2)
-                            } else {
-                                Image(systemName: setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            HStack(spacing: 15) {
+                                if setting.icon == "accessibility" {
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 30, height: 30)
+                                            .foregroundStyle(.blue.gradient)
+                                        Image(systemName: setting.icon)
+                                            .fontWeight(.medium)
+                                            .font(.title3)
+                                    }
+                                    .padding(.leading, 3)
+                                } else if setting.icon == "custom.switch.2.circle.fill" {
+                                    Image(setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                } else if setting.icon == "applesiri" {
+                                    Image(setting.icon)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 30)
+                                        .padding(.leading, 2)
+                                } else {
+                                    Image(systemName: setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                }
+                                Text(setting.id)
                             }
-                            Text(setting.id)
                         })
                     }
                 }
@@ -107,20 +123,22 @@ struct ContentView: View {
                 Section {
                     ForEach(deviceSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            if setting.icon == "custom.externaldrive.circle.fill" {
-                                Image(setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                            } else {
-                                Image(systemName: setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            HStack(spacing: 15) {
+                                if setting.icon == "custom.externaldrive.circle.fill" {
+                                    Image(setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                } else {
+                                    Image(systemName: setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                }
+                                Text(setting.id)
                             }
-                            Text(setting.id)
                         })
                     }
                 }
@@ -129,34 +147,36 @@ struct ContentView: View {
                 Section {
                     ForEach(accountSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            if setting.icon == "custom.key.circle.fill" {
-                                Image(setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                            } else if setting.icon == "applegamecenter" {
-                                Image(setting.icon)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 27, height: 27)
-                                    .clipShape(Circle())
-                                    .padding(.horizontal, 3)
-                            } else if setting.icon == "applewallet" {
-                                Image(setting.icon)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 30)
-                                    .padding(.leading, 1)
-                                    .padding(.trailing, 3)
-                            } else {
-                                Image(systemName: setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                            HStack(spacing: 15) {
+                                if setting.icon == "custom.key.circle.fill" {
+                                    Image(setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                } else if setting.icon == "applegamecenter" {
+                                    Image(setting.icon)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 27, height: 27)
+                                        .clipShape(Circle())
+                                        .padding(.horizontal, 3)
+                                } else if setting.icon == "applewallet" {
+                                    Image(setting.icon)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 30)
+                                        .padding(.leading, 1)
+                                        .padding(.trailing, 3)
+                                } else {
+                                    Image(systemName: setting.icon)
+                                        .font(.largeTitle)
+                                        .fontWeight(.light)
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(.white.gradient, setting.color.gradient)
+                                }
+                                Text(setting.id)
                             }
-                            Text(setting.id)
                         })
                     }
                 }
@@ -165,12 +185,14 @@ struct ContentView: View {
                 Section {
                     ForEach(developerSettings) { setting in
                         NavigationLink(value: setting.type, label: {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
-                            Text(setting.id)
+                            HStack(spacing: 15) {
+                                Image(systemName: setting.icon)
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.white.gradient, setting.color.gradient)
+                                Text(setting.id)
+                            }
                         })
                     }
                 }

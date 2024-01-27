@@ -98,6 +98,7 @@
 		834E6D002B648B8A00B81150 /* BrailleAlertMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CFF2B648B8A00B81150 /* BrailleAlertMessagesView.swift */; };
 		834E6D022B648F2B00B81150 /* IgnoreChordDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */; };
 		834E6D042B6490FA00B81150 /* AutoAdvanceDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */; };
+		834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D052B6495D300B81150 /* VerbosityView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
@@ -273,6 +274,7 @@
 		834E6CFF2B648B8A00B81150 /* BrailleAlertMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleAlertMessagesView.swift; sourceTree = "<group>"; };
 		834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreChordDurationView.swift; sourceTree = "<group>"; };
 		834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAdvanceDurationView.swift; sourceTree = "<group>"; };
+		834E6D052B6495D300B81150 /* VerbosityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbosityView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				834E6CF12B647BC600B81150 /* Braille */,
 				8328F51D2B6451F8004C6220 /* SpeechView.swift */,
 				834E6CF22B647BE100B81150 /* BrailleView.swift */,
+				834E6D052B6495D300B81150 /* VerbosityView.swift */,
 			);
 			path = VoiceOver;
 			sourceTree = "<group>";
@@ -1046,6 +1049,7 @@
 				8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */,
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
+				834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,

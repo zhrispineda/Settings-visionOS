@@ -47,7 +47,7 @@ struct VoiceOverView: View {
             }
             
             Section {
-                NavigationLink("Verbosity", destination: {})
+                NavigationLink("Verbosity", destination: VerbosityView())
                 NavigationLink("Audio", destination: {})
             }
             
