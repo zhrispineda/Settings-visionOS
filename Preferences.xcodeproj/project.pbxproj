@@ -140,6 +140,9 @@
 		83BDDE4D2B659DF7006C0FDC /* ApplyAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE4C2B659DF7006C0FDC /* ApplyAppsView.swift */; };
 		83BDDE4F2B65A07D006C0FDC /* MediaDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE4E2B65A07D006C0FDC /* MediaDescriptionView.swift */; };
 		83BDDE512B65A17A006C0FDC /* VerbosityFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE502B65A17A006C0FDC /* VerbosityFeedbackView.swift */; };
+		83BDDE532B65ADA1006C0FDC /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE522B65ADA1006C0FDC /* AudioView.swift */; };
+		83BDDE562B65AF84006C0FDC /* VoiceOverSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */; };
+		83BDDE582B65B308006C0FDC /* VoiceOverSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE572B65B308006C0FDC /* VoiceOverSoundView.swift */; };
 		83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */; };
 		83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175622B5EF0ED00BA98FA /* AllowedPeopleView.swift */; };
 		83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175642B5EF9E000BA98FA /* FocusAllowedAppsView.swift */; };
@@ -334,6 +337,9 @@
 		83BDDE4C2B659DF7006C0FDC /* ApplyAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyAppsView.swift; sourceTree = "<group>"; };
 		83BDDE4E2B65A07D006C0FDC /* MediaDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDescriptionView.swift; sourceTree = "<group>"; };
 		83BDDE502B65A17A006C0FDC /* VerbosityFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbosityFeedbackView.swift; sourceTree = "<group>"; };
+		83BDDE522B65ADA1006C0FDC /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverSoundsView.swift; sourceTree = "<group>"; };
+		83BDDE572B65B308006C0FDC /* VoiceOverSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverSoundView.swift; sourceTree = "<group>"; };
 		83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusPreferencesView.swift; sourceTree = "<group>"; };
 		83C175622B5EF0ED00BA98FA /* AllowedPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowedPeopleView.swift; sourceTree = "<group>"; };
 		83C175642B5EF9E000BA98FA /* FocusAllowedAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAllowedAppsView.swift; sourceTree = "<group>"; };
@@ -488,9 +494,11 @@
 				8328F51F2B645553004C6220 /* Speech */,
 				834E6CF12B647BC600B81150 /* Braille */,
 				834E6D072B649AE800B81150 /* Verbosity */,
+				83BDDE542B65AF74006C0FDC /* Audio */,
 				8328F51D2B6451F8004C6220 /* SpeechView.swift */,
 				834E6CF22B647BE100B81150 /* BrailleView.swift */,
 				834E6D052B6495D300B81150 /* VerbosityView.swift */,
+				83BDDE522B65ADA1006C0FDC /* AudioView.swift */,
 			);
 			path = VoiceOver;
 			sourceTree = "<group>";
@@ -824,6 +832,14 @@
 			path = "Scene Descriptions";
 			sourceTree = "<group>";
 		};
+		83BDDE542B65AF74006C0FDC /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		83C175602B5EF0D200BA98FA /* Focus */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,6 +958,7 @@
 				8372E4B42B64B37900C1ABDC /* VerbosityMethodsView.swift */,
 				83BDDE412B659690006C0FDC /* VerbosityAudibleMethodsView.swift */,
 				83BDDE502B65A17A006C0FDC /* VerbosityFeedbackView.swift */,
+				83BDDE572B65B308006C0FDC /* VoiceOverSoundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1108,6 +1125,7 @@
 				83DB44EA2B4C4F6D0081852F /* ListRowLabel.swift in Sources */,
 				831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */,
 				83BDDE512B65A17A006C0FDC /* VerbosityFeedbackView.swift in Sources */,
+				83BDDE562B65AF84006C0FDC /* VoiceOverSoundsView.swift in Sources */,
 				83080EAE2B61ECFB00771ACC /* GuidedAccessView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
 				8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */,
@@ -1129,6 +1147,7 @@
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83BDDE422B659690006C0FDC /* VerbosityAudibleMethodsView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
+				83BDDE532B65ADA1006C0FDC /* AudioView.swift in Sources */,
 				83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */,
 				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
@@ -1144,6 +1163,7 @@
 				8309A1922B6358B00039BDEC /* AppPermissionView.swift in Sources */,
 				834E6D002B648B8A00B81150 /* BrailleAlertMessagesView.swift in Sources */,
 				837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */,
+				83BDDE582B65B308006C0FDC /* VoiceOverSoundView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
