@@ -89,6 +89,15 @@
 		834E6CEC2B64719500B81150 /* VoiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CEB2B64719500B81150 /* VoiceDetailView.swift */; };
 		834E6CEE2B64760100B81150 /* PronounciationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CED2B64760100B81150 /* PronounciationsView.swift */; };
 		834E6CF02B6476B300B81150 /* AddNewLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CEF2B6476B300B81150 /* AddNewLanguageView.swift */; };
+		834E6CF32B647BE100B81150 /* BrailleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CF22B647BE100B81150 /* BrailleView.swift */; };
+		834E6CF52B64828800B81150 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CF42B64828800B81150 /* OutputView.swift */; };
+		834E6CF72B64852800B81150 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CF62B64852800B81150 /* InputView.swift */; };
+		834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CF82B6485BB00B81150 /* BrailleTablesView.swift */; };
+		834E6CFC2B64866700B81150 /* SelectedBrailleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CFB2B64866700B81150 /* SelectedBrailleTableView.swift */; };
+		834E6CFE2B648A7C00B81150 /* StatusCellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CFD2B648A7C00B81150 /* StatusCellsView.swift */; };
+		834E6D002B648B8A00B81150 /* BrailleAlertMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6CFF2B648B8A00B81150 /* BrailleAlertMessagesView.swift */; };
+		834E6D022B648F2B00B81150 /* IgnoreChordDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */; };
+		834E6D042B6490FA00B81150 /* AutoAdvanceDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
@@ -255,6 +264,15 @@
 		834E6CEB2B64719500B81150 /* VoiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceDetailView.swift; sourceTree = "<group>"; };
 		834E6CED2B64760100B81150 /* PronounciationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronounciationsView.swift; sourceTree = "<group>"; };
 		834E6CEF2B6476B300B81150 /* AddNewLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLanguageView.swift; sourceTree = "<group>"; };
+		834E6CF22B647BE100B81150 /* BrailleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleView.swift; sourceTree = "<group>"; };
+		834E6CF42B64828800B81150 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		834E6CF62B64852800B81150 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		834E6CF82B6485BB00B81150 /* BrailleTablesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTablesView.swift; sourceTree = "<group>"; };
+		834E6CFB2B64866700B81150 /* SelectedBrailleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBrailleTableView.swift; sourceTree = "<group>"; };
+		834E6CFD2B648A7C00B81150 /* StatusCellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCellsView.swift; sourceTree = "<group>"; };
+		834E6CFF2B648B8A00B81150 /* BrailleAlertMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleAlertMessagesView.swift; sourceTree = "<group>"; };
+		834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreChordDurationView.swift; sourceTree = "<group>"; };
+		834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAdvanceDurationView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
@@ -436,7 +454,9 @@
 			isa = PBXGroup;
 			children = (
 				8328F51F2B645553004C6220 /* Speech */,
+				834E6CF12B647BC600B81150 /* Braille */,
 				8328F51D2B6451F8004C6220 /* SpeechView.swift */,
+				834E6CF22B647BE100B81150 /* BrailleView.swift */,
 			);
 			path = VoiceOver;
 			sourceTree = "<group>";
@@ -549,6 +569,29 @@
 				834111EE2B5DB5A600366689 /* ScreenSharingView.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		834E6CF12B647BC600B81150 /* Braille */ = {
+			isa = PBXGroup;
+			children = (
+				834E6CFA2B64865100B81150 /* Braille Tables */,
+				834E6CF42B64828800B81150 /* OutputView.swift */,
+				834E6CF62B64852800B81150 /* InputView.swift */,
+				834E6CF82B6485BB00B81150 /* BrailleTablesView.swift */,
+				834E6CFD2B648A7C00B81150 /* StatusCellsView.swift */,
+				834E6CFF2B648B8A00B81150 /* BrailleAlertMessagesView.swift */,
+				834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */,
+				834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */,
+			);
+			path = Braille;
+			sourceTree = "<group>";
+		};
+		834E6CFA2B64865100B81150 /* Braille Tables */ = {
+			isa = PBXGroup;
+			children = (
+				834E6CFB2B64866700B81150 /* SelectedBrailleTableView.swift */,
+			);
+			path = "Braille Tables";
 			sourceTree = "<group>";
 		};
 		835B93422B48904100E96BE3 /* General */ = {
@@ -956,6 +999,7 @@
 				83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */,
 				83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */,
 				83080EB42B61FD7500771ACC /* PerAppSettingsView.swift in Sources */,
+				834E6CFE2B648A7C00B81150 /* StatusCellsView.swift in Sources */,
 				834111D82B5DA68B00366689 /* NewsView.swift in Sources */,
 				83F20FF02B5F356200164ACF /* ContentPrivacyRestrictionsView.swift in Sources */,
 				83FEB7082B5AE0BE0028D308 /* ExtensionsView.swift in Sources */,
@@ -1006,6 +1050,7 @@
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
 				83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */,
+				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
 				83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */,
@@ -1017,6 +1062,7 @@
 				83E7DC3A2B60967C002B9087 /* TVView.swift in Sources */,
 				837F10552B533F3400CB8FCD /* FocusView.swift in Sources */,
 				8309A1922B6358B00039BDEC /* AppPermissionView.swift in Sources */,
+				834E6D002B648B8A00B81150 /* BrailleAlertMessagesView.swift in Sources */,
 				837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */,
@@ -1026,6 +1072,7 @@
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
 				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
+				834E6CF52B64828800B81150 /* OutputView.swift in Sources */,
 				834111E52B5DB18100366689 /* DisplayOrderView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,
@@ -1054,6 +1101,7 @@
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
+				834E6CF32B647BE100B81150 /* BrailleView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* PreferencesApp.swift in Sources */,
 				832A54722B5C92FA00BC877C /* EventsView.swift in Sources */,
@@ -1063,11 +1111,14 @@
 				834111E92B5DB39000366689 /* BlockedContacts.swift in Sources */,
 				832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
+				834E6CF72B64852800B81150 /* InputView.swift in Sources */,
 				832A54562B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift in Sources */,
 				830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */,
 				83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */,
 				83E7DC342B6093F2002B9087 /* CleanExplicitView.swift in Sources */,
 				832A545B2B5C7E6800BC877C /* CalendarView.swift in Sources */,
+				834E6D042B6490FA00B81150 /* AutoAdvanceDurationView.swift in Sources */,
+				834E6D022B648F2B00B81150 /* IgnoreChordDurationView.swift in Sources */,
 				83F20FFA2B5F8A6500164ACF /* ContentRestrictionsView.swift in Sources */,
 				83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
@@ -1092,6 +1143,7 @@
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,
+				834E6CFC2B64866700B81150 /* SelectedBrailleTableView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 				8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */,
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
