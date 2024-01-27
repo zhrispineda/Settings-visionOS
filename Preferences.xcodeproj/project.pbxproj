@@ -105,6 +105,11 @@
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
 		83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE42B57454F00948E7A /* ModifierKeysView.swift */; };
 		83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE62B57477A00948E7A /* KeyboardTypeView.swift */; };
+		8372E4A82B649B5C00C1ABDC /* PunctuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */; };
+		8372E4AB2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AA2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift */; };
+		8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */; };
+		8372E4AF2B64AD6D00C1ABDC /* PunctuationSomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AE2B64AD6D00C1ABDC /* PunctuationSomeView.swift */; };
+		8372E4B12B64AF4600C1ABDC /* PunctuationNoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B02B64AF4600C1ABDC /* PunctuationNoneView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -282,6 +287,11 @@
 		83713AE22B573FFE00948E7A /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		83713AE42B57454F00948E7A /* ModifierKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierKeysView.swift; sourceTree = "<group>"; };
 		83713AE62B57477A00948E7A /* KeyboardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTypeView.swift; sourceTree = "<group>"; };
+		8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationView.swift; sourceTree = "<group>"; };
+		8372E4AA2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePunctuationGroupView.swift; sourceTree = "<group>"; };
+		8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationAllView.swift; sourceTree = "<group>"; };
+		8372E4AE2B64AD6D00C1ABDC /* PunctuationSomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationSomeView.swift; sourceTree = "<group>"; };
+		8372E4B02B64AF4600C1ABDC /* PunctuationNoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationNoneView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -457,6 +467,7 @@
 			children = (
 				8328F51F2B645553004C6220 /* Speech */,
 				834E6CF12B647BC600B81150 /* Braille */,
+				834E6D072B649AE800B81150 /* Verbosity */,
 				8328F51D2B6451F8004C6220 /* SpeechView.swift */,
 				834E6CF22B647BE100B81150 /* BrailleView.swift */,
 				834E6D052B6495D300B81150 /* VerbosityView.swift */,
@@ -597,6 +608,15 @@
 			path = "Braille Tables";
 			sourceTree = "<group>";
 		};
+		834E6D072B649AE800B81150 /* Verbosity */ = {
+			isa = PBXGroup;
+			children = (
+				8372E4A92B649C5B00C1ABDC /* Punctuation */,
+				8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */,
+			);
+			path = Verbosity;
+			sourceTree = "<group>";
+		};
 		835B93422B48904100E96BE3 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +668,17 @@
 				83713AE62B57477A00948E7A /* KeyboardTypeView.swift */,
 			);
 			path = "Hardware Keyboard";
+			sourceTree = "<group>";
+		};
+		8372E4A92B649C5B00C1ABDC /* Punctuation */ = {
+			isa = PBXGroup;
+			children = (
+				8372E4AA2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift */,
+				8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */,
+				8372E4AE2B64AD6D00C1ABDC /* PunctuationSomeView.swift */,
+				8372E4B02B64AF4600C1ABDC /* PunctuationNoneView.swift */,
+			);
+			path = Punctuation;
 			sourceTree = "<group>";
 		};
 		839EA8192B59C83F0099BCAA /* Apps */ = {
@@ -1050,6 +1081,7 @@
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */,
+				8372E4AB2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift in Sources */,
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
@@ -1076,6 +1108,7 @@
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
 				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
+				8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */,
 				834E6CF52B64828800B81150 /* OutputView.swift in Sources */,
 				834111E52B5DB18100366689 /* DisplayOrderView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
@@ -1087,6 +1120,7 @@
 				832A546B2B5C8FCF00BC877C /* SyncView.swift in Sources */,
 				83080EAA2B61E50F00771ACC /* AudioVisualView.swift in Sources */,
 				834E6CEC2B64719500B81150 /* VoiceDetailView.swift in Sources */,
+				8372E4A82B649B5C00C1ABDC /* PunctuationView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
@@ -1128,6 +1162,7 @@
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
+				8372E4B12B64AF4600C1ABDC /* PunctuationNoneView.swift in Sources */,
 				83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */,
 				83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */,
 				83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */,
@@ -1140,6 +1175,7 @@
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */,
+				8372E4AF2B64AD6D00C1ABDC /* PunctuationSomeView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
