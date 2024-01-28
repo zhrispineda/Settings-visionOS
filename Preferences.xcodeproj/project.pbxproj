@@ -143,6 +143,10 @@
 		83BDDE532B65ADA1006C0FDC /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE522B65ADA1006C0FDC /* AudioView.swift */; };
 		83BDDE562B65AF84006C0FDC /* VoiceOverSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */; };
 		83BDDE582B65B308006C0FDC /* VoiceOverSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE572B65B308006C0FDC /* VoiceOverSoundView.swift */; };
+		83BDDE5A2B65B7A4006C0FDC /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE592B65B7A4006C0FDC /* CommandsView.swift */; };
+		83BDDE5D2B65B98B006C0FDC /* AllCommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE5C2B65B98B006C0FDC /* AllCommandsView.swift */; };
+		83BDDE602B65BAE9006C0FDC /* AllCommandsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE5F2B65BAE9006C0FDC /* AllCommandsDetailView.swift */; };
+		83BDDE632B65BBCB006C0FDC /* InteractionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDDE622B65BBCB006C0FDC /* InteractionItemView.swift */; };
 		83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */; };
 		83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175622B5EF0ED00BA98FA /* AllowedPeopleView.swift */; };
 		83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175642B5EF9E000BA98FA /* FocusAllowedAppsView.swift */; };
@@ -340,6 +344,10 @@
 		83BDDE522B65ADA1006C0FDC /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverSoundsView.swift; sourceTree = "<group>"; };
 		83BDDE572B65B308006C0FDC /* VoiceOverSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverSoundView.swift; sourceTree = "<group>"; };
+		83BDDE592B65B7A4006C0FDC /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
+		83BDDE5C2B65B98B006C0FDC /* AllCommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommandsView.swift; sourceTree = "<group>"; };
+		83BDDE5F2B65BAE9006C0FDC /* AllCommandsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommandsDetailView.swift; sourceTree = "<group>"; };
+		83BDDE622B65BBCB006C0FDC /* InteractionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionItemView.swift; sourceTree = "<group>"; };
 		83C1755E2B5EEE8200BA98FA /* FocusPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusPreferencesView.swift; sourceTree = "<group>"; };
 		83C175622B5EF0ED00BA98FA /* AllowedPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowedPeopleView.swift; sourceTree = "<group>"; };
 		83C175642B5EF9E000BA98FA /* FocusAllowedAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAllowedAppsView.swift; sourceTree = "<group>"; };
@@ -495,10 +503,12 @@
 				834E6CF12B647BC600B81150 /* Braille */,
 				834E6D072B649AE800B81150 /* Verbosity */,
 				83BDDE542B65AF74006C0FDC /* Audio */,
+				83BDDE5B2B65B980006C0FDC /* Commands */,
 				8328F51D2B6451F8004C6220 /* SpeechView.swift */,
 				834E6CF22B647BE100B81150 /* BrailleView.swift */,
 				834E6D052B6495D300B81150 /* VerbosityView.swift */,
 				83BDDE522B65ADA1006C0FDC /* AudioView.swift */,
+				83BDDE592B65B7A4006C0FDC /* CommandsView.swift */,
 			);
 			path = VoiceOver;
 			sourceTree = "<group>";
@@ -838,6 +848,32 @@
 				83BDDE552B65AF84006C0FDC /* VoiceOverSoundsView.swift */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		83BDDE5B2B65B980006C0FDC /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				83BDDE5E2B65BADF006C0FDC /* All Commands */,
+				83BDDE5C2B65B98B006C0FDC /* AllCommandsView.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		83BDDE5E2B65BADF006C0FDC /* All Commands */ = {
+			isa = PBXGroup;
+			children = (
+				83BDDE612B65BBB2006C0FDC /* Interaction */,
+				83BDDE5F2B65BAE9006C0FDC /* AllCommandsDetailView.swift */,
+			);
+			path = "All Commands";
+			sourceTree = "<group>";
+		};
+		83BDDE612B65BBB2006C0FDC /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				83BDDE622B65BBCB006C0FDC /* InteractionItemView.swift */,
+			);
+			path = Interaction;
 			sourceTree = "<group>";
 		};
 		83C175602B5EF0D200BA98FA /* Focus */ = {
@@ -1198,6 +1234,7 @@
 				8309A1902B63576B0039BDEC /* TrackingView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
 				83D4D9692B5DF06600081A31 /* NotificationGroupingView.swift in Sources */,
+				83BDDE5D2B65B98B006C0FDC /* AllCommandsView.swift in Sources */,
 				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
 				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
 				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
@@ -1218,6 +1255,7 @@
 				834E6CF72B64852800B81150 /* InputView.swift in Sources */,
 				832A54562B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift in Sources */,
 				830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */,
+				83BDDE602B65BAE9006C0FDC /* AllCommandsDetailView.swift in Sources */,
 				83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */,
 				83E7DC342B6093F2002B9087 /* CleanExplicitView.swift in Sources */,
 				832A545B2B5C7E6800BC877C /* CalendarView.swift in Sources */,
@@ -1225,6 +1263,7 @@
 				834E6D022B648F2B00B81150 /* IgnoreChordDurationView.swift in Sources */,
 				83F20FFA2B5F8A6500164ACF /* ContentRestrictionsView.swift in Sources */,
 				83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */,
+				83BDDE632B65BBCB006C0FDC /* InteractionItemView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
@@ -1242,6 +1281,7 @@
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */,
 				8372E4AF2B64AD6D00C1ABDC /* PunctuationSomeView.swift in Sources */,
+				83BDDE5A2B65B7A4006C0FDC /* CommandsView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
