@@ -53,7 +53,7 @@ struct VoiceOverView: View {
             
             Section(content: {
                 NavigationLink("Commands", destination: CommandsView())
-                NavigationLink("Rotor", destination: {})
+                NavigationLink("Rotor", destination: RotorView())
                 NavigationLink("Activities", destination: {})
                 NavigationLink("Typing", destination: {})
                 NavigationLink("Quick Settings", destination: {})
@@ -76,5 +76,7 @@ struct VoiceOverView: View {
 }
 
 #Preview {
-    VoiceOverView()
+    NavigationStack {
+        VoiceOverView()
+    }
 }
