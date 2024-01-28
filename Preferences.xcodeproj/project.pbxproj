@@ -114,6 +114,7 @@
 		8372E4B52B64B37900C1ABDC /* VerbosityMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B42B64B37900C1ABDC /* VerbosityMethodsView.swift */; };
 		8372E4B72B64CECC00C1ABDC /* CapitalLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4B62B64CECC00C1ABDC /* CapitalLettersView.swift */; };
 		837DA1652B66C88A0038B856 /* TouchGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1642B66C88A0038B856 /* TouchGesturesView.swift */; };
+		837DA1672B66F7A60038B856 /* KeyboardShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1662B66F7A60038B856 /* KeyboardShortcutsView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -314,6 +315,7 @@
 		8372E4B42B64B37900C1ABDC /* VerbosityMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbosityMethodsView.swift; sourceTree = "<group>"; };
 		8372E4B62B64CECC00C1ABDC /* CapitalLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalLettersView.swift; sourceTree = "<group>"; };
 		837DA1642B66C88A0038B856 /* TouchGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchGesturesView.swift; sourceTree = "<group>"; };
+		837DA1662B66F7A60038B856 /* KeyboardShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutsView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -858,6 +860,7 @@
 				83BDDE5E2B65BADF006C0FDC /* All Commands */,
 				83BDDE5C2B65B98B006C0FDC /* AllCommandsView.swift */,
 				837DA1642B66C88A0038B856 /* TouchGesturesView.swift */,
+				837DA1662B66F7A60038B856 /* KeyboardShortcutsView.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
 				83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
+				837DA1672B66F7A60038B856 /* KeyboardShortcutsView.swift in Sources */,
 				83080EB02B61F1F300771ACC /* SiriView.swift in Sources */,
 				832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */,
 				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,

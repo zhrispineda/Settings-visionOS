@@ -26,7 +26,7 @@ struct CommandsView: View {
             
             Section(content: {
                 NavigationLink("Touch Gestures", destination: TouchGesturesView())
-                NavigationLink("Keyboard Shortcuts", destination: {})
+                NavigationLink("Keyboard Shortcuts", destination: KeyboardShortcutsView())
             }, footer: {
                 Text("Commands are prefixed with the VoiceOver modifier key: Control + Option")
             })
