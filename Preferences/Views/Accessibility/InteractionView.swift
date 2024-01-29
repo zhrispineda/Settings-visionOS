@@ -14,7 +14,7 @@ struct InteractionView: View {
     var body: some View {
         CustomList(title: "Interaction") {
             Section(content: {
-                ListRowNavigationLabel(title: "AssistiveTouch", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "AssistiveTouch", subtitle: "Off", content: AssistiveTouchView())
             }, footer: {
                 Text("AssistiveTouch allows you to use your Apple Vision Pro if you have difficulty interacting with spatial content or if you require an adaptive accessory.")
             })
@@ -39,5 +39,7 @@ struct InteractionView: View {
 }
 
 #Preview {
-    InteractionView()
+    NavigationStack {
+        InteractionView()
+    }
 }

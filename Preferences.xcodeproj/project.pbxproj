@@ -42,11 +42,14 @@
 		8309A1922B6358B00039BDEC /* AppPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1912B6358B00039BDEC /* AppPermissionView.swift */; };
 		8309A1942B6374730039BDEC /* AppleAdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1932B6374730039BDEC /* AppleAdvertisingView.swift */; };
 		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
+		831C8B442B677D150039C782 /* AssistiveTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C8B432B677D150039C782 /* AssistiveTouchView.swift */; };
 		831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F692B4C76140071E539 /* PeopleView.swift */; };
 		831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */; };
 		831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6D2B4C77A90071E539 /* TransferResetView.swift */; };
 		831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */; };
 		831D1F722B4C7A9A0071E539 /* GameControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D1F712B4C7A9A0071E539 /* GameControllerView.swift */; };
+		8320E88C2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320E88B2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift */; };
+		8320E88E2B681C7600EFB674 /* AssistiveTouchTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320E88D2B681C7600EFB674 /* AssistiveTouchTapView.swift */; };
 		8328F51E2B6451F8004C6220 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328F51D2B6451F8004C6220 /* SpeechView.swift */; };
 		8328F5212B645561004C6220 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328F5202B645561004C6220 /* VoiceView.swift */; };
 		832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54532B5C2E0B00BC877C /* WebsiteDataView.swift */; };
@@ -100,6 +103,9 @@
 		834E6D042B6490FA00B81150 /* AutoAdvanceDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */; };
 		834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D052B6495D300B81150 /* VerbosityView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
+		8360DAB22B68350000AD556A /* LongPressDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAB12B68350000AD556A /* LongPressDurationView.swift */; };
+		8360DAB42B68369600AD556A /* IdleOpacityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAB32B68369600AD556A /* IdleOpacityView.swift */; };
+		8360DAB62B6837F700AD556A /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAB52B6837F700AD556A /* DevicesView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -135,6 +141,7 @@
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
 		837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10522B533F2700CB8FCD /* ScreenTimeView.swift */; };
 		837F10552B533F3400CB8FCD /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10542B533F3400CB8FCD /* FocusView.swift */; };
+		8399C35A2B6830C900132AA9 /* DoubleTapTimeoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8399C3592B6830C900132AA9 /* DoubleTapTimeoutView.swift */; };
 		839EA81B2B59C85E0099BCAA /* FreeformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81A2B59C85E0099BCAA /* FreeformView.swift */; };
 		839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */; };
 		839EA81F2B59CE520099BCAA /* SiriSearchAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */; };
@@ -259,11 +266,14 @@
 		8309A1912B6358B00039BDEC /* AppPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionView.swift; sourceTree = "<group>"; };
 		8309A1932B6374730039BDEC /* AppleAdvertisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAdvertisingView.swift; sourceTree = "<group>"; };
 		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		831C8B432B677D150039C782 /* AssistiveTouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveTouchView.swift; sourceTree = "<group>"; };
 		831D1F692B4C76140071E539 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		831D1F6B2B4C76300071E539 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
 		831D1F6D2B4C77A90071E539 /* TransferResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResetView.swift; sourceTree = "<group>"; };
 		831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNDeviceManagementView.swift; sourceTree = "<group>"; };
 		831D1F712B4C7A9A0071E539 /* GameControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerView.swift; sourceTree = "<group>"; };
+		8320E88B2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTopLevelMenuView.swift; sourceTree = "<group>"; };
+		8320E88D2B681C7600EFB674 /* AssistiveTouchTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveTouchTapView.swift; sourceTree = "<group>"; };
 		8328F51D2B6451F8004C6220 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 		8328F5202B645561004C6220 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
 		832A54532B5C2E0B00BC877C /* WebsiteDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDataView.swift; sourceTree = "<group>"; };
@@ -317,6 +327,9 @@
 		834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAdvanceDurationView.swift; sourceTree = "<group>"; };
 		834E6D052B6495D300B81150 /* VerbosityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbosityView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		8360DAB12B68350000AD556A /* LongPressDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressDurationView.swift; sourceTree = "<group>"; };
+		8360DAB32B68369600AD556A /* IdleOpacityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleOpacityView.swift; sourceTree = "<group>"; };
+		8360DAB52B6837F700AD556A /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -353,6 +366,7 @@
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
 		837F10522B533F2700CB8FCD /* ScreenTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeView.swift; sourceTree = "<group>"; };
 		837F10542B533F3400CB8FCD /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		8399C3592B6830C900132AA9 /* DoubleTapTimeoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTapTimeoutView.swift; sourceTree = "<group>"; };
 		839EA81A2B59C85E0099BCAA /* FreeformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeformView.swift; sourceTree = "<group>"; };
 		839EA81C2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchAccessNavigationLabel.swift; sourceTree = "<group>"; };
 		839EA81E2B59CE520099BCAA /* SiriSearchAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchAppView.swift; sourceTree = "<group>"; };
@@ -468,6 +482,7 @@
 				8328F51C2B6451E8004C6220 /* VoiceOver */,
 				837DA1882B673BC30038B856 /* Display & Text Size */,
 				83F114F32B673FC60090FAE8 /* Spoken Content */,
+				831C8B422B677D030039C782 /* Interaction */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
@@ -534,6 +549,28 @@
 				830602EC2B583E23007B7529 /* DictationShortcutView.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		831C8B422B677D030039C782 /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				8320E88A2B68180200EFB674 /* AssistiveTouch */,
+				831C8B432B677D150039C782 /* AssistiveTouchView.swift */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		8320E88A2B68180200EFB674 /* AssistiveTouch */ = {
+			isa = PBXGroup;
+			children = (
+				8399C3582B6830BD00132AA9 /* Double-Tap */,
+				8360DAB02B6834EC00AD556A /* Long Press */,
+				8320E88B2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift */,
+				8320E88D2B681C7600EFB674 /* AssistiveTouchTapView.swift */,
+				8360DAB32B68369600AD556A /* IdleOpacityView.swift */,
+				8360DAB52B6837F700AD556A /* DevicesView.swift */,
+			);
+			path = AssistiveTouch;
 			sourceTree = "<group>";
 		};
 		8328F51C2B6451E8004C6220 /* VoiceOver */ = {
@@ -754,6 +791,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8360DAB02B6834EC00AD556A /* Long Press */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAB12B68350000AD556A /* LongPressDurationView.swift */,
+			);
+			path = "Long Press";
+			sourceTree = "<group>";
+		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +863,14 @@
 				837DA1892B673C730038B856 /* LargerTextView.swift */,
 			);
 			path = "Display & Text Size";
+			sourceTree = "<group>";
+		};
+		8399C3582B6830BD00132AA9 /* Double-Tap */ = {
+			isa = PBXGroup;
+			children = (
+				8399C3592B6830C900132AA9 /* DoubleTapTimeoutView.swift */,
+			);
+			path = "Double-Tap";
 			sourceTree = "<group>";
 		};
 		839EA8192B59C83F0099BCAA /* Apps */ = {
@@ -1300,6 +1353,7 @@
 				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
+				8399C35A2B6830C900132AA9 /* DoubleTapTimeoutView.swift in Sources */,
 				83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
 				837DA1672B66F7A60038B856 /* KeyboardShortcutsView.swift in Sources */,
@@ -1340,6 +1394,7 @@
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				83080EAC2B61EC0700771ACC /* SubtitlesCaptioningView.swift in Sources */,
+				8360DAB62B6837F700AD556A /* DevicesView.swift in Sources */,
 				837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */,
 				83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */,
 				83BDDE4D2B659DF7006C0FDC /* ApplyAppsView.swift in Sources */,
@@ -1347,6 +1402,7 @@
 				837DA17F2B6734420038B856 /* TypingFeedbackView.swift in Sources */,
 				83D4D9672B5DF05C00081A31 /* SoundsView.swift in Sources */,
 				834111DA2B5DA8B200366689 /* ShortcutsView.swift in Sources */,
+				8320E88C2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift in Sources */,
 				8309A1902B63576B0039BDEC /* TrackingView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
 				83D4D9692B5DF06600081A31 /* NotificationGroupingView.swift in Sources */,
@@ -1368,6 +1424,7 @@
 				83BDDE442B6599AE006C0FDC /* NumbersView.swift in Sources */,
 				83C1756D2B5F0A8000BA98FA /* SmartActivationView.swift in Sources */,
 				834111E92B5DB39000366689 /* BlockedContacts.swift in Sources */,
+				8320E88E2B681C7600EFB674 /* AssistiveTouchTapView.swift in Sources */,
 				832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
 				834E6CF72B64852800B81150 /* InputView.swift in Sources */,
@@ -1397,6 +1454,7 @@
 				83E7DC322B608EBA002B9087 /* WebContentView.swift in Sources */,
 				834111D02B5DA05C00366689 /* DrivingView.swift in Sources */,
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
+				831C8B442B677D150039C782 /* AssistiveTouchView.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */,
@@ -1418,6 +1476,7 @@
 				837DA18A2B673C730038B856 /* LargerTextView.swift in Sources */,
 				8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */,
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
+				8360DAB22B68350000AD556A /* LongPressDurationView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
 				83E7DC422B60FF7A002B9087 /* CustomList.swift in Sources */,
@@ -1432,6 +1491,7 @@
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				83080EB22B61F3C500771ACC /* AccessibilityShortcutView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,
+				8360DAB42B68369600AD556A /* IdleOpacityView.swift in Sources */,
 				834111E32B5DB0ED00366689 /* SortOrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
