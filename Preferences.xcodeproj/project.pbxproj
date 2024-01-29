@@ -112,6 +112,11 @@
 		8360DABF2B684ED800AD556A /* PointerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DABE2B684ED800AD556A /* PointerControlView.swift */; };
 		8360DAC22B68523B00AD556A /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAC12B68523B00AD556A /* ControlView.swift */; };
 		8360DAC42B685A9F00AD556A /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAC32B685A9F00AD556A /* ColorView.swift */; };
+		8360DAC72B685FE300AD556A /* SwitchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAC62B685FE300AD556A /* SwitchesView.swift */; };
+		8360DACA2B6860DA00AD556A /* AddNewSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAC92B6860DA00AD556A /* AddNewSwitchView.swift */; };
+		8360DACD2B68620600AD556A /* ExternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DACC2B68620600AD556A /* ExternalView.swift */; };
+		8360DACF2B68659D00AD556A /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DACE2B68659D00AD556A /* SoundView.swift */; };
+		8360DAD12B6868B900AD556A /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD02B6868B900AD556A /* ActionsView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -342,6 +347,11 @@
 		8360DABE2B684ED800AD556A /* PointerControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerControlView.swift; sourceTree = "<group>"; };
 		8360DAC12B68523B00AD556A /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		8360DAC32B685A9F00AD556A /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		8360DAC62B685FE300AD556A /* SwitchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchesView.swift; sourceTree = "<group>"; };
+		8360DAC92B6860DA00AD556A /* AddNewSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewSwitchView.swift; sourceTree = "<group>"; };
+		8360DACC2B68620600AD556A /* ExternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalView.swift; sourceTree = "<group>"; };
+		8360DACE2B68659D00AD556A /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		8360DAD02B6868B900AD556A /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -495,6 +505,7 @@
 				837DA1882B673BC30038B856 /* Display & Text Size */,
 				83F114F32B673FC60090FAE8 /* Spoken Content */,
 				831C8B422B677D030039C782 /* Interaction */,
+				8360DAC52B685FAD00AD556A /* Switch Control */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
@@ -831,6 +842,34 @@
 				8360DAC32B685A9F00AD556A /* ColorView.swift */,
 			);
 			path = "Pointer Control";
+			sourceTree = "<group>";
+		};
+		8360DAC52B685FAD00AD556A /* Switch Control */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAC82B6860CA00AD556A /* Switches */,
+				8360DAC62B685FE300AD556A /* SwitchesView.swift */,
+			);
+			path = "Switch Control";
+			sourceTree = "<group>";
+		};
+		8360DAC82B6860CA00AD556A /* Switches */ = {
+			isa = PBXGroup;
+			children = (
+				8360DACB2B6861FA00AD556A /* Add New Switch */,
+				8360DAC92B6860DA00AD556A /* AddNewSwitchView.swift */,
+			);
+			path = Switches;
+			sourceTree = "<group>";
+		};
+		8360DACB2B6861FA00AD556A /* Add New Switch */ = {
+			isa = PBXGroup;
+			children = (
+				8360DACC2B68620600AD556A /* ExternalView.swift */,
+				8360DACE2B68659D00AD556A /* SoundView.swift */,
+				8360DAD02B6868B900AD556A /* ActionsView.swift */,
+			);
+			path = "Add New Switch";
 			sourceTree = "<group>";
 		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
@@ -1339,6 +1378,7 @@
 				83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */,
 				83FEB71B2B5AE99A0028D308 /* ReaderView.swift in Sources */,
 				839EA81B2B59C85E0099BCAA /* FreeformView.swift in Sources */,
+				8360DACD2B68620600AD556A /* ExternalView.swift in Sources */,
 				83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */,
 				834E6CEE2B64760100B81150 /* PronunciationsView.swift in Sources */,
 				8309A1942B6374730039BDEC /* AppleAdvertisingView.swift in Sources */,
@@ -1362,6 +1402,7 @@
 				83BDDE562B65AF84006C0FDC /* VoiceOverSoundsView.swift in Sources */,
 				83080EAE2B61ECFB00771ACC /* GuidedAccessView.swift in Sources */,
 				832A54542B5C2E0B00BC877C /* WebsiteDataView.swift in Sources */,
+				8360DAC72B685FE300AD556A /* SwitchesView.swift in Sources */,
 				8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */,
 				83A9C8F12B62D47B00CF4C4B /* SiriVoiceView.swift in Sources */,
 				83E7DC3E2B60A1A6002B9087 /* AllowDontAllowChangesView.swift in Sources */,
@@ -1391,6 +1432,7 @@
 				8399C35A2B6830C900132AA9 /* DoubleTapTimeoutView.swift in Sources */,
 				83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
+				8360DACA2B6860DA00AD556A /* AddNewSwitchView.swift in Sources */,
 				837DA1672B66F7A60038B856 /* KeyboardShortcutsView.swift in Sources */,
 				83080EB02B61F1F300771ACC /* SiriView.swift in Sources */,
 				832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */,
@@ -1480,6 +1522,7 @@
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
 				8372E4B12B64AF4600C1ABDC /* PunctuationNoneView.swift in Sources */,
+				8360DACF2B68659D00AD556A /* SoundView.swift in Sources */,
 				83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */,
 				83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */,
 				83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */,
@@ -1504,6 +1547,7 @@
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
 				8309A1852B6303BA0039BDEC /* SecurityRecommendationsView.swift in Sources */,
+				8360DAD12B6868B900AD556A /* ActionsView.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				837DA16E2B670ADA0038B856 /* DirectTouchAppsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,

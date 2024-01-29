@@ -35,7 +35,7 @@ struct SwitchControlView: View {
             })
             
             Section {
-                ListRowNavigationLabel(title: "Switches", subtitle: "0", content: EmptyView())
+                ListRowNavigationLabel(title: "Switches", subtitle: "0", content: SwitchesView())
                 ListRowNavigationLabel(title: "Recipes", subtitle: "2", content: EmptyView())
             }
             
@@ -110,5 +110,7 @@ struct SwitchControlView: View {
 }
 
 #Preview {
-    SwitchControlView()
+    NavigationStack {
+        SwitchControlView()
+    }
 }
