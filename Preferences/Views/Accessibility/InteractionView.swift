@@ -20,13 +20,13 @@ struct InteractionView: View {
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Dwell Control", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Dwell Control", subtitle: "Off", content: DwellControlView())
             }, footer: {
                 Text("With Dwell Control, holding the pointer still for the specified duration will perform the selected dwell action.")
             })
             
             Section {
-                NavigationLink("Pointer Control", destination: {})
+                NavigationLink("Pointer Control", destination: PointerControlView())
             }
             
             Section(content: {
