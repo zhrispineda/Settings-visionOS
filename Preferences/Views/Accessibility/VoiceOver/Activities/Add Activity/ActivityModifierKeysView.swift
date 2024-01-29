@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActivityModifierKeysView: View {
     // Variables
-    @State private var selected: [String] = []
+    @State var selected: [String] = []
     let options = ["Control + Option", "Caps Lock"]
     
     var body: some View {

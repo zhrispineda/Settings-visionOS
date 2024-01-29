@@ -55,7 +55,7 @@ struct VoiceOverView: View {
                 NavigationLink("Commands", destination: CommandsView())
                 NavigationLink("Rotor", destination: RotorView())
                 NavigationLink("Activities", destination: ActivitiesView())
-                NavigationLink("Typing", destination: {})
+                NavigationLink("Typing", destination: TypingView())
                 NavigationLink("Quick Settings", destination: {})
             }, footer: {
                 Text("Quick settings allows you to access VoiceOver settings at any time. Access quick settings with left index modifier right ring pinch.")
