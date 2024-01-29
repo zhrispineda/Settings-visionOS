@@ -56,20 +56,20 @@ struct VoiceOverView: View {
                 NavigationLink("Rotor", destination: RotorView())
                 NavigationLink("Activities", destination: ActivitiesView())
                 NavigationLink("Typing", destination: TypingView())
-                NavigationLink("Quick Settings", destination: {})
+                NavigationLink("Quick Settings", destination: QuickSettingsView())
             }, footer: {
                 Text("Quick settings allows you to access VoiceOver settings at any time. Access quick settings with left index modifier right ring pinch.")
             })
             
             Section {
-                ListRowNavigationLabel(title: "Navigation Style", subtitle: "Flat", content: EmptyView())
-                ListRowNavigationLabel(title: "Navigate Images", subtitle: "Always", content: EmptyView())
+                ListRowNavigationLabel(title: "Navigation Style", subtitle: "Flat", content: NavigationStyleView())
+                ListRowNavigationLabel(title: "Navigate Images", subtitle: "Always", content: OnOffView(title: "Navigate Images", selectedOption: "Always", options: ["Always", "With descriptions", "Never"]))
                 Toggle("Large Cursor", isOn: $largeCursor)
                 Toggle("Caption Panel", isOn: $captionPanel)
             }
             
             Section {
-                ListRowNavigationLabel(title: "Double-pinch Timeout", subtitle: "0.25s", content: EmptyView())
+                ListRowNavigationLabel(title: "Double-pinch Timeout", subtitle: "0.25s", content: DoublePinchTimeoutView())
             }
         }
     }

@@ -126,6 +126,9 @@
 		837DA17C2B6732C90038B856 /* TypingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA17B2B6732C90038B856 /* TypingView.swift */; };
 		837DA17F2B6734420038B856 /* TypingFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA17E2B6734420038B856 /* TypingFeedbackView.swift */; };
 		837DA1812B6736080038B856 /* KeyboardInteractionTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1802B6736080038B856 /* KeyboardInteractionTimeView.swift */; };
+		837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1822B67375E0038B856 /* QuickSettingsView.swift */; };
+		837DA1852B6739110038B856 /* NavigationStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1842B6739110038B856 /* NavigationStyleView.swift */; };
+		837DA1872B673A960038B856 /* DoublePinchTimeoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1862B673A960038B856 /* DoublePinchTimeoutView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -338,6 +341,9 @@
 		837DA17B2B6732C90038B856 /* TypingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingView.swift; sourceTree = "<group>"; };
 		837DA17E2B6734420038B856 /* TypingFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingFeedbackView.swift; sourceTree = "<group>"; };
 		837DA1802B6736080038B856 /* KeyboardInteractionTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInteractionTimeView.swift; sourceTree = "<group>"; };
+		837DA1822B67375E0038B856 /* QuickSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSettingsView.swift; sourceTree = "<group>"; };
+		837DA1842B6739110038B856 /* NavigationStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStyleView.swift; sourceTree = "<group>"; };
+		837DA1862B673A960038B856 /* DoublePinchTimeoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublePinchTimeoutView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -541,6 +547,9 @@
 				837DA1682B6707340038B856 /* RotorView.swift */,
 				837DA16F2B670FFF0038B856 /* ActivitiesView.swift */,
 				837DA17B2B6732C90038B856 /* TypingView.swift */,
+				837DA1822B67375E0038B856 /* QuickSettingsView.swift */,
+				837DA1842B6739110038B856 /* NavigationStyleView.swift */,
+				837DA1862B673A960038B856 /* DoublePinchTimeoutView.swift */,
 			);
 			path = VoiceOver;
 			sourceTree = "<group>";
@@ -1187,6 +1196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837DA1852B6739110038B856 /* NavigationStyleView.swift in Sources */,
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
 				832A54582B5C30C600BC877C /* FeatureFlagsView.swift in Sources */,
 				83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */,
@@ -1258,6 +1268,7 @@
 				834A448B2B45FC2A00690818 /* GeneralView.swift in Sources */,
 				832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */,
 				83BDDE422B659690006C0FDC /* VerbosityAudibleMethodsView.swift in Sources */,
+				837DA1872B673A960038B856 /* DoublePinchTimeoutView.swift in Sources */,
 				83FEB7192B5AE9060028D308 /* RequestDesktopWebsiteView.swift in Sources */,
 				83BDDE532B65ADA1006C0FDC /* AudioView.swift in Sources */,
 				83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */,
@@ -1304,6 +1315,7 @@
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				83080EAC2B61EC0700771ACC /* SubtitlesCaptioningView.swift in Sources */,
+				837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */,
 				83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */,
 				83BDDE4D2B659DF7006C0FDC /* ApplyAppsView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
