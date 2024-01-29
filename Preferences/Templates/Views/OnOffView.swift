@@ -14,8 +14,8 @@ import SwiftUI
 struct OnOffView: View {
     // Variables
     var title = String()
-    @State private var selectedOption = "On"
-    let options = ["Off", "On"]
+    @State var selectedOption = "On"
+    var options = ["Off", "On"]
     
     var body: some View {
         List(options, id: \.self) { option in

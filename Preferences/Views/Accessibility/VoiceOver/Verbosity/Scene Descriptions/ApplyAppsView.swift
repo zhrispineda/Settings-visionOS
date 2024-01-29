@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ApplyAppsView: View {
     // Variables
+    var title = "Apply to Apps"
     let apps = ["Calendar", "Files", "Freeform", "Maps", "News", "Photos", "Reminders", "Safari", "Settings", "Shortcuts"]
     let roundedIcons = ["Files", "Freeform", "Photos", "Safari", "Settings"]
     @State private var selected = [""]
     
     var body: some View {
-        CustomList(title: "Apply to Apps") {
+        CustomList(title: title) {
             Section(content: {
                 ForEach(apps, id: \.self) { app in
                     Button(action: {

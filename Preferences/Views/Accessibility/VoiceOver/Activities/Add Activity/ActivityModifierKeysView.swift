@@ -1,0 +1,46 @@
+//
+//  ActivityModifierKeysView.swift
+//  Preferences
+//
+//  Settings > Accessibility > VoiceOver > Activities > Add Activity > Modifier Keys
+//
+
+import SwiftUI
+
+struct ActivityModifierKeysView: View {
+    // Variables
+    @State private var selected: [String] = []
+    let options = ["Control + Option", "Caps Lock"]
+    
+    var body: some View {
+        CustomList(title: "Modifier Keys") {
+            Section(content: {
+                ForEach(options, id: \.self) { option in
+                    Button(action: {
+                        if let index = selected.firstIndex(of: option) {
+                            if selected.count > 1 {
+                                selected.remove(at: index)
+                            }
+                        } else {
+                            selected.append(option)
+                        }
+                    }, label: {
+                        HStack {
+                            Text(option)
+                            Spacer()
+                            if selected.contains(option) {
+                                Image(systemName: "checkmark")
+                            }
+                        }
+                    })
+                }
+            }, footer: {
+                Text("Choose the modifier keys that must be pressed on a hardware keyboard to activate VoiceOver key commands.")
+            })
+        }
+    }
+}
+
+#Preview {
+    ActivityModifierKeysView()
+}

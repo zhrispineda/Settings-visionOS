@@ -20,6 +20,8 @@ struct VerbosityMethodsView: View {
                     Button(action: {
                         if option == "Do Nothing" {
                             selected = ["Do Nothing"]
+                        } else if option == "Default" {
+                            selected = ["Default"]
                         } else {
                             if let index = selected.firstIndex(of: option) {
                                 if selected.count > 1 {
@@ -41,7 +43,7 @@ struct VerbosityMethodsView: View {
                                 selected.append("Speak")
                                 selected.append("Change Pitch")
                             } else {
-                                if selected == ["Do Nothing"] {
+                                if selected == ["Do Nothing"] || selected == ["Default"] {
                                     selected = []
                                 }
                                 selected.append(option)
