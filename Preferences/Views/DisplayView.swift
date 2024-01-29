@@ -15,7 +15,7 @@ struct DisplayView: View {
     var body: some View {
         CustomList(title: "Display") {
             Section {
-                NavigationLink("Text Size", destination: TextSizeView())
+                NavigationLink("Text Size", destination: TextSizeView(largerAccessibilitySizes: .constant(false)))
                 Toggle("Bold Text", isOn: $boldTextEnabled)
             }
             

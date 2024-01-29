@@ -25,7 +25,7 @@ struct DisplayTextSizeView: View {
         CustomList(title: "Display & Text Size") {
             Section {
                 Toggle("Bold Text", isOn: $boldTextEnabled)
-                ListRowNavigationLabel(title: "Larger Text", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Larger Text", subtitle: "Off", content: LargerTextView())
                 Toggle("Button Shapes", isOn: $buttonShapesEnabled)
                 Toggle("On/Off Labels", isOn: $onOffLabelsEnabled)
             }
@@ -83,5 +83,7 @@ struct DisplayTextSizeView: View {
 }
 
 #Preview {
-    DisplayTextSizeView()
+    NavigationStack {
+        DisplayTextSizeView()
+    }
 }

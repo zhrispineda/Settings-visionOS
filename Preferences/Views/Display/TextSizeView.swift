@@ -10,12 +10,13 @@ import SwiftUI
 struct TextSizeView: View {
     // Variables
     @State private var textSize = 3.0
+    @Binding var largerAccessibilitySizes: Bool
     
     var body: some View {
         VStack {
             ZStack {
                 Slider(value: $textSize,
-                       in: 0.0...6.0,
+                       in: 0.0...(largerAccessibilitySizes ? 11.0 : 6.0),
                        step: 1.0,
                        minimumValueLabel: Image(systemName: "textformat.size.smaller"),
                        maximumValueLabel: Image(systemName: "textformat.size.larger"),
@@ -32,6 +33,7 @@ struct TextSizeView: View {
             }
             .padding()
             Text("Apps that support Dynamic Type will adjust to your\npreferred reading size above.")
+                .opacity(0.6)
                 .multilineTextAlignment(.center)
                 .padding(.top, 5)
         }
@@ -47,5 +49,5 @@ struct TextSizeView: View {
 }
 
 #Preview {
-    TextSizeView()
+    TextSizeView(largerAccessibilitySizes: .constant(true))
 }

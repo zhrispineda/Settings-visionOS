@@ -129,6 +129,7 @@
 		837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1822B67375E0038B856 /* QuickSettingsView.swift */; };
 		837DA1852B6739110038B856 /* NavigationStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1842B6739110038B856 /* NavigationStyleView.swift */; };
 		837DA1872B673A960038B856 /* DoublePinchTimeoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1862B673A960038B856 /* DoublePinchTimeoutView.swift */; };
+		837DA18A2B673C730038B856 /* LargerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA1892B673C730038B856 /* LargerTextView.swift */; };
 		837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104C2B5330A900CB8FCD /* SiriSearchView.swift */; };
 		837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F104E2B533B6700CB8FCD /* ControlCenterView.swift */; };
 		837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F10502B533E0000CB8FCD /* AccessibilityView.swift */; };
@@ -344,6 +345,7 @@
 		837DA1822B67375E0038B856 /* QuickSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSettingsView.swift; sourceTree = "<group>"; };
 		837DA1842B6739110038B856 /* NavigationStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStyleView.swift; sourceTree = "<group>"; };
 		837DA1862B673A960038B856 /* DoublePinchTimeoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublePinchTimeoutView.swift; sourceTree = "<group>"; };
+		837DA1892B673C730038B856 /* LargerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargerTextView.swift; sourceTree = "<group>"; };
 		837F104C2B5330A900CB8FCD /* SiriSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriSearchView.swift; sourceTree = "<group>"; };
 		837F104E2B533B6700CB8FCD /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		837F10502B533E0000CB8FCD /* AccessibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityView.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				8328F51C2B6451E8004C6220 /* VoiceOver */,
+				837DA1882B673BC30038B856 /* Display & Text Size */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
@@ -802,6 +805,14 @@
 				837DA1802B6736080038B856 /* KeyboardInteractionTimeView.swift */,
 			);
 			path = Typing;
+			sourceTree = "<group>";
+		};
+		837DA1882B673BC30038B856 /* Display & Text Size */ = {
+			isa = PBXGroup;
+			children = (
+				837DA1892B673C730038B856 /* LargerTextView.swift */,
+			);
+			path = "Display & Text Size";
 			sourceTree = "<group>";
 		};
 		839EA8192B59C83F0099BCAA /* Apps */ = {
@@ -1388,6 +1399,7 @@
 				834E6CFC2B64866700B81150 /* SelectedBrailleTableView.swift in Sources */,
 				83BDDE4F2B65A07D006C0FDC /* MediaDescriptionView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
+				837DA18A2B673C730038B856 /* LargerTextView.swift in Sources */,
 				8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */,
 				83F20FF32B5F3CFE00164ACF /* PurchasesView.swift in Sources */,
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,

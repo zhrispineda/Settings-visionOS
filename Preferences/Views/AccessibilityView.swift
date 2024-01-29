@@ -50,5 +50,7 @@ struct AccessibilityView: View {
 }
 
 #Preview {
-    AccessibilityView()
+    NavigationStack {
+        AccessibilityView()
+    }
 }
