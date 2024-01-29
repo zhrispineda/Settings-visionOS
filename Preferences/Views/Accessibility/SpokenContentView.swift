@@ -27,12 +27,12 @@ struct SpokenContentView: View {
             }
             
             Section {
-                NavigationLink("Typing Feedback", destination: {})
+                NavigationLink("Typing Feedback", destination: SpokenContentTypingFeedbackView())
             }
             
             Section {
-                NavigationLink("Voices", destination: {})
-                NavigationLink("Default Language", destination: {})
+                NavigationLink("Voices", destination: ActivityVoiceView(title: "Voices"))
+                NavigationLink("Default Language", destination: DefaultLanguageView())
                 Toggle("Detect Languages", isOn: $detectLanguagesEnabled)
             }
             
@@ -51,7 +51,7 @@ struct SpokenContentView: View {
             })
             
             Section {
-                NavigationLink("Pronounciations", destination: {})
+                NavigationLink("Pronunciations", destination: PronunciationsView())
             }
             
             if speakSelectionEnabled || speakScreenEnabled {
@@ -66,5 +66,7 @@ struct SpokenContentView: View {
 }
 
 #Preview {
-    SpokenContentView()
+    NavigationStack {
+        SpokenContentView()
+    }
 }

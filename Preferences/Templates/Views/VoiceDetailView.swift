@@ -15,6 +15,7 @@ import SwiftUI
 struct VoiceDetailView: View {
     var language = String()
     var voice = String()
+    @State private var speakingRate = 0.5
     
     var body: some View {
         CustomList(title: voice) {
@@ -26,7 +27,7 @@ struct VoiceDetailView: View {
                         .foregroundStyle(.blue)
                     VStack(alignment: .leading) {
                         Text(voice)
-                        Text("Using 11 MB")
+                        Text("Using \(Int.random(in: 11..<250)) MB")
                             .font(.caption)
                     }
                     Spacer()
@@ -40,6 +41,20 @@ struct VoiceDetailView: View {
                 }
             }, header: {
                 Text(language)
+            })
+            
+            Section(content: {
+                Group {
+                    Slider(value: $speakingRate,
+                           in: 0.0...1.0,
+                           minimumValueLabel: Image(systemName: "tortoise.fill"),
+                           maximumValueLabel: Image(systemName: "hare.fill"),
+                           label: { Text("Speaking Rate") }
+                    )
+                }
+                .imageScale(.large)
+            }, header: {
+                Text("Speaking Rate")
             })
         }
     }

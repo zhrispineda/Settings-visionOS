@@ -17,7 +17,7 @@ struct SpeechView: View {
         CustomList(title: "Speech") {
             Section {
                 ListRowNavigationLabel(title: "Speech", subtitle: "Samantha", content: VoiceView())
-                NavigationLink("Pronounciations", destination: PronounciationsView())
+                NavigationLink("Pronunciations", destination: PronunciationsView())
             }
             
             Section(content: {

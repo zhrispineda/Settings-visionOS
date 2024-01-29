@@ -1,13 +1,13 @@
 //
-//  PronounciationsView.swift
+//  PronunciationsView.swift
 //  Preferences
 //
-//  Settings > Accessibility > VoiceOver > Speech > Pronounciations
+//  Settings > Accessibility > VoiceOver > Speech > Pronunciations
 //
 
 import SwiftUI
 
-struct PronounciationsView: View {
+struct PronunciationsView: View {
     var body: some View {
         List {
             
@@ -16,7 +16,7 @@ struct PronounciationsView: View {
         // Horizontally-centered title text
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                Text("Pronounciations")
+                Text("Pronunciations")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
             })
@@ -28,5 +28,5 @@ struct PronounciationsView: View {
 }
 
 #Preview {
-    PronounciationsView()
+    PronunciationsView()
 }
