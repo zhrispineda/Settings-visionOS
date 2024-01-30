@@ -14,7 +14,6 @@ struct SoundsView: View {
     var body: some View {
         CustomList(title: "Sounds") {
             Section {
-                // This view is mostly non-functional in the current beta of visionOS (21N305)
                 Button(action: {}, label: {
                     HStack {
                         Text("Haptics")

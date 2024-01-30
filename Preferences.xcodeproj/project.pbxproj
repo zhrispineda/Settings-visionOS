@@ -18,6 +18,10 @@
 		8306F0C22B696AA100DBB3CA /* AddWebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */; };
 		8306F0C42B696C8100DBB3CA /* HighlightContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C32B696C8100DBB3CA /* HighlightContentView.swift */; };
 		8306F0C72B696DFE00DBB3CA /* WordColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C62B696DFE00DBB3CA /* WordColorView.swift */; };
+		8306F0C92B6970E500DBB3CA /* RecognitionSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C82B6970E500DBB3CA /* RecognitionSoundsView.swift */; };
+		8306F0CC2B6973BC00DBB3CA /* SoundDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0CB2B6973BC00DBB3CA /* SoundDetailView.swift */; };
+		8306F0CE2B6975B300DBB3CA /* AlertTonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0CD2B6975B300DBB3CA /* AlertTonesView.swift */; };
+		8306F0D02B69770800DBB3CA /* ClassicTonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0CF2B69770800DBB3CA /* ClassicTonesView.swift */; };
 		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
@@ -287,6 +291,10 @@
 		8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebsiteView.swift; sourceTree = "<group>"; };
 		8306F0C32B696C8100DBB3CA /* HighlightContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightContentView.swift; sourceTree = "<group>"; };
 		8306F0C62B696DFE00DBB3CA /* WordColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordColorView.swift; sourceTree = "<group>"; };
+		8306F0C82B6970E500DBB3CA /* RecognitionSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionSoundsView.swift; sourceTree = "<group>"; };
+		8306F0CB2B6973BC00DBB3CA /* SoundDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDetailView.swift; sourceTree = "<group>"; };
+		8306F0CD2B6975B300DBB3CA /* AlertTonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTonesView.swift; sourceTree = "<group>"; };
+		8306F0CF2B69770800DBB3CA /* ClassicTonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTonesView.swift; sourceTree = "<group>"; };
 		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
@@ -590,6 +598,16 @@
 				8306F0C62B696DFE00DBB3CA /* WordColorView.swift */,
 			);
 			path = "Highlight Content";
+			sourceTree = "<group>";
+		};
+		8306F0CA2B6973AB00DBB3CA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8306F0CB2B6973BC00DBB3CA /* SoundDetailView.swift */,
+				8306F0CD2B6975B300DBB3CA /* AlertTonesView.swift */,
+				8306F0CF2B69770800DBB3CA /* ClassicTonesView.swift */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		83080E942B61B62E00771ACC /* Accessibility */ = {
@@ -1037,6 +1055,8 @@
 		8360DB0D2B68B74900AD556A /* Sound Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				8306F0CA2B6973AB00DBB3CA /* Sounds */,
+				8306F0C82B6970E500DBB3CA /* RecognitionSoundsView.swift */,
 			);
 			path = "Sound Recognition";
 			sourceTree = "<group>";
@@ -1596,6 +1616,7 @@
 				8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */,
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
 				8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */,
+				8306F0C92B6970E500DBB3CA /* RecognitionSoundsView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				83BDDE4A2B659D2F006C0FDC /* SceneDescriptionsView.swift in Sources */,
 				834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */,
@@ -1621,6 +1642,7 @@
 				832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */,
 				8347ACDF2B4F8468002B980C /* NotificationsView.swift in Sources */,
 				8360DABF2B684ED800AD556A /* PointerControlView.swift in Sources */,
+				8306F0CC2B6973BC00DBB3CA /* SoundDetailView.swift in Sources */,
 				831D1F702B4C785C0071E539 /* VPNDeviceManagementView.swift in Sources */,
 				83E7DC3A2B60967C002B9087 /* TVView.swift in Sources */,
 				837F10552B533F3400CB8FCD /* FocusView.swift in Sources */,
@@ -1718,6 +1740,7 @@
 				83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */,
 				83BDDE632B65BBCB006C0FDC /* InteractionItemView.swift in Sources */,
 				8360DAD82B6874ED00AD556A /* LaunchRecipeView.swift in Sources */,
+				8306F0D02B69770800DBB3CA /* ClassicTonesView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
@@ -1733,6 +1756,7 @@
 				83F114F72B6744880090FAE8 /* DefaultLanguageView.swift in Sources */,
 				83E7DC322B608EBA002B9087 /* WebContentView.swift in Sources */,
 				834111D02B5DA05C00366689 /* DrivingView.swift in Sources */,
+				8306F0CE2B6975B300DBB3CA /* AlertTonesView.swift in Sources */,
 				8306F0C72B696DFE00DBB3CA /* WordColorView.swift in Sources */,
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
 				8360DAF22B688B0A00AD556A /* MenuItemsView.swift in Sources */,

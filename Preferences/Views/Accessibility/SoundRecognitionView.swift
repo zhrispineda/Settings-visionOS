@@ -26,7 +26,7 @@ struct SoundRecognitionView: View {
             
             if soundRecognitionEnabled {
                 Section(content: {
-                    ListRowNavigationLabel(title: "Sounds", subtitle: "None", content: EmptyView())
+                    ListRowNavigationLabel(title: "Sounds", subtitle: "None", content: RecognitionSoundsView())
                 }, footer: {
                     Text("Choose which sounds to recognize.")
                 })
