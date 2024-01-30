@@ -53,7 +53,7 @@ struct BrailleView: View {
                         showingSoundCurtainAlert = soundCurtainEnabled
                     })
             }, footer: {
-                Text("Sound Curtain ensures that your Apple Vision Pro does not play sound from music or sound effects when a Braille display is connected. Emergency alerts will still play sounds.")
+                Text("Sound Curtain ensures that your \(UIDevice().name) does not play sound from music or sound effects when a Braille display is connected. Emergency alerts will still play sounds.")
             })
             
             Section(content: {

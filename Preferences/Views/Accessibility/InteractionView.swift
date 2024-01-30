@@ -16,7 +16,7 @@ struct InteractionView: View {
             Section(content: {
                 ListRowNavigationLabel(title: "AssistiveTouch", subtitle: "Off", content: AssistiveTouchView())
             }, footer: {
-                Text("AssistiveTouch allows you to use your Apple Vision Pro if you have difficulty interacting with spatial content or if you require an adaptive accessory.")
+                Text("AssistiveTouch allows you to use your \(UIDevice().name) if you have difficulty interacting with spatial content or if you require an adaptive accessory.")
             })
             
             Section(content: {

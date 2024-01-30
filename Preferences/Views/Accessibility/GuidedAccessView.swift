@@ -17,7 +17,7 @@ struct GuidedAccessView: View {
             Section(content: {
                 Toggle("Guided Access", isOn: $guidedAccessEnabled.animation())
             }, footer: {
-                Text("Guided Access keeps the Apple Vision Pro in a single app, and allows you to control which features are available. To start Guided Access, triple-press the Digital Crown in the app you want to use.")
+                Text("Guided Access keeps the \(UIDevice().name) in a single app, and allows you to control which features are available. To start Guided Access, triple-press the Digital Crown in the app you want to use.")
             })
             
             if guidedAccessEnabled {

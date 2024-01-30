@@ -18,7 +18,7 @@ struct AccessibilityKeyboardsView: View {
             }, header: {
                 Text("Hardware Keyboards")
             }, footer: {
-                Text("Use an external keyboard to control your Apple Vision Pro.")
+                Text("Use an external keyboard to control your \(UIDevice().name).")
             })
             
             Section(content: {

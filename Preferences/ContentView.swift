@@ -29,7 +29,7 @@ struct ContentView: View {
                                 .font(.system(size: 40))
                                 .padding(.leading, -5)
                             VStack(alignment: .leading) {
-                                Text("Sign in to Apple Vision Pro")
+                                Text("Sign in to \(UIDevice().name)")
                                     .font(.subheadline)
                                     .bold()
                                 Text("Set up iCloud, the App Store, and more.")

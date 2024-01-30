@@ -33,7 +33,7 @@ struct DisplayAppearanceView: View {
             }, header: {
                 Text("Window Zoom")
             }, footer: {
-                Text("Choose how you would like to view your Apple Vision Pro content. Windows and controls will appear larger or smaller.")
+                Text("Choose how you would like to view your \(UIDevice().name) content. Windows and controls will appear larger or smaller.")
             })
             
             Section(content: {

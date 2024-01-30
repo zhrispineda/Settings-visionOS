@@ -46,7 +46,7 @@ struct AudioVisualView: View {
             Section(content: {
                 Toggle("Sound Effects", isOn: $soundEffectsEnabled)
             }, footer: {
-                Text("Adjusts whether your Apple Vision Pro plays sound effects when interacting with the controls.")
+                Text("Adjusts whether your \(UIDevice().name) plays sound effects when interacting with the controls.")
             })
         }
     }

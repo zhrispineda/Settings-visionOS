@@ -27,7 +27,7 @@ struct GeneralView: View {
                 }
                 
                 Section {
-                    NavigationLink("Transfer or Reset This Apple Vision Pro", destination: TransferResetView())
+                    NavigationLink("Transfer or Reset This \(UIDevice().name)", destination: TransferResetView())
                 }
             }
         }

@@ -52,7 +52,7 @@ struct SystemServicesView: View {
             }
             
             Section(content: {
-                Toggle("Apple Vision Pro Analytics", isOn: $deviceAnalyticsEnabled)
+                Toggle("\(UIDevice().name) Analytics", isOn: $deviceAnalyticsEnabled)
                 Toggle("Routing & Traffic", isOn: $routingTrafficEnabled)
                 Toggle("Improve Maps", isOn: $improveMapsEnabled)
             }, header: {

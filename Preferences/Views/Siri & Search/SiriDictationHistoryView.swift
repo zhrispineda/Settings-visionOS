@@ -21,7 +21,7 @@ struct SiriDictationHistoryView: View {
                         Button("Delete Siri &\nDictation History", role: .destructive) { showingProcessRequestAlert.toggle() }
                         Button("Cancel", role: .cancel) {}
                     } message: {
-                        Text("Siri & Dictation interactions currently associated with this Apple Vision Pro\nwill be deleted from Apple servers.")
+                        Text("Siri & Dictation interactions currently associated with this \(UIDevice().name)\nwill be deleted from Apple servers.")
                     }
                     .alert("Your Process Is\nBeing Requested", isPresented: $showingProcessRequestAlert) {
                         Button("OK") {}
@@ -29,7 +29,7 @@ struct SiriDictationHistoryView: View {
                         Text("Your Siri and Dictation history will be deleted.")
                     }
             }, footer: {
-                Text("Delete Siri & Dictation interactions currently associated with this Apple Vision Pro from Apple servers. [About Improve Siri & Dictation](#)")
+                Text("Delete Siri & Dictation interactions currently associated with this \(UIDevice().name) from Apple servers. [About Improve Siri & Dictation](#)")
             })
         }
     }

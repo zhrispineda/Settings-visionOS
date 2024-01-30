@@ -17,7 +17,7 @@ struct DownloadsView: View {
                             .font(.title)
                             .foregroundStyle(.blue)
                         VStack(alignment: .leading) {
-                            Text("On My Apple Vision Pro")
+                            Text("On My \(UIDevice().name)")
                             Text("Downloads")
                                 .foregroundStyle(.secondary)
                                 .font(.callout)

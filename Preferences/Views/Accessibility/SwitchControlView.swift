@@ -31,7 +31,7 @@ struct SwitchControlView: View {
                         showingSwitchControlDisableAlert = !switchControlEnabled
                     }
             }, footer: {
-                Text("Switch Control allows you to use your Apple Vision Pro by sequentially highlighting items on the screen that can be activated through an adaptive accessory.")
+                Text("Switch Control allows you to use your \(UIDevice().name) by sequentially highlighting items on the screen that can be activated through an adaptive accessory.")
             })
             
             Section {

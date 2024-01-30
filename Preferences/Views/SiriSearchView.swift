@@ -41,7 +41,7 @@ struct SiriSearchView: View {
             }, header: {
                 Text("Ask Siri")
             }, footer: {
-                Text("Voice input is processed on Apple Vision Pro, but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)")
+                Text("Voice input is processed on \(UIDevice().name), but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)")
             })
             
             Section(content: {

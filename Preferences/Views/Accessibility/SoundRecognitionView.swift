@@ -19,7 +19,7 @@ struct SoundRecognitionView: View {
                     .foregroundStyle(.tertiary)
             }, footer: {
                 VStack {
-                    Text("Your Apple Vision Pro will continously listen for certain sounds, and using on-device intelligence, will notify you when sounds may be recognized.")
+                    Text("Your \(UIDevice().name) will continously listen for certain sounds, and using on-device intelligence, will notify you when sounds may be recognized.")
                     Text("\nSound Recognition should not be relied upon in circumstances where you may be harmed or injured, in high-risk emergency situations, or for navigation.")
                 }
             })
