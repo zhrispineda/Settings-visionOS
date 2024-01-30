@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // Variables
     @State private var searchText = String()
+    @State private var showingSignInSheet = false
     @State private var selection: SettingsModel? = .general
     @State private var destination = AnyView(GeneralView())
 
@@ -20,7 +21,7 @@ struct ContentView: View {
                 // TODO: Pop to root detail view on tapping NavigationLink within its own destination view
                 Section {
                     Button(action: {
-                        print("Toggling Apple ID Popover")
+                        showingSignInSheet.toggle()
                     }, label: {
                         HStack {
                             Image(systemName: "person.crop.circle.fill")
@@ -36,6 +37,10 @@ struct ContentView: View {
                                     .font(.footnote)
                             }
                         }
+                    })
+                    .sheet(isPresented: $showingSignInSheet, content: {
+                        SignInView(showingSignInSheet: $showingSignInSheet)
+                            .frame(width: 650, height: 730)
                     })
                 }
                 

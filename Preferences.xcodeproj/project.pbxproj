@@ -157,6 +157,8 @@
 		8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB082B68B04800AD556A /* SlowKeysView.swift */; };
 		8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB0B2B68B1BB00AD556A /* StyleView.swift */; };
 		8360DB0F2B68B87E00AD556A /* LocationServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB0E2B68B87E00AD556A /* LocationServicesView.swift */; };
+		836816DF2B698A61003139A1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836816DE2B698A61003139A1 /* SignInView.swift */; };
+		836816E12B69A4CD003139A1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836816E02B69A4CD003139A1 /* ForgotPasswordView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -432,6 +434,8 @@
 		8360DB082B68B04800AD556A /* SlowKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowKeysView.swift; sourceTree = "<group>"; };
 		8360DB0B2B68B1BB00AD556A /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
 		8360DB0E2B68B87E00AD556A /* LocationServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServicesView.swift; sourceTree = "<group>"; };
+		836816DE2B698A61003139A1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		836816E02B69A4CD003139A1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -1075,6 +1079,15 @@
 			path = "Sound Recognition";
 			sourceTree = "<group>";
 		};
+		836816DD2B6989A8003139A1 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				836816DE2B698A61003139A1 /* SignInView.swift */,
+				836816E02B69A4CD003139A1 /* ForgotPasswordView.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,6 +1234,7 @@
 		83AB15C32B44F6DE002DCD7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				836816DD2B6989A8003139A1 /* Sheets */,
 				834111E02B5DAFB400366689 /* Shared */,
 				835B93422B48904100E96BE3 /* General */,
 				839EA8192B59C83F0099BCAA /* Apps */,
@@ -1697,6 +1711,7 @@
 				8360DAE22B68800800AD556A /* MoveRepeatView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
+				836816DF2B698A61003139A1 /* SignInView.swift in Sources */,
 				83080EAC2B61EC0700771ACC /* SubtitlesCaptioningView.swift in Sources */,
 				8306F0D52B697ADC00DBB3CA /* TimeLimitsView.swift in Sources */,
 				8360DAF52B688C2100AD556A /* MenuItemDetailView.swift in Sources */,
@@ -1812,6 +1827,7 @@
 				83E7DC422B60FF7A002B9087 /* CustomList.swift in Sources */,
 				8360DB072B68AF4800AD556A /* StickyKeysView.swift in Sources */,
 				834111E72B5DB29500366689 /* ShortNameView.swift in Sources */,
+				836816E12B69A4CD003139A1 /* ForgotPasswordView.swift in Sources */,
 				834111D42B5DA17600366689 /* TransitView.swift in Sources */,
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,
 				83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */,

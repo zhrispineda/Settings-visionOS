@@ -33,7 +33,7 @@ struct StorageView: View {
             Section {
                 VStack {
                     HStack {
-                        Text("Apple Vision Pro")
+                        Text("\(UIDevice().name)")
                         Spacer()
                         Text("32.30 GB of 256 GB used")
                             .foregroundStyle(.secondary)
@@ -108,7 +108,7 @@ struct StorageView: View {
                             .clipShape(Circle())
                             .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
-                            Text("visionOS (1.0)")
+                            Text("\(UIDevice().systemName) (\(UIDevice().systemVersion))")
                             Text("9.97 GB")
                                 .font(.caption)
                                 .foregroundStyle(.gray)
