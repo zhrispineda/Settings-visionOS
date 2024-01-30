@@ -13,6 +13,7 @@ import SwiftUI
 struct ListRowNavigationLabel<Content: View>: View {
     var title: String = "Title"
     var subtitle: String = "Subtitle"
+    var icon: String = String()
     var content: Content
     
     var body: some View {
@@ -23,6 +24,10 @@ struct ListRowNavigationLabel<Content: View>: View {
                 Text(title)
                     .lineLimit(1)
                 Spacer()
+                if !icon.isEmpty {
+                    Image(systemName: icon)
+                        .foregroundStyle(.purple)
+                }
                 Text(subtitle)
                     .foregroundStyle(.secondary)
             }

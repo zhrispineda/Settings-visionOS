@@ -2,7 +2,7 @@
 //  PurchasesView.swift
 //  Preferences
 //
-//  Settings > Screen Time > Content & Privacy Restrictions
+//  Settings > Screen Time > Content & Privacy Restrictions > iTunes & App Store Purchases
 //
 
 import SwiftUI

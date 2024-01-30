@@ -2,7 +2,7 @@
 //  AppleAdvertisingView.swift
 //  Preferences
 //
-//  Created by Chris on 1/25/24.
+//  Settings > Privacy & Security > Apple Advertising
 //
 
 import SwiftUI

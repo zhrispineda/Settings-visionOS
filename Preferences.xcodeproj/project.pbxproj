@@ -12,6 +12,9 @@
 		830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EC2B583E23007B7529 /* DictationShortcutView.swift */; };
 		830602EF2B584852007B7529 /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602EE2B584852007B7529 /* FontsView.swift */; };
 		830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830602F02B5849AB007B7529 /* DictionaryView.swift */; };
+		8306F0BB2B69645100DBB3CA /* LocationAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BA2B69645100DBB3CA /* LocationAlertsView.swift */; };
+		8306F0BD2B6964D000DBB3CA /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */; };
+		8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */; };
 		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
@@ -144,6 +147,7 @@
 		8360DB072B68AF4800AD556A /* StickyKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB062B68AF4800AD556A /* StickyKeysView.swift */; };
 		8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB082B68B04800AD556A /* SlowKeysView.swift */; };
 		8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB0B2B68B1BB00AD556A /* StyleView.swift */; };
+		8360DB0F2B68B87E00AD556A /* LocationServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB0E2B68B87E00AD556A /* LocationServicesView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -274,6 +278,9 @@
 		830602EC2B583E23007B7529 /* DictationShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationShortcutView.swift; sourceTree = "<group>"; };
 		830602EE2B584852007B7529 /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
 		830602F02B5849AB007B7529 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		8306F0BA2B69645100DBB3CA /* LocationAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAlertsView.swift; sourceTree = "<group>"; };
+		8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemServicesView.swift; sourceTree = "<group>"; };
 		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
@@ -406,6 +413,7 @@
 		8360DB062B68AF4800AD556A /* StickyKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyKeysView.swift; sourceTree = "<group>"; };
 		8360DB082B68B04800AD556A /* SlowKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowKeysView.swift; sourceTree = "<group>"; };
 		8360DB0B2B68B1BB00AD556A /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
+		8360DB0E2B68B87E00AD556A /* LocationServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServicesView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -552,6 +560,16 @@
 			path = "Text Replacement";
 			sourceTree = "<group>";
 		};
+		8306F0B92B69641B00DBB3CA /* Location Services */ = {
+			isa = PBXGroup;
+			children = (
+				8306F0BA2B69645100DBB3CA /* LocationAlertsView.swift */,
+				8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */,
+				8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */,
+			);
+			path = "Location Services";
+			sourceTree = "<group>";
+		};
 		83080E942B61B62E00771ACC /* Accessibility */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +579,7 @@
 				831C8B422B677D030039C782 /* Interaction */,
 				8360DAC52B685FAD00AD556A /* Switch Control */,
 				8360DAFA2B68992700AD556A /* Keyboards */,
+				8360DB0D2B68B74900AD556A /* Sound Recognition */,
 				8360DB0A2B68B1A500AD556A /* Subtitles & Captioning */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
@@ -993,6 +1012,13 @@
 			path = "Subtitles & Captioning";
 			sourceTree = "<group>";
 		};
+		8360DB0D2B68B74900AD556A /* Sound Recognition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sound Recognition";
+			sourceTree = "<group>";
+		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,9 +1390,11 @@
 			isa = PBXGroup;
 			children = (
 				83E7DC2E2B608D97002B9087 /* Content Restrictions */,
+				8306F0B92B69641B00DBB3CA /* Location Services */,
 				83F20FF22B5F3CFE00164ACF /* PurchasesView.swift */,
 				83F20FF72B5F42EB00164ACF /* RestrictionsAllowedAppsView.swift */,
 				83F20FF92B5F8A6500164ACF /* ContentRestrictionsView.swift */,
+				8360DB0E2B68B87E00AD556A /* LocationServicesView.swift */,
 			);
 			path = "Content & Privacy Restrictions";
 			sourceTree = "<group>";
@@ -1613,6 +1641,7 @@
 				837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */,
 				83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */,
 				83BDDE4D2B659DF7006C0FDC /* ApplyAppsView.swift in Sources */,
+				8360DB0F2B68B87E00AD556A /* LocationServicesView.swift in Sources */,
 				837F104F2B533B6700CB8FCD /* ControlCenterView.swift in Sources */,
 				837DA17F2B6734420038B856 /* TypingFeedbackView.swift in Sources */,
 				83D4D9672B5DF05C00081A31 /* SoundsView.swift in Sources */,
@@ -1685,6 +1714,7 @@
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
 				83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */,
 				8372E4AF2B64AD6D00C1ABDC /* PunctuationSomeView.swift in Sources */,
+				8306F0BD2B6964D000DBB3CA /* LocationDetailView.swift in Sources */,
 				8360DABD2B683FEE00AD556A /* MovementToleranceView.swift in Sources */,
 				83BDDE5A2B65B7A4006C0FDC /* CommandsView.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
@@ -1699,6 +1729,7 @@
 				837DA16E2B670ADA0038B856 /* DirectTouchAppsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
 				8360DABB2B683D3900AD556A /* TargetView.swift in Sources */,
+				8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */,
 				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,
 				834E6CFC2B64866700B81150 /* SelectedBrailleTableView.swift in Sources */,
 				83BDDE4F2B65A07D006C0FDC /* MediaDescriptionView.swift in Sources */,
@@ -1722,6 +1753,7 @@
 				83080E9A2B61C48100771ACC /* MotionView.swift in Sources */,
 				831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */,
 				83080EB22B61F3C500771ACC /* AccessibilityShortcutView.swift in Sources */,
+				8306F0BB2B69645100DBB3CA /* LocationAlertsView.swift in Sources */,
 				8309585D2B53061C00DD47D4 /* PrivacySecurityView.swift in Sources */,
 				8360DAB42B68369600AD556A /* IdleOpacityView.swift in Sources */,
 				834111E32B5DB0ED00366689 /* SortOrderView.swift in Sources */,

@@ -2,7 +2,7 @@
 //  GlidingCursorView.swift
 //  Preferences
 //
-//  Created by Chris on 1/29/24.
+//  Settings > Accessibility > Switch Control > Gliding Cursor
 //
 
 import SwiftUI

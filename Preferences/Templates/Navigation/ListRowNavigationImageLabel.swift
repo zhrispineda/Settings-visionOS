@@ -16,6 +16,7 @@ struct ListRowNavigationImageLabel<Content: View>: View {
     var image: String = "applefreeform"
     var title: String = "Title"
     var subtitle: String = String()
+    var status: String = String()
     var content: Content
     
     var body: some View {
@@ -44,6 +45,9 @@ struct ListRowNavigationImageLabel<Content: View>: View {
                             .font(.subheadline)
                     }
                 }
+                Spacer()
+                Text(status)
+                    .foregroundStyle(.secondary)
             }
         })
     }

@@ -2,7 +2,7 @@
 //  ContentRestrictionsView.swift
 //  Preferences
 //
-//  Created by Chris on 1/22/24.
+//  Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions
 //
 
 import SwiftUI

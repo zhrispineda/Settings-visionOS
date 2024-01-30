@@ -2,7 +2,7 @@
 //  AudioDescriptionsView.swift
 //  Preferences
 //
-//  Created by Chris on 1/24/24.
+//  Settings > Accessibility > Audio Description
 //
 
 import SwiftUI

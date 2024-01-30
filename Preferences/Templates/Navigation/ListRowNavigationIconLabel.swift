@@ -67,7 +67,12 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                 }
                 Spacer()
                 if !status.isEmpty {
-                    Text(status).foregroundStyle(.secondary)
+                    if UIImage(systemName: status) != nil {
+                        Image(systemName: status)
+                    } else {
+                        Text(status)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
         })
@@ -75,5 +80,5 @@ struct ListRowNavigationIconLabel<Content: View>: View {
 }
 
 #Preview {
-    ListRowNavigationIconLabel(color: .red, icon: "logo.bluetooth", title: "Title", content: EmptyView())
+    ListRowNavigationIconLabel(color: .red, icon: "logo.bluetooth", title: "Title", status: "location.fill", content: EmptyView())
 }

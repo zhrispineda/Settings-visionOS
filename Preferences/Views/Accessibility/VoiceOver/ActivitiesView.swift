@@ -2,7 +2,7 @@
 //  ActivitiesView.swift
 //  Preferences
 //
-//  Created by Chris on 1/28/24.
+//  Settings > Accessibility > VoiceOver > Activities
 //
 
 import SwiftUI

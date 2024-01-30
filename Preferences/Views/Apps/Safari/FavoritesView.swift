@@ -2,7 +2,7 @@
 //  FavoritesView.swift
 //  Preferences
 //
-//  Created by Chris on 1/19/24.
+//  Settings > Apps > Safari > Favorites
 //
 
 import SwiftUI
