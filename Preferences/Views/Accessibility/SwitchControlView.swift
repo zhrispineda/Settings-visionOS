@@ -36,7 +36,7 @@ struct SwitchControlView: View {
             
             Section {
                 ListRowNavigationLabel(title: "Switches", subtitle: "0", content: SwitchesView())
-                ListRowNavigationLabel(title: "Recipes", subtitle: "2", content: EmptyView())
+                ListRowNavigationLabel(title: "Recipes", subtitle: "2", content: RecipesView())
             }
             
             Section {

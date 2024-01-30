@@ -117,6 +117,9 @@
 		8360DACD2B68620600AD556A /* ExternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DACC2B68620600AD556A /* ExternalView.swift */; };
 		8360DACF2B68659D00AD556A /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DACE2B68659D00AD556A /* SoundView.swift */; };
 		8360DAD12B6868B900AD556A /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD02B6868B900AD556A /* ActionsView.swift */; };
+		8360DAD32B686AB800AD556A /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD22B686AB800AD556A /* RecipesView.swift */; };
+		8360DAD62B686E6A00AD556A /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD52B686E6A00AD556A /* NewRecipeView.swift */; };
+		8360DAD82B6874ED00AD556A /* LaunchRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -352,6 +355,9 @@
 		8360DACC2B68620600AD556A /* ExternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalView.swift; sourceTree = "<group>"; };
 		8360DACE2B68659D00AD556A /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8360DAD02B6868B900AD556A /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		8360DAD22B686AB800AD556A /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		8360DAD52B686E6A00AD556A /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
+		8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRecipeView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -848,7 +854,9 @@
 			isa = PBXGroup;
 			children = (
 				8360DAC82B6860CA00AD556A /* Switches */,
+				8360DAD42B686E4000AD556A /* Recipes */,
 				8360DAC62B685FE300AD556A /* SwitchesView.swift */,
+				8360DAD22B686AB800AD556A /* RecipesView.swift */,
 			);
 			path = "Switch Control";
 			sourceTree = "<group>";
@@ -870,6 +878,15 @@
 				8360DAD02B6868B900AD556A /* ActionsView.swift */,
 			);
 			path = "Add New Switch";
+			sourceTree = "<group>";
+		};
+		8360DAD42B686E4000AD556A /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAD52B686E6A00AD556A /* NewRecipeView.swift */,
+				8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
@@ -1390,6 +1407,7 @@
 				834111D62B5DA46500366689 /* CyclingView.swift in Sources */,
 				8360DAC22B68523B00AD556A /* ControlView.swift in Sources */,
 				83D4D96E2B5DFA6300081A31 /* CustomizeNotificationsView.swift in Sources */,
+				8360DAD62B686E6A00AD556A /* NewRecipeView.swift in Sources */,
 				83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */,
 				830602E82B5837B0007B7529 /* TextReplacementView.swift in Sources */,
 				837DA1762B6715C10038B856 /* ActivityVoiceView.swift in Sources */,
@@ -1444,6 +1462,7 @@
 				8309A1922B6358B00039BDEC /* AppPermissionView.swift in Sources */,
 				834E6D002B648B8A00B81150 /* BrailleAlertMessagesView.swift in Sources */,
 				837F10532B533F2700CB8FCD /* ScreenTimeView.swift in Sources */,
+				8360DAD32B686AB800AD556A /* RecipesView.swift in Sources */,
 				83BDDE582B65B308006C0FDC /* VoiceOverSoundView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */,
@@ -1518,6 +1537,7 @@
 				83F20FFA2B5F8A6500164ACF /* ContentRestrictionsView.swift in Sources */,
 				83FEB7112B5AE5200028D308 /* WhenUsingNewKeyboardShortcutView.swift in Sources */,
 				83BDDE632B65BBCB006C0FDC /* InteractionItemView.swift in Sources */,
+				8360DAD82B6874ED00AD556A /* LaunchRecipeView.swift in Sources */,
 				83DB44E82B4C4CC50081852F /* VersionView.swift in Sources */,
 				832A545D2B5C841D00BC877C /* AddAccountView.swift in Sources */,
 				830602EB2B583B1B007B7529 /* AddTextReplacementView.swift in Sources */,
