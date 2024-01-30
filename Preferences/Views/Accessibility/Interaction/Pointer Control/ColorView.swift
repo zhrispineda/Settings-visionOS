@@ -44,6 +44,10 @@ struct ColorView: View {
 extension Color {
     static subscript(name: String) -> Color {
         switch name {
+        case "Default":
+            return Color.blue
+        case "Gray":
+            return Color.gray
         case "White":
             return Color.white
         case "Blue":

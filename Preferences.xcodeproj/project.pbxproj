@@ -136,6 +136,13 @@
 		8360DAF52B688C2100AD556A /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */; };
 		8360DAF72B6896A500AD556A /* CursorColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF62B6896A500AD556A /* CursorColorView.swift */; };
 		8360DAF92B68971300AD556A /* SavedGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF82B68971300AD556A /* SavedGesturesView.swift */; };
+		8360DAFC2B68994500AD556A /* FullKeyboardAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAFB2B68994500AD556A /* FullKeyboardAccessView.swift */; };
+		8360DAFF2B68A0F700AD556A /* KeyboardCommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAFE2B68A0F700AD556A /* KeyboardCommandsView.swift */; };
+		8360DB012B68AABA00AD556A /* AutoHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB002B68AABA00AD556A /* AutoHideView.swift */; };
+		8360DB032B68AC1200AD556A /* KeyboardColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB022B68AC1200AD556A /* KeyboardColorView.swift */; };
+		8360DB052B68AD5C00AD556A /* KeyRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB042B68AD5C00AD556A /* KeyRepeatView.swift */; };
+		8360DB072B68AF4800AD556A /* StickyKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB062B68AF4800AD556A /* StickyKeysView.swift */; };
+		8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB082B68B04800AD556A /* SlowKeysView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -390,6 +397,13 @@
 		8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
 		8360DAF62B6896A500AD556A /* CursorColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorColorView.swift; sourceTree = "<group>"; };
 		8360DAF82B68971300AD556A /* SavedGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGesturesView.swift; sourceTree = "<group>"; };
+		8360DAFB2B68994500AD556A /* FullKeyboardAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullKeyboardAccessView.swift; sourceTree = "<group>"; };
+		8360DAFE2B68A0F700AD556A /* KeyboardCommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCommandsView.swift; sourceTree = "<group>"; };
+		8360DB002B68AABA00AD556A /* AutoHideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHideView.swift; sourceTree = "<group>"; };
+		8360DB022B68AC1200AD556A /* KeyboardColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColorView.swift; sourceTree = "<group>"; };
+		8360DB042B68AD5C00AD556A /* KeyRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyRepeatView.swift; sourceTree = "<group>"; };
+		8360DB062B68AF4800AD556A /* StickyKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyKeysView.swift; sourceTree = "<group>"; };
+		8360DB082B68B04800AD556A /* SlowKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowKeysView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -544,6 +558,7 @@
 				83F114F32B673FC60090FAE8 /* Spoken Content */,
 				831C8B422B677D030039C782 /* Interaction */,
 				8360DAC52B685FAD00AD556A /* Switch Control */,
+				8360DAFA2B68992700AD556A /* Keyboards */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
@@ -943,6 +958,28 @@
 				8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */,
 			);
 			path = "Menu Items";
+			sourceTree = "<group>";
+		};
+		8360DAFA2B68992700AD556A /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAFD2B689B5B00AD556A /* Full Keyboard Access */,
+				8360DAFB2B68994500AD556A /* FullKeyboardAccessView.swift */,
+				8360DB042B68AD5C00AD556A /* KeyRepeatView.swift */,
+				8360DB062B68AF4800AD556A /* StickyKeysView.swift */,
+				8360DB082B68B04800AD556A /* SlowKeysView.swift */,
+			);
+			path = Keyboards;
+			sourceTree = "<group>";
+		};
+		8360DAFD2B689B5B00AD556A /* Full Keyboard Access */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAFE2B68A0F700AD556A /* KeyboardCommandsView.swift */,
+				8360DB002B68AABA00AD556A /* AutoHideView.swift */,
+				8360DB022B68AC1200AD556A /* KeyboardColorView.swift */,
+			);
+			path = "Full Keyboard Access";
 			sourceTree = "<group>";
 		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
@@ -1423,6 +1460,7 @@
 				837DA1852B6739110038B856 /* NavigationStyleView.swift in Sources */,
 				831D1F6C2B4C76300071E539 /* EnvironmentsView.swift in Sources */,
 				832A54582B5C30C600BC877C /* FeatureFlagsView.swift in Sources */,
+				8360DB012B68AABA00AD556A /* AutoHideView.swift in Sources */,
 				83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */,
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83E7DC302B608DA9002B9087 /* MultiplayerGamesView.swift in Sources */,
@@ -1492,6 +1530,7 @@
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
 				8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */,
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
+				8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */,
 				834A448D2B461BE100690818 /* AppsView.swift in Sources */,
 				83BDDE4A2B659D2F006C0FDC /* SceneDescriptionsView.swift in Sources */,
 				834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */,
@@ -1504,6 +1543,7 @@
 				83BDDE532B65ADA1006C0FDC /* AudioView.swift in Sources */,
 				83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */,
 				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
+				8360DAFC2B68994500AD556A /* FullKeyboardAccessView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
 				8360DAE42B68818400AD556A /* LongPressView.swift in Sources */,
@@ -1565,6 +1605,7 @@
 				837DA17F2B6734420038B856 /* TypingFeedbackView.swift in Sources */,
 				83D4D9672B5DF05C00081A31 /* SoundsView.swift in Sources */,
 				834111DA2B5DA8B200366689 /* ShortcutsView.swift in Sources */,
+				8360DB032B68AC1200AD556A /* KeyboardColorView.swift in Sources */,
 				8320E88C2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift in Sources */,
 				8309A1902B63576B0039BDEC /* TrackingView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
@@ -1574,10 +1615,12 @@
 				8360DADE2B6879C800AD556A /* PauseFirstItemView.swift in Sources */,
 				837DA1652B66C88A0038B856 /* TouchGesturesView.swift in Sources */,
 				8360DAEA2B6885C400AD556A /* HoldDurationView.swift in Sources */,
+				8360DB052B68AD5C00AD556A /* KeyRepeatView.swift in Sources */,
 				83BDDE5D2B65B98B006C0FDC /* AllCommandsView.swift in Sources */,
 				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
 				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
 				839EA8232B59D8340099BCAA /* SafariView.swift in Sources */,
+				8360DAFF2B68A0F700AD556A /* KeyboardCommandsView.swift in Sources */,
 				83FF013F2B52023200CC2CE8 /* TVAppView.swift in Sources */,
 				8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
@@ -1656,6 +1699,7 @@
 				83FEB7212B5AEADA0028D308 /* LocationView.swift in Sources */,
 				83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */,
 				83E7DC422B60FF7A002B9087 /* CustomList.swift in Sources */,
+				8360DB072B68AF4800AD556A /* StickyKeysView.swift in Sources */,
 				834111E72B5DB29500366689 /* ShortNameView.swift in Sources */,
 				834111D42B5DA17600366689 /* TransitView.swift in Sources */,
 				83E7DC362B6094EB002B9087 /* OnOffView.swift in Sources */,

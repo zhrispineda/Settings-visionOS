@@ -14,7 +14,7 @@ struct AccessibilityKeyboardsView: View {
     var body: some View {
         CustomList(title: "Keyboards") {
             Section(content: {
-                ListRowNavigationLabel(title: "Full Keyboard Access", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Full Keyboard Access", subtitle: "Off", content: FullKeyboardAccessView())
             }, header: {
                 Text("Hardware Keyboards")
             }, footer: {
@@ -22,15 +22,15 @@ struct AccessibilityKeyboardsView: View {
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Key Repeat", subtitle: "On", content: EmptyView())
-                ListRowNavigationLabel(title: "Sticky Keys", subtitle: "Off", content: EmptyView())
-                ListRowNavigationLabel(title: "Slow Keys", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Key Repeat", subtitle: "On", content: KeyRepeatView())
+                ListRowNavigationLabel(title: "Sticky Keys", subtitle: "Off", content: StickyKeysView())
+                ListRowNavigationLabel(title: "Slow Keys", subtitle: "Off", content: SlowKeysView())
             }, footer: {
                 Text("Customize the typing experience when using an external keyboard.")
             })
             
             Section(content: {
-                Toggle("Show LowercaseKeys", isOn: $showLowercaseKeysEnabled)
+                Toggle("Show Lowercase Keys", isOn: $showLowercaseKeysEnabled)
             }, header: {
                 Text("Software Keyboards")
             }, footer: {
@@ -41,5 +41,7 @@ struct AccessibilityKeyboardsView: View {
 }
 
 #Preview {
-    AccessibilityKeyboardsView()
+    NavigationStack {
+        AccessibilityKeyboardsView()
+    }
 }
