@@ -16,6 +16,8 @@
 		8306F0BD2B6964D000DBB3CA /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */; };
 		8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */; };
 		8306F0C22B696AA100DBB3CA /* AddWebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */; };
+		8306F0C42B696C8100DBB3CA /* HighlightContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C32B696C8100DBB3CA /* HighlightContentView.swift */; };
+		8306F0C72B696DFE00DBB3CA /* WordColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C62B696DFE00DBB3CA /* WordColorView.swift */; };
 		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
@@ -283,6 +285,8 @@
 		8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemServicesView.swift; sourceTree = "<group>"; };
 		8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebsiteView.swift; sourceTree = "<group>"; };
+		8306F0C32B696C8100DBB3CA /* HighlightContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightContentView.swift; sourceTree = "<group>"; };
+		8306F0C62B696DFE00DBB3CA /* WordColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordColorView.swift; sourceTree = "<group>"; };
 		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
@@ -578,6 +582,14 @@
 				8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */,
 			);
 			path = "Web Content";
+			sourceTree = "<group>";
+		};
+		8306F0C52B696DF400DBB3CA /* Highlight Content */ = {
+			isa = PBXGroup;
+			children = (
+				8306F0C62B696DFE00DBB3CA /* WordColorView.swift */,
+			);
+			path = "Highlight Content";
 			sourceTree = "<group>";
 		};
 		83080E942B61B62E00771ACC /* Accessibility */ = {
@@ -1382,8 +1394,10 @@
 		83F114F32B673FC60090FAE8 /* Spoken Content */ = {
 			isa = PBXGroup;
 			children = (
+				8306F0C52B696DF400DBB3CA /* Highlight Content */,
 				83F114F42B673FE40090FAE8 /* SpokenContentTypingFeedbackView.swift */,
 				83F114F62B6744880090FAE8 /* DefaultLanguageView.swift */,
+				8306F0C32B696C8100DBB3CA /* HighlightContentView.swift */,
 			);
 			path = "Spoken Content";
 			sourceTree = "<group>";
@@ -1691,6 +1705,7 @@
 				832A54622B5C8B5000BC877C /* AddOtherAccountView.swift in Sources */,
 				831D1F6E2B4C77A90071E539 /* TransferResetView.swift in Sources */,
 				834E6CF72B64852800B81150 /* InputView.swift in Sources */,
+				8306F0C42B696C8100DBB3CA /* HighlightContentView.swift in Sources */,
 				832A54562B5C2F5500BC877C /* AdvancedTrackingFingerprintingProtectionView.swift in Sources */,
 				830602F12B5849AB007B7529 /* DictionaryView.swift in Sources */,
 				83BDDE602B65BAE9006C0FDC /* AllCommandsDetailView.swift in Sources */,
@@ -1718,6 +1733,7 @@
 				83F114F72B6744880090FAE8 /* DefaultLanguageView.swift in Sources */,
 				83E7DC322B608EBA002B9087 /* WebContentView.swift in Sources */,
 				834111D02B5DA05C00366689 /* DrivingView.swift in Sources */,
+				8306F0C72B696DFE00DBB3CA /* WordColorView.swift in Sources */,
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
 				8360DAF22B688B0A00AD556A /* MenuItemsView.swift in Sources */,
 				831C8B442B677D150039C782 /* AssistiveTouchView.swift in Sources */,

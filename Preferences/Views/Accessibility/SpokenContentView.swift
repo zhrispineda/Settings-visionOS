@@ -56,7 +56,7 @@ struct SpokenContentView: View {
             
             if speakSelectionEnabled || speakScreenEnabled {
                 Section(content: {
-                    ListRowNavigationLabel(title: "Highlight Content", subtitle: "Off", content: EmptyView())
+                    ListRowNavigationLabel(title: "Highlight Content", subtitle: "Off", content: HighlightContentView())
                 }, footer: {
                     Text("Highlight content as it is spoken.")
                 })

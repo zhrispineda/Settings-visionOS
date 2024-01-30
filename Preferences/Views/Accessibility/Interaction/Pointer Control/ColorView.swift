@@ -60,6 +60,10 @@ extension Color {
             return Color.yellow
         case "Orange":
             return Color.orange
+        case "Pink":
+            return Color.pink
+        case "Purple":
+            return Color.purple
         default:
             return Color.clear
         }
