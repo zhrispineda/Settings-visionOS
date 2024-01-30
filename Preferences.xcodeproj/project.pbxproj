@@ -143,6 +143,7 @@
 		8360DB052B68AD5C00AD556A /* KeyRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB042B68AD5C00AD556A /* KeyRepeatView.swift */; };
 		8360DB072B68AF4800AD556A /* StickyKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB062B68AF4800AD556A /* StickyKeysView.swift */; };
 		8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB082B68B04800AD556A /* SlowKeysView.swift */; };
+		8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DB0B2B68B1BB00AD556A /* StyleView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -404,6 +405,7 @@
 		8360DB042B68AD5C00AD556A /* KeyRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyRepeatView.swift; sourceTree = "<group>"; };
 		8360DB062B68AF4800AD556A /* StickyKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyKeysView.swift; sourceTree = "<group>"; };
 		8360DB082B68B04800AD556A /* SlowKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowKeysView.swift; sourceTree = "<group>"; };
+		8360DB0B2B68B1BB00AD556A /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 				831C8B422B677D030039C782 /* Interaction */,
 				8360DAC52B685FAD00AD556A /* Switch Control */,
 				8360DAFA2B68992700AD556A /* Keyboards */,
+				8360DB0A2B68B1A500AD556A /* Subtitles & Captioning */,
 				83080E952B61B64500771ACC /* VoiceOverView.swift */,
 				83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */,
 				83080E992B61C48100771ACC /* MotionView.swift */,
@@ -980,6 +983,14 @@
 				8360DB022B68AC1200AD556A /* KeyboardColorView.swift */,
 			);
 			path = "Full Keyboard Access";
+			sourceTree = "<group>";
+		};
+		8360DB0A2B68B1A500AD556A /* Subtitles & Captioning */ = {
+			isa = PBXGroup;
+			children = (
+				8360DB0B2B68B1BB00AD556A /* StyleView.swift */,
+			);
+			path = "Subtitles & Captioning";
 			sourceTree = "<group>";
 		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
@@ -1488,6 +1499,7 @@
 				834111CD2B5D9D5300366689 /* MapsView.swift in Sources */,
 				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
 				83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */,
+				8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */,
 				8360DAE82B68849100AD556A /* FocusedItemAfterTapView.swift in Sources */,
 				83FEB71B2B5AE99A0028D308 /* ReaderView.swift in Sources */,
 				839EA81B2B59C85E0099BCAA /* FreeformView.swift in Sources */,

@@ -20,7 +20,7 @@ struct SubtitlesCaptioningView: View {
             })
             
             Section {
-                ListRowNavigationLabel(title: "Style", subtitle: "Transparent Background", content: EmptyView())
+                ListRowNavigationLabel(title: "Style", subtitle: "Transparent Background", content: StyleView())
             }
         }
     }
