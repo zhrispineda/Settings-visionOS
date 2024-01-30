@@ -24,7 +24,6 @@ struct SpeechView: View {
                 HStack(spacing: 15) {
                     Slider(value: $pitchValue, in: 0...100)
                     Text("\(pitchValue, specifier: "%.0f")%")
-                    // Changing whitePoint value on Slider sometimes causes 100% CPU and freezes slider
                 }
                 Toggle("Pitch Change", isOn: $pitchChangeEnabled)
             }, header: {

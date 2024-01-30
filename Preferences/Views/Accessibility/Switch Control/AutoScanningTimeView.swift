@@ -1,54 +1,51 @@
 //
-//  LongPressDurationView.swift
+//  AutoScanningTime.swift
 //  Preferences
 //
-//  Settings > Accessibility > AssistiveTouch > Long Press > Long Press Duration
+//  Settings > Accessibility > Switch Control > Auto Scanning Time
 //
 
 import SwiftUI
 
-struct LongPressDurationView: View {
-    // Variables
-    @State private var duration = 0.75
+struct AutoScanningTimeView: View {
+    @State private var time = 1.00
     
     var body: some View {
-        CustomList(title: "Long Press Duration") {
+        CustomList(title: "Auto Scanning Time") {
             Section(content: {
                 HStack(spacing: 15) {
-                    Text("\(duration, specifier: "%.2f")")
-                    Text("\(duration == 1.00 ? "Second" : "Seconds")")
+                    Text("\(time, specifier: "%.2f")")
+                    Text("\(time == 1.00 ? "Second" : "Seconds")")
                         .foregroundStyle(.secondary)
                     Spacer()
                     Button(action: {
-                        duration -= 0.10
+                        time -= 0.05
                     }, label: {
                         Image(systemName: "minus.circle.fill")
                             .font(.extraLargeTitle2)
                             .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
+                            .foregroundStyle(.white, .secondary.opacity(0.3))
                     })
                     .buttonStyle(.plain)
-                    .disabled(duration < 0.21)
+                    .disabled(time < 0.054)
                     Button(action: {
-                        duration += 0.10
+                        time += 0.05
                     }, label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.extraLargeTitle2)
                             .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
+                            .foregroundStyle(.white, .secondary.opacity(0.3))
                     })
                     .buttonStyle(.plain)
-                    .disabled(duration > 7.99)
+                    .disabled(time > 24.99)
                 }
             }, header: {
-                Text("Long Press Duration")
-            }, footer: {
-                Text("The duration of time required to activate the Long Press action.")
+                Text("Auto Scanning Time")
             })
         }
     }
 }
 
 #Preview {
-    LongPressDurationView()
+    AutoScanningTimeView()
 }

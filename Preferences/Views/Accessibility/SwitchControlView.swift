@@ -40,22 +40,22 @@ struct SwitchControlView: View {
             }
             
             Section {
-                ListRowNavigationLabel(title: "Scanning Style", subtitle: "Auto", content: EmptyView())
+                ListRowNavigationLabel(title: "Scanning Style", subtitle: "Auto", content: ScanningStyleView())
             }
             
             Section(content: {
-                ListRowNavigationLabel(title: "Auto Scanning Time", subtitle: "1s", content: EmptyView())
-                ListRowNavigationLabel(title: "Pause on First Item", subtitle: "Off", content: EmptyView())
-                ListRowNavigationLabel(title: "Loops", subtitle: "4", content: EmptyView())
-                ListRowNavigationLabel(title: "Move Repeat", subtitle: "Off", content: EmptyView())
-                ListRowNavigationLabel(title: "Long Press", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Auto Scanning Time", subtitle: "1s", content: AutoScanningTimeView())
+                ListRowNavigationLabel(title: "Pause on First Item", subtitle: "Off", content: PauseFirstItemView())
+                ListRowNavigationLabel(title: "Loops", subtitle: "4", content: LoopsView())
+                ListRowNavigationLabel(title: "Move Repeat", subtitle: "Off", content: MoveRepeatView())
+                ListRowNavigationLabel(title: "Long Press", subtitle: "Off", content: LongPressView())
             }, header: {
                 Text("Timing")
             })
             
             Section {
-                ListRowNavigationLabel(title: "Tap Behavior", subtitle: "Default", content: EmptyView())
-                ListRowNavigationLabel(title: "Focused Item After Tap", subtitle: "First", content: EmptyView())
+                ListRowNavigationLabel(title: "Tap Behavior", subtitle: "Default", content: TapBehaviorView())
+                ListRowNavigationLabel(title: "Focused Item After Tap", subtitle: "First", content: FocusedItemAfterTapView())
             }
             
             Section(content: {
@@ -66,27 +66,27 @@ struct SwitchControlView: View {
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Hold Duration", subtitle: "Off", content: EmptyView())
-                ListRowNavigationLabel(title: "Ignore Repeat", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Hold Duration", subtitle: "Off", content: HoldDurationView())
+                ListRowNavigationLabel(title: "Ignore Repeat", subtitle: "Off", content: IgnoreRepeatView())
             }, header: {
                 Text("Switch Stabilization")
             })
             
             Section(content: {
-                ListRowNavigationLabel(title: "Gliding Cursor", subtitle: "Refined", content: EmptyView())
+                ListRowNavigationLabel(title: "Gliding Cursor", subtitle: "Refined", content: GlidingCursorView())
             }, header: {
                 Text("Point Scanning")
             })
             
             Section(content: {
                 Toggle("Sound Effects", isOn: $soundEffectsEnabled)
-                ListRowNavigationLabel(title: "Speech", subtitle: "Off", content: EmptyView())
+                ListRowNavigationLabel(title: "Speech", subtitle: "Off", content: SwitchControlSpeechView())
             }, header: {
                 Text("Audio")
             })
             
             Section {
-                NavigationLink("Menu Items", destination: {})
+                NavigationLink("Menu Items", destination: MenuItemsView())
             }
             
             Section(content: {
@@ -97,13 +97,13 @@ struct SwitchControlView: View {
             
             Section(content: {
                 Toggle("Large Cursor", isOn: $largeCursorEnabled)
-                ListRowNavigationLabel(title: "Cursor Color", subtitle: "Blue", content: EmptyView())
+                ListRowNavigationLabel(title: "Cursor Color", subtitle: "Blue", content: CursorColorView())
             }, header: {
                 Text("Visual")
             })
             
             Section {
-                ListRowNavigationLabel(title: "Saved Gestures", subtitle: "None", content: EmptyView())
+                ListRowNavigationLabel(title: "Saved Gestures", subtitle: "None", content: SavedGesturesView())
             }
         }
     }

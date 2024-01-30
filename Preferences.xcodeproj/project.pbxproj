@@ -120,6 +120,22 @@
 		8360DAD32B686AB800AD556A /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD22B686AB800AD556A /* RecipesView.swift */; };
 		8360DAD62B686E6A00AD556A /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD52B686E6A00AD556A /* NewRecipeView.swift */; };
 		8360DAD82B6874ED00AD556A /* LaunchRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */; };
+		8360DADA2B68761100AD556A /* ScanningStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAD92B68761100AD556A /* ScanningStyleView.swift */; };
+		8360DADC2B6878E900AD556A /* AutoScanningTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DADB2B6878E900AD556A /* AutoScanningTimeView.swift */; };
+		8360DADE2B6879C800AD556A /* PauseFirstItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DADD2B6879C800AD556A /* PauseFirstItemView.swift */; };
+		8360DAE02B687AA300AD556A /* LoopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DADF2B687AA300AD556A /* LoopsView.swift */; };
+		8360DAE22B68800800AD556A /* MoveRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAE12B68800800AD556A /* MoveRepeatView.swift */; };
+		8360DAE42B68818400AD556A /* LongPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAE32B68818400AD556A /* LongPressView.swift */; };
+		8360DAE62B68827500AD556A /* TapBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAE52B68827500AD556A /* TapBehaviorView.swift */; };
+		8360DAE82B68849100AD556A /* FocusedItemAfterTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAE72B68849100AD556A /* FocusedItemAfterTapView.swift */; };
+		8360DAEA2B6885C400AD556A /* HoldDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAE92B6885C400AD556A /* HoldDurationView.swift */; };
+		8360DAEC2B68872B00AD556A /* IgnoreRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAEB2B68872B00AD556A /* IgnoreRepeatView.swift */; };
+		8360DAEE2B6887D500AD556A /* GlidingCursorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAED2B6887D500AD556A /* GlidingCursorView.swift */; };
+		8360DAF02B6889D900AD556A /* SwitchControlSpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAEF2B6889D900AD556A /* SwitchControlSpeechView.swift */; };
+		8360DAF22B688B0A00AD556A /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF12B688B0A00AD556A /* MenuItemsView.swift */; };
+		8360DAF52B688C2100AD556A /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */; };
+		8360DAF72B6896A500AD556A /* CursorColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF62B6896A500AD556A /* CursorColorView.swift */; };
+		8360DAF92B68971300AD556A /* SavedGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAF82B68971300AD556A /* SavedGesturesView.swift */; };
 		83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADD2B57337500948E7A /* KeyboardsView.swift */; };
 		83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */; };
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
@@ -358,6 +374,22 @@
 		8360DAD22B686AB800AD556A /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		8360DAD52B686E6A00AD556A /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRecipeView.swift; sourceTree = "<group>"; };
+		8360DAD92B68761100AD556A /* ScanningStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningStyleView.swift; sourceTree = "<group>"; };
+		8360DADB2B6878E900AD556A /* AutoScanningTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScanningTimeView.swift; sourceTree = "<group>"; };
+		8360DADD2B6879C800AD556A /* PauseFirstItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseFirstItemView.swift; sourceTree = "<group>"; };
+		8360DADF2B687AA300AD556A /* LoopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopsView.swift; sourceTree = "<group>"; };
+		8360DAE12B68800800AD556A /* MoveRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepeatView.swift; sourceTree = "<group>"; };
+		8360DAE32B68818400AD556A /* LongPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressView.swift; sourceTree = "<group>"; };
+		8360DAE52B68827500AD556A /* TapBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBehaviorView.swift; sourceTree = "<group>"; };
+		8360DAE72B68849100AD556A /* FocusedItemAfterTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedItemAfterTapView.swift; sourceTree = "<group>"; };
+		8360DAE92B6885C400AD556A /* HoldDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldDurationView.swift; sourceTree = "<group>"; };
+		8360DAEB2B68872B00AD556A /* IgnoreRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRepeatView.swift; sourceTree = "<group>"; };
+		8360DAED2B6887D500AD556A /* GlidingCursorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlidingCursorView.swift; sourceTree = "<group>"; };
+		8360DAEF2B6889D900AD556A /* SwitchControlSpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchControlSpeechView.swift; sourceTree = "<group>"; };
+		8360DAF12B688B0A00AD556A /* MenuItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsView.swift; sourceTree = "<group>"; };
+		8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
+		8360DAF62B6896A500AD556A /* CursorColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorColorView.swift; sourceTree = "<group>"; };
+		8360DAF82B68971300AD556A /* SavedGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGesturesView.swift; sourceTree = "<group>"; };
 		83713ADC2B57302B00948E7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83713ADD2B57337500948E7A /* KeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsView.swift; sourceTree = "<group>"; };
 		83713ADF2B57382A00948E7A /* HardwareKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareKeyboardView.swift; sourceTree = "<group>"; };
@@ -855,8 +887,24 @@
 			children = (
 				8360DAC82B6860CA00AD556A /* Switches */,
 				8360DAD42B686E4000AD556A /* Recipes */,
+				8360DAF32B688C1200AD556A /* Menu Items */,
 				8360DAC62B685FE300AD556A /* SwitchesView.swift */,
 				8360DAD22B686AB800AD556A /* RecipesView.swift */,
+				8360DAD92B68761100AD556A /* ScanningStyleView.swift */,
+				8360DADB2B6878E900AD556A /* AutoScanningTimeView.swift */,
+				8360DADD2B6879C800AD556A /* PauseFirstItemView.swift */,
+				8360DADF2B687AA300AD556A /* LoopsView.swift */,
+				8360DAE12B68800800AD556A /* MoveRepeatView.swift */,
+				8360DAE32B68818400AD556A /* LongPressView.swift */,
+				8360DAE52B68827500AD556A /* TapBehaviorView.swift */,
+				8360DAE72B68849100AD556A /* FocusedItemAfterTapView.swift */,
+				8360DAE92B6885C400AD556A /* HoldDurationView.swift */,
+				8360DAEB2B68872B00AD556A /* IgnoreRepeatView.swift */,
+				8360DAED2B6887D500AD556A /* GlidingCursorView.swift */,
+				8360DAEF2B6889D900AD556A /* SwitchControlSpeechView.swift */,
+				8360DAF12B688B0A00AD556A /* MenuItemsView.swift */,
+				8360DAF62B6896A500AD556A /* CursorColorView.swift */,
+				8360DAF82B68971300AD556A /* SavedGesturesView.swift */,
 			);
 			path = "Switch Control";
 			sourceTree = "<group>";
@@ -887,6 +935,14 @@
 				8360DAD72B6874ED00AD556A /* LaunchRecipeView.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		8360DAF32B688C1200AD556A /* Menu Items */ = {
+			isa = PBXGroup;
+			children = (
+				8360DAF42B688C2100AD556A /* MenuItemDetailView.swift */,
+			);
+			path = "Menu Items";
 			sourceTree = "<group>";
 		};
 		83713AE12B573FEE00948E7A /* Hardware Keyboard */ = {
@@ -1383,6 +1439,7 @@
 				83FF01472B5209D200CC2CE8 /* PasswordsView.swift in Sources */,
 				83FEB7132B5AE62C0028D308 /* CloseTabsView.swift in Sources */,
 				83DB44EE2B4C5C1A0081852F /* CertificateTrustSettingsView.swift in Sources */,
+				8360DAF02B6889D900AD556A /* SwitchControlSpeechView.swift in Sources */,
 				83FEB7232B5AEBC50028D308 /* SafariAdvancedView.swift in Sources */,
 				830602EF2B584852007B7529 /* FontsView.swift in Sources */,
 				83BDDE462B659A4E006C0FDC /* PredictiveTextFeedbackView.swift in Sources */,
@@ -1393,9 +1450,11 @@
 				834111CD2B5D9D5300366689 /* MapsView.swift in Sources */,
 				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
 				83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */,
+				8360DAE82B68849100AD556A /* FocusedItemAfterTapView.swift in Sources */,
 				83FEB71B2B5AE99A0028D308 /* ReaderView.swift in Sources */,
 				839EA81B2B59C85E0099BCAA /* FreeformView.swift in Sources */,
 				8360DACD2B68620600AD556A /* ExternalView.swift in Sources */,
+				8360DAEE2B6887D500AD556A /* GlidingCursorView.swift in Sources */,
 				83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */,
 				834E6CEE2B64760100B81150 /* PronunciationsView.swift in Sources */,
 				8309A1942B6374730039BDEC /* AppleAdvertisingView.swift in Sources */,
@@ -1447,6 +1506,7 @@
 				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
+				8360DAE42B68818400AD556A /* LongPressView.swift in Sources */,
 				8399C35A2B6830C900132AA9 /* DoubleTapTimeoutView.swift in Sources */,
 				83C175632B5EF0ED00BA98FA /* AllowedPeopleView.swift in Sources */,
 				83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */,
@@ -1466,14 +1526,17 @@
 				83BDDE582B65B308006C0FDC /* VoiceOverSoundView.swift in Sources */,
 				83FF01412B52026B00CC2CE8 /* TVProviderView.swift in Sources */,
 				834111EF2B5DB5A600366689 /* ScreenSharingView.swift in Sources */,
+				8360DAF92B68971300AD556A /* SavedGesturesView.swift in Sources */,
 				83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */,
 				830602ED2B583E23007B7529 /* DictationShortcutView.swift in Sources */,
 				832A54702B5C91F100BC877C /* BirthdaysView.swift in Sources */,
 				837F104D2B5330A900CB8FCD /* SiriSearchView.swift in Sources */,
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
+				8360DADC2B6878E900AD556A /* AutoScanningTimeView.swift in Sources */,
 				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
 				8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */,
 				834E6CF52B64828800B81150 /* OutputView.swift in Sources */,
+				8360DAE62B68827500AD556A /* TapBehaviorView.swift in Sources */,
 				834111E52B5DB18100366689 /* DisplayOrderView.swift in Sources */,
 				83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */,
 				832A54692B5C8E9F00BC877C /* AlternateCalendarsView.swift in Sources */,
@@ -1489,9 +1552,11 @@
 				8372E4A82B649B5C00C1ABDC /* PunctuationView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */,
+				8360DAE22B68800800AD556A /* MoveRepeatView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
 				837F10512B533E0000CB8FCD /* AccessibilityView.swift in Sources */,
 				83080EAC2B61EC0700771ACC /* SubtitlesCaptioningView.swift in Sources */,
+				8360DAF52B688C2100AD556A /* MenuItemDetailView.swift in Sources */,
 				8360DAB62B6837F700AD556A /* DevicesView.swift in Sources */,
 				837DA1832B67375E0038B856 /* QuickSettingsView.swift in Sources */,
 				83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */,
@@ -1503,9 +1568,12 @@
 				8320E88C2B68183F00EFB674 /* CustomizeTopLevelMenuView.swift in Sources */,
 				8309A1902B63576B0039BDEC /* TrackingView.swift in Sources */,
 				83713AE02B57382A00948E7A /* HardwareKeyboardView.swift in Sources */,
+				8360DADA2B68761100AD556A /* ScanningStyleView.swift in Sources */,
 				83D4D9692B5DF06600081A31 /* NotificationGroupingView.swift in Sources */,
 				837DA1702B670FFF0038B856 /* ActivitiesView.swift in Sources */,
+				8360DADE2B6879C800AD556A /* PauseFirstItemView.swift in Sources */,
 				837DA1652B66C88A0038B856 /* TouchGesturesView.swift in Sources */,
+				8360DAEA2B6885C400AD556A /* HoldDurationView.swift in Sources */,
 				83BDDE5D2B65B98B006C0FDC /* AllCommandsView.swift in Sources */,
 				83FEB7152B5AE6EF0028D308 /* HideIPAddressView.swift in Sources */,
 				832A54672B5C8DE800BC877C /* TimeZoneView.swift in Sources */,
@@ -1514,10 +1582,12 @@
 				8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */,
 				831D1F6A2B4C76140071E539 /* PeopleView.swift in Sources */,
 				834E6CF32B647BE100B81150 /* BrailleView.swift in Sources */,
+				8360DAE02B687AA300AD556A /* LoopsView.swift in Sources */,
 				83FF01452B52082800CC2CE8 /* GameCenterView.swift in Sources */,
 				83AB15B02B44CB37002DCD7E /* PreferencesApp.swift in Sources */,
 				832A54722B5C92FA00BC877C /* EventsView.swift in Sources */,
 				835B93442B48904A00E96BE3 /* AboutView.swift in Sources */,
+				8360DAEC2B68872B00AD556A /* IgnoreRepeatView.swift in Sources */,
 				83713ADE2B57337500948E7A /* KeyboardsView.swift in Sources */,
 				83BDDE442B6599AE006C0FDC /* NumbersView.swift in Sources */,
 				83C1756D2B5F0A8000BA98FA /* SmartActivationView.swift in Sources */,
@@ -1554,6 +1624,7 @@
 				83E7DC322B608EBA002B9087 /* WebContentView.swift in Sources */,
 				834111D02B5DA05C00366689 /* DrivingView.swift in Sources */,
 				832A545F2B5C895600BC877C /* ListRowAccountLabel.swift in Sources */,
+				8360DAF22B688B0A00AD556A /* MenuItemsView.swift in Sources */,
 				831C8B442B677D150039C782 /* AssistiveTouchView.swift in Sources */,
 				8309585B2B5301B000DD47D4 /* DisplayView.swift in Sources */,
 				83FEB7172B5AE8010028D308 /* PageZoomView.swift in Sources */,
@@ -1566,6 +1637,7 @@
 				837DA17A2B6730340038B856 /* ActivityModifierKeysView.swift in Sources */,
 				834111F12B5DB7FA00366689 /* AppNotificationsView.swift in Sources */,
 				8309585F2B5309AF00DD47D4 /* ListRowNavigationIconLabel.swift in Sources */,
+				8360DAF72B6896A500AD556A /* CursorColorView.swift in Sources */,
 				8309A1852B6303BA0039BDEC /* SecurityRecommendationsView.swift in Sources */,
 				8360DAD12B6868B900AD556A /* ActionsView.swift in Sources */,
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
