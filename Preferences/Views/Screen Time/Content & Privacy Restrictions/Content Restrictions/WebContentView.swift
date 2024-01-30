@@ -44,7 +44,7 @@ struct WebContentView: View {
                         Text(option)
                     }
                     ZStack(alignment: .leading) {
-                        NavigationLink("", destination: {})
+                        NavigationLink("", destination: AddWebsiteView())
                         .opacity(0)
                         Text("**Add Website**")
                     }
@@ -56,7 +56,7 @@ struct WebContentView: View {
             if selectedOption == "Limit Adult Websites" {
                 Section(content: {
                     ZStack(alignment: .leading) {
-                        NavigationLink("", destination: {})
+                        NavigationLink("", destination: AddWebsiteView())
                         .opacity(0)
                         Text("**Add Website**")
                     }
@@ -66,7 +66,7 @@ struct WebContentView: View {
                 
                 Section(content: {
                     ZStack(alignment: .leading) {
-                        NavigationLink("", destination: {})
+                        NavigationLink("", destination: AddWebsiteView())
                         .opacity(0)
                         Text("**Add Website**")
                     }
@@ -79,5 +79,7 @@ struct WebContentView: View {
 }
 
 #Preview {
-    WebContentView()
+    NavigationStack {
+        WebContentView()
+    }
 }

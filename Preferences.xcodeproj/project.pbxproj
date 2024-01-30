@@ -15,6 +15,7 @@
 		8306F0BB2B69645100DBB3CA /* LocationAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BA2B69645100DBB3CA /* LocationAlertsView.swift */; };
 		8306F0BD2B6964D000DBB3CA /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */; };
 		8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */; };
+		8306F0C22B696AA100DBB3CA /* AddWebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */; };
 		83080E932B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */; };
 		83080E962B61B64500771ACC /* VoiceOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E952B61B64500771ACC /* VoiceOverView.swift */; };
 		83080E982B61BFB900771ACC /* DisplayTextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */; };
@@ -281,6 +282,7 @@
 		8306F0BA2B69645100DBB3CA /* LocationAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAlertsView.swift; sourceTree = "<group>"; };
 		8306F0BC2B6964D000DBB3CA /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemServicesView.swift; sourceTree = "<group>"; };
+		8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebsiteView.swift; sourceTree = "<group>"; };
 		83080E922B61AE0000771ACC /* ListRowNavigationSymbolLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationSymbolLabel.swift; sourceTree = "<group>"; };
 		83080E952B61B64500771ACC /* VoiceOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverView.swift; sourceTree = "<group>"; };
 		83080E972B61BFB900771ACC /* DisplayTextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextSizeView.swift; sourceTree = "<group>"; };
@@ -568,6 +570,14 @@
 				8306F0BE2B69663E00DBB3CA /* SystemServicesView.swift */,
 			);
 			path = "Location Services";
+			sourceTree = "<group>";
+		};
+		8306F0C02B696A9000DBB3CA /* Web Content */ = {
+			isa = PBXGroup;
+			children = (
+				8306F0C12B696AA100DBB3CA /* AddWebsiteView.swift */,
+			);
+			path = "Web Content";
 			sourceTree = "<group>";
 		};
 		83080E942B61B62E00771ACC /* Accessibility */ = {
@@ -1316,6 +1326,7 @@
 		83E7DC2E2B608D97002B9087 /* Content Restrictions */ = {
 			isa = PBXGroup;
 			children = (
+				8306F0C02B696A9000DBB3CA /* Web Content */,
 				83E7DC2F2B608DA9002B9087 /* MultiplayerGamesView.swift */,
 				83E7DC312B608EBA002B9087 /* WebContentView.swift */,
 				83E7DC372B6095E2002B9087 /* MoviesView.swift */,
@@ -1732,6 +1743,7 @@
 				8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */,
 				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,
 				834E6CFC2B64866700B81150 /* SelectedBrailleTableView.swift in Sources */,
+				8306F0C22B696AA100DBB3CA /* AddWebsiteView.swift in Sources */,
 				83BDDE4F2B65A07D006C0FDC /* MediaDescriptionView.swift in Sources */,
 				83C55CAB2B5229E500569896 /* StorageView.swift in Sources */,
 				837DA18A2B673C730038B856 /* LargerTextView.swift in Sources */,
