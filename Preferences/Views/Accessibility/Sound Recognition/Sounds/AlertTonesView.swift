@@ -9,8 +9,9 @@ import SwiftUI
 
 struct AlertTonesView: View {
     // Variables
-    let soundNames = ["Antic", "Cheers", "Chord", "Droplet", "Handoff", "Milestone", "Note", "Passage", "Portal", "Rattle", "Rebound", "Slide", "Welcome"]
-    @State private var selected = "Tri-tone"
+    var title = "Sounds"
+    let soundNames = ["None (Default)", "Antic", "Cheers", "Chord", "Droplet", "Handoff", "Milestone", "Note", "Passage", "Portal", "Rattle", "Rebound", "Slide", "Welcome"]
+    @State var selected = "Tri-tone"
     
     var body: some View {
         List {
@@ -29,21 +30,31 @@ struct AlertTonesView: View {
             
             Section {
                 ForEach(soundNames, id: \.self) { sound in
-                    Button(action: {
-                        selected = sound
-                    }, label: {
-                        Label(sound, systemImage: selected == sound ? "checkmark" : "")
-                    })
+                    if sound == "None (Default)" {
+                        if title == "Sound" {
+                            Button(action: {
+                                selected = sound
+                            }, label: {
+                                Label(sound, systemImage: selected == sound ? "checkmark" : "")
+                            })
+                        }
+                    } else {
+                        Button(action: {
+                            selected = sound
+                        }, label: {
+                            Label(sound, systemImage: selected == sound ? "checkmark" : "")
+                        })
+                    }
                 }
                 NavigationLink(destination: ClassicTonesView(), label: {
                     Label("Classic", systemImage: "empty")
                 })
             }
         }
-        .navigationTitle("Sounds")
+        .navigationTitle(title)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
-                Text("Sounds")
+                Text(title)
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40) // Adjust for back button if parent view or not
