@@ -19,6 +19,7 @@ struct ScreenTimeView: View {
                         VStack(alignment: .leading) {
                             Text("Content & Privacy Restrictions")
                             Text("Block inappropriate content")
+                                .font(.footnote)
                                 .foregroundStyle(.secondary)
                         }
                     }

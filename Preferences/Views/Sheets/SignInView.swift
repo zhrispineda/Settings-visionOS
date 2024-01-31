@@ -22,9 +22,10 @@ struct SignInView: View {
                 VStack(alignment: .center) {
                     Image(systemName: "apple.logo")
                         .font(.largeTitle)
-                        .padding(.bottom, 50)
+                        .padding(.bottom, 30)
+                        .padding(.top, -5)
                     Text("Apple ID")
-                        .font(.extraLargeTitle)
+                        .font(.extraLargeTitle2)
                     TextField("Email", text: $username)
                         .padding(20)
                         .background(.black).opacity(0.35)
@@ -35,11 +36,12 @@ struct SignInView: View {
                             showingForgotPasswordSheet.toggle()
                         }, label :{
                             Text("Forgot Password")
+                                .font(.subheadline)
                         })
                         .buttonStyle(.plain)
                         .sheet(isPresented: $showingForgotPasswordSheet, content: {
                             ForgotPasswordView(showingForgotPasswordSheet: $showingForgotPasswordSheet)
-                                .frame(width: 650, height: 750)
+                                .frame(width: 650, height: 720)
                         })
                         Text("\u{2022}")
                             .padding(.horizontal, 10)
@@ -47,6 +49,7 @@ struct SignInView: View {
                             showingFailedAlert.toggle()
                         }, label: {
                             Text("Create New Apple ID")
+                                .font(.subheadline)
                         })
                         .buttonStyle(.plain)
                         .alert("Could Not Create Apple ID",
@@ -65,7 +68,7 @@ struct SignInView: View {
                         }
                     }
                     Spacer()
-                        .padding(.vertical, 40)
+                        .padding(.vertical, 35)
                     Image("appleprivacy")
                         .resizable()
                         .grayscale(1.0)

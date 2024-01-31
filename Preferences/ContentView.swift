@@ -41,7 +41,7 @@ struct ContentView: View {
                     })
                     .sheet(isPresented: $showingSignInSheet, content: {
                         SignInView(showingSignInSheet: $showingSignInSheet)
-                            .frame(width: 650, height: 730)
+                            .frame(width: 650, height: 650)
                     })
                 }
                 
@@ -279,7 +279,7 @@ struct ContentView: View {
             //.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    TextField("Search", text: $searchText)
+                    TextField("\(Image(systemName: "mic.fill"))\tSearch", text: $searchText)
                         .textFieldStyle(.roundedBorder)
                         .padding(.bottom, -5)
                         .padding(.horizontal, -5)

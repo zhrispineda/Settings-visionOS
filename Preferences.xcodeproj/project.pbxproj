@@ -358,6 +358,9 @@
 		832A54732B5C930100BC877C /* AllDayEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDayEventsView.swift; sourceTree = "<group>"; };
 		832A54752B5C946000BC877C /* DurationNewEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationNewEventsView.swift; sourceTree = "<group>"; };
 		832A54772B5C950A00BC877C /* StartWeekOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWeekOnView.swift; sourceTree = "<group>"; };
+		8340C5732B69D4C400C9137D /* Apps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apps@2x.png"; sourceTree = "<group>"; };
+		8340C5742B69D4C400C9137D /* General@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General@2x.png"; sourceTree = "<group>"; };
+		8340C5752B69D4C400C9137D /* Settings.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Settings.gif; sourceTree = "<group>"; };
 		834111CC2B5D9D5300366689 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		834111CF2B5DA05C00366689 /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
 		834111D12B5DA0EA00366689 /* WalkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingView.swift; sourceTree = "<group>"; };
@@ -812,6 +815,17 @@
 			path = "Default Alert Times";
 			sourceTree = "<group>";
 		};
+		8340C5762B69D4C400C9137D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8340C5732B69D4C400C9137D /* Apps@2x.png */,
+				8340C5742B69D4C400C9137D /* General@2x.png */,
+				8340C5752B69D4C400C9137D /* Settings.gif */,
+			);
+			name = Assets;
+			path = ../../Downloads/Assets;
+			sourceTree = "<group>";
+		};
 		834111CE2B5DA02900366689 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -1195,6 +1209,7 @@
 			isa = PBXGroup;
 			children = (
 				83713ADC2B57302B00948E7A /* README.md */,
+				8340C5762B69D4C400C9137D /* Assets */,
 				83AB15AA2B44CB37002DCD7E /* Preferences */,
 				83AB15A92B44CB37002DCD7E /* Products */,
 			);
