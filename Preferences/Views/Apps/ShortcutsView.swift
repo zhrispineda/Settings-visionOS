@@ -21,7 +21,7 @@ struct ShortcutsView: View {
             Section(content: {
                 Toggle("Private Sharing", isOn: $privateSharingEnabled)
             }, footer: {
-                Text("Allow receiving shortcuts directly from people in your contacts. Apple cannot verify the authenticity of shortcuts shared privately. [About Shortcuts Sharing & Privacy...](#)")
+                Text("Allow receiving shortcuts directly from people in your contacts. Apple cannot verify the authenticity of shortcuts shared privately. [About Shortcuts Sharing & Privacy...](#)").tint(.cyan)
             })
             
             Section {

@@ -29,7 +29,7 @@ struct SiriDictationHistoryView: View {
                         Text("Your Siri and Dictation history will be deleted.")
                     }
             }, footer: {
-                Text("Delete Siri & Dictation interactions currently associated with this \(UIDevice().name) from Apple servers. [About Improve Siri & Dictation](#)")
+                Text("Delete Siri & Dictation interactions currently associated with this \(UIDevice().name) from Apple servers. [About Improve Siri & Dictation](#)").tint(.cyan)
             })
         }
     }

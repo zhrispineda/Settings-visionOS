@@ -16,7 +16,7 @@ struct TrackingView: View {
             Section(content: {
                 Toggle("Allow Apps to Request to Track", isOn: $allowAppsRequestTrack)
             }, footer: {
-                Text("Allow apps to ask to track your activity across other companies' apps and websites. When this is off, new app tracking requests are automatically denied. [Learn more...](#)")
+                Text("Allow apps to ask to track your activity across other companies' apps and websites. When this is off, new app tracking requests are automatically denied. [Learn more...](#)").tint(.cyan)
             })
             
             Section(content: {}, footer: {

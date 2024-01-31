@@ -28,7 +28,7 @@ struct HideIPAddressView: View {
                     })
                 }
             }, footer: {
-                Text("Your IP address can be used to determine your personal information, like your location. To protect this information, Safari can hide your IP address from known trackers. [Learn more...](#)")
+                Text("Your IP address can be used to determine your personal information, like your location. To protect this information, Safari can hide your IP address from known trackers. [Learn more...](#)").tint(.cyan)
             })
         }
     }

@@ -41,7 +41,7 @@ struct SiriSearchView: View {
             }, header: {
                 Text("Ask Siri")
             }, footer: {
-                Text("Voice input is processed on \(UIDevice().name), but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)")
+                Text("Voice input is processed on \(UIDevice().name), but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)").tint(.cyan)
             })
             
             Section(content: {
@@ -62,7 +62,7 @@ struct SiriSearchView: View {
             }, header: {
                 Text("Content from Apple")
             }, footer: {
-                Text("Apple can show content when looking up text or objects in photos, or when searching. [About Siri Suggestions, Search & Privacy...](#)")
+                Text("Apple can show content when looking up text or objects in photos, or when searching. [About Siri Suggestions, Search & Privacy...](#)").tint(.cyan)
             })
             
             Section(content: {
@@ -71,7 +71,7 @@ struct SiriSearchView: View {
             }, header: {
                 Text("Suggestions from Apple")
             }, footer: {
-                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)")
+                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)").tint(.cyan)
             })
             
             Section {

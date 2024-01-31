@@ -75,7 +75,7 @@ struct PhotosView: View {
             })
             
             Section(content: {}, footer: {
-                Text("[About Photos & Privacy...](#)")
+                Text("[About Photos & Privacy...](#)").tint(.cyan)
             })
         }
     }

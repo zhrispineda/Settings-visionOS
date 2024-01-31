@@ -37,7 +37,7 @@ struct LocationServicesView: View {
                 Toggle("Location Services", isOn: $locationServicesEnabled)
                 NavigationLink("Location Alerts", destination: LocationAlertsView())
             }, footer: {
-                Text("Using Location Services requires turning on Wi-Fi.\n\nLocation Services uses Bluetooth and crowd-sourced Wi-Fi hotspot locations to determine your approximate location. [About Location Services and Privacy...](#)")
+                Text("Using Location Services requires turning on Wi-Fi.\n\nLocation Services uses Bluetooth and crowd-sourced Wi-Fi hotspot locations to determine your approximate location. [About Location Services and Privacy...](#)").tint(.cyan)
             })
             
             Section(content: {

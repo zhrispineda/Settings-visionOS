@@ -22,7 +22,7 @@ struct AboutView: View {
                     .onTapGesture {
                         showingModelNumber.toggle()
                     }
-                ListRowLabel(title: "Serial Number", subtitle: "XXXXX00XXX")
+                ListRowLabel(title: "Test", subtitle: randomSerialNumber(10))
             }
             
             Section {
@@ -74,6 +74,18 @@ func getTotalStorage() -> String? {
         print("Error: \(error.localizedDescription)")
     }
     return nil
+}
+
+func randomSerialNumber(_ length: Int) -> String {
+   let letters = "BCDFGHJKLMNPQRTVWXYZ0123456789"
+   var random = SystemRandomNumberGenerator()
+   var randomString = ""
+   for _ in 0..<length {
+      let randomIndex = Int(random.next(upperBound: UInt32(letters.count)))
+      let randomCharacter = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
+      randomString.append(randomCharacter)
+   }
+   return randomString
 }
 
 #Preview {

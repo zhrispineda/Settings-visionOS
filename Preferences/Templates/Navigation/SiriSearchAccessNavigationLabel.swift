@@ -41,7 +41,7 @@ struct SiriSearchAccessNavigationLabel: View {
             Text("Allow \(appName) To Access")
         }, footer: {
             if appName == "Maps" {
-                Text("[About Apple Maps & Privacy](#)")
+                Text("[About Apple Maps & Privacy](#)").tint(.cyan)
             }
         })
     }

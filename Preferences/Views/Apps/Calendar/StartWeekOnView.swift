@@ -28,7 +28,7 @@ struct StartWeekOnView: View {
             }, header: {
                 Text("Mirror System Setting")
             }, footer: {
-                Text("When selected, Calendar will use the setting from [Language & Region](#).")
+                Text("When selected, Calendar will use the setting from [Language & Region](#).").tint(.cyan)
             })
             
             Section(content: {
