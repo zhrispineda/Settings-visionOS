@@ -111,9 +111,9 @@ struct SignInView: View {
                     })
                     .buttonStyle(.plain)
                     .disabled(username.count < 1 || signingIn)
-                    .alert("\(Image(systemName: "apple.logo"))\nVerification Failed",
-                           isPresented: $showingSignInFailedAlert
-                    ) {} message: {
+                    .alert("Verification Failed", isPresented: $showingSignInFailedAlert) {
+                        Button("OK") {}
+                    } message: {
                         Text("There was an error connecting to the Apple ID server.")
                     }
                 }

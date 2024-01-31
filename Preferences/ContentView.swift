@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var showingSignInSheet = false
     @State private var selection: SettingsModel? = .general
     @State private var destination = AnyView(GeneralView())
-
+    
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
@@ -35,6 +35,7 @@ struct ContentView: View {
                                     .bold()
                                 Text("Set up iCloud, the App Store, and more.")
                                     .font(.footnote)
+                                    .foregroundStyle(.secondary)
                             }
                         }
                     })
@@ -63,7 +64,19 @@ struct ContentView: View {
                                         .foregroundStyle(.white.gradient, setting.color.gradient)
                                 }
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
@@ -79,7 +92,19 @@ struct ContentView: View {
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
@@ -119,7 +144,19 @@ struct ContentView: View {
                                         .foregroundStyle(.white.gradient, setting.color.gradient)
                                 }
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
@@ -143,7 +180,19 @@ struct ContentView: View {
                                         .foregroundStyle(.white.gradient, setting.color.gradient)
                                 }
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
@@ -181,7 +230,19 @@ struct ContentView: View {
                                         .foregroundStyle(.white.gradient, setting.color.gradient)
                                 }
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
@@ -197,14 +258,33 @@ struct ContentView: View {
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                                 Text(setting.id)
+                                Spacer()
                             }
+                            .overlay(
+                                VStack(alignment: .trailing) {
+                                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.5)
+                                        .padding(-13.5)
+                                        .offset(x: 4)
+                                }
+                                .frame(width: 272)
+                                .opacity(selection == setting.type ? 1 : 0)
+                            )
                         })
                     }
                 }
             }
-            .navigationBarTitle("Settings")
-            // TODO: Find a way to hide navigation bar title but keep the search bar including rounding the bar to make it capsule shaped
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            // TODO: Implement search box with capsule/rounded shape including mic for dictation
+            //.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    TextField("Search", text: $searchText)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.bottom, -5)
+                        .padding(.horizontal, -5)
+                }
+              }
         } detail: {
             destination
                 .onChange(of: selection, { // Change views when sidebar navigation links are tapped

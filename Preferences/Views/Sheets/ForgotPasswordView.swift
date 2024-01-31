@@ -82,7 +82,7 @@ struct ForgotPasswordView: View {
                                 .padding(.bottom, 5)
                             Text("Enter your email address or phone number\nthat you use with your account to continue.")
                                 .padding(.bottom, 30)
-                            TextField("Email", text: $username)
+                            TextField("Email or Phone Number", text: $username)
                                 .padding(20)
                                 .background(.black).opacity(0.35)
                                 .cornerRadius(10)
