@@ -12,27 +12,13 @@ struct KeyboardsView: View {
     @State private var keyboards = ["English", "Emoji"]
     
     var body: some View {
-        List {
+        CustomList(title: "Keyboards", editEnabled: true) {
             ForEach(keyboards, id: \.self) { keyboard in
                 Text(keyboard)
             }
             .onMove { prev, new in
                 keyboards.move(fromOffsets: prev, toOffset: new)
             }
-        }
-        .padding(.horizontal, 45)
-        .navigationTitle("Keyboards")
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                HStack {
-                    Text("Keyboards")
-                        .font(.title)
-                }
-                .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
-                EditButton()
-            })
         }
     }
 }

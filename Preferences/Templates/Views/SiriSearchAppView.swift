@@ -3,6 +3,7 @@
 //  Settings-visionOS
 //
 //  A template to have controls for an app's access to Siri & Search.
+//  Settings > Apps > [App] > Siri & Search
 //
 //  Parameters:
 //  appName: String
@@ -54,7 +55,7 @@ struct SiriSearchAppView: View {
        .padding(.horizontal, 45)
        .toolbar {
            ToolbarItem(placement: .principal, content: {
-               Text(appName)
+               Text("Siri & Search")
                    .font(.title2)
                    .frame(maxWidth: .infinity)
                    .offset(x: -40)

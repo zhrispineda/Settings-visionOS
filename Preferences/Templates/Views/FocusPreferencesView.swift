@@ -4,6 +4,8 @@
 //
 //  A template to manage preferences for a focus.
 //
+//  Settings > Focus > [Focus]
+//
 //  Parameters:
 //  focusName: String, icon: String, color: Color
 //
