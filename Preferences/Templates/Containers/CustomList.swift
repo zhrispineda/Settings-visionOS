@@ -5,7 +5,7 @@
 //  Template for a List that has commonly used modifiers.
 //
 //  Parameters:
-//  title: String
+//  title: String, editEnabled: Bool
 //
 //  Example:
 //  CustomList(title: "My Navigation Title") {

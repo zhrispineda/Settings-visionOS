@@ -13,7 +13,7 @@ struct TVProviderView: View {
     @State private var simulateExpiredTokenEnabled = false
     
     var body: some View {
-        CustomList(title: "TV Provider") {
+        List {
             Section(content: {
                 Toggle("Cache Buster", isOn: $cacheBusterEnabled)
             }, header: {
@@ -35,9 +35,21 @@ struct TVProviderView: View {
             })
             
             Section(content: {
-                Button("Add TV Provider", action: {})
+                Button(action: {
+                    //
+                }, label: {
+                    Text("Add TV Provider")
+                        .frame(maxWidth: .infinity)
+                })
             }, header: {
                 Text("Development TV Providers")
+            })
+        }
+        .padding(.horizontal, 45)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading, content: {
+                Text("TV Provider")
+                    .font(.title)
             })
         }
     }

@@ -4,6 +4,9 @@
 //
 //  Template for displaying each VoiceOver sound.
 //
+//  Parameters:
+//  title: String
+//
 
 import SwiftUI
 

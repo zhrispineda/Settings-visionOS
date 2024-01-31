@@ -4,6 +4,9 @@
 //
 //  Template for selecting which verbosity methods to use.
 //
+//  Parameters:
+//  title: String, options: [String], selected: [String]
+//
 
 import SwiftUI
 

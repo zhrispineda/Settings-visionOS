@@ -4,6 +4,9 @@
 //
 //  Template for Allow or Deny lists.
 //
+//  Parameters:
+//  title: String, options: [String]
+//
 
 import SwiftUI
 

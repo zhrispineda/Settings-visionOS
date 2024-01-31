@@ -13,7 +13,7 @@ struct SavedCreditCardsView: View {
             // TODO: Popover view
             Button("Add Credit Card", action: {})
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

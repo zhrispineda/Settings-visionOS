@@ -29,7 +29,7 @@ struct AddTextReplacementView: View {
                 Text("Create a shortcut that will automatically expand into the word or phrase as you type.")
             })
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 Text("Text Replacement")

@@ -5,6 +5,9 @@
 //  Settings > Accessibility > VoiceOver > Verbosity > Input Feedback
 //  Settings > Accessibility > VoiceOver > Verbosity > App Hover Feedback
 //
+//  Parameters:
+//  title: String, selected: String
+//
 
 import SwiftUI
 

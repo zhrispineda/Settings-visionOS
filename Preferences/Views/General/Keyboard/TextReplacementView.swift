@@ -24,7 +24,7 @@ struct TextReplacementView: View {
                 }
             }
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .navigationTitle("Text Replacement")
         .searchable(text: $searchText)
         .toolbar {

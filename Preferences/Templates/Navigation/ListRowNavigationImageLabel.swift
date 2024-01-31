@@ -5,7 +5,7 @@
 //  A template to have a NavigationLink with an image made to a circle shape and title with an optional subtitle.
 //
 //  Parameters:
-//  isRounded: Bool, image: String, title: String, subtitle: String, content: Content
+//  isRounded: Bool, image: String, title: String, subtitle: String, status: String, content: Content
 //
 
 import SwiftUI

@@ -4,6 +4,9 @@
 //
 //  Template for selecting which audible method to use.
 //
+//  Parameters:
+//  title: String, options: [String], selected: String
+//
 
 import SwiftUI
 

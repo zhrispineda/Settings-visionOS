@@ -25,7 +25,7 @@ struct SyncView: View {
                 }
             })
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

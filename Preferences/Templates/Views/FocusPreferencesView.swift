@@ -99,7 +99,7 @@ struct FocusPreferencesView: View {
                 }
             }
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
     }
 }
 

@@ -5,7 +5,7 @@
 //  A template to have a NavigationLink with a title and subtitle on each side.
 //
 //  Parameters:
-//  title: String, subtitle: String, destination: Content
+//  title: String, subtitle: String, icon: String, destination: Content
 //
 
 import SwiftUI

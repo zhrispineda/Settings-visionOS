@@ -4,9 +4,8 @@
 //
 //  Template for On Off list views.
 //
-//  Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions > Music Videos
-//
-//  Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions > Music Profiles
+//  Parameters:
+//  title: String, selectedOption: String, options: [String]
 //
 
 import SwiftUI
@@ -29,7 +28,7 @@ struct OnOffView: View {
                 }
             })
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

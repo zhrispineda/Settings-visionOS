@@ -4,6 +4,9 @@
 //
 //  Template for managing apps with access to a specific permission
 //
+//  Parameters:
+//  permissionName: String
+//
 
 import SwiftUI
 

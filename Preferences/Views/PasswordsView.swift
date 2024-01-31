@@ -50,7 +50,7 @@ struct PasswordsView: View {
                 })
             }
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Passwords")
         .toolbar {

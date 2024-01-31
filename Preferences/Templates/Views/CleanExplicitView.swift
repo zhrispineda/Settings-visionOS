@@ -6,6 +6,9 @@
 //
 // Settings > Screen Time > Content & Privacy Restrictions > Content Restrictions > Books
 //
+//  Parameters:
+//  title: String
+//
 
 import SwiftUI
 
@@ -27,7 +30,7 @@ struct CleanExplicitView: View {
                 }
             })
         }
-        .padding([.leading, .trailing], 45)
+        .padding(.horizontal, 45)
         .toolbar {
             ToolbarItem(placement: .principal, content: {
                 HStack {

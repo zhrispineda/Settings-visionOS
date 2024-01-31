@@ -4,6 +4,9 @@
 //
 //  Settings > Storage > [App]
 //
+//  Parameters:
+//  appName: String
+//
 
 import SwiftUI
 

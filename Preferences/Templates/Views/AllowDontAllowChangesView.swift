@@ -4,6 +4,9 @@
 //
 //  Template for Allow Changes or Don't Allow Changes views.
 //
+//  Parameters:
+//  title: String
+//
 
 import SwiftUI
 
