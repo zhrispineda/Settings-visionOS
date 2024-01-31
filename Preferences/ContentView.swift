@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
-                // TODO: Clean the loops for listing every navigation button
+                // TODO: Clean loops for listing every NavigationLink
                 // TODO: Pop to root detail view on tapping NavigationLink within its own destination view
                 Section {
                     Button(action: {
@@ -45,7 +45,7 @@ struct ContentView: View {
                     })
                 }
                 
-                // Main Section
+                // MARK: - Main Section
                 Section {
                     ForEach(mainSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -81,7 +81,7 @@ struct ContentView: View {
                     }
                 }
                 
-                // Focus Section
+                // MARK: - Focus Section
                 Section {
                     ForEach(focusSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -109,7 +109,7 @@ struct ContentView: View {
                     }
                 }
                 
-                // Usage Section
+                // MARK: - Usage Section
                 Section {
                     ForEach(usageSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -161,7 +161,7 @@ struct ContentView: View {
                     }
                 }
                 
-                // Device Section
+                // MARK: - Device Section
                 Section {
                     ForEach(deviceSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -197,7 +197,7 @@ struct ContentView: View {
                     }
                 }
                 
-                // Account Section
+                // MARK: - Account Section
                 Section {
                     ForEach(accountSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -247,7 +247,7 @@ struct ContentView: View {
                     }
                 }
                 
-                // Developer Section
+                // MARK: - Developer Section
                 Section {
                     ForEach(developerSettings) { setting in
                         NavigationLink(value: setting.type, label: {
@@ -287,7 +287,7 @@ struct ContentView: View {
               }
         } detail: {
             destination
-                .onChange(of: selection, { // Change views when sidebar navigation links are tapped
+                .onChange(of: selection, { // Change views when selecting sidebar navigation links
                     if let selectedSettingsItem = combinedSettings.first(where: { $0.type == selection }) {
                         destination = selectedSettingsItem.destination
                     }
