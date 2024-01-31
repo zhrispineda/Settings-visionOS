@@ -20,6 +20,7 @@ As this is a personal project for learning Swift and SwiftUI, feel free to fork,
 
 ## Contributing
 Contributions such as pull requests that help make the app more accurate and better optimized are always welcome.
+
 Issues are also encourage to raise awareness to certain issues, inconsistencies, or questions about the project.
 
 ## Disclaimers
@@ -32,3 +33,5 @@ Issues are also encourage to raise awareness to certain issues, inconsistencies,
 - Add pop to root functionality in the sidebar
 - Make use of NSUserDefaults for saving and loading basic data
 - Make use of Bindings or a Model to keep persistent data across views and app sessions
+- Work on missing sheet views such as ones opened through links
+- Implement simulated functionality of radios and other physical-device-only views at a later date
