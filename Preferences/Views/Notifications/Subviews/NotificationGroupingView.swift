@@ -13,25 +13,18 @@ struct NotificationGroupingView: View {
     let options = ["Automatic", "By App", "Off"]
     
     var body: some View {
-        List(options, id: \.self) { option in
-            Button(action: { selectedOption = option }, label: {
-                HStack {
-                    Text(option)
-                    Spacer()
-                    if selectedOption == option {
-                        Image(systemName: "checkmark")
+        CustomList(title: "Notification Grouping") {
+            ForEach(options, id: \.self) { option in
+                Button(action: { selectedOption = option }, label: {
+                    HStack {
+                        Text(option)
+                        Spacer()
+                        if selectedOption == option {
+                            Image(systemName: "checkmark")
+                        }
                     }
-                }
-            })
-        }
-        .padding(.horizontal, 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("Notification Grouping")
-                    .font(.title)
-                    .frame(maxWidth: .infinity)
-                    .offset(x: -40)
-            })
+                })
+            }
         }
     }
 }

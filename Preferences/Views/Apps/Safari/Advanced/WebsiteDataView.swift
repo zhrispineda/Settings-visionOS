@@ -2,7 +2,7 @@
 //  WebsiteDataView.swift
 //  Preferences
 //
-//  Settings > Apps > Safari > Advanced
+//  Settings > Apps > Safari > Advanced > Website Data
 //
 
 import SwiftUI

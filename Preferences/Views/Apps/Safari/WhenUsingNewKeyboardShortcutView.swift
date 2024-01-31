@@ -14,23 +14,16 @@ struct WhenUsingNewKeyboardShortcutView: View {
     let options = ["Open Tab", "Open Window"]
     
     var body: some View {
-        List(options, id: \.self) { option in
-            Button(action: { selectedOption = option }, label: {
-                HStack {
-                    Text(option)
-                    Spacer()
-                    if selectedOption == option { Image(systemName: "checkmark") }
-                }
-            })
-        }
-        .padding(.horizontal, 45)
-        .toolbar {
-            ToolbarItem(placement: .principal, content: {
-                Text("When Using New Keyboard Shortcut")
-                .font(.title)
-                .frame(maxWidth: .infinity)
-                .offset(x: -40)
-            })
+        CustomList(title: "When Using New Keyboard Shortcut") {
+            ForEach(options, id: \.self) { option in
+                Button(action: { selectedOption = option }, label: {
+                    HStack {
+                        Text(option)
+                        Spacer()
+                        if selectedOption == option { Image(systemName: "checkmark") }
+                    }
+                })
+            }
         }
     }
 }
