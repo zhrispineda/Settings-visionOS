@@ -63,10 +63,10 @@ struct SafariView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        // TODO: Missing animation
+                        SafariTabsAnimation(animation: true)
                         Text("Look to Show")
-                            .padding(.bottom, 1)
-                        // TODO: Missing functional radio buttons
+                            .font(.subheadline)
+                            .padding(.vertical, 1)
                         Button(action: { tabDisplayMode = 0 }, label: {
                             Image(systemName: tabDisplayMode == 0 ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(.white, .blue)
@@ -76,11 +76,12 @@ struct SafariView: View {
                         .buttonStyle(.plain)
                     }
                     Spacer()
+                        .frame(width: 75)
                     VStack {
-                        // TODO: Missing animation
+                        SafariTabsAnimation(animation: false)
                         Text("Always Show")
-                            .padding(.bottom, 1)
-                        // TODO: Missing functional radio buttons
+                            .font(.subheadline)
+                            .padding(.vertical, 1)
                         Button(action: { tabDisplayMode = 1 }, label: {
                             Image(systemName: tabDisplayMode == 1 ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(.white, .blue)
@@ -91,6 +92,7 @@ struct SafariView: View {
                     }
                     Spacer()
                 }
+                .padding(.bottom, -5)
                 Toggle("Open New Tabs in Background", isOn: $openNewTabsInBackgroundEnabled)
                 ListRowNavigationLabel(title: "When Using New Keyboard Shortcut", subtitle: "Open Tab", content: WhenUsingNewKeyboardShortcutView())
                 ListRowNavigationLabel(title: "Close Tabs", subtitle: "Manually", content: CloseTabsView())
