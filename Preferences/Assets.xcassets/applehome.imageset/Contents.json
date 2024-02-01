@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "applehome.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "home-masked_Normal@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
