@@ -46,7 +46,7 @@ let mainSettings: [SettingsItem] = [
     SettingsItem(type: .general, title: "General", icon: "gear.circle.fill", color: .gray, destination: AnyView(GeneralView())),
     SettingsItem(type: .apps, title: "Apps", icon: "logo.appstore.circle.fill", color: .blue, destination: AnyView(AppsView())),
     SettingsItem(type: .people, title: "People", icon: "person.2.circle.fill", color: .green, destination: AnyView(PeopleView())),
-    SettingsItem(type: .environments, title: "Environments", icon: "mountain.2.circle.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
+    SettingsItem(type: .environments, title: "Environments", icon: "Environments_Normal", color: .indigo, destination: AnyView(EnvironmentsView())),
 ]
 
 // Focus Settings: Notifications, Focus, Screen Time

@@ -56,6 +56,15 @@ struct ContentView: View {
                                         .fontWeight(.light)
                                         .symbolRenderingMode(.palette)
                                         .foregroundStyle(.white.gradient, setting.color.gradient)
+                                } else if setting.icon == "Environments_Normal" {
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 30, height: 30)
+                                            .foregroundStyle(.indigo.gradient)
+                                        Image(setting.icon)
+                                            .fontWeight(.medium)
+                                            .font(.title3)
+                                    }
                                 } else {
                                     Image(systemName: setting.icon)
                                         .font(.largeTitle)

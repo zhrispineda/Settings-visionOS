@@ -34,7 +34,7 @@ struct LocationDetailView: View {
                 Text("Allow Location Access")
             }, footer: {
                 if title == "Siri & Dictation" {
-                    Text("App explanation: \u{201C}Siri uses your location for things like answering questions and offering suggestions about what\u{2019}s nearby.\u{201D}")
+                    Text("App explanation: \u{201C}Siri uses your location for things like answering questions and offering suggestions about what‘s nearby.\u{201D}")
                 }
             })
             
