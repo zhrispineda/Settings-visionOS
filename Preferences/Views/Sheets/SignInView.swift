@@ -20,10 +20,10 @@ struct SignInView: View {
         NavigationStack {
             List {
                 VStack(alignment: .center) {
-                    Image(systemName: "apple.logo")
-                        .font(.largeTitle)
-                        .padding(.bottom, 30)
-                        .padding(.top, -5)
+                    Image("sign-in-header-dark_Normal")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80)
                     Text("Apple ID")
                         .font(.extraLargeTitle2)
                     TextField("Email", text: $username)

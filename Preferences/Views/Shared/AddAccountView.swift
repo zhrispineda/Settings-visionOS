@@ -9,15 +9,20 @@
 import SwiftUI
 
 struct AddAccountView: View {
+    // Variables
+    let services = ["icloud_Normal", "exchange_Normal", "gmail_Normal", "yahoo-white_Normal", "aol-white_Normal", "Outlook_Logo_Normal"]
+    
     var body: some View {
         CustomList(title: "Add Account") {
-            // TODO: Get transparent images for each service.
-            ListRowAccountLabel(service: "iCloud") // Popover for Apple ID
-            ListRowAccountLabel(service: "Microsoft Exchange") // Popover for Exchange
-            ListRowAccountLabel(service: "Google") // Safari View Controller
-            ListRowAccountLabel(service: "Yahoo") // Safari View Controller
-            ListRowAccountLabel(service: "AOL") // Safari View Controller
-            ListRowAccountLabel(service: "Outlook")  // Safari View Controller
+            ForEach(services, id: \.self) { service in
+                HStack {
+                    Image(service)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 50)
+                        .frame(maxWidth: .infinity)
+                }
+            }
             // Other: NavigationLink
             ZStack(alignment: .leading) {
                 NavigationLink("", destination: AddOtherAccountView()).opacity(0)
