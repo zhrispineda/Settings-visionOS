@@ -26,9 +26,8 @@ Issues are also encourage to raise awareness to certain issues, inconsistencies,
 ## To Do
 - Add pop to root functionality in the sidebar
 - Make use of NSUserDefaults for saving and loading basic data
-- Make use of Bindings or a Model to keep persistent data across views and app sessions
+- Make use of Bindings and a Model to keep persistent data across views and app sessions
 - Work on missing sheet views such as ones opened through links
-- Add AppIcon assets
 - Implement simulated functionality of radios and other physical-device-only views at a later date
 
 ## Disclaimers
