@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
     @State private var showingModelNumber = true
+    @State private var serialNumber = randomSerialNumber()
     @State private var availableStorage: String = getAvailableStorage() ?? "N/A"
     @State private var totalStorage: String = getTotalStorage() ?? "N/A"
     
@@ -22,7 +23,7 @@ struct AboutView: View {
                     .onTapGesture {
                         showingModelNumber.toggle()
                     }
-                ListRowLabel(title: "Test", subtitle: randomSerialNumber(10))
+                ListRowLabel(title: "Serial Number", subtitle: serialNumber)
             }
             
             Section {
@@ -76,11 +77,11 @@ func getTotalStorage() -> String? {
     return nil
 }
 
-func randomSerialNumber(_ length: Int) -> String {
+func randomSerialNumber() -> String {
    let letters = "BCDFGHJKLMNPQRTVWXYZ0123456789"
    var random = SystemRandomNumberGenerator()
    var randomString = ""
-   for _ in 0..<length {
+   for _ in 0..<10 {
       let randomIndex = Int(random.next(upperBound: UInt32(letters.count)))
       let randomCharacter = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
       randomString.append(randomCharacter)

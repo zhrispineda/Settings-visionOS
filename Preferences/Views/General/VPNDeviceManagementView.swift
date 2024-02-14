@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct VPNDeviceManagementView: View {
+    // Variables
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
-        CustomList(title: "VPN & Device Management") {
-            // Empty
-        }
+        Color(.clear)
+            .onAppear(perform: {
+                dismiss()
+            })
+            .toolbar {
+                ToolbarItem(placement: .principal, content: {
+                    Text("VPN & Device Management")
+                        .font(.title2)
+                        .frame(maxWidth: .infinity)
+                        .offset(x: -40)
+                })
+            }
     }
+    
 }
 
 #Preview {
