@@ -14,31 +14,17 @@ struct KeyboardInteractionTimeView: View {
     var body: some View {
         CustomList(title: "Keyboard Interaction Time") {
             Section(content: {
-                HStack(spacing: 15) {
-                    Text("\(intervalTime, specifier: "%.2f")")
-                    Text("\(intervalTime == 1.00 ? "Second" : "Seconds")")
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Button(action: {
-                        intervalTime -= 0.20
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.6))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(intervalTime < 0.01)
-                    Button(action: {
-                        intervalTime += 0.20
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.6))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(intervalTime > 3.99)
+                Stepper(
+                    value: $intervalTime,
+                    in: 0.00...4.00,
+                    step: 0.20
+                ) {
+                    HStack {
+                        Text("\(intervalTime, specifier: "%.2f")")
+                            .frame(width: 50, alignment: .leading)
+                        Text(intervalTime == 1.00 ? "Second" : "Seconds")
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }, header: {
                 Text("Keyboard Interaction Time")

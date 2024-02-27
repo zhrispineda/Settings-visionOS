@@ -26,30 +26,16 @@ struct CustomizeTopLevelMenuView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .listRowBackground(Color.clear)
-                HStack {
-                    Spacer()
-                    Text("\(icons) Icon\(icons == 1 ? "" : "s")")
-                    Button(action: {
-                        icons -= 1
-                        print(icons)
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.light)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(icons == 1)
-                    Button(action: {
-                        icons += 1
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.light)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(icons == 8)
+                Stepper(
+                    value: $icons,
+                    in: 1...8,
+                    step: 1
+                ) {
+                    HStack {
+                        Spacer()
+                        Text("\(icons)")
+                        Text(icons == 1 ? "Icon" : "Icons")
+                    }
                 }
             }, header: {
                 Text("Tap an icon to change:")

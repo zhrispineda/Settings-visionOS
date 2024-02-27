@@ -23,62 +23,34 @@ struct KeyRepeatView: View {
             
             if keyRepeatEnabled {
                 Section(content: {
-                    HStack(spacing: 15) {
-                        Text("\(keyRepeatInterval, specifier: "%.2f")")
-                        Text("\(keyRepeatInterval == 1.00 ? "Second" : "Seconds")")
-                            .foregroundStyle(.secondary)
-                        Spacer()
-                        Button(action: {
-                            keyRepeatInterval -= 0.01
-                        }, label: {
-                            Image(systemName: "minus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(keyRepeatInterval < 0.031)
-                        Button(action: {
-                            keyRepeatInterval += 0.01
-                        }, label: {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(keyRepeatInterval > 1.99)
+                    Stepper(
+                        value: $keyRepeatInterval,
+                        in: 0.30...2.00,
+                        step: 0.01
+                    ) {
+                        HStack {
+                            Text("\(keyRepeatInterval, specifier: "%.2f")")
+                                .frame(width: 50, alignment: .leading)
+                            Text(keyRepeatInterval == 1.00 ? "Second" : "Seconds")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }, header: {
                     Text("Key Repeat Interval")
                 })
                 
                 Section(content: {
-                    HStack(spacing: 15) {
-                        Text("\(delayUntilRepeat, specifier: "%.2f")")
-                        Text("\(delayUntilRepeat == 1.00 ? "Second" : "Seconds")")
-                            .foregroundStyle(.secondary)
-                        Spacer()
-                        Button(action: {
-                            delayUntilRepeat -= 0.01
-                        }, label: {
-                            Image(systemName: "minus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(delayUntilRepeat < 0.201)
-                        Button(action: {
-                            delayUntilRepeat += 0.01
-                        }, label: {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(delayUntilRepeat > 1.99)
+                    Stepper(
+                        value: $delayUntilRepeat,
+                        in: 0.20...2.00,
+                        step: 0.01
+                    ) {
+                        HStack {
+                            Text("\(delayUntilRepeat, specifier: "%.2f")")
+                                .frame(width: 50, alignment: .leading)
+                            Text(delayUntilRepeat == 1.00 ? "Second" : "Seconds")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }, header: {
                     Text("Delay Until Repeat")

@@ -14,31 +14,17 @@ struct LongPressDurationView: View {
     var body: some View {
         CustomList(title: "Long Press Duration") {
             Section(content: {
-                HStack(spacing: 15) {
-                    Text("\(duration, specifier: "%.2f")")
-                    Text("\(duration == 1.00 ? "Second" : "Seconds")")
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Button(action: {
-                        duration -= 0.10
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(duration < 0.21)
-                    Button(action: {
-                        duration += 0.10
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .gray.opacity(0.4))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(duration > 7.99)
+                Stepper(
+                    value: $duration,
+                    in: 0.20...8.00,
+                    step: 0.10
+                ) {
+                    HStack {
+                        Text("\(duration, specifier: "%.2f")")
+                            .frame(width: 50, alignment: .leading)
+                        Text(duration == 1.00 ? "Second" : "Seconds")
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }, header: {
                 Text("Long Press Duration")

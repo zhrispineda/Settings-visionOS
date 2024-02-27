@@ -19,31 +19,17 @@ struct DwellControlView: View {
                 Toggle("Dwell Control", isOn: $dwellControlEnabled)
                 ListRowNavigationLabel(title: "Target", subtitle: "Automatic", content: TargetView())
                 NavigationLink("Movement Tolerance", destination: MovementToleranceView())
-                HStack(spacing: 15) {
-                    Text("\(duration, specifier: "%.2f")")
-                    Text("\(duration == 1.00 ? "Second" : "Seconds")")
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Button(action: {
-                        duration -= 0.25
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(duration < 0.26)
-                    Button(action: {
-                        duration += 0.25
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(duration > 7.99)
+                Stepper(
+                    value: $duration,
+                    in: 0.25...8.00,
+                    step: 0.25
+                ) {
+                    HStack {
+                        Text("\(duration, specifier: "%.2f")")
+                            .frame(width: 50, alignment: .leading)
+                        Text(duration == 1.00 ? "Second" : "Seconds")
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             

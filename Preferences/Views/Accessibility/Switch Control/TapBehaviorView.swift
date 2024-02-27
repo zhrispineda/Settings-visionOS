@@ -42,31 +42,17 @@ struct TapBehaviorView: View {
             
             if selected == "Auto Tap" {
                 Section {
-                    HStack(spacing: 15) {
-                        Text("\(time, specifier: "%.2f")")
-                        Text("\(time == 1.00 ? "Second" : "Seconds")")
-                            .foregroundStyle(.secondary)
-                        Spacer()
-                        Button(action: {
-                            time -= 0.20
-                        }, label: {
-                            Image(systemName: "minus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(time < 0.21)
-                        Button(action: {
-                            time += 0.20
-                        }, label: {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.extraLargeTitle2)
-                                .fontWeight(.medium)
-                                .foregroundStyle(.white, .secondary.opacity(0.3))
-                        })
-                        .buttonStyle(.plain)
-                        .disabled(time > 19.99)
+                    Stepper(
+                        value: $time,
+                        in: 0.20...20.00,
+                        step: 0.20
+                    ) {
+                        HStack {
+                            Text("\(time, specifier: "%.2f")")
+                                .frame(width: 50, alignment: .leading)
+                            Text(time == 1.00 ? "Second" : "Seconds")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
             }

@@ -11,7 +11,7 @@ struct GlidingCursorView: View {
     // Variables
     @State private var selected = "Refined"
     let options = ["Single", "Refined", "Precise"]
-    @State private var cursorSpeed = 31.0
+    @State private var cursorSpeed = 31
     
     var body: some View {
         CustomList(title: "Gliding Cursor") {
@@ -42,29 +42,14 @@ struct GlidingCursorView: View {
             })
             
             Section(content: {
-                HStack(spacing: 15) {
-                    Text("\(cursorSpeed, specifier: "%.0f")")
-                    Spacer()
-                    Button(action: {
-                        cursorSpeed -= 1
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(cursorSpeed < 1.01)
-                    Button(action: {
-                        cursorSpeed += 1
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(cursorSpeed > 119.99)
+                Stepper(
+                    value: $cursorSpeed,
+                    in: 1...120,
+                    step: 1
+                ) {
+                    HStack {
+                        Text("\(cursorSpeed)")
+                    }
                 }
             }, header: {
                 Text("Gliding Cursor Speed")

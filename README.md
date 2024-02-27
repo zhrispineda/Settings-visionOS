@@ -7,10 +7,11 @@ SwiftUI recreation of the visionOS Settings app.
 ![An image comparing both app's Apps section](Assets/Apps@2x.png)
 
 ## Information
+- **IMPORTANT NOTE: Toolbar items such as navigation titles and text fields are currently broken in the ongoing visionOS 1.1 beta and will be investigated once the final version is released should the issue persist. Until then, this project is intended to be run on visionOS 1.0 only.**
 - This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator.app)** on visionOS 1.0 (21N305).
 - All features within the app are only simulations and have no effect on the device outside of the app.
 - Most views are complete, but lack features such as saving data, including basic variables, perhaps for now.
-- Since this is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views for radios, are missing in areas such as the top of the sidebar below the Sign In button.
+- Since this project is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views for wireless settings, are missing in areas such as the top of the sidebar below the Sign In button, and will be added in the future.
 - Currently, this project does not make use of Swift Packages, UIKit, Storyboards, or Objective-C, and is pure Swift & SwiftUI.
 
 ## Usage

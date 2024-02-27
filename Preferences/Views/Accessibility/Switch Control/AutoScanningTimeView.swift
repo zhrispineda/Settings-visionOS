@@ -13,31 +13,17 @@ struct AutoScanningTimeView: View {
     var body: some View {
         CustomList(title: "Auto Scanning Time") {
             Section(content: {
-                HStack(spacing: 15) {
-                    Text("\(time, specifier: "%.2f")")
-                    Text("\(time == 1.00 ? "Second" : "Seconds")")
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Button(action: {
-                        time -= 0.05
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(time < 0.054)
-                    Button(action: {
-                        time += 0.05
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.extraLargeTitle2)
-                            .fontWeight(.medium)
-                            .foregroundStyle(.white, .secondary.opacity(0.3))
-                    })
-                    .buttonStyle(.plain)
-                    .disabled(time > 24.99)
+                Stepper(
+                    value: $time,
+                    in: 0.05...25.00,
+                    step: 0.05
+                ) {
+                    HStack {
+                        Text("\(time, specifier: "%.2f")")
+                            .frame(width: 50, alignment: .leading)
+                        Text(time == 1.00 ? "Second" : "Seconds")
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }, header: {
                 Text("Auto Scanning Time")

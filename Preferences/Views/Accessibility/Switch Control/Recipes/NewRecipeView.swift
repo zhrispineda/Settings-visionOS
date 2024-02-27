@@ -14,7 +14,7 @@ struct NewRecipeView: View {
     @State var title = "New Recipe"
     @State var name = String()
     @State var timeoutEnabled = true
-    @State private var timeout = 60.0
+    @State private var timeout = 60
     @State private var switches = ["Tap Middle of Screen", "Exit Recipe"]
     
     var body: some View {
@@ -51,31 +51,17 @@ struct NewRecipeView: View {
                 Section(content: {
                     Toggle("Timeout", isOn: $timeoutEnabled)
                     if timeoutEnabled {
-                        HStack(spacing: 15) {
-                            Text("\(timeout, specifier: "%.0f")")
-                            Text("\(timeout == 1.00 ? "Second" : "Seconds")")
-                                .foregroundStyle(.secondary)
-                            Spacer()
-                            Button(action: {
-                                timeout -= 10
-                            }, label: {
-                                Image(systemName: "minus.circle.fill")
-                                    .font(.extraLargeTitle2)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.white, .secondary.opacity(0.3))
-                            })
-                            .buttonStyle(.plain)
-                            .disabled(timeout < 10.01)
-                            Button(action: {
-                                timeout += 10
-                            }, label: {
-                                Image(systemName: "plus.circle.fill")
-                                    .font(.extraLargeTitle2)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.white, .secondary.opacity(0.3))
-                            })
-                            .buttonStyle(.plain)
-                            .disabled(timeout > 10799.99)
+                        Stepper(
+                            value: $timeout,
+                            in: 10...10800,
+                            step: 10
+                        ) {
+                            HStack {
+                                Text("\(timeout)")
+                                    .frame(width: 50, alignment: .leading)
+                                Text("Seconds")
+                                    .foregroundStyle(.secondary)
+                            }
                         }
                     }
                 }, header: {
