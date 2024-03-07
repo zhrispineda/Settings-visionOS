@@ -40,7 +40,7 @@ struct ContentView: View {
                         }
                     })
                     .sheet(isPresented: $showingSignInSheet, content: {
-                        SignInView(showingSignInSheet: $showingSignInSheet)
+                        SignInView()
                             .frame(width: 650, height: 650)
                     })
                 }

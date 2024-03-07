@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SignInView: View {
     // Variables
+    @Environment(\.dismiss) private var dismiss
     @State private var username = String()
     @State private var showingFailedAlert = false
     @State private var showingForgotPasswordSheet = false
     @State private var signingIn = false
     @State private var showingSignInFailedAlert = false
-    @Binding var showingSignInSheet: Bool
     
     var body: some View {
         NavigationStack {
@@ -34,7 +34,7 @@ struct SignInView: View {
                     HStack {
                         Button(action: {
                             showingForgotPasswordSheet.toggle()
-                        }, label :{
+                        }, label: {
                             Text("Forgot Password")
                                 .font(.subheadline)
                         })
@@ -73,7 +73,7 @@ struct SignInView: View {
                         .resizable()
                         .grayscale(1.0)
                         .scaledToFit()
-                        .scaleEffect(CGSize(width: -1.0, height: 1.0))  // << here !!
+                        .scaleEffect(CGSize(width: -1.0, height: 1.0))
                         .frame(height: 30)
                     VStack {
                         Text("Your Apple ID information is used to enable Apple services when you sign\nin, including iCloud Backup, which automatically backs up the data on\nyour device in case you need to replace or restore it. Your device serial\nnumber may be used to check eligibility for service offers.")
@@ -127,7 +127,7 @@ struct SignInView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading, content: {
                     Button(action: {
-                        showingSignInSheet.toggle()
+                        dismiss()
                     }, label: {
                         Image(systemName: "xmark.circle.fill")
                             .font(.extraLargeTitle)
@@ -142,5 +142,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView(showingSignInSheet: .constant(true))
+    SignInView()
 }
