@@ -43,13 +43,14 @@ struct CustomList<Content: View>: View {
                     EditButton()
                 })
             }
-        }.environment(\.editMode, $editMode)
+        }
+        .environment(\.editMode, $editMode)
     }
 }
 
 #Preview {
     NavigationStack {
-        CustomList(title: "Test", editEnabled: true) {
+        CustomList(title: "Test", editEnabled: false) {
             Text("Hello, world!")
         }
     }

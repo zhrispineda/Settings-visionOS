@@ -289,6 +289,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     TextField("\(Image(systemName: "mic.fill"))\tSearch", text: $searchText)
+                        .frame(width: 275)
                         .textFieldStyle(.roundedBorder)
                         .padding(.bottom, -5)
                         .padding(.horizontal, -5)
