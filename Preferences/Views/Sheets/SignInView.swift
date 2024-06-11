@@ -24,9 +24,9 @@ struct SignInView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80)
-                    Text("Apple ID")
+                    Text("Apple Account")
                         .font(.extraLargeTitle2)
-                    TextField("Email", text: $username)
+                    TextField("Email or Phone Number", text: $username)
                         .padding(20)
                         .background(.black).opacity(0.35)
                         .cornerRadius(10)
@@ -48,11 +48,11 @@ struct SignInView: View {
                         Button(action: {
                             showingFailedAlert.toggle()
                         }, label: {
-                            Text("Create New Apple ID")
+                            Text("Create New Apple Account")
                                 .font(.subheadline)
                         })
                         .buttonStyle(.plain)
-                        .alert("Could Not Create Apple ID",
+                        .alert("Could Not Create Apple Account",
                                isPresented: $showingFailedAlert
                         ) {
                             Button {
@@ -64,7 +64,7 @@ struct SignInView: View {
                             }
                             Button("OK") {}
                         } message: {
-                            Text("This iPhoneSimulator has been used to create too many new Apple IDs. Contact Apple Support to request another Apple ID to use with this iPhoneSimulator.")
+                            Text("This iPhoneSimulator has been used to create too many new Apple Accounts. Contact Apple Support to request another Apple Account to use with this iPhoneSimulator.")
                         }
                     }
                     Spacer()

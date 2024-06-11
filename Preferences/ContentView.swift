@@ -23,17 +23,18 @@ struct ContentView: View {
                     Button(action: {
                         showingSignInSheet.toggle()
                     }, label: {
-                        HStack {
-                            Image(systemName: "person.crop.circle.fill")
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, .gray.gradient)
-                                .font(.system(size: 40))
-                                .padding(.leading, -5)
+                        HStack(alignment: .top) {
+                            VStack {
+                                Image("AppleAccount90x90")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .padding(.leading, -5)
+                            }
                             VStack(alignment: .leading) {
-                                Text("Sign in to \(UIDevice().name)")
+                                Text("Apple Account")
                                     .font(.subheadline)
                                     .bold()
-                                Text("Set up iCloud, the App Store, and more.")
+                                Text("Sign in to access your iCloud data, set up the App Store, use Apple services, and more.")
                                     .font(.footnote)
                                     .foregroundStyle(.secondary)
                             }

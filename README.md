@@ -7,7 +7,7 @@ SwiftUI recreation of the visionOS Settings app.
 ![An image comparing both app's Apps section](Assets/Apps@2x.png)
 
 ## Information
-- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 1.2 (21O589).
+- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 2.0 (22N5252n).
 - The `main` branch will have the latest available version of visionOS; older versions will be available as their own branch.
 - All features within the app are only simulations and have no effect on the device outside of the app.
 - Most views are complete, but lack features such as saving/retrieving data for now.
