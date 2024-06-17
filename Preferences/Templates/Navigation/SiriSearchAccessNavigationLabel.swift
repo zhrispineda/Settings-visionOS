@@ -16,8 +16,8 @@ struct SiriSearchAccessNavigationLabel: View {
     let backgroundAppRefreshApps: [String] = ["Maps", "News"]
     
     var body: some View {
-        Section(content: {
-            NavigationLink(destination: SiriSearchAppView(appName: appName), label: {
+        Section {
+            NavigationLink(destination: SiriSearchAppView(appName: appName)) {
                 HStack {
                     Image("applesiri")
                         .resizable()
@@ -26,7 +26,7 @@ struct SiriSearchAccessNavigationLabel: View {
                         .padding(.horizontal, 2)
                     Text("Siri & Search")
                 }
-            })
+            }
             if backgroundAppRefreshApps.contains(appName) {
                 HStack {
                     Image(systemName: "gear.circle.fill")
@@ -37,13 +37,13 @@ struct SiriSearchAccessNavigationLabel: View {
                     Toggle("Background App Refresh", isOn: .constant(true))
                 }
             }
-        }, header: {
+        } header: {
             Text("Allow \(appName) To Access")
-        }, footer: {
+        } footer: {
             if appName == "Maps" {
                 Text("[About Apple Maps & Privacy](#)").tint(.cyan)
             }
-        })
+        }
     }
 }
 

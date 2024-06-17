@@ -20,9 +20,9 @@ struct ListRowNavigationImageLabel<Content: View>: View {
     var content: Content
     
     var body: some View {
-        NavigationLink(destination: {
+        NavigationLink {
             content
-        }, label: {
+        } label: {
             HStack(spacing: 15) {
                 if isRounded {
                     Image(image)
@@ -50,7 +50,7 @@ struct ListRowNavigationImageLabel<Content: View>: View {
                 Text(status)
                     .foregroundStyle(.secondary)
             }
-        })
+        }
     }
 }
 

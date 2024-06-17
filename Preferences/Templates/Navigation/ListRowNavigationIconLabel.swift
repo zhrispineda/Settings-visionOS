@@ -20,9 +20,9 @@ struct ListRowNavigationIconLabel<Content: View>: View {
     var content: Content
     
     var body: some View {
-        NavigationLink(destination: {
+        NavigationLink {
             content
-        }, label: {
+        } label: {
             HStack {
                 if UIImage(systemName: icon) != nil { // If SF Symbol
                     if icon == "clock.fill" {
@@ -75,7 +75,7 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                     }
                 }
             }
-        })
+        }
     }
 }
 

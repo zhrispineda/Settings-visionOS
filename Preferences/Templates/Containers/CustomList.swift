@@ -32,11 +32,11 @@ struct CustomList<Content: View>: View {
         .padding(.horizontal, 45)
         // Horizontally-centered title text
         .toolbar {
-            ToolbarItem(placement: .secondaryAction, content: {
+            ToolbarItem(placement: .secondaryAction) {
                 Text(title)
                     .font(.title2)
                     //.offset(x: parentViews.contains(title) ? 0 : (editEnabled ? (editMode == .active ? -5 : -10) : -40)) // Adjust for back button if parent view or not
-            })
+            }
             if editEnabled {
                 ToolbarItem(placement: .topBarTrailing, content: {
                     EditButton()

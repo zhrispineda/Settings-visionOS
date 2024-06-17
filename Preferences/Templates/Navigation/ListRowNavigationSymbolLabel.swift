@@ -19,9 +19,9 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
     var content: Content
     
     var body: some View {
-        NavigationLink(destination: {
+        NavigationLink {
             content
-        }, label: {
+        } label: {
             HStack(spacing: 15) {
                 ZStack {
                     Circle()
@@ -51,7 +51,7 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
                     Text(status).foregroundStyle(.secondary)
                 }
             }
-        })
+        }
     }
 }
 

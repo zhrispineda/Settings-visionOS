@@ -17,9 +17,9 @@ struct ListRowNavigationLabel<Content: View>: View {
     var content: Content
     
     var body: some View {
-        NavigationLink(destination: {
+        NavigationLink {
             content
-        }, label: {
+        } label: {
             HStack {
                 Text(title)
                     .lineLimit(1)
@@ -31,7 +31,7 @@ struct ListRowNavigationLabel<Content: View>: View {
                 Text(subtitle)
                     .foregroundStyle(.secondary)
             }
-        })
+        }
     }
 }
 
