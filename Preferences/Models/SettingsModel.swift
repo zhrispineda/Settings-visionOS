@@ -29,12 +29,12 @@ enum SettingsModel: String, CaseIterable {
     case accessibility = "Accessibility"
     case controlCenter = "Control Center"
     case siriSearch = "Siri & Search"
+    case healthData = "Health Data"
     case privacySecurity = "Privacy & Security"
     
-    case display = "Display"
+    case appearance = "Appearance"
     case storage = "Storage"
     
-    case passwords = "Passwords"
     case gameCenter = "Game Center"
     case walletApplePay = "Wallet & Apple Pay"
     
@@ -61,18 +61,18 @@ enum SettingsModel: String, CaseIterable {
     SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility", color: .blue, destination: AnyView(AccessibilityView())),
     SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(SiriSearchView())),
+    SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(SiriSearchView())),
     SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),
 ]
 
-// Device Settings: Display, Storage
+// Device Settings: Appearance, Storage
 @MainActor let deviceSettings: [SettingsItem] = [
-    SettingsItem(type: .display, title: "Display", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(DisplayView())),
+    SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(EnvironmentAppearanceView())),
     SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
 ]
 
-// Account Settings: Passwords, Game Center, Wallet & Apple Pay
+// Account Settings: Game Center, Wallet & Apple Pay
 @MainActor let accountSettings: [SettingsItem] = [
-    SettingsItem(type: .passwords, title: "Passwords", icon: "custom.key.circle.fill", color: .gray, destination: AnyView(PasswordsView())),
     SettingsItem(type: .gameCenter, title: "Game Center", icon: "applegamecenter", color: .white, destination: AnyView(GameCenterView())),
     SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", destination: AnyView(WalletApplePayView())),
 ]

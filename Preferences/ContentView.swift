@@ -23,7 +23,7 @@ struct ContentView: View {
                     } label: {
                         HStack(alignment: .top) {
                             VStack {
-                                Image("AppleAccount90x90")
+                                Image("appleaccount")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .padding(.leading, -5)
@@ -110,7 +110,7 @@ struct SettingsLabel: View {
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                             }
                         } else {
-                            if setting.icon == "environments.fill" {
+                            if setting.icon == "environments.fill" || setting.icon == "health.3.stack.3d.fill" {
                                 ZStack {
                                     Circle()
                                         .frame(width: 30, height: 30)
@@ -119,6 +119,7 @@ struct SettingsLabel: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 22)
+                                        .padding( .bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
                                 }
                             } else {
                                 Image(setting.icon)

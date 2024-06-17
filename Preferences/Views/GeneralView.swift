@@ -16,14 +16,20 @@ struct GeneralView: View {
                 }
                 
                 Section {
-                    NavigationLink("Keyboard", destination: KeyboardView())
-                    NavigationLink("Game Controller", destination: GameControllerView())
-                    NavigationLink("Fonts", destination: FontsView())
+                    NavigationLink("AutoFill & Passwords", destination: EmptyView())
                     NavigationLink("Dictionary", destination: DictionaryView())
+                    NavigationLink("Fonts", destination: FontsView())
+                    NavigationLink("Keyboard", destination: KeyboardView())
+                    //NavigationLink("Game Controller", destination: GameControllerView())
+                    NavigationLink("Language & Region", destination: EmptyView())
                 }
                 
                 Section {
                     NavigationLink("VPN & Device Management", destination: VPNDeviceManagementView())
+                }
+                
+                Section {
+                    NavigationLink("Remote Devices", destination: EmptyView())
                 }
                 
                 Section {

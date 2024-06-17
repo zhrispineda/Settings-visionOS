@@ -1,5 +1,5 @@
 //
-//  DisplayView.swift
+//  AppearanceView.swift
 //  Settings-visionOS
 //
 //  Settings > Display
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DisplayView: View {
+struct AppearanceView: View {
     // Variables
     @State private var boldTextEnabled = false
     @State private var brightness = CGFloat(0.5)
@@ -45,5 +45,5 @@ struct DisplayView: View {
 }
 
 #Preview {
-    DisplayView()
+    AppearanceView()
 }

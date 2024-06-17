@@ -1,5 +1,5 @@
 //
-//  AppearanceView.swift
+//  EnvironmentAppearanceView.swift
 //  Preferences
 //
 //  Settings > Environments > Appearance
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AppearanceView: View {
+struct EnvironmentAppearanceView: View {
     // Variables
     @State private var selectedOption: String? = "Light"
     let options = ["Automatic", "Light", "Dark"]
@@ -34,5 +34,5 @@ struct AppearanceView: View {
 }
 
 #Preview {
-    AppearanceView()
+    EnvironmentAppearanceView()
 }
