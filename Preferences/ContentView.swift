@@ -20,9 +20,9 @@ struct ContentView: View {
                 // TODO: Clean loops for listing every NavigationLink
                 // TODO: Pop to root detail view on tapping NavigationLink within its own destination view
                 Section {
-                    Button(action: {
+                    Button {
                         showingSignInSheet.toggle()
-                    }, label: {
+                    } label: {
                         HStack(alignment: .top) {
                             VStack {
                                 Image("AppleAccount90x90")
@@ -39,7 +39,7 @@ struct ContentView: View {
                                     .foregroundStyle(.secondary)
                             }
                         }
-                    })
+                    }
                     .sheet(isPresented: $showingSignInSheet, content: {
                         SignInView()
                             .frame(width: 650, height: 650)

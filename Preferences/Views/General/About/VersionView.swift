@@ -10,17 +10,17 @@ import SwiftUI
 struct VersionView: View {
     var body: some View {
         CustomList(title: "\(UIDevice().systemName) Version") {
-            Section(content: {
+            Section {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("\(UIDevice().systemName) \(UIDevice().systemVersion) (21O589)")
                         .fontWeight(.heavy)
                     Text("This update includes improvements and bug fixes for your \(UIDevice().name).")
                         .foregroundStyle(.secondary)
                 }
-                .padding(.vertical, -10)
-            }, header: {
+                .padding(.vertical, 0)
+            } header: {
                 Text("\(UIDevice().systemName) Version")
-            })
+            }
         }
     }
 }

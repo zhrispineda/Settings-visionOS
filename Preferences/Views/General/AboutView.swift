@@ -27,11 +27,12 @@ struct AboutView: View {
             }
             
             Section {
-                ListRowLabel(title: "Songs", subtitle: "0")
-                ListRowLabel(title: "Videos", subtitle: "0")
-                ListRowLabel(title: "Photos", subtitle: "0")
-                ListRowLabel(title: "Capacity", subtitle: totalStorage)
-                ListRowLabel(title: "Available", subtitle: availableStorage)
+                LabeledContent("Songs", value: "0")
+                LabeledContent("Videos", value: "0")
+                LabeledContent("Photos", value: "0")
+                LabeledContent("Applications", value: "1")
+                LabeledContent("Capacity", value: totalStorage)
+                LabeledContent("Available", value: availableStorage)
             }
             
             Section {
