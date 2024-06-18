@@ -1,6 +1,10 @@
 #  Settings-visionOS
 SwiftUI recreation of the visionOS Settings app.
 
+**IMPORTANT:** This project is being worked on using **Xcode 16 beta** and **Swift 6.0**. To use this project on Xcode 15, change the version of Swift to 5.0:
+
+(Top of project sidebar) `Preferences` > `TARGETS` > `Preferences` > `Build Settings` > (Scroll to bottom) `Swift Compiler - Language` > `Swift Language Version` > Change the value `Swift 6` to `Swift 5`
+
 ## Examples
 ![A GIF comparing Apple's Settings app and this project's Settings app side-by-side](Assets/Settings.gif)
 ![An image comparing both apps's General section](Assets/General@2x.png)
@@ -22,3 +26,7 @@ As this is a personal project for learning Swift and SwiftUI, feel free to fork,
 - This app is a recreation of one of Apple's own apps and its designs.
 - All assets such as icons and images are not my own in any way.
 - Feel free to look through the commit history to see the project evolve from a single view to its current state.
+
+## Other Settings Projects
+- **iOS Settings** https://github.com/zhrispineda/Settings-iOS
+- **watchOS Settings** https://github.com/zhrispineda/Settings-watchOS

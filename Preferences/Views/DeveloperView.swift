@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DeveloperView: View {
+    @State private var macVirtualDisplayEnabled = false
     @State private var resetNewsLocalDataOnNextLaunch = false
     @State private var allowAnyDomain = false
     @State private var allowUnverifiedSources = false
@@ -15,47 +16,55 @@ struct DeveloperView: View {
     var body: some View {
         NavigationStack {
             CustomList(title: "Developer") {
-                Section(content: {
+                Section {
+                    Toggle("Allow Mac Virtual Display", isOn: $macVirtualDisplayEnabled)
+                } header: {
+                    Text("Immersive Experience Testing")
+                } footer: {
+                    Text("Allow access to Mac Virtual Display during an immersive experience.")
+                }
+                
+                Section {
                     Toggle("Reset Local Data on Next Launch", isOn: $resetNewsLocalDataOnNextLaunch)
-                }, header: {
+                } header: {
                     Text("News Testing")
-                }, footer: {
+                } footer: {
                     Text("Reset layouts, images, and other cached elements. Private data will not be affected.")
-                })
+                }
                 
-                Section(content: {
+                Section {
                     NavigationLink("TV Provider", destination: TVProviderView())
-                }, header: {
+                } header: {
                     Text("TV Provider Testing")
-                })
+                }
                 
-                Section(content: {
+                Section {
                     NavigationLink("TV App", destination: TVAppView())
-                }, header: {
+                } header: {
                     Text("TV Provider Testing")
-                })
+                }
                 
-                Section(content: {
-                    Button("Reset Alert", action: {})
-                }, header: {
-                    Text("Reset Surroundings Awareness Alert")
-                })
+//                Section {
+//                    Button("Reset Alert") {}
+//                } header: {
+//                    Text("Reset Surroundings Awareness Alert")
+//                }
                 
-                Section(content: {
-                    Button("Reindex All Items", action: {})
-                    Button("Reindex all Items with Identifiers", action: {})
-                }, header: {
+                Section {
+                    Button("Reindex All Items") {}
+                    Button("Reindex all Items with Identifiers") {}
+                } header: {
                     Text("CoreSpotlight Testing")
-                })
+                }
                 
-                Section(content: {
+                Section {
                     Toggle("Allow Any Domain", isOn: $allowAnyDomain)
                     Toggle("Allow Unverified Sources", isOn: $allowUnverifiedSources)
-                }, header: {
+                } header: {
                     Text("Siri Event Suggestions Testing")
-                }, footer: {
+                } footer: {
                     Text("These settings affect Siri Event Suggestions from Mail and Safari. Enable Allow Any Domain to allow e-mails or web pages which have not yet been approved for Siri Event Suggestions by Apple. Enable Allow Unverified Sources to bypass DKIM or SSL authenticity verification for Siri Event Suggestions in Mail and Safari.")
-                })
+                }
             }
         }
     }
