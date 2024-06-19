@@ -38,12 +38,12 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                             .foregroundStyle(.white.gradient, color.gradient)
                     }
                 } else { // If image asset
-                    if icon == "logo.bluetooth" {
+                    if icon == "bluetooth" {
                         ZStack {
                             Circle()
                                 .foregroundStyle(color.gradient)
                                 .frame(width: 32, height: 32)
-                            Image(icon)
+                            Image(_internalSystemName: icon)
                                 .fontWeight(.light)
                                 .imageScale(.large)
                                 .symbolRenderingMode(.palette)
@@ -80,5 +80,5 @@ struct ListRowNavigationIconLabel<Content: View>: View {
 }
 
 #Preview {
-    ListRowNavigationIconLabel(color: .red, icon: "logo.bluetooth", title: "Title", status: "location.fill", content: EmptyView())
+    ListRowNavigationIconLabel(color: .red, icon: "bluetooth", title: "Title", status: "location.fill", content: EmptyView())
 }

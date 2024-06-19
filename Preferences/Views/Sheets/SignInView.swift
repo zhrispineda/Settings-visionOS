@@ -32,25 +32,25 @@ struct SignInView: View {
                         .cornerRadius(10)
                         .textFieldStyle(.plain)
                     HStack {
-                        Button(action: {
+                        Button {
                             showingForgotPasswordSheet.toggle()
-                        }, label: {
+                        } label: {
                             Text("Forgot Password")
                                 .font(.subheadline)
-                        })
+                        }
                         .buttonStyle(.plain)
-                        .sheet(isPresented: $showingForgotPasswordSheet, content: {
+                        .sheet(isPresented: $showingForgotPasswordSheet) {
                             ForgotPasswordView(showingForgotPasswordSheet: $showingForgotPasswordSheet)
                                 .frame(width: 650, height: 720)
-                        })
+                        }
                         Text("\u{2022}")
                             .padding(.horizontal, 10)
-                        Button(action: {
+                        Button {
                             showingFailedAlert.toggle()
-                        }, label: {
+                        } label: {
                             Text("Create New Apple Account")
                                 .font(.subheadline)
-                        })
+                        }
                         .buttonStyle(.plain)
                         .alert("Could Not Create Apple Account",
                                isPresented: $showingFailedAlert
@@ -69,11 +69,9 @@ struct SignInView: View {
                     }
                     Spacer()
                         .padding(.vertical, 35)
-                    Image("appleprivacy")
+                    Image(_internalSystemName: "privacy.handshake")
                         .resizable()
-                        .grayscale(1.0)
                         .scaledToFit()
-                        .scaleEffect(CGSize(width: -1.0, height: 1.0))
                         .frame(height: 30)
                     VStack {
                         Text("Your Apple ID information is used to enable Apple services when you sign\nin, including iCloud Backup, which automatically backs up the data on\nyour device in case you need to replace or restore it. Your device serial\nnumber may be used to check eligibility for service offers.")
@@ -86,9 +84,9 @@ struct SignInView: View {
                             .font(.caption2)
                             .padding(.bottom, 3)
                     }
-                    Button(action: {
+                    Button {
                         signingIn.toggle()
-                    }, label: {
+                    } label: {
                         if signingIn {
                             ProgressView()
                                 .frame(width: 275, height: 60)
@@ -111,7 +109,7 @@ struct SignInView: View {
                                 .foregroundStyle(username.count < 1 ? .white.opacity(0.1) : Color.white)
                                 .cornerRadius(30)
                         }
-                    })
+                    }
                     .buttonStyle(.plain)
                     .disabled(username.count < 1 || signingIn)
                     .alert("Verification Failed", isPresented: $showingSignInFailedAlert) {
@@ -125,17 +123,17 @@ struct SignInView: View {
                 .listRowBackground(Color.clear)
             }
             .toolbar {
-                ToolbarItem(placement: .topBarLeading, content: {
-                    Button(action: {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
                         dismiss()
-                    }, label: {
+                    } label: {
                         Image(systemName: "xmark.circle.fill")
                             .font(.extraLargeTitle)
                             .foregroundStyle(.white, .white.opacity(0.2))
                             .fontWeight(.thin)
-                    })
+                    }
                     .buttonStyle(.plain)
-                })
+                }
             }
         }
     }

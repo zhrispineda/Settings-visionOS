@@ -88,6 +88,7 @@ struct SettingsLabel: View {
     // Variables
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
+    let internalIcons = ["appstore", "environments.fill", "health.3.stack.3d.fill"]
     
     var body: some View {
         Section {
@@ -110,16 +111,17 @@ struct SettingsLabel: View {
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                             }
                         } else {
-                            if setting.icon == "environments.fill" || setting.icon == "health.3.stack.3d.fill" {
+                            if internalIcons.contains(setting.icon) {
                                 ZStack {
                                     Circle()
                                         .frame(width: 30, height: 30)
                                         .foregroundStyle(setting.color.gradient)
-                                    Image(setting.icon)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 22)
-                                        .padding( .bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
+                                    Image(_internalSystemName: setting.icon)
+                                        //.resizable()
+                                        //.scaledToFit()
+                                        //.frame(width: 22)
+                                        .imageScale(setting.icon == "appstore" ? .medium : .small)
+                                        .padding(.bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
                                 }
                             } else {
                                 Image(setting.icon)

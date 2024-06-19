@@ -40,11 +40,11 @@ struct RestrictionsAllowedAppsView: View {
                 })
                 Toggle(isOn: $airDropEnabled, label: {
                     HStack(spacing: 15) {
-                        Image("appleairdrop")
+                        Image(_internalSystemName: "airdrop.circle.fill")
                             .resizable()
+                            .foregroundStyle(.blue, .white)
                             .scaledToFit()
                             .frame(height: 32)
-                            .clipShape(Circle())
                         Text("AirDrop")
                         Spacer()
                     }

@@ -16,14 +16,14 @@ struct PrivacySecurityView: View {
             }
             
             // Apps Privacy Controls Section
-            Section(content: {
+            Section {
                 ListRowNavigationIconLabel(color: .blue, icon: "viewfinder.circle.fill", title: "Surroundings", content: AppPermissionView(permissionName: "Surroundings"))
                 ListRowNavigationIconLabel(color: .blue, icon: "custom.hand.point.up.left.circle.fill", title: "Hand Structures & Movements", content: AppPermissionView(permissionName: "Hand Structures & Movements"))
                 ListRowNavigationImageLabel(image: "applecontacts", title: "Contacts", content: AppPermissionView(permissionName: "Contacts"))
                 ListRowNavigationImageLabel(image: "applecalendar", title: "Calendars", content: AppPermissionView(permissionName: "Calendars"))
                 ListRowNavigationImageLabel(image: "applereminders", title: "Reminders", content: AppPermissionView(permissionName: "Reminders"))
                 ListRowNavigationImageLabel(image: "applephotos", title: "Photos", content: AppPermissionView(permissionName: "Photos"))
-                ListRowNavigationIconLabel(color: .blue, icon: "logo.bluetooth", title: "Bluetooth", content: AppPermissionView(permissionName: "Bluetooth"))
+                ListRowNavigationIconLabel(color: .blue, icon: "bluetooth", title: "Bluetooth", content: AppPermissionView(permissionName: "Bluetooth"))
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "network", title: "Local Network", content: AppPermissionView(permissionName: "Local Network"))
                 ListRowNavigationSymbolLabel(color: .orange, symbol: "mic.fill", title: "Microphone", content: AppPermissionView(permissionName: "Microphone"))
                 ListRowNavigationSymbolLabel(color: .gray, symbol: "waveform", title: "Speech Recognition", content: AppPermissionView(permissionName: "Speech Recognition"))
@@ -32,9 +32,9 @@ struct PrivacySecurityView: View {
                 ListRowNavigationImageLabel(image: "applemusic", title: "Media & Apple Music", content: AppPermissionView(permissionName: "Media & Apple Music"))
                 ListRowNavigationImageLabel(image: "applefiles", title: "Files and Folders", content: AppPermissionView(permissionName: "Files and Folders"))
                 ListRowNavigationSymbolLabel(color: .indigo, symbol: "moon.fill", title: "Focus", content: AppPermissionView(permissionName: "Focus"))
-            }, footer: {
+            } footer: {
                 Text("As apps request access, they will be added in the categories above.")
-            })
+            }
             
             // Advertising Section
             Section {
@@ -45,5 +45,7 @@ struct PrivacySecurityView: View {
 }
 
 #Preview {
-    PrivacySecurityView()
+    NavigationStack {
+        PrivacySecurityView()
+    }
 }
