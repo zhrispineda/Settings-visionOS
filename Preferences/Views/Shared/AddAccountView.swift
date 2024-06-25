@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddAccountView: View {
     // Variables
-    let services = ["icloud_Normal", "exchange_Normal", "gmail_Normal", "yahoo-white_Normal", "aol-white_Normal", "Outlook_Logo_Normal"]
+    let services = ["icloud", "exchange", "gmail", "yahoo-white", "aol-white", "Outlook_Logo"]
     
     var body: some View {
         CustomList(title: "Add Account") {

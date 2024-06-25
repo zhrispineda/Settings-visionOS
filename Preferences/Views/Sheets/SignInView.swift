@@ -20,7 +20,7 @@ struct SignInView: View {
         NavigationStack {
             List {
                 VStack(alignment: .center) {
-                    Image("sign-in-header-dark_Normal")
+                    Image("sign-in-header-dark")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80)
