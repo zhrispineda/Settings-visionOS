@@ -24,10 +24,10 @@ struct FocusPreferencesView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") People", subtitle: "None \(focusName == "Personal" ? "silenced" : "allowed")", content: AllowedPeopleView(focusName: focusName))
                 ListRowNavigationIconLabel(title: "\(focusName == "Personal" ? "Silenced" : "Allowed") Apps", subtitle: "None\(focusName == "Personal" ? "" : " allowed")", content: FocusAllowedAppsView(focusName: focusName))
-            }, header: {
+            } header: {
                 VStack {
                     HStack {
                         Spacer()
@@ -47,9 +47,9 @@ struct FocusPreferencesView: View {
                             .padding(.bottom)
                     }
                 }
-            })
+            }
             
-            Section(content: {
+            Section {
                 if focusName == "Sleep" {
                     HStack(alignment: .top) {
                         Image("applehealth")
@@ -69,12 +69,9 @@ struct FocusPreferencesView: View {
                     } else {
                         ListRowNavigationIconLabel(color: .indigo, icon: "clock.fill", title: "12:00 AM", subtitle: "Every day", status: "Off", content: ScheduleView())
                     }
-                    // Add popover for button
-                    Button(action: {}, label: {
-                        Label("Add Schedule", image: "")
-                    })
+                    Button("Add Schedule") {}
                 }
-            }, header: {
+            } header: {
                 if focusName == "Sleep" {
                     Text("Schedule")
                 } else {
@@ -86,13 +83,13 @@ struct FocusPreferencesView: View {
                             .font(.subheadline)
                     }
                 }
-            })
+            }
             
             if focusName != "Do Not Disturb" {
                 Section {
-                    Button("Delete Focus", action: {
+                    Button("Delete Focus") {
                         showingDeleteAlert.toggle()
-                    })
+                    }
                     .foregroundStyle(.red)
                     .alert("Do you want to delete this Focus?", isPresented: $showingDeleteAlert) {
                         Button("Delete Schedule", role: .destructive) {}
@@ -106,5 +103,7 @@ struct FocusPreferencesView: View {
 }
 
 #Preview {
-    FocusPreferencesView(focusName: "Sleep", icon: "bed.double.circle.fill", color: .cyan)
+    NavigationStack {
+        FocusPreferencesView(focusName: "Sleep", icon: "bed.double.circle.fill", color: .cyan)
+    }
 }

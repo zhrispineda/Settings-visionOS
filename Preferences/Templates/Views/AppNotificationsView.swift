@@ -27,7 +27,7 @@ struct AppNotificationsView: View {
             }
             
             if appName != "Photos" {
-                Section(content: {
+                Section {
                     Toggle(isOn: $timeSensitiveNotificationsEnabled, label: {
                         HStack(spacing: 15) {
                             Image(systemName: "clock.fill")
@@ -36,17 +36,15 @@ struct AppNotificationsView: View {
                             Text("Time Sensitive Notifications")
                         }
                     })
-                }, header: {
+                } header: {
                     Text("Always Deliver Immediately")
-                })
+                }
             }
             
-            Section(content: {
+            Section("Alerts") {
                 Toggle("Notification Center", isOn: $notificationCenterEnabled)
                 Toggle("Banners", isOn: $bannersEnabled)
-            }, header: {
-                Text("Alerts")
-            })
+            }
             
             
             if bannersEnabled {
@@ -78,5 +76,7 @@ struct AppNotificationsView: View {
 }
 
 #Preview {
-    AppNotificationsView()
+    NavigationStack {
+        AppNotificationsView()
+    }
 }

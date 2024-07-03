@@ -24,33 +24,33 @@ struct SiriSearchAppView: View {
     
     var body: some View {
        List {
-            Section(content: {
+            Section {
                 Toggle("Learn from this App", isOn: $learnFromAppEnabled)
-            }, footer: {
+            } footer: {
                 Text("Allow Siri to learn from how you use \u{201C}\(appName)\u{201D} to make suggestions across apps.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Show App in Search", isOn: $showAppInSearchEnabled)
                 if showAppInSearchEnabled {
                     Toggle("Show Content in Search", isOn: $showContentInSearchEnabled)
                 }
-            }, header: {
+            } header: {
                 Text("While Searching")
-            }, footer: {
+            } footer: {
                 Text("Allow \u{201C}\(appName)\u{201D} the app and its content to appear in Search.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 if showInAppApps.contains(appName) {
                     Toggle("Suggest in App", isOn: $suggestInAppEnabled)
                 }
                 Toggle("Suggest App", isOn: $suggestAppEnabled)
-            }, header: {
+            } header: {
                 Text("Suggestions")
-            }, footer: {
+            } footer: {
                 Text("Allow suggestions and content from \u{201C}\(appName)\u{201D} and Shortcuts for the app to appear \(showInAppApps.contains(appName) ? "in the app and " : "")in Search. These suggestions and Shortcuts are based on how you use the app.")
-            })
+            }
         }
        .padding(.horizontal, 45)
        .toolbar {
@@ -65,5 +65,7 @@ struct SiriSearchAppView: View {
 }
 
 #Preview {
-    SiriSearchAppView()
+    NavigationStack {
+        SiriSearchAppView()
+    }
 }
