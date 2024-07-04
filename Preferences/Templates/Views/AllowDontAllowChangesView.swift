@@ -13,24 +13,20 @@ import SwiftUI
 struct AllowDontAllowChangesView: View {
     // Variables
     var title = String()
-    @State private var selectedOption = "Allow Changes"
+    @State private var selected = "Allow Changes"
     let options = ["Allow Changes", "Don't Allow Changes"]
     
     var body: some View {
         CustomList(title: title) {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 switch title {
                 case "Media & Apple Music":
                     Text("Disallowing changes locks the settings below and prevents new apps from accessing Apple Music and using your media library.")
@@ -45,22 +41,22 @@ struct AllowDontAllowChangesView: View {
                 default:
                     Text("Disallowing changes locks the settings shown below and prevents new apps from using your \(title.lowercased()).")
                 }
-            })
+            }
             
             if title == "Photos" {
-                Section(content: {
+                Section {
                     VStack(alignment: .leading) {
                         Text("**Full Photo Library Access**")
                         Text("No Items")
                             .foregroundStyle(.secondary)
                     }
                     .padding(3)
-                }, footer: {
+                } footer: {
                     Text("Photos may contain data associated with location, depth information, captions, and audio.")
-                })
+                }
             }
             
-            Section(content: {}, footer: {
+            Section {} footer: {
                 switch title {
                 case "Media & Apple Music":
                     Text("Apps that have requested access to Apple Music, your music and video activity, and your media library appear here.")
@@ -77,7 +73,7 @@ struct AllowDontAllowChangesView: View {
                 default:
                     Text("Applications that have requested access to your \(title.lowercased()) will appear here.")
                 }
-            })
+            }
         }
     }
 }

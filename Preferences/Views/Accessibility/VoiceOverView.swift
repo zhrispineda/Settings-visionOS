@@ -16,18 +16,18 @@ struct VoiceOverView: View {
     
     var body: some View {
         CustomList(title: "VoiceOver") {
-            Section(content: {
+            Section {
                 Toggle("VoiceOver", isOn: $voiceOverEnabled)
-            }, footer: {
+            } footer: {
                 VStack(alignment: .leading) {
                     Text("**VoiceOver speaks items on screen:**")
                     Text("\u{2022} Left Index Pinch or Right Ring Pinch to Activate.")
                     Text("\u{2022} Right Index Pinch to Move to Next Item.")
                     Text("\n\t[Learn more...](#)") // TODO: Popover
                 }
-            })
+            }
             
-            Section(content: {
+            Section {
                 Group {
                     Slider(value: $speakingRate,
                            in: 0.0...1.0,
@@ -37,9 +37,9 @@ struct VoiceOverView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
+            } header: {
                 Text("Speaking Rate")
-            })
+            }
             
             Section {
                 NavigationLink("Speech", destination: SpeechView())
@@ -51,19 +51,19 @@ struct VoiceOverView: View {
                 NavigationLink("Audio", destination: AudioView())
             }
             
-            Section(content: {
+            Section {
                 NavigationLink("Commands", destination: CommandsView())
                 NavigationLink("Rotor", destination: RotorView())
                 NavigationLink("Activities", destination: ActivitiesView())
                 NavigationLink("Typing", destination: TypingView())
                 NavigationLink("Quick Settings", destination: QuickSettingsView())
-            }, footer: {
+            } footer: {
                 Text("Quick settings allows you to access VoiceOver settings at any time. Access quick settings with left index modifier right ring pinch.")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Navigation Style", subtitle: "Flat", content: NavigationStyleView())
-                ListRowNavigationLabel(title: "Navigate Images", subtitle: "Always", content: OnOffView(title: "Navigate Images", selectedOption: "Always", options: ["Always", "With descriptions", "Never"]))
+                ListRowNavigationLabel(title: "Navigate Images", subtitle: "Always", content: OnOffView(title: "Navigate Images", selected: "Always", options: ["Always", "With descriptions", "Never"]))
                 Toggle("Large Cursor", isOn: $largeCursor)
                 Toggle("Caption Panel", isOn: $captionPanel)
             }

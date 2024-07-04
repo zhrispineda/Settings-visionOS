@@ -30,7 +30,7 @@ struct AddActivityView: View {
                 }
             }
             
-            Section(content: {
+            Section("Speech & Audio Settings") {
                 ListRowNavigationLabel(title: "Voice", subtitle: "Default", content: ActivityVoiceView())
                 Group {
                     Slider(value: $speakingRate,
@@ -47,41 +47,33 @@ struct AddActivityView: View {
                     )
                 }
                 .imageScale(.large)
-                ListRowNavigationLabel(title: "Mute Speech", subtitle: "Default", content: OnOffView(title: "Mute Speech", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Mute Sound", subtitle: "Default", content: OnOffView(title: "Mute Sound", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Audio Ducking", subtitle: "Default", content: OnOffView(title: "Audio Ducking", selectedOption: "Default", options: ["Default", "On", "Off"]))
-            }, header: {
-                Text("Speech & Audio Settings")
-            })
+                ListRowNavigationLabel(title: "Mute Speech", subtitle: "Default", content: OnOffView(title: "Mute Speech", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Mute Sound", subtitle: "Default", content: OnOffView(title: "Mute Sound", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Audio Ducking", subtitle: "Default", content: OnOffView(title: "Audio Ducking", selected: "Default", options: ["Default", "On", "Off"]))
+            }
             
-            Section(content: {
-                ListRowNavigationLabel(title: "Punctuation", subtitle: "Default", content: OnOffView(title: "Punctuation", selectedOption: "Default", options: ["Default", "All", "Some", "None"]))
-                ListRowNavigationLabel(title: "Emojis", subtitle: "Default", content: OnOffView(title: "Emojis", selectedOption: "Default", options: ["Default", "On", "Off"]))
+            Section("Verbosity Settings") {
+                ListRowNavigationLabel(title: "Punctuation", subtitle: "Default", content: OnOffView(title: "Punctuation", selected: "Default", options: ["Default", "All", "Some", "None"]))
+                ListRowNavigationLabel(title: "Emojis", subtitle: "Default", content: OnOffView(title: "Emojis", selected: "Default", options: ["Default", "On", "Off"]))
                 ListRowNavigationLabel(title: "Container Descriptions", subtitle: "Default", content: VerbosityMethodsView(title: "Container Descriptions", options: ["Default", "Speak", "Play Sound", "Change Pitch", "Braille", "Do Nothing"], selected: ["Default"]))
-                ListRowNavigationLabel(title: "Table Headers", subtitle: "Default", content: OnOffView(title: "Table Headers", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Row & Column Numbers", subtitle: "Default", content: OnOffView(title: "Row & Column Numbers", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Speak Hints", subtitle: "Default", content: OnOffView(title: "Speak Hints", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Numbers", subtitle: "Default", content: OnOffView(title: "Numbers", selectedOption: "Default", options: ["Default", "Words", "Numbers"]))
-            }, header: {
-                Text("Verbosity Settings")
-            })
+                ListRowNavigationLabel(title: "Table Headers", subtitle: "Default", content: OnOffView(title: "Table Headers", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Row & Column Numbers", subtitle: "Default", content: OnOffView(title: "Row & Column Numbers", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Speak Hints", subtitle: "Default", content: OnOffView(title: "Speak Hints", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Numbers", subtitle: "Default", content: OnOffView(title: "Numbers", selected: "Default", options: ["Default", "Words", "Numbers"]))
+            }
             
-            Section(content: {
-                ListRowNavigationLabel(title: "Typing Style", subtitle: "Default", content: OnOffView(title: "Typing Style", selectedOption: "Default", options: ["Default", "Standard Typing", "Touch Typing", "Direct Touch Typing"]))
-            }, header: {
-                Text("Typing Settings")
-            })
+            Section("Typing Settings") {
+                ListRowNavigationLabel(title: "Typing Style", subtitle: "Default", content: OnOffView(title: "Typing Style", selected: "Default", options: ["Default", "Standard Typing", "Touch Typing", "Direct Touch Typing"]))
+            }
             
-            Section(content: {
-                ListRowNavigationLabel(title: "Navigation Style", subtitle: "Default", content: OnOffView(title: "Navigation Style", selectedOption: "Default", options: ["Default", "Flat", "Grouped"]))
-            }, header: {
-                Text("Navigation Settings")
-            })
+            Section("Navigation Settings") {
+                ListRowNavigationLabel(title: "Navigation Style", subtitle: "Default", content: OnOffView(title: "Navigation Style", selected: "Default", options: ["Default", "Flat", "Grouped"]))
+            }
             
-            Section(content: {
-                ListRowNavigationLabel(title: "General Status Cell", subtitle: "Default", content: OnOffView(title: "General Status Cell", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Text Status Cell", subtitle: "Default", content: OnOffView(title: "Text Status Cell", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                Button(action: {}, label: { // TODO: Popover
+            Section("Braille Settings") {
+                ListRowNavigationLabel(title: "General Status Cell", subtitle: "Default", content: OnOffView(title: "General Status Cell", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Text Status Cell", subtitle: "Default", content: OnOffView(title: "Text Status Cell", selected: "Default", options: ["Default", "On", "Off"]))
+                Button {} label: { // TODO: Popover
                     HStack {
                         Text("Braille Table")
                         Spacer()
@@ -90,30 +82,26 @@ struct AddActivityView: View {
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.secondary)
                     }
-                })
-                ListRowNavigationLabel(title: "Braille Output", subtitle: "Default", content: OnOffView(title: "General Status Cell", selectedOption: "", options: ["Uncontracted Six-dot Braille", "Uncontracted Eight-dot Braille", "Contracted Braille"]))
-                ListRowNavigationLabel(title: "Braille Input", subtitle: "Default", content: OnOffView(title: "General Status Cell", selectedOption: "", options: ["Uncontracted Six-dot Braille", "Uncontracted Eight-dot Braille", "Contracted Braille"]))
+                }
+                ListRowNavigationLabel(title: "Braille Output", subtitle: "Default", content: OnOffView(title: "General Status Cell", selected: "", options: ["Uncontracted Six-dot Braille", "Uncontracted Eight-dot Braille", "Contracted Braille"]))
+                ListRowNavigationLabel(title: "Braille Input", subtitle: "Default", content: OnOffView(title: "General Status Cell", selected: "", options: ["Uncontracted Six-dot Braille", "Uncontracted Eight-dot Braille", "Contracted Braille"]))
                 ListRowNavigationLabel(title: "Auto Advance Duration", subtitle: "5s", content: AutoAdvanceDurationView())
-                ListRowNavigationLabel(title: "Braille Alert Messages", subtitle: "Default", content: OnOffView(title: "Braille Alert Messages", selectedOption: "Default", options: ["Default", "On", "Off"]))
-                ListRowNavigationLabel(title: "Braille Text Formatting", subtitle: "Default", content: OnOffView(title: "Braille Text Formatting", selectedOption: "Default", options: ["Default", "On", "Off"]))
-            }, header: {
-                Text("Braille Settings")
-            })
+                ListRowNavigationLabel(title: "Braille Alert Messages", subtitle: "Default", content: OnOffView(title: "Braille Alert Messages", selected: "Default", options: ["Default", "On", "Off"]))
+                ListRowNavigationLabel(title: "Braille Text Formatting", subtitle: "Default", content: OnOffView(title: "Braille Text Formatting", selected: "Default", options: ["Default", "On", "Off"]))
+            }
             
-            Section(content: {
+            Section {
                 NavigationLink("Apps", destination: ApplyAppsView(title: "Apps"))
                 NavigationLink("Context", destination: ActivityContextView())
-            }, header: {
+            } header: {
                 Text("Automatic Switching")
-            }, footer: {
+            } footer: {
                 Text("Choose apps or contexts within apps to automatically apply the settings from this activity.")
-            })
+            }
             
-            Section(content: {
+            Section("Interaction") {
                 ListRowNavigationLabel(title: "Modifier Keys", subtitle: "Default", content: ActivityModifierKeysView())
-            }, header: {
-                Text("Interaction")
-            })
+            }
         }
     }
 }

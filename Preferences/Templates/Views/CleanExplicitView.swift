@@ -15,26 +15,24 @@ import SwiftUI
 struct CleanExplicitView: View {
     // Variables
     var title = String()
-    @State private var selectedOption = "Explicit"
+    @State private var selected = "Explicit"
     let options = ["Clean", "Explicit"]
     
     var body: some View {
         CustomList(title: title) {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    CleanExplicitView()
+    NavigationStack {
+        CleanExplicitView()
+    }
 }

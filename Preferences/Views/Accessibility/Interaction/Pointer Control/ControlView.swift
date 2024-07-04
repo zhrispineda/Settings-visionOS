@@ -73,17 +73,17 @@ struct ControlView: View {
             
             if selected == "Wrist" || selected == "Index Finger" {
                 Section {
-                    ListRowNavigationLabel(title: "Handedness", subtitle: handChoice, content: OnOffView(title: "Handedness", selectedOption: handChoice, options: ["Right", "Left"]))
+                    ListRowNavigationLabel(title: "Handedness", subtitle: handChoice, content: OnOffView(title: "Handedness", selected: handChoice, options: ["Right", "Left"]))
                     Toggle("Show Depth Ray", isOn: $showDepthRay)
                 }
             }
             
             if selected != "Eyes" {
-                Section(content: {
+                Section {
                     Slider(value: $sensitivity, in: 0...100)
-                }, header: {
+                } header: {
                     Text("Movement Sensitivity")
-                })
+                }
             }
         }
     }
