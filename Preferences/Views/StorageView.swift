@@ -101,7 +101,7 @@ struct StorageView: View {
             
             // System Section
             Section {
-                NavigationLink(destination: SystemInfoView(title: "visionOS (1.0)"), label: {
+                NavigationLink(destination: SystemInfoView(title: "\(UIDevice().systemName) (\(UIDevice().systemVersion)"), label: {
                     HStack(spacing: 15) {
                         Image("applesettings")
                             .resizable()
@@ -138,5 +138,7 @@ struct StorageView: View {
 }
 
 #Preview {
-    StorageView()
+    NavigationStack {
+        StorageView()
+    }
 }

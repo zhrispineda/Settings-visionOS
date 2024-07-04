@@ -19,27 +19,23 @@ struct VerbosityFeedbackView: View {
     
     var body: some View {
         CustomList(title: title) {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selected == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("Determines the level of feedback VoiceOver gives for certain gestures performed.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    VerbosityFeedbackView()
+    NavigationStack {
+        VerbosityFeedbackView()
+    }
 }

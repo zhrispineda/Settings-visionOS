@@ -32,10 +32,10 @@ struct AppStorageInfoView: View {
             }
             
             if appName == "Calendar" {
-                Section(content: {
+                Section {
                     ListRowLabel(title: "Events", subtitle: "2.3 MB")
                     ListRowLabel(title: "Attachments", subtitle: "Zero KB")
-                }, header: {
+                } header: {
                     HStack {
                         Text(appName.uppercased())
                             .font(.callout)
@@ -47,7 +47,7 @@ struct AppStorageInfoView: View {
                             .fontWeight(.medium)
                             .foregroundStyle(.secondary)
                     }
-                })
+                }
             }
             
             if appName == "Safari" {
@@ -56,11 +56,11 @@ struct AppStorageInfoView: View {
                         .disabled(true)
                 }
                 
-                Section(content: {
+                Section {
                     ListRowLabel(title: "Offline Reading List", subtitle: "Zero KB")
-                }, footer: {
+                } footer: {
                     Text("Clearing the offline Reading List cache will not remove any items from your Reading List.")
-                })
+                }
                 
                 Section {
                     ListRowLabel(title: "History", subtitle: "Zero KB")
@@ -80,5 +80,7 @@ struct AppStorageInfoView: View {
 }
 
 #Preview {
-    AppStorageInfoView()
+    NavigationStack {
+        AppStorageInfoView()
+    }
 }

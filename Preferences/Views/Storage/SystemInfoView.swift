@@ -2,7 +2,7 @@
 //  SystemInfoView.swift
 //  Preferences
 //
-//  Settings > Storage > visionOS (1.0)
+//  Settings > Storage > visionOS (2.0)
 //  Settings > Storage > System Data
 //
 
@@ -21,11 +21,11 @@ struct SystemInfoView: View {
                         .frame(width: 80)
                         .clipShape(Circle())
                     VStack(alignment: .leading) {
-                        if title == "visionOS (1.0)" {
+                        if title == "\(UIDevice().systemName) (\(UIDevice().systemVersion)" {
                             Text(title)
                             Text("Apple Inc.")
                                 .font(.callout)
-                            Text("Version: 1.0")
+                            Text("Version: 2.0")
                                 .font(.callout)
                         } else {
                             Text(title)
@@ -41,5 +41,7 @@ struct SystemInfoView: View {
 }
 
 #Preview {
-    SystemInfoView()
+    NavigationStack {
+        SystemInfoView()
+    }
 }

@@ -16,7 +16,7 @@ struct AppPermissionView: View {
     var body: some View {
         CustomList(title: permissionName) {
             if permissionName == "Calendars" {
-                Section(content: {
+                Section {
                     VStack(alignment: .leading) {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
@@ -65,35 +65,35 @@ struct AppPermissionView: View {
                             .foregroundStyle(.secondary)
                             .font(.caption)
                     }
-                }, footer: {
+                } footer: {
                     Text("Calendar events may include additional data, such as location, email addresses, or notes.")
-                })
+                }
             }
             
             if permissionName == "Photos" {
-                Section(content: {
+                Section {
                     VStack(alignment: .leading) {
                         Text("**Full Photo Library Access**")
                         Text("No Items")
                             .foregroundStyle(.secondary)
                     }
                     .padding(3)
-                }, footer: {
+                } footer: {
                     Text("Photos may contain data associated with location, depth information, captions, and audio.")
-                })
+                }
             }
             
             if permissionName == "Focus" {
-                Section(content: {}, footer: {
+                Section {} footer: {
                     Text("Your Focus status tells apps and people that you have\nnotifications silenced.")
-                })
+                }
             }
             
-            Section(content: {}, header: {
+            Section {} header: {
                 if permissionName == "Focus" {
                     Text("Shared With")
                 }
-            },footer: {
+            } footer: {
                 switch permissionName {
                 case "Calendars":
                     Text("Apps that have requested access to your calendar events will appear here.")
@@ -120,11 +120,13 @@ struct AppPermissionView: View {
                 default:
                     Text("Applications that have requested the ability to use \(permissionName) will appear here.")
                 }
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AppPermissionView()
+    NavigationStack {
+        AppPermissionView()
+    }
 }

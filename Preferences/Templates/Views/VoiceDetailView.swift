@@ -19,7 +19,7 @@ struct VoiceDetailView: View {
     
     var body: some View {
         CustomList(title: voice) {
-            Section(content: {
+            Section {
                 HStack {
                     Image(systemName: "play.circle")
                         .font(.largeTitle)
@@ -39,11 +39,11 @@ struct VoiceDetailView: View {
                             .foregroundStyle(.blue)
                     }
                 }
-            }, header: {
+            } header: {
                 Text(language)
-            })
+            }
             
-            Section(content: {
+            Section {
                 Group {
                     Slider(value: $speakingRate,
                            in: 0.0...1.0,
@@ -53,13 +53,15 @@ struct VoiceDetailView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
+            } header: {
                 Text("Speaking Rate")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    VoiceDetailView(language: "English (US)", voice: "Samantha")
+    NavigationStack {
+        VoiceDetailView(language: "English (US)", voice: "Samantha")
+    }
 }

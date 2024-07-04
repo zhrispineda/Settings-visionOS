@@ -1,9 +1,12 @@
 #  Settings-visionOS
 SwiftUI recreation of the visionOS Settings app.
 
-**IMPORTANT:** This project is being worked on using **Xcode 16 beta** and **Swift 6.0**. To use this project on Xcode 15, change the version of Swift to 5.0:
-
-(Top of project sidebar) `Preferences` > `TARGETS` > `Preferences` > `Build Settings` > (Scroll to bottom) `Swift Compiler - Language` > `Swift Language Version` > Change the value `Swift 6` to `Swift 5`
+> [!IMPORTANT]
+> 
+> This project is being worked on using **Xcode 16 beta** and **Swift 6.0**. To use this project on Xcode 15, change the version of Swift to 5.0:
+>
+> (Top of project sidebar) `Preferences` > Under `TARGETS` > `Preferences` > `Build Settings` > (Scroll to bottom) `Swift Compiler - Language` > `Swift Language Version` > Change the value `Swift 6` to `Swift 5`
+>
 
 ## Examples
 ![A GIF comparing Apple's Settings app and this project's Settings app side-by-side](Assets/Settings.gif)

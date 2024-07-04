@@ -21,12 +21,14 @@ struct VoiceOverSoundView: View {
             }
             
             Section {
-                Button("Preview", action: {})
+                Button("Preview") {}
             }
         }
     }
 }
 
 #Preview {
-    VoiceOverSoundView()
+    NavigationStack {
+        VoiceOverSoundView()
+    }
 }

@@ -20,7 +20,7 @@ struct VerbosityMethodsView: View {
         CustomList(title: title) {
             Section {
                 ForEach(options, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         if option == "Do Nothing" {
                             selected = ["Do Nothing"]
                         } else if option == "Default" {
@@ -52,7 +52,7 @@ struct VerbosityMethodsView: View {
                                 selected.append(option)
                             }
                         }
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
@@ -60,7 +60,7 @@ struct VerbosityMethodsView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
             }
             
@@ -72,5 +72,7 @@ struct VerbosityMethodsView: View {
 }
 
 #Preview {
-    VerbosityMethodsView()
+    NavigationStack {
+        VerbosityMethodsView()
+    }
 }
