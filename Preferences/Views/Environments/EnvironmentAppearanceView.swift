@@ -9,30 +9,28 @@ import SwiftUI
 
 struct EnvironmentAppearanceView: View {
     // Variables
-    @State private var selectedOption: String? = "Light"
+    @State private var selected = "Light"
     let options = ["Automatic", "Light", "Dark"]
     
     var body: some View {
         CustomList(title: "Appearance") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
-                Text("Automatically adjust the Ennvironment appearance based on your time of day, or choose a default. Shared Environments will not be affected.")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
+                Text("Automatically adjust the Environment appearance based on your time of day, or choose a default. Shared Environments will not be affected.")
+            }
         }
     }
 }
 
 #Preview {
-    EnvironmentAppearanceView()
+    NavigationStack {
+        EnvironmentAppearanceView()
+    }
 }

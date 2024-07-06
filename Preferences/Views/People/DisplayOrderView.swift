@@ -9,30 +9,28 @@ import SwiftUI
 
 struct DisplayOrderView: View {
     // Variables
-    @State private var selectedOption: String? = "First, Last"
+    @State private var selected = "First, Last"
     let options = ["First, Last", "Last, First"]
     
     var body: some View {
         CustomList(title: "Display Order") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("Names in some languages such as Chinese, Japanese, and Korean follow a fixed order and will not be affected.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DisplayOrderView()
+    NavigationStack {
+        DisplayOrderView()
+    }
 }

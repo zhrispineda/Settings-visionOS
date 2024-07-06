@@ -18,76 +18,66 @@ struct AssistiveTouchView: View {
     
     var body: some View {
         CustomList(title: "AssistiveTouch") {
-            Section(content: {
+            Section {
                 Toggle("AssistiveTouch", isOn: $assistiveTouchEnabled)
-            }, footer: {
+            } footer: {
                 Text("AssistiveTouch allows you to use your \(UIDevice().name) if you have difficulty interacting with spatial content or if you require an adaptive accessory.")
-            })
+            }
             
             Section {
                 NavigationLink("Customize Top Level Menu", destination: CustomizeTopLevelMenuView())
             }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Single-Tap", subtitle: "", content: AssistiveTouchTapView(title: "Single-Tap"))
                 ListRowNavigationLabel(title: "Double-Tap", subtitle: "None", content: AssistiveTouchTapView(title: "Double-Tap"))
                 ListRowNavigationLabel(title: "Long Press", subtitle: "None", content: AssistiveTouchTapView(title: "Long Press"))
-            }, header: {
+            } header: {
                 Text("Custom Actions")
-            }, footer: {
+            } footer: {
                 Text("Custom actions allow you to interact directly with the AssistiveTouch icon without opening the menu.")
-            })
+            }
             
-            Section(content: {
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Create New Gesture...")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.secondary)
-                    }
-                })
-            }, header: {
+            Section {
+                Button {} label: {
+                    NavigationLink("Create New Gesture...") {}
+                }
+            } header: {
                 Text("Custom Gestures")
-            }, footer: {
+            } footer: {
                 Text("Custom gestures allow you to record gestures that can be activated from Custom in the Menu.")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Idle Opacity", subtitle: "40%", content: IdleOpacityView())
             }
             
-            Section(content: {
+            Section {
                 NavigationLink("Devices", destination: DevicesView())
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Mouse Keys")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.secondary)
-                    }
-                })
+                Button {} label: {
+                    NavigationLink("Mouse Keys") {}
+                }
                 Toggle("Show Onscreen Keyboard", isOn: $showOnscreenKeyboardEnabled)
                 Toggle("Always Show Menu", isOn: $alwaysShowMenuEnabled)
-            }, header: {
+            } header: {
                 Text("Pointer Devices")
-            }, footer: {
+            } footer: {
                 Text("\(alwaysShowMenuEnabled ? "Show the AssistiveTouch menu" : "The AssistiveTouch menu will be hidden") when a pointer device is connected.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Perform Touch Gestures", isOn: $performTouchGesturesEnabled)
-            }, footer: {
+            } footer: {
                 Text("Simulate a finger when performing gestures with a pointer device. When enabled, apps may recognize some gestures differently. For example, scrolling may be preferred over text selected.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Use Game Controller", isOn: $useGameControllerEnabled)
-            }, footer: {
+            } footer: {
                 Text("Allow AssistiveTouch to be controlled by Game Controllers.\n\n\t[Learn more...](#)")
-            })
+            }
             
-            Section(content: {
+            Section("Tracking Sensitivity") {
                 Group {
                     Slider(value: $trackingSensitivity,
                            in: 0.0...1.0,
@@ -97,9 +87,7 @@ struct AssistiveTouchView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
-                Text("Tracking Sensitivity")
-            })
+            }
         }
     }
 }

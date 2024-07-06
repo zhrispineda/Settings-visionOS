@@ -9,9 +9,8 @@ import SwiftUI
 
 struct MapsView: View {
     // Variables
-    @State private var selectedOption: String? = "Driving"
+    @State private var selected = "Driving"
     let options = ["Driving", "Walking", "Transit", "Cycling"]
-    
     @State private var airQualityIndexEnabled = true
     @State private var weatherConditionsEnabled = true
     @State private var alwaysEnglishEnabled = true
@@ -20,50 +19,41 @@ struct MapsView: View {
         CustomList(title: "Maps") {
             SiriSearchAccessNavigationLabel(appName: "Maps")
             
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
+                .labelsHidden()
+                .pickerStyle(.inline)
+            } header: {
                 Text("Preferred Type of Travel")
-            }, footer: {
+            } footer: {
                 Text("When available, this transportation time will be used to get directions and to estimate your travel time.")
-            })
+            }
             
-            Section(content: {
+            Section("Directions") {
                 NavigationLink("Driving", destination: DrivingView())
                 NavigationLink("Walking", destination: WalkingView())
                 NavigationLink("Transit", destination: TransitView())
                 NavigationLink("Cycling", destination: CyclingView())
-            }, header: {
-                Text("Directions")
-            })
+            }
             
-            Section(content: {
+            Section("Climate") {
                 Toggle("Air Quality Index", isOn: $airQualityIndexEnabled)
                 Toggle("Weather Conditions", isOn: $weatherConditionsEnabled)
-            }, header: {
-                Text("Climate")
-            })
+            }
             
-            Section(content: {
+            Section("Map Labels") {
                 Toggle("Always in English", isOn: $alwaysEnglishEnabled)
-            }, header: {
-                Text("Map Labels")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    MapsView()
-        .padding()
+    NavigationStack {
+        MapsView()
+    }
 }

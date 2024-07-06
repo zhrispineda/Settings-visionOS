@@ -13,11 +13,11 @@ struct ScreenSharingView: View {
     
     var body: some View {
         CustomList(title: "Screen Sharing") {
-            Section(content: {
+            Section {
                 Toggle("Allow Notifications", isOn: $allowNotificationsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Allow notifications while using SharePlay or Screen Mirroring.")
-            })
+            }
         }
     }
 }

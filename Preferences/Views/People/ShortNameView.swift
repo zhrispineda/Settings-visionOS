@@ -10,8 +10,7 @@ import SwiftUI
 struct ShortNameView: View {
     // Variables
     @State private var shortNameEnabled = true
-    
-    @State private var selectedOption: String? = "First Name Only"
+    @State private var selected = "First Name Only"
     let options = ["First Name & Last Initial", "First Initial & Last Name", "First Name Only", "Last Name Only"]
     
     @State private var preferNicknamesEnabled = true
@@ -23,32 +22,30 @@ struct ShortNameView: View {
             }
             
             if shortNameEnabled {
-                Section(content: {
-                    ForEach(options, id: \.self) { option in
-                        Button(action: { selectedOption = option }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                if selectedOption == option {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        })
+                Section {
+                    Picker("", selection: $selected) {
+                        ForEach(options, id: \.self) {
+                            Text($0)
+                        }
                     }
-                }, footer: {
+                    .pickerStyle(.inline)
+                    .labelsHidden()
+                } footer: {
                     Text("Short names are sometimes used to fit more names on screen. Chinese, Japanese, and Korean names are not affected by this setting.")
-                })
+                }
             }
             
-            Section(content: {
+            Section {
                 Toggle("Prefer Nicknames", isOn: $preferNicknamesEnabled)
-            }, footer: {
+            } footer: {
                 Text("Always use nicknames when available.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ShortNameView()
+    NavigationStack {
+        ShortNameView()
+    }
 }
