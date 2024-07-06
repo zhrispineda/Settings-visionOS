@@ -16,14 +16,14 @@ struct AboutView: View {
     var body: some View {
         CustomList(title: "About") {
             Section {
-                ListRowLabel(title: "Name", subtitle: UIDevice().name)
+                LabeledContent("Name", value: UIDevice().name)
                 ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion, content: VersionView())
-                ListRowLabel(title: "Model Name", subtitle: UIDevice().name)
-                ListRowLabel(title: "Model Number", subtitle: (showingModelNumber ? "A2117LL/A" : "A2117"))
+                LabeledContent("Model Name", value: UIDevice().name)
+                LabeledContent("Model Number", value: showingModelNumber ? "A2117LL/A" : "A2117")
                     .onTapGesture {
                         showingModelNumber.toggle()
                     }
-                ListRowLabel(title: "Serial Number", subtitle: serialNumber)
+                LabeledContent("Serial Number", value: serialNumber)
             }
             
             Section {
@@ -91,5 +91,7 @@ func randomSerialNumber() -> String {
 }
 
 #Preview {
-    AboutView()
+    NavigationStack {
+        AboutView()
+    }
 }

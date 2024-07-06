@@ -20,16 +20,18 @@ struct ListRowNavigationLabel<Content: View>: View {
         NavigationLink {
             content
         } label: {
-            HStack {
-                Text(title)
-                    .lineLimit(1)
-                Spacer()
-                if !icon.isEmpty {
+            if icon.isEmpty {
+                LabeledContent(title, value: subtitle)
+            } else {
+                HStack {
+                    Text(title)
+                        .lineLimit(1)
+                    Spacer()
                     Image(systemName: icon)
                         .foregroundStyle(.purple)
+                    Text(subtitle)
+                        .foregroundStyle(.secondary)
                 }
-                Text(subtitle)
-                    .foregroundStyle(.secondary)
             }
         }
     }

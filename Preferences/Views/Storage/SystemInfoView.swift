@@ -34,7 +34,7 @@ struct SystemInfoView: View {
                         }
                     }
                 }
-                ListRowLabel(title: "Documents & Data", subtitle: "\(title == "System Data" ? "3.3 GB" : "10.13 GB")")
+                LabeledContent("Documents & Data", value: title == "System Data" ? "3.3 GB" : "10.13 GB")
             }
         }
     }

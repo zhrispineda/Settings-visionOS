@@ -11,61 +11,35 @@ import SwiftUI
 struct AddOtherAccountView: View {
     var body: some View {
         CustomList(title: "Add Account") {
-            // TODO: Popovers for buttons
-            Section(content: {
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Add Mail Account")
-                        Spacer()
-                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                    }
-                })
-            }, header: {
-                Text("Mail")
-            })
+            Section("Mail") {
+                Button {} label: {
+                    NavigationLink("Add Mail Account") {}
+                }
+            }
             
-            Section(content: {
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Add LDAP Account")
-                        Spacer()
-                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                    }
-                })
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Add CardDAV Account")
-                        Spacer()
-                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                    }
-                })
-            }, header: {
-                Text("Contacts")
-            })
+            Section("Contacts") {
+                Button {} label: {
+                    NavigationLink("Add LDAP Account") {}
+                }
+                Button {} label: {
+                    NavigationLink("Add CardDAV Account") {}
+                }
+            }
             
-            Section(content: {
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Add CalDAV Account")
-                        Spacer()
-                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                    }
-                })
-                Button(action: {}, label: {
-                    HStack {
-                        Text("Add Subscribed Calendar")
-                        Spacer()
-                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                    }
-                })
-            }, header: {
-                Text("Calendars")
-            })
+            Section("Calendars") {
+                Button {} label: {
+                    NavigationLink("Add CardDAV Account") {}
+                }
+                Button {} label: {
+                    NavigationLink("Add Subscribed Calendar") {}
+                }
+            }
         }
     }
 }
 
 #Preview {
-    AddOtherAccountView()
-        .padding()
+    NavigationStack {
+        AddOtherAccountView()
+    }
 }

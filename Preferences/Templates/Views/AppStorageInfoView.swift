@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct AppStorageInfoView: View {
-    var appName: String = "Safari"
+    var appName = String()
     
     var body: some View {
         CustomList(title: appName) {
@@ -28,13 +28,13 @@ struct AppStorageInfoView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-                ListRowLabel(title: "Documents & Data", subtitle: "\(appName == "Calendar" ? "3.3 MB" : "345 KB")")
+                LabeledContent("Documents & Data", value: appName == "Calendar" ? "3.3 MB" : "345 KB")
             }
             
             if appName == "Calendar" {
                 Section {
-                    ListRowLabel(title: "Events", subtitle: "2.3 MB")
-                    ListRowLabel(title: "Attachments", subtitle: "Zero KB")
+                    LabeledContent("Events", value: "2.3 MB")
+                    LabeledContent("Attachments", value: "Zero KB")
                 } header: {
                     HStack {
                         Text(appName.uppercased())
@@ -57,17 +57,17 @@ struct AppStorageInfoView: View {
                 }
                 
                 Section {
-                    ListRowLabel(title: "Offline Reading List", subtitle: "Zero KB")
+                    LabeledContent("Offline Reading List", value: "Zero KB")
                 } footer: {
                     Text("Clearing the offline Reading List cache will not remove any items from your Reading List.")
                 }
                 
                 Section {
-                    ListRowLabel(title: "History", subtitle: "Zero KB")
+                    LabeledContent("History", value: "Zero KB")
                 }
                 
                 Section {
-                    ListRowLabel(title: "Downloads", subtitle: "Zero KB")
+                    LabeledContent("Downloads", value: "Zero KB")
                 }
                 
                 Section {

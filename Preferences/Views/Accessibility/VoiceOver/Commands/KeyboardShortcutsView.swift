@@ -141,13 +141,13 @@ struct KeyboardShortcutsView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 ForEach($keyboardShortcuts, editActions: .delete) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -155,22 +155,22 @@ struct KeyboardShortcutsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Keyboard Shortcuts")
-            })
+            }
         }
         .padding(.horizontal, 45)
         .searchable(text: $searchText)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing, content: {
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
-            })
-            ToolbarItem(placement: .principal, content: {
+            }
+            ToolbarItem(placement: .principal) {
                 Text("Keyboard Shortcuts")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: 50)
-            })
+            }
         }
     }
 }
