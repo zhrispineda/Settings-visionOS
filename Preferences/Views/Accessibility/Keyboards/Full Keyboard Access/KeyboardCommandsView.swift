@@ -69,17 +69,17 @@ struct KeyboardCommandsView: View {
     
     var body: some View {
         CustomList(title: "Commands") {
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("Tap any command to customize its keyboard shortcut.")
-            })
+            }
             
-            Section(content: {
+            Section("Basic") {
                 ForEach($basicShortcuts) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -87,17 +87,15 @@ struct KeyboardCommandsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
-                Text("Basic")
-            })
+            }
             
-            Section(content: {
+            Section("Movement") {
                 ForEach($movementShortcuts) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -105,17 +103,15 @@ struct KeyboardCommandsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
-                Text("Movement")
-            })
+            }
             
-            Section(content: {
+            Section("Interaction") {
                 ForEach($interactionShortcuts) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -123,17 +119,15 @@ struct KeyboardCommandsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
-                Text("Interaction")
-            })
+            }
             
-            Section(content: {
+            Section("Device") {
                 ForEach($deviceShortcuts) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -141,17 +135,15 @@ struct KeyboardCommandsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
-                Text("Device")
-            })
+            }
             
-            Section(content: {
+            Section("Gestures") {
                 ForEach($gestureShortcuts) { $shortcut in
-                    Button(action: {
+                    Button {
                         showingKeyboardShortcutAlert.toggle()
-                    }, label: {
-                        ListRowLabel(title: shortcut.name, subtitle: shortcut.shortcut)
-                    })
+                    } label: {
+                        LabeledContent(shortcut.name, value: shortcut.shortcut)
+                    }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}
@@ -159,12 +151,10 @@ struct KeyboardCommandsView: View {
                         Text("Enter a key combination on your keyboard.")
                     }
                 }
-            }, header: {
-                Text("Gestures")
-            })
+            }
             
             Section {
-                Button("Restore Defaults", action: {})
+                Button("Restore Defaults") {}
                     .foregroundStyle(.red)
             }
         }
