@@ -14,16 +14,18 @@ struct DrivingView: View {
     
     var body: some View {
         CustomList(title: "Driving") {
-            Section(content: {
+            Section {
                 Toggle("Tolls", isOn: $avoidTollsEnabled)
                 Toggle("Highways", isOn: $avoidHighwaysEnabled)
-            }, header: {
+            } header: {
                 Text("Avoid")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DrivingView()
+    NavigationStack {
+        DrivingView()
+    }
 }

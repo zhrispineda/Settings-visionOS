@@ -17,17 +17,18 @@ struct TimeZoneOverrideView: View {
                 Toggle("Time Zone Override", isOn: $timeZoneOverrideEnabled)
             }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Time Zone", subtitle: "\(timeZoneOverrideEnabled ? "Chicago" : "Off")", content: TimeZoneView())
                     .disabled(!timeZoneOverrideEnabled)
-            }, footer: {
+            } footer: {
                 Text("The Time Zone Override always shows event dates and times in the selected time zone.\n\nWhen off, events will display according to the time zone of your current location.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    TimeZoneOverrideView()
-        .padding()
+    NavigationStack {
+        TimeZoneOverrideView()
+    }
 }

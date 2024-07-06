@@ -17,17 +17,17 @@ struct FreeformView: View {
         CustomList(title: "Freeform") {
             SiriSearchAccessNavigationLabel(appName: "Freeform")
             
-            Section(content: {
+            Section("Alignment Guides") {
                 Toggle("Center Guides", isOn: $centerGuidesEnabled)
                 Toggle("Edge Guides", isOn: $edgeGuidesEnabled)
                 Toggle("Spacing Guides", isOn: $spacingGuidesEnabled)
-            }, header: {
-                Text("Alignment Guides")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    FreeformView()
+    NavigationStack {
+        FreeformView()
+    }
 }

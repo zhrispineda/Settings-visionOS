@@ -21,12 +21,12 @@ struct SafariAdvancedView: View {
                 NavigationLink("Website Data", destination: WebsiteDataView())
             }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Advanced Tracking and Fingerprinting Protection", subtitle: "Private Browsing", content: AdvancedTrackingFingerprintingProtectionView())
                 Toggle("Block All Cookies", isOn: $blockAllCookiesEnabled)
-                    .onChange(of: blockAllCookiesEnabled, {
+                    .onChange(of: blockAllCookiesEnabled) {
                         showingBlockCookiesAlert = blockAllCookiesEnabled
-                    })
+                    }
                     .alert("Are you sure you want to\nblock all cookies?", isPresented: $showingBlockCookiesAlert) {
                         Button("Block All", role: .destructive) {}
                         Button("Cancel", role: .cancel) { blockAllCookiesEnabled = false }
@@ -35,11 +35,11 @@ struct SafariAdvancedView: View {
                     }
                 Toggle("Privacy Preseving Ad Measurement", isOn: $privacyPreservingAdMeasurementEnabled)
                 Toggle("Check for Apple Pay", isOn: $checkForApplePayEnabled)
-            }, header: {
+            } header: {
                 Text("Privacy")
-            }, footer: {
+            } footer: {
                 Text("Allow websites to check if Apple Pay is enabled and if you have an Apple Card account.\n[About Safari & Privacy...](#)").tint(.cyan)
-            })
+            }
             
             Section {
                 Toggle("JavaScript", isOn: $javaScriptEnabled)
@@ -53,5 +53,7 @@ struct SafariAdvancedView: View {
 }
 
 #Preview {
-    SafariAdvancedView()
+    NavigationStack {
+        SafariAdvancedView()
+    }
 }

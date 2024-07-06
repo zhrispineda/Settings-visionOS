@@ -9,49 +9,45 @@ import SwiftUI
 
 struct StartWeekOnView: View {
     // Variables
-    @State private var selectedOption = "System Setting (Sunday)"
-
+    @State private var selected = "System Setting (Sunday)"
+    let option = ["System Setting (Sunday)"]
     let options = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     var body: some View {
         CustomList(title: "Start Week On") {
-            Section(content: {
-                Button(action: { selectedOption = "System Setting (Sunday)" }, label: {
-                    HStack {
-                        Text("System Setting (Sunday)")
-                        Spacer()
-                        if selectedOption == "System Setting (Sunday)" {
-                            Image(systemName: "checkmark")
-                        }
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(option, id: \.self) {
+                        Text($0)
                     }
-                })
-            }, header: {
-                Text("Mirror System Setting")
-            }, footer: {
-                Text("When selected, Calendar will use the setting from [Language & Region](#).").tint(.cyan)
-            })
-            
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
                 }
-            }, header: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
+                Text("Mirror System Setting")
+            } footer: {
+                Text("When selected, Calendar will use the setting from [Language & Region](#).").tint(.cyan)
+            }
+            
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
                 Text("Calendar App Only")
-            }, footer: {
+            } footer: {
                 Text("This setting will apply in Calendar only. Other apps will use the system setting.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    StartWeekOnView()
+    NavigationStack {
+        StartWeekOnView()
+    }
 }

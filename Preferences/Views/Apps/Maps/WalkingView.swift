@@ -15,17 +15,19 @@ struct WalkingView: View {
     
     var body: some View {
         CustomList(title: "Walking") {
-            Section(content: {
+            Section {
                 Toggle("Hills", isOn: $avoidHillsEnabled)
                 Toggle("Busy Roads", isOn: $avoidBusyRoadsEnabled)
                 Toggle("Stairs", isOn: $avoidStairsEnabled)
-            }, header: {
+            } header: {
                 Text("Avoid")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    WalkingView()
+    NavigationStack {
+        WalkingView()
+    }
 }

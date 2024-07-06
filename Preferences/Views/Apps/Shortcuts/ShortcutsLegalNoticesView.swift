@@ -10,11 +10,11 @@ import SwiftUI
 struct ShortcutsLegalNoticesView: View {
     var body: some View {
         CustomList(title: "Legal Notices") {
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("Legal Notices:")
                     .foregroundStyle(.secondary)
                     .listRowBackground(Color.clear)
-            })
+            }
         }
     }
 }

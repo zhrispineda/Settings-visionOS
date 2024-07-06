@@ -19,15 +19,17 @@ struct DefaultAlertTimesView: View {
                 ListRowNavigationLabel(title: "All-Day Events", subtitle: "None", content: AllDayEventsView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Time to Leave", isOn: $timeToLeaveEnabled).disabled(true)
-            }, footer: {
+            } footer: {
                 Text("Time to leave alerts are not available because Calendar does not have access to your precise location.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DefaultAlertTimesView()
+    NavigationStack {
+        DefaultAlertTimesView()
+    }
 }

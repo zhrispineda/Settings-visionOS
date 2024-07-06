@@ -9,39 +9,41 @@ import SwiftUI
 
 struct TransitView: View {
     // Variables
-    @State private var selectedOptions: [String] = ["Bus", "Subway & Light Rail", "Commuter Rail", "Ferry"]
+    @State private var selected = ["Bus", "Subway & Light Rail", "Commuter Rail", "Ferry"]
     let options = ["Bus", "Subway & Light Rail", "Commuter Rail", "Ferry"]
     
     var body: some View {
         CustomList(title: "Transit") {
-            Section(content: {
+            Section {
                 ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        if let index = selectedOptions.firstIndex(of: option) {
-                            selectedOptions.remove(at: index)
+                    Button {
+                        if let index = selected.firstIndex(of: option) {
+                            selected.remove(at: index)
                         } else {
-                            selectedOptions.append(option)
+                            selected.append(option)
                         }
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
-                            if selectedOptions.contains(option) {
+                            if selected.contains(option) {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
-                    .disabled(selectedOptions.contains(option) && selectedOptions.count < 2)
+                    }
+                    .disabled(selected.contains(option) && selected.count < 2)
                 }
-            }, header: {
+            } header: {
                 Text("Prefer Trips Using")
-            }, footer: {
+            } footer: {
                 Text("Prefer these vehicles when planning transit trips.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    TransitView()
+    NavigationStack {
+        TransitView()
+    }
 }

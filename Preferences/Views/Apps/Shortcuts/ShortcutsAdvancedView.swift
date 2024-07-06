@@ -16,11 +16,11 @@ struct ShortcutsAdvancedView: View {
     
     var body: some View {
         CustomList(title: "Advanced") {
-            Section(content: {
+            Section {
                 Toggle("Allow Running Scripts", isOn: $allowRunningScriptsEnabled)
-            }, footer: {
+            } footer: {
                 Text("When enabled, the actions \u{201C}Run JavaScript on Web Page\u{201D} and \u{201C}Run SSH Script Over SSH\u{201D} can be run.")
-            })
+            }
             
             Section {
                 Toggle("Allow Sharing Large Amounts of Data", isOn: $allowSharingLargeDataEnabled)
@@ -35,5 +35,7 @@ struct ShortcutsAdvancedView: View {
 }
 
 #Preview {
-    ShortcutsAdvancedView()
+    NavigationStack {
+        ShortcutsAdvancedView()
+    }
 }
