@@ -193,125 +193,103 @@ struct TouchGesturesView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section("Right Hand Pinches") {
                 ForEach(rightHandPinches) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Right Hand Pinches")
-            })
+            }
             
-            Section(content: {
+            Section("Left Hand Pinches") {
                 ForEach(leftHandPinches) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Left Hand Pinches")
-            })
+            }
             
-            Section(content: {
+            Section("Right Hand Pinch and Slide") {
                 ForEach(rightHandPinchSlide) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Right Hand Pinch and Slide")
-            })
+            }
             
-            Section(content: {
+            Section("Left Hand Pinch and Slide") {
                 ForEach(leftHandPinchSlide) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Left Hand Pinch and Slide")
-            })
+            }
             
-            Section(content: {
+            Section("Right Hand Pinches Modified by Left Index Finger") {
                 ForEach(rightHandPinchesModifiedLeftIndexFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Right Hand Pinches Modified by Left Index Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Right Hand Pinches Modified by Left Middle Finger") {
                 ForEach(rightHandPinchesModifiedLeftMiddleFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Right Hand Pinches Modified by Left Middle Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Right Hand Pinches Modified by Left Ring Finger") {
                 ForEach(rightHandPinchesModifiedLeftRingFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Right Hand Pinches Modified by Left Ring Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Left Hand Pinches Modified by Right Index Finger") {
                 ForEach(leftHandPinchesModifiedRightIndexFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Left Hand Pinches Modified by Right Index Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Left Hand Pinches Modified by Right Middle Finger") {
                 ForEach(leftHandPinchesModifiedRightMiddleFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Left Hand Pinches Modified by Right Middle Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Left Hand Pinches Modified by Right Ring Finger") {
                 ForEach(leftHandPinchesModifiedRightRingFinger) { item in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: item.name, subtitle: item.gesture)
-                    })
+                    Button {} label: {
+                        LabeledContent(item.name, value: item.gesture)
+                    }
                 }
-            }, header: {
-                Text("Left Hand Pinches Modified by Right Ring Finger")
-            })
+            }
             
-            Section(content: {
+            Section("Sound Actions") {
                 ForEach(soundActions) { sound in
-                    Button(action: {}, label: {
-                        ListRowLabel(title: sound.name, subtitle: sound.action)
-                    })
+                    Button {} label: {
+                        LabeledContent(sound.name, value: sound.action)
+                    }
                 }
-            }, header: {
-                Text("Sound Actions")
-            })
+            }
         }
         .padding(.horizontal, 45)
         .searchable(text: $searchText)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Touch Gestures")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: 50)
-            })
+            }
         }
     }
 }

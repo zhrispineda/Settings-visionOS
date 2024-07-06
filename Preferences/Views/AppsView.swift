@@ -12,6 +12,7 @@ struct AppsView: View {
         NavigationStack {
             CustomList(title: "Apps") {
                 Section {
+                    ListRowNavigationImageLabel(image: "applepasswords", title: "Passwords", content: EmptyView())
                     ListRowNavigationImageLabel(image: "applefreeform", title: "Freeform", content: FreeformView())
                     ListRowNavigationImageLabel(image: "applephotos", title: "Photos", content: PhotosView())
                     ListRowNavigationImageLabel(image: "applesafari", title: "Safari", content: SafariView())

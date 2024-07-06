@@ -9,30 +9,30 @@ import SwiftUI
 
 struct PunctuationNoneView: View {
     var body: some View {
-        CustomList() {
-            Section(content: {
-                ListRowLabel(title: "\u{0023}", subtitle: "Number Sign")
-                ListRowLabel(title: "\u{0024}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{007C}", subtitle: "Vertical Line")
-                ListRowLabel(title: "\u{007E}", subtitle: "Tilde")
-                ListRowLabel(title: "\u{005C}", subtitle: "Backslash")
-                ListRowLabel(title: "\u{005E}", subtitle: "Caret")
-                ListRowLabel(title: "\u{005F}", subtitle: "Underscore")
-                ListRowLabel(title: "\u{002A}", subtitle: "Star")
-                ListRowLabel(title: "\u{00B0}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{00B6}", subtitle: "Pilcrow")
-                ListRowLabel(title: "\u{00A2}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{00A3}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{00A4}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{00A5}", subtitle: "Ignore")
-                ListRowLabel(title: "\u{00A7}", subtitle: "Section Sign")
-            }, header: {
-                Text("Default Replacements")
-            })
+        CustomList {
+            Section("Default Replacements") {
+                LabeledContent("\u{0023}", value: "Number Sign")
+                LabeledContent("\u{0024}", value: "Ignore")
+                LabeledContent("\u{007C}", value: "Vertical Line")
+                LabeledContent("\u{007E}", value: "Tilde")
+                LabeledContent("\u{005C}", value: "Backslash")
+                LabeledContent("\u{005E}", value: "Caret")
+                LabeledContent("\u{005F}", value: "Underscore")
+                LabeledContent("\u{002A}", value: "Star")
+                LabeledContent("\u{00B0}", value: "Ignore")
+                LabeledContent("\u{00B6}", value: "Pilcrow")
+                LabeledContent("\u{00A2}", value: "Ignore")
+                LabeledContent("\u{00A3}", value: "Ignore")
+                LabeledContent("\u{00A4}", value: "Ignore")
+                LabeledContent("\u{00A5}", value: "Ignore")
+                LabeledContent("\u{00A7}", value: "Section Sign")
+            }
         }
     }
 }
 
 #Preview {
-    PunctuationNoneView()
+    NavigationStack {
+        PunctuationNoneView()
+    }
 }
