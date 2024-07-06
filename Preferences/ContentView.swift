@@ -72,7 +72,7 @@ struct ContentView: View {
                         .padding(.bottom, -5)
                         .padding(.horizontal, -5)
                 }
-              }
+            }
         } detail: {
             destination
                 .onChange(of: selection) { // Change views when selecting sidebar navigation links
@@ -110,26 +110,21 @@ struct SettingsLabel: View {
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
                             }
-                        } else {
-                            if internalIcons.contains(setting.icon) {
-                                ZStack {
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundStyle(setting.color.gradient)
-                                    Image(_internalSystemName: setting.icon)
-                                        //.resizable()
-                                        //.scaledToFit()
-                                        //.frame(width: 22)
-                                        .imageScale(setting.icon == "appstore" ? .medium : .small)
-                                        .padding(.bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
-                                }
-                            } else {
-                                Image(setting.icon)
-                                    .resizable()
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                                    .scaledToFit()
-                                    .frame(width: 33)
+                        } else if internalIcons.contains(setting.icon) {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(setting.color.gradient)
+                                Image(_internalSystemName: setting.icon)
+                                    .imageScale(setting.icon == "appstore" ? .medium : .small)
+                                    .padding(.bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
                             }
+                        } else {
+                            Image(setting.icon)
+                                .resizable()
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
+                                .scaledToFit()
+                                .frame(width: 33)
                         }
                         Text(setting.id)
                         Spacer()

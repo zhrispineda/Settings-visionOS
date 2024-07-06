@@ -16,30 +16,32 @@ struct HardwareKeyboardView: View {
     var body: some View {
         CustomList(title: "Hardware Keyboard") {
             Section {
-                ListRowNavigationLabel(title: "English", subtitle: "Automatic — U.S.", content: LanguageView())
+                ListRowNavigationLabel(title: "English (US)", subtitle: "Automatic — U.S.", content: LanguageView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Auto-Capitalization", isOn: $autoCapitalizationEnabled)
                 Toggle("Auto-Correction", isOn: $autoCorrectionEnabled)
                 Toggle("\u{201C}.\u{201D} Shortcut", isOn: $periodShortcutEnabled)
-            }, footer: {
+            } footer: {
                 Text("Pressing the space bar twice will insert a period followed by a space.")
-            })
+            }
             
             Section {
                 NavigationLink("Modifier Keys", destination: ModifierKeysView())
             }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Keyboard Type", subtitle: "ANSI", content: KeyboardTypeView())
-            }, footer: {
-                Text("Your keyboard has been identified. IF this isn't the correct type for your keyboard, select the type.")
-            })
+            } footer: {
+                Text("Your keyboard has been identified. If this isn't the correct type for your keyboard, select the type.")
+            }
         }
     }
 }
 
 #Preview {
-    HardwareKeyboardView()
+    NavigationStack {
+        HardwareKeyboardView()
+    }
 }
