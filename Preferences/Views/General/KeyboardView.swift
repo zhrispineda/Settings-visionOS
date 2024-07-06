@@ -28,14 +28,14 @@ struct KeyboardView: View {
         CustomList(title: "Keyboards") {
             Section {
                 ListRowNavigationLabel(title: "Keyboards", subtitle: "2", content: KeyboardsView())
-                NavigationLink("Hardware Keyboard", destination: HardwareKeyboardView())
             }
             
             Section {
                 NavigationLink("Text Replacement", destination: TextReplacementView())
+                NavigationLink("Hardware Keyboard", destination: HardwareKeyboardView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Auto-Capitalization", isOn: $autoCapitalizationEnabled)
                 Toggle("Auto-Correction", isOn: $autoCapitalizationEnabled)
                 Toggle("Check Spelling", isOn: $autoCapitalizationEnabled)
@@ -43,13 +43,13 @@ struct KeyboardView: View {
                 Toggle("Predictive", isOn: $autoCapitalizationEnabled)
                 Toggle("Smart Punctuation", isOn: $autoCapitalizationEnabled)
                 Toggle("\u{201C}.\u{201D} Shortcut", isOn: $autoCapitalizationEnabled)
-            }, header: {
+            } header: {
                 Text("All Keyboards")
-            }, footer: {
+            } footer: {
                 Text("Double tapping the space bar will insert a period followed by a space.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Enable Dictation", isOn: $dictationEnabled)
                     .alert("Enable Dictation?", isPresented: $showingDictationEnableAlert) {
                         Button("Enable Dictation") {}
@@ -58,10 +58,9 @@ struct KeyboardView: View {
                     } message: {
                         Text("When necessary, Dictation sends information like your voice input, contacts and location to Apple for processing your requests.")
                     }
-                    .onChange(of: dictationEnabled, {
+                    .onChange(of: dictationEnabled) {
                         showingDictationEnableAlert = dictationEnabled
-                    })
-                    // TODO: Popover for when turning off dictation
+                    }
                     .alert("Turn Off Dictation?", isPresented: $showingDictationDisableAlert) {
                         Button("Turn Off Dictation") {}
                         Button("Cancel", role: .cancel) { dictationEnabled = true }
@@ -70,31 +69,33 @@ struct KeyboardView: View {
                     }
                 Toggle("Auto-Punctuation", isOn: $autoPunctuationEnabled)
                 if dictationEnabled {
-                    NavigationLink(destination: DictationShortcutView(), label: {
+                    NavigationLink(destination: DictationShortcutView()) {
                         HStack {
                             Text("Dictation Shortcut")
                             Spacer()
                             Label("Control", systemImage: "control").foregroundStyle(.secondary)
                         }
-                    })
+                    }
                 }
-            }, header: {
+            } header: {
                 Text("Dictation")
-            }, footer: {
+            } footer: {
                 Text("\(dictationEnabled ? "Dictation processes many voice inputs on \(UIDevice().name). Information will be sent to Apple in some cases. " : "")[About Dictation & Privacy...](#)").tint(.cyan)
-            })
+            }
             
             if dictationEnabled {
-                Section(content: {
+                Section {
                     Toggle("Look to Dictate", isOn: $lookToDictateEnabled)
-                }, footer: {
+                } footer: {
                     Text("In Safari and supported search fields, focusing your eyes on the microphone will start Dictation.")
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    KeyboardView()
+    NavigationStack {
+        KeyboardView()
+    }
 }

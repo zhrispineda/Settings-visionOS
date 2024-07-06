@@ -17,17 +17,14 @@ struct Flag: Identifiable {
 struct FeatureFlagsView: View {
     // Variables
     @State private var experimentalFlags = [
-        Flag(title: "HTML <model> element", isOn: false),
-        Flag(title: "WebXR Device API", isOn: false),
-        Flag(title: "WebXR Hand Input Module", isOn: false)
+        Flag(title: "HTML <model> element", isOn: false)
     ]
     
     @State private var featureFlags = [
-        Flag(title: ":dir pseudo-class", isOn: true),
-        Flag(title: ":focus-visible pseudo-class", isOn: true),
-        Flag(title: ":has() pseudo-class", isOn: true),
-        Flag(title: "ARIA Reflection for Element References", isOn: true),
-        Flag(title: "AbortSignal.any() API", isOn: false),
+        Flag(title: "::grammar-error and ::spelling-error pseudo-elements", isOn: true),
+        Flag(title: "::thumb and ::track pseudo-elements", isOn: false),
+        Flag(title: "<select> showPicker() method", isOn: false),
+        Flag(title: "AbortSignal.any() API", isOn: true),
         Flag(title: "AccessHandle API", isOn: true),
         Flag(title: "Allow WebGL in Web Workers", isOn: true),
         Flag(title: "Allow per media element speaker device selection", isOn: false),
@@ -182,39 +179,46 @@ struct FeatureFlagsView: View {
         Flag(title: "WebRTC SFrame Transform API", isOn: false),
         Flag(title: "WebRTC VP9 profile 2 codec", isOn: false),
         Flag(title: "WebXR Augmented Reality Module", isOn: false),
-        Flag(title: "WebXR Gamepads Module", isOn: false),
+        Flag(title: "WebXR Device API", isOn: true),
+        Flag(title: "WebXR Gamepads Module", isOn: true),
+        Flag(title: "WebXR Hand Input Module", isOn: true),
+        Flag(title: "Writing Suggestions", isOn: true),
         Flag(title: "[ITP Live-On] 1 Hour Timeout For Non-Cookie Data Removal", isOn: false),
         Flag(title: "[ITP Repro] 30 Second Timeout For Non-Cookie Data Removal", isOn: false),
-        Flag(title: "lh / rlh units", isOn: true),
-        Flag(title: "word-break: auto enabled", isOn: false),
+        Flag(title: "align-content on blocks", isOn: true),
+        Flag(title: "element.checkVisibility() API", isOn: true),
+        Flag(title: "requestIdleCallback", isOn: false),
+        Flag(title: "word-break: auto-phrase enabled", isOn: false),
         Flag(title: "Passkeys site-specific hacks", isOn: true)
     ]
     
     var body: some View {
         CustomList(title: "WebKit Feature Flags") {
-            Section(content: {
+            Section {
                 ForEach($experimentalFlags) { $flag in
                     Toggle(flag.title, isOn: $flag.isOn)
                 }
-            }, header: {
+            } header: {
                 Text("Experimental XR Features")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ForEach($featureFlags) { $flag in
                     Toggle(flag.title, isOn: $flag.isOn)
                 }
-            }, header: {
+            } header: {
                 Text("WebKit Feature Flags")
-            })
+            }
             
             Section {
-                Button("Reset All to Defaults", action: {})
+                Button("Reset All to Defaults") {}
             }
         }
     }
 }
 
 #Preview {
-    FeatureFlagsView()
+    NavigationStack {
+        FeatureFlagsView()
+    }
 }
