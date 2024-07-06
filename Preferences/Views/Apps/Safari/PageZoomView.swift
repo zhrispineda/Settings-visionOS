@@ -9,43 +9,38 @@ import SwiftUI
 
 struct PageZoomView: View {
     // Variables
-    @State private var selectedOption: String? = "100%"
-
+    @State private var selected = "100%"
     let options = ["50%", "75%", "100%", "115%", "125%", "150%", "175%", "200%", "250%", "300%"]
     
     var body: some View {
         List {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section("Page Zoom On All Websites") {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Page Zoom On All Websites")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
         }
         .padding(.horizontal, 45)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Page Zoom")
                     .font(.title)
                     .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
                     .disabled(true)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    PageZoomView()
+    NavigationStack {
+        PageZoomView()
+    }
 }

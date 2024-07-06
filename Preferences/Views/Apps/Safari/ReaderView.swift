@@ -13,27 +13,29 @@ struct ReaderView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 Toggle("All Websites", isOn: $allWebsitesEnabled)
-            }, header: {
+            } header: {
                 Text("Automatically Use Reader On")
-            })
+            }
         }
         .padding(.horizontal, 45)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Reader")
                 .font(.title)
                 .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
                     .disabled(true)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ReaderView()
+    NavigationStack {
+        ReaderView()
+    }
 }

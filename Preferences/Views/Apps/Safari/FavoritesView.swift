@@ -10,28 +10,26 @@ import SwiftUI
 struct FavoritesView: View {
     var body: some View {
         CustomList(title: "Favorites") {
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("Quickly access Favorite bookmarks when you enter an address, search, or create a new tab.")
-            })
+            }
             
             Section {
-                Button(action: {}, label: {
+                Button {} label: {
                     HStack(spacing: 15) {
-                        Image(systemName: "folder")
-                            .font(.title2)
-                            .fontWeight(.light)
-                            .foregroundStyle(.blue)
-                        Text("Favorites")
+                        Label("Favorites", systemImage: "folder")
                         Spacer()
                         Image(systemName: "checkmark")
                             .foregroundStyle(.white)
                     }
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    FavoritesView()
+    NavigationStack {
+        FavoritesView()
+    }
 }

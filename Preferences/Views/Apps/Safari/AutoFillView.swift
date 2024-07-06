@@ -14,28 +14,21 @@ struct AutoFillView: View {
     
     var body: some View {
         CustomList(title: "AutoFill") {
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("Automatically fill out web forms using your contact or credit card info.")
-            })
+            }
             
             Section {
                 Toggle("Use Contact Info", isOn: $useContactInfoEnabled)
-                // TODO: Contacts sheet popup for button
-                Button(action: {}, label: {
-                    HStack {
-                        Text("My Info")
-                        Spacer()
-                        Text("None")
-                            .foregroundStyle(.secondary)
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.secondary)
+                Button {} label: {
+                    NavigationLink(destination: EmptyView()) {
+                        LabeledContent("My Info", value: "None")
                     }
-                })
+                }
             }
             
             Section {
                 Toggle("Credit Cards", isOn: $creditCardsEnabled)
-                // TODO: Add authentication to view SavedCreditCardsView
                 NavigationLink("Saved Credit Cards", destination: SavedCreditCardsView())
             }
         }
@@ -43,5 +36,7 @@ struct AutoFillView: View {
 }
 
 #Preview {
-    AutoFillView()
+    NavigationStack {
+        AutoFillView()
+    }
 }
