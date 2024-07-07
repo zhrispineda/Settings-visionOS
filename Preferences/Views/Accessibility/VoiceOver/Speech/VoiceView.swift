@@ -170,7 +170,7 @@ struct VoiceView: View {
         CustomList(title: title) {
             switch title {
             case "English":
-                Section(content: {
+                Section("English (US)") {
                     ForEach(enUSVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (US)", voice: voice), label: {
                             HStack {
@@ -183,11 +183,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (US)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (Australia)") {
                     ForEach(enAUVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (Australia)", voice: voice), label: {
                             HStack {
@@ -200,11 +198,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (Australia)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (India)") {
                     ForEach(enINVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (India)", voice: voice), label: {
                             HStack {
@@ -217,11 +213,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (India)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (Ireland)") {
                     ForEach(enIRVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (Ireland)", voice: voice), label: {
                             HStack {
@@ -234,11 +228,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (Ireland)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (Scotland, UK)") {
                     ForEach(enSUKVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (Scotland, UK)", voice: voice), label: {
                             HStack {
@@ -251,11 +243,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (Scotland, UK)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (South Africa)") {
                     ForEach(enSAVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (South Africa)", voice: voice), label: {
                             HStack {
@@ -268,11 +258,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (South Africa)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (UK)") {
                     ForEach(enUKVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (UK)", voice: voice), label: {
                             HStack {
@@ -285,11 +273,9 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (UK)")
-                })
+                }
                 
-                Section(content: {
+                Section("English (Novelty)") {
                     ForEach(noveltyVoices, id: \.self) { voice in
                         NavigationLink(destination: VoiceDetailView(language: "English (Novelty)", voice: voice), label: {
                             HStack {
@@ -302,465 +288,349 @@ struct VoiceView: View {
                             }
                         })
                     }
-                }, header: {
-                    Text("English (Novelty)")
-                })
+                }
             case "Arabic":
-                Section(content: {
+                Section("Arabic (World)") {
                     ForEach(arabicVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Arabic (World)", voice: voice))
                     }
-                }, header: {
-                    Text("Arabic (World)")
-                })
+                }
             case "Bangla":
-                Section(content: {
+                Section("Bangla (India)") {
                     ForEach(banglaVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Bangla (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Bangla (India)")
-                })
+                }
             case "Basque":
-                Section(content: {
+                Section("Basque (Spain)") {
                     ForEach(basqueVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Basque (Spain)", voice: voice))
                     }
-                }, header: {
-                    Text("Basque (Spain)")
-                })
+                }
             case "Bhojpuri":
-                Section(content: {
+                Section("Bhojpuri (India)") {
                     ForEach(bhojpuriVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Bhojpuri (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Bhojpuri (India)")
-                })
+                }
             case "Bulgarian":
-                Section(content: {
+                Section("Bulgarian (Bulgaria)") {
                     ForEach(bulgarianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Bulgarian (Bulgaria)", voice: voice))
                     }
-                }, header: {
-                    Text("Bulgarian (Bulgaria)")
-                })
+                }
             case "Catalan":
-                Section(content: {
+                Section("Catalan (Spain)") {
                     ForEach(catalanVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Catalan (Spain)", voice: voice))
                     }
-                }, header: {
-                    Text("Catalan (Spain)")
-                })
+                }
                 
-                Section(content: {
+                Section("Valencian (Spain)") {
                     ForEach(valencianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Valencian (Spain)", voice: voice))
                     }
-                }, header: {
-                    Text("Valencian (Spain)")
-                })
+                }
             case "Chinese":
-                Section(content: {
+                Section("Chinese (China mainland)") {
                     ForEach(chineseMainlandVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (China mainland)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (China mainland)")
-                })
+                }
                 
-                Section(content: {
+                Section("Chinese (Hong Kong)") {
                     ForEach(chineseHongKongVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (Hong Kong)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (Hong Kong)")
-                })
+                }
                 
-                Section(content: {
+                Section("Chinese (Liaoning, China mainland)") {
                     ForEach(chineseLiaoningVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (Liaoning, China mainland)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (Liaoning, China mainland)")
-                })
+                }
                 
-                Section(content: {
+                Section("Chinese (Shaanxi, China mainland)") {
                     ForEach(chineseShaanxiVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (Shaanxi, China mainland)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (Shaanxi, China mainland)")
-                })
+                }
                 
-                Section(content: {
+                Section("Chinese (Sichuan, China mainland)") {
                     ForEach(chineseSichuanVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (Shichuan, China mainland)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (Sichuan, China mainland)")
-                })
+                }
                 
-                Section(content: {
+                Section("Chinese (Taiwan)") {
                     ForEach(chineseTaiwanVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Chinese (Taiwan)", voice: voice))
                     }
-                }, header: {
-                    Text("Chinese (Taiwan)")
-                })
+                }
             case "Croatian":
-                Section(content: {
+                Section("Croatian (Croatia)") {
                     ForEach(croatianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Croatian (Croatia)", voice: voice))
                     }
-                }, header: {
-                    Text("Croatian (Croatia)")
-                })
+                }
             case "Czech":
-                Section(content: {
+                Section("Czech (Czechia)") {
                     ForEach(czechVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Czech (Czechia)", voice: voice))
                     }
-                }, header: {
-                    Text("Czech (Czechia)")
-                })
+                }
             case "Danish":
-                Section(content: {
+                Section("Danish (Denmark)") {
                     ForEach(danishVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Danish (Denmark)", voice: voice))
                     }
-                }, header: {
-                    Text("Danish (Denmark)")
-                })
+                }
             case "Dutch":
-                Section(content: {
+                Section("Dutch (Belgium)") {
                     ForEach(dutchBelgiumVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Dutch (Belgium)", voice: voice))
                     }
-                }, header: {
-                    Text("Dutch (Belgium)")
-                })
+                }
                 
-                Section(content: {
+                Section("Dutch (Netherlands)") {
                     ForEach(dutchNetherlands, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Dutch (Netherlands)", voice: voice))
                     }
-                }, header: {
-                    Text("Dutch (Netherlands)")
-                })
+                }
             case "Finnish":
-                Section(content: {
+                Section("Finnish (Finland)") {
                     ForEach(finnishVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Finnish (Finland)", voice: voice))
                     }
-                }, header: {
-                    Text("Finnish (Finland)")
-                })
+                }
             case "French":
-                Section(content: {
+                Section("French (Belgium)") {
                     ForEach(frenchBelgiumVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "French (Belgium)", voice: voice))
                     }
-                }, header: {
-                    Text("French (Belgium)")
-                })
+                }
                 
-                Section(content: {
+                Section("French (Canada)") {
                     ForEach(frenchCanadaVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "French (Canada)", voice: voice))
                     }
-                }, header: {
-                    Text("French (Canada)")
-                })
+                }
                 
-                Section(content: {
+                Section("French (France)") {
                     ForEach(frenchFranceVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "French (France)", voice: voice))
                     }
-                }, header: {
-                    Text("French (France)")
-                })
+                }
             case "Galician":
-                Section(content: {
+                Section("Galician (Spain)") {
                     ForEach(galicianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Galician (Spain)", voice: voice))
                     }
-                }, header: {
-                    Text("Galician (Spain)")
-                })
+                }
             case "German":
-                Section(content: {
+                Section("German (Germany)") {
                     ForEach(germanVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "German (Germany)", voice: voice))
                     }
-                }, header: {
-                    Text("German (Germany)")
-                })
+                }
             case "Greek":
-                Section(content: {
+                Section("Greek (Greece)") {
                     ForEach(greekVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Greek (Greece)", voice: voice))
                     }
-                }, header: {
-                    Text("Greek (Greece)")
-                })
+                }
             case "Hebrew":
-                Section(content: {
+                Section("Hebrew (Israel)") {
                     ForEach(hebrewVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Hebrew (Israel)", voice: voice))
                     }
-                }, header: {
-                    Text("Hebrew (Israel)")
-                })
+                }
             case "Hindi":
-                Section(content: {
+                Section("Hindi (India)") {
                     ForEach(hindiVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Hindi (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Hindi (India)")
-                })
+                }
             case "Hungarian":
-                Section(content: {
+                Section("Hungarian (Hungary)") {
                     ForEach(hungarianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Hungarian (Hungary)", voice: voice))
                     }
-                }, header: {
-                    Text("Hungarian (Hungary)")
-                })
+                }
             case "Indonesian":
-                Section(content: {
+                Section("Indonesian (Indonesia)") {
                     ForEach(indonesianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Indonesian (Indonesia)", voice: voice))
                     }
-                }, header: {
-                    Text("Indonesian (Indonesia)")
-                })
+                }
             case "Italian":
-                Section(content: {
+                Section("Italian (Italy)") {
                     ForEach(italianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Italian (Italy)", voice: voice))
                     }
-                }, header: {
-                    Text("Italian (Italy)")
-                })
+                }
             case "Japanese":
-                Section(content: {
+                Section("Japanese (Japan)") {
                     ForEach(japaneseVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Japanese (Japan)", voice: voice))
                     }
-                }, header: {
-                    Text("Japanese (Japan)")
-                })
+                }
             case "Kannada":
-                Section(content: {
+                Section("Kannada (India)") {
                     ForEach(kannadaVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Kannada (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Kannada (India)")
-                })
+                }
             case "Korean":
-                Section(content: {
+                Section("Korean (Korea)") {
                     ForEach(koreanVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Korean (Korea)", voice: voice))
                     }
-                }, header: {
-                    Text("Korean (Korea)")
-                })
+                }
             case "Malay":
-                Section(content: {
+                Section("Malay (Malaysia)") {
                     ForEach(malayVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Malay (Malaysia)", voice: voice))
                     }
-                }, header: {
-                    Text("Malay (Malaysia)")
-                })
+                }
             case "Marathi":
-                Section(content: {
+                Section("Marathi (India)") {
                     ForEach(marathiVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Marathi (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Marathi (India)")
-                })
+                }
             case "Norwegian Bokmål":
-                Section(content: {
+                Section("Norwegian Bokmål (Norway)") {
                     ForEach(norwegianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Norwegian Bokmål (Norway)", voice: voice))
                     }
-                }, header: {
-                    Text("Norwegian Bokmål (Norway)")
-                })
+                }
             case "Persian":
-                Section(content: {
+                Section("Persian (Iran)") {
                     ForEach(persianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Persian (Iran)", voice: voice))
                     }
-                }, header: {
-                    Text("Persian (Iran)")
-                })
+                }
             case "Polish":
-                Section(content: {
+                Section("Polish (Poland)") {
                     ForEach(polishVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Polish (Poland)", voice: voice))
                     }
-                }, header: {
-                    Text("Polish (Poland)")
-                })
+                }
             case "Portuguese":
-                Section(content: {
+                Section("Portuguese (Brazil)") {
                     ForEach(portugueseBrazilVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Portuguese (Brazil)", voice: voice))
                     }
-                }, header: {
-                    Text("Portuguese (Brazil)")
-                })
+                }
                 
-                Section(content: {
+                Section("Portuguese (Portugal)") {
                     ForEach(portuguesePortugalVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Portuguese (Portugal)", voice: voice))
                     }
-                }, header: {
-                    Text("Portuguese (Portugal)")
-                })
+                }
             case "Romanian":
-                Section(content: {
+                Section("Romanian (Romania)") {
                     ForEach(romanianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Romanian (Romania)", voice: voice))
                     }
-                }, header: {
-                    Text("Romanian (Romania)")
-                })
+                }
             case "Russian":
-                Section(content: {
+                Section("Russian (Russia)") {
                     ForEach(russianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Russian (Russia)", voice: voice))
                     }
-                }, header: {
-                    Text("Russian (Russia)")
-                })
+                }
             case "Shanghainese":
-                Section(content: {
+                Section("Shanghainese (China mainland)") {
                     ForEach(shanghaineseVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Shanghainese (China mainland)", voice: voice))
                     }
-                }, header: {
-                    Text("Shanghainese (China mainland)")
-                })
+                }
             case "Slovak":
-                Section(content: {
+                Section("Slovak (Slovakia)") {
                     ForEach(slovakVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Slovak (Slovakia)", voice: voice))
                     }
-                }, header: {
-                    Text("Slovak (Slovakia)")
-                })
+                }
             case "Slovenian":
-                Section(content: {
+                Section("Slovenian (Slovenia)") {
                     ForEach(slovenianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Slovenian (Slovenia)", voice: voice))
                     }
-                }, header: {
-                    Text("Slovenian (Slovenia)")
-                })
+                }
             case "Spanish":
-                Section(content: {
+                Section("Spanish (Argentina)") {
                     ForEach(spanishArgentinaVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Spanish (Argentina)", voice: voice))
                     }
-                }, header: {
-                    Text("Spanish (Argentina)")
-                })
+                }
                 
-                Section(content: {
+                Section("Spanish (Chile)") {
                     ForEach(spanishChileVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Spanish (Chile)", voice: voice))
                     }
-                }, header: {
-                    Text("Spanish (Chile)")
-                })
+                }
                 
-                Section(content: {
+                Section("Spanish (Colombia)") {
                     ForEach(spanishColumbiaVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Spanish (Colombia)", voice: voice))
                     }
-                }, header: {
-                    Text("Spanish (Colombia)")
-                })
+                }
                 
-                Section(content: {
+                Section("Spanish (Mexico)") {
                     ForEach(spanishMexicoVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Spanish (Mexico)", voice: voice))
                     }
-                }, header: {
-                    Text("Spanish (Mexico)")
-                })
+                }
                 
-                Section(content: {
+                Section("Spanish (Spain)") {
                     ForEach(spanishSpainVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Spanish (Spain)", voice: voice))
                     }
-                }, header: {
-                    Text("Spanish (Spain)")
-                })
+                }
             case "Swedish":
-                Section(content: {
+                Section("Swedish (Swedish)") {
                     ForEach(swedishVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Swedish (Swedish)", voice: voice))
                     }
-                }, header: {
-                    Text("Swedish (Swedish)")
-                })
+                }
             case "Tamil":
-                Section(content: {
+                Section("Tamil (India)") {
                     ForEach(tamilVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Tamil (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Tamil (India)")
-                })
+                }
             case "Telugu":
-                Section(content: {
+                Section("Telugu (India)") {
                     ForEach(teluguVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Telugu (India)", voice: voice))
                     }
-                }, header: {
-                    Text("Telugu (India)")
-                })
+                }
             case "Thai":
-                Section(content: {
+                Section("Thai (Thailand)") {
                     ForEach(thaiVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Thai (Thailand)", voice: voice))
                     }
-                }, header: {
-                    Text("Thai (Thailand)")
-                })
+                }
             case "Turkish":
-                Section(content: {
+                Section("Turkish (Türkiye)") {
                     ForEach(turkishVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Turkish (Türkiye)", voice: voice))
                     }
-                }, header: {
-                    Text("Turkish (Türkiye)")
-                })
+                }
             case "Ukrainian":
-                Section(content: {
+                Section("Ukrainian (Ukraine)") {
                     ForEach(ukrainianVoices, id: \.self) { voice in
                         NavigationLink(voice, destination: VoiceDetailView(language: "Ukrainian (Ukraine)", voice: voice))
                     }
-                }, header: {
-                    Text("Ukrainian (Ukraine)")
-                })
+                }
             case "Vietnamese":
-                Section(content: {
-                    ForEach(vietnameseVoices, id: \.self) { voice in
-                        NavigationLink(voice, destination: VoiceDetailView(language: "Vietnamese (Vietnam)", voice: voice))
+                Section("Vietnamese (Vietnam)") {
+                    ForEach(vietnameseVoices, id: \.self) {
+                        NavigationLink($0, destination: VoiceDetailView(language: "Vietnamese (Vietnam)", voice: $0))
                     }
-                }, header: {
-                    Text("Vietnamese (Vietnam)")
-                })
+                }
             default:
                 Text("No voices available.")
             }
