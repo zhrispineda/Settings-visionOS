@@ -16,11 +16,11 @@ struct SpokenContentView: View {
     
     var body: some View {
         CustomList(title: "Spoken Content") {
-            Section(content: {
+            Section {
                 Toggle("Speak Selection", isOn: $speakSelectionEnabled)
-            }, footer: {
+            } footer: {
                 Text("A Speak button will appear when you select text.")
-            })
+            }
             
             Section {
                 Toggle("Speak Screen", isOn: $speakScreenEnabled)
@@ -36,7 +36,7 @@ struct SpokenContentView: View {
                 Toggle("Detect Languages", isOn: $detectLanguagesEnabled)
             }
             
-            Section(content: {
+            Section("Speaking Rate") {
                 Group {
                     Slider(value: $speakingRate,
                            in: 0.0...1.0,
@@ -46,20 +46,18 @@ struct SpokenContentView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
-                Text("Speaking Rate")
-            })
+            }
             
             Section {
                 NavigationLink("Pronunciations", destination: PronunciationsView())
             }
             
             if speakSelectionEnabled || speakScreenEnabled {
-                Section(content: {
+                Section {
                     ListRowNavigationLabel(title: "Highlight Content", subtitle: "Off", content: HighlightContentView())
-                }, footer: {
+                } footer: {
                     Text("Highlight content as it is spoken.")
-                })
+                }
             }
         }
     }

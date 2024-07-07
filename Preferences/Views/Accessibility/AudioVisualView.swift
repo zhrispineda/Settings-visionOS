@@ -15,13 +15,13 @@ struct AudioVisualView: View {
     
     var body: some View {
         CustomList(title: "Audio & Visual") {
-            Section(content: {
+            Section {
                 Toggle("Mono Audio", isOn: $monoAudioEnabled)
-            }, footer: {
+            } footer: {
                 Text("Make the left and right speakers play the same content.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 VStack {
                     HStack {
                         Text("L")
@@ -37,21 +37,23 @@ struct AudioVisualView: View {
                     )
                     .colorMultiply(.gray)
                 }
-            }, header: {
+            } header: {
                 Text("Balance")
-            }, footer: {
+            } footer: {
                 Text("Adjust the audio volume balance between left and right channels.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Sound Effects", isOn: $soundEffectsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Adjusts whether your \(UIDevice().name) plays sound effects when interacting with the controls.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AudioVisualView()
+    NavigationStack {
+        AudioVisualView()
+    }
 }

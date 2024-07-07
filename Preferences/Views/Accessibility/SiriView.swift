@@ -11,56 +11,63 @@ struct SiriView: View {
     // Variables
     @State private var typeToSiri = false
     @State private var siriPauseTimeOption = "Default"
-    let siriPauseTimeOptions = ["Default", "Longer", "Longest"]
-    
     @State private var spokenResponsesOption = "Automatic"
-    let spokenResponsesOptions = ["Automatic", "Prefer Spoken Responses"]
+    @State private var speakingRate = 100.0
+    let siriPauseTimeOptions = ["Default", "Longer", "Longest"]
+    let spokenResponsesOptions = ["Prefer Silent Responses", "Automatic", "Prefer Spoken Responses"]
     
     var body: some View {
         CustomList(title: "Siri") {
-            Section(content: {
+            Section {
                 Toggle("Type to Siri", isOn: $typeToSiri)
-            }, footer: {
+            } footer: {
                 Text("Siri will \(typeToSiri ? "allow you to type your requests rather than speaking them." : "listen for voice input.")")
-            })
+            }
             
-            Section(content: {
-                ForEach(siriPauseTimeOptions, id: \.self) { option in
-                    Button(action: { siriPauseTimeOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if siriPauseTimeOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $siriPauseTimeOption) {
+                    ForEach(siriPauseTimeOptions, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
                 Text("Siri Pause Time")
-            }, footer: {
+            } footer: {
                 Text("Set how long Siri waits for you to finish speaking.")
-            })
+            }
             
-            Section(content: {
-                ForEach(spokenResponsesOptions, id: \.self) { option in
-                    Button(action: { spokenResponsesOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if spokenResponsesOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section("Speaking Rate") {
+                Group {
+                    VStack {
+                        Slider(value: $speakingRate,
+                               in: 80.0...200.0,
+                               minimumValueLabel: Image(systemName: "tortoise.fill"),
+                               maximumValueLabel: Image(systemName: "hare.fill"),
+                               label: { Text("Speaking Rate") }
+                        )
+                        Text("\(Int(speakingRate))%")
+                    }
                 }
-            }, header: {
-                Text("Spoken Responses")
-            })
+                .imageScale(.large)
+            }
+            
+            Section("Spoken Responses") {
+                Picker("", selection: $spokenResponsesOption) {
+                    ForEach(spokenResponsesOptions, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
         }
     }
 }
 
 #Preview {
-    SiriView()
+    NavigationStack {
+        SiriView()
+    }
 }

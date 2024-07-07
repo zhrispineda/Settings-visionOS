@@ -22,7 +22,7 @@ struct DisplayAppearanceView: View {
     
     var body: some View {
         CustomList(title: "Appearance") {
-            Section(content: {
+            Section {
                 Picker("Window Zoom Picker", selection: $textSize) {
                     Text("Small").tag(Size.Small)
                     Text("Medium").tag(Size.Medium)
@@ -30,21 +30,23 @@ struct DisplayAppearanceView: View {
                     Text("Extra Large").tag(Size.extraLarge)
                 }
                 .pickerStyle(SegmentedPickerStyle())
-            }, header: {
+            } header: {
                 Text("Window Zoom")
-            }, footer: {
+            } footer: {
                 Text("Choose how you would like to view your \(UIDevice().name) content. Windows and controls will appear larger or smaller.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Two-Handed Window Zoom", isOn: $twoHandedWindowZoomEnabled)
-            }, footer: {
+            } footer: {
                 Text("Temporarily adjust window zoom by pinching with two hands, then pulling them apart or together.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DisplayAppearanceView()
+    NavigationStack {
+        DisplayAppearanceView()
+    }
 }

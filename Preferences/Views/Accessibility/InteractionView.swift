@@ -13,27 +13,27 @@ struct InteractionView: View {
     
     var body: some View {
         CustomList(title: "Interaction") {
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "AssistiveTouch", subtitle: "Off", content: AssistiveTouchView())
-            }, footer: {
+            } footer: {
                 Text("AssistiveTouch allows you to use your \(UIDevice().name) if you have difficulty interacting with spatial content or if you require an adaptive accessory.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Dwell Control", subtitle: "Off", content: DwellControlView())
-            }, footer: {
+            } footer: {
                 Text("With Dwell Control, holding the pointer still for the specified duration will perform the selected dwell action.")
-            })
+            }
             
             Section {
                 NavigationLink("Pointer Control", destination: PointerControlView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Prefer Non-Headlocked Controls", isOn: $preferNonHeadlockedControlsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Prefers that user interface items should not be tied to head movement.")
-            })
+            }
         }
     }
 }
