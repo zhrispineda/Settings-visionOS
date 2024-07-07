@@ -19,7 +19,7 @@ struct SwitchControlView: View {
     
     var body: some View {
         CustomList(title: "Switch Control") {
-            Section(content: {
+            Section {
                 Toggle("Switch Control", isOn: $switchControlEnabled)
                     .alert("Important", isPresented: $showingSwitchControlDisableAlert) {
                         Button("Yes") {}
@@ -30,9 +30,9 @@ struct SwitchControlView: View {
                     .onChange(of: switchControlEnabled) {
                         showingSwitchControlDisableAlert = !switchControlEnabled
                     }
-            }, footer: {
+            } footer: {
                 Text("Switch Control allows you to use your \(UIDevice().name) by sequentially highlighting items on the screen that can be activated through an adaptive accessory.")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Switches", subtitle: "0", content: SwitchesView())
@@ -43,64 +43,52 @@ struct SwitchControlView: View {
                 ListRowNavigationLabel(title: "Scanning Style", subtitle: "Auto", content: ScanningStyleView())
             }
             
-            Section(content: {
+            Section("Timing") {
                 ListRowNavigationLabel(title: "Auto Scanning Time", subtitle: "1s", content: AutoScanningTimeView())
                 ListRowNavigationLabel(title: "Pause on First Item", subtitle: "Off", content: PauseFirstItemView())
                 ListRowNavigationLabel(title: "Loops", subtitle: "4", content: LoopsView())
                 ListRowNavigationLabel(title: "Move Repeat", subtitle: "Off", content: MoveRepeatView())
                 ListRowNavigationLabel(title: "Long Press", subtitle: "Off", content: LongPressView())
-            }, header: {
-                Text("Timing")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Tap Behavior", subtitle: "Default", content: TapBehaviorView())
                 ListRowNavigationLabel(title: "Focused Item After Tap", subtitle: "First", content: FocusedItemAfterTapView())
             }
             
-            Section(content: {
+            Section("Keyboard") {
                 Toggle("Scan Same Key After Tap", isOn: $scanSameKeyAfterTapEnabled)
                 Toggle("Always Tap Keyboard Keys", isOn: $alwaysTapKeyboardKeysEnabled)
-            }, header: {
-                Text("Keyboard")
-            })
+            }
             
-            Section(content: {
+            Section("Switch Stabilization") {
                 ListRowNavigationLabel(title: "Hold Duration", subtitle: "Off", content: HoldDurationView())
                 ListRowNavigationLabel(title: "Ignore Repeat", subtitle: "Off", content: IgnoreRepeatView())
-            }, header: {
-                Text("Switch Stabilization")
-            })
+            }
             
-            Section(content: {
+            Section("Point Scanning") {
                 ListRowNavigationLabel(title: "Gliding Cursor", subtitle: "Refined", content: GlidingCursorView())
-            }, header: {
-                Text("Point Scanning")
-            })
+            }
             
-            Section(content: {
+            Section("Audio") {
                 Toggle("Sound Effects", isOn: $soundEffectsEnabled)
                 ListRowNavigationLabel(title: "Speech", subtitle: "Off", content: SwitchControlSpeechView())
-            }, header: {
-                Text("Audio")
-            })
+            }
             
             Section {
                 NavigationLink("Menu Items", destination: MenuItemsView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Group Items", isOn: $groupItemsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Groups items for faster navigation.")
-            })
+            }
             
-            Section(content: {
+            Section("Visual") {
                 Toggle("Large Cursor", isOn: $largeCursorEnabled)
                 ListRowNavigationLabel(title: "Cursor Color", subtitle: "Blue", content: CursorColorView())
-            }, header: {
-                Text("Visual")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Saved Gestures", subtitle: "None", content: SavedGesturesView())

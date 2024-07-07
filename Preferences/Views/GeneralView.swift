@@ -16,7 +16,7 @@ struct GeneralView: View {
                 }
                 
                 Section {
-                    NavigationLink("AutoFill & Passwords", destination: EmptyView())
+                    NavigationLink("AutoFill & Passwords", destination: PasswordOptionsView())
                     NavigationLink("Dictionary", destination: DictionaryView())
                     NavigationLink("Fonts", destination: FontsView())
                     NavigationLink("Keyboard", destination: KeyboardView())

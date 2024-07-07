@@ -17,11 +17,11 @@ struct VerbosityView: View {
     
     var body: some View {
         CustomList(title: "Verbosity") {
-            Section(content: {
+            Section {
                 NavigationLink("Punctuation", destination: PunctuationView())
-            }, footer: {
+            } footer: {
                 Text("Customize how punctuation is output.")
-            })
+            }
             
             Section {
                 Toggle("Speak Hints", isOn: $speakHintsEnabled)
@@ -40,46 +40,46 @@ struct VerbosityView: View {
                 NavigationLink("Predictive Text Feedback", destination: PredictiveTextFeedbackView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Table Headers", isOn: $tableHeadersEnabled)
                 Toggle("Row & Column Numbers", isOn: $rowColumnNumbersEnabled)
-            }, header: {
+            } header: {
                 Text("Table Output")
-            }, footer: {
+            } footer: {
                 Text("Determines whether this information is output when navigating tables.")
-            })
+            }
             
-            Section(content: {
+            Section("Rotor Actions") {
                 Toggle("Speak Confirmation", isOn: $speakConfirmationEnabled)
                 ListRowNavigationLabel(title: "Web Rotor Summary", subtitle: "Speak", content: VerbosityMethodsView(title: "Web Rotor Summary", options: ["Speak", "Braille", "Do Nothing"], selected: ["Speak"]))
-            }, header: {
-                Text("Rotor Actions")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Emojis", subtitle: "Speak, Braille", content: VerbosityMethodsView(title: "Emojis", options: ["Speak", "Braille", "Do Nothing"], selected: ["Speak", "Braille"]))
                 Toggle("Emoji Suffix", isOn: $emojiSuffixEnabled)
-            }, footer: {
+            } footer: {
                 Text("Speaks the word \u{2018}emoji\u{2019} when emoji are read in text content.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Scene Description", subtitle: "On", content: SceneDescriptionsView())
                 ListRowNavigationLabel(title: "Media Description", subtitle: "Off", content: MediaDescriptionView())
-            }, footer: {
+            } footer: {
                 Text("Determines how Closed Captions + SDH are output during media playback.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Input Feedback", subtitle: "None", content: VerbosityFeedbackView(title: "Input Feedback", selected: "None"))
                 ListRowNavigationLabel(title: "App Hover Feedback", subtitle: "Speech and Sounds", content: VerbosityFeedbackView(title: "App Hover Feedback", selected: "Speech and Sounds"))
-            }, footer: {
+            } footer: {
                 Text("Determines the level of feedback VoiceOver gives for certain gestures performed.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    VerbosityView()
+    NavigationStack {
+        VerbosityView()
+    }
 }

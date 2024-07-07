@@ -22,7 +22,7 @@ struct VoiceOverSoundsView: View {
     
     var body: some View {
         CustomList(title: "VoiceOver Sounds") {
-            Section(content: {
+            Section {
                 Toggle("Sounds", isOn: $soundsEnabled.animation())
                 
                 if soundsEnabled {
@@ -39,69 +39,57 @@ struct VoiceOverSoundsView: View {
                         .imageScale(.large)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Sounds")
-            }, footer: {
+            } footer: {
                 Text("The volume rotor will change \(soundsEnabled && matchSpeechVolume ? "the volume of VoiceOver speech & sounds." : "only the volume of VoiceOver speech.")")
-            })
+            }
             
-            Section(content: {
+            Section("Interaction") {
                 ForEach(interactionSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("Interaction")
-            })
+            }
             
-            Section(content: {
+            Section("VoiceOver Feedback") {
                 ForEach(voiceOverFeedbackSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("VoiceOver Feedback")
-            })
+            }
             
-            Section(content: {
+            Section("App Feedback") {
                 ForEach(appFeedbackSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("App Feedback")
-            })
+            }
             
-            Section(content: {
+            Section("Braille") {
                 ForEach(brailleSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("Braille")
-            })
+            }
             
-            Section(content: {
+            Section("Text Editing") {
                 ForEach(textEditingSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("Text Editing")
-            })
+            }
             
-            Section(content: {
+            Section("System") {
                 ForEach(systemSounds, id: \.self) { sound in
                     NavigationLink(sound, destination: VoiceOverSoundView(title: sound))
                 }
-            }, header: {
-                Text("System")
-            })
+            }
             
-            Section(content: {
+            Section("Hand Tracking") {
                 Toggle("Hand Tracking Sound Feedback", isOn: $handTrackingSoundFeedbackEnabled)
-            }, header: {
-                Text("Hand Tracking")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    VoiceOverSoundsView()
+    NavigationStack {
+        VoiceOverSoundsView()
+    }
 }

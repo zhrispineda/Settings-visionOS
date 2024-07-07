@@ -18,45 +18,47 @@ struct MotionView: View {
     
     var body: some View {
         CustomList(title: "Motion") {
-            Section(content: {
+            Section {
                 Toggle("Reduce Motion", isOn: $reduceMotionEnabled)
-            }, footer: {
+            } footer: {
                 Text("Reduce the motion of the user interface, including the parallax effect of icons.")
-            })
-            
-            if reduceMotionEnabled {
-                Section(content: {
-                    Toggle("Prefer Cross-Fade Transitions", isOn: $preferCrossFadeAnimationsEnabled)
-                }, footer: {
-                    Text("Reduce the motion for user interface controls that slide in when appearing and disappearing.")
-                })
             }
             
-            Section(content: {
-                Toggle("Auto-Play Message Effects", isOn: $autoPlayMessageEffectsEnabled)
-            }, footer: {
-                Text("Allows fullscreen effects in the Messages app to auto-play.")
-            })
+            if reduceMotionEnabled {
+                Section {
+                    Toggle("Prefer Cross-Fade Transitions", isOn: $preferCrossFadeAnimationsEnabled)
+                } footer: {
+                    Text("Reduce the motion for user interface controls that slide in when appearing and disappearing.")
+                }
+            }
             
-            Section(content: {
+            Section {
+                Toggle("Auto-Play Message Effects", isOn: $autoPlayMessageEffectsEnabled)
+            } footer: {
+                Text("Allows fullscreen effects in the Messages app to auto-play.")
+            }
+            
+            Section {
                 Toggle("Auto-Play Animated Images", isOn: $autoPlayAnimatedImagesEnabled)
-            }, footer: {
+            } footer: {
                 Text("Controls whether images animate on the Web or in apps.")
-            })
+            }
             
             Section {
                 Toggle("Auto-Play Video Previews", isOn: $autoPlayVideoPreviews)
             }
             
-            Section(content: {
+            Section {
                 Toggle("Limit Frame Rate", isOn: $limitFrameRate)
-            }, footer: {
+            } footer: {
                 Text("Sets the maximum frame rate of the display to 60 frames per second.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    MotionView()
+    NavigationStack {
+        MotionView()
+    }
 }

@@ -16,37 +16,29 @@ struct RecognitionSoundsView: View {
     
     var body: some View {
         CustomList(title: "Sounds", editEnabled: true) {
-            Section(content: {
+            Section("Alarms") {
                 ForEach(alarmSounds, id: \.self) { sound in
                     ListRowNavigationLabel(title: sound, subtitle: "Off", content: SoundDetailView(title: sound))
                 }
-            }, header: {
-                Text("Alarms")
-            })
+            }
             
-            Section(content: {
+            Section("Animals") {
                 ForEach(animalSounds, id: \.self) { sound in
                     ListRowNavigationLabel(title: sound, subtitle: "Off", content: SoundDetailView(title: sound))
                 }
-            }, header: {
-                Text("Animals")
-            })
+            }
             
-            Section(content: {
+            Section("Household") {
                 ForEach(householdSounds, id: \.self) { sound in
                     ListRowNavigationLabel(title: sound, subtitle: "Off", content: SoundDetailView(title: sound))
                 }
-            }, header: {
-                Text("Household")
-            })
+            }
             
-            Section(content: {
+            Section("People") {
                 ForEach(peopleSounds, id: \.self) { sound in
                     ListRowNavigationLabel(title: sound, subtitle: "Off", content: SoundDetailView(title: sound))
                 }
-            }, header: {
-                Text("People")
-            })
+            }
         }
     }
 }

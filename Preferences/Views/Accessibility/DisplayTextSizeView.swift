@@ -30,54 +30,53 @@ struct DisplayTextSizeView: View {
                 Toggle("On/Off Labels", isOn: $onOffLabelsEnabled)
             }
             
-            Section(content: {
+            Section {
                 Toggle("Ignore Eye Movements to Stabilize", isOn: $ignoreEyeMovementsEnabled)
-            }, footer: {
+            } footer: {
                 Text("If you observe blurriness, jumpiness or inconsistent colors, you can enable Ignore Eye Movements to turn off dynamic image optimization.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Increase Focus State", isOn: $increaseFocusStateEnabled)
-            }, footer: {
+            } footer: {
                 Text("Increase contrast for items when you look at them.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Increase Contrast", isOn: $increaseContrastEnabled)
-            }, footer: {
+            } footer: {
                 Text("Increase color contrast between app foreground and background colors.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Differentiate Without Color", isOn: $differentiateWithoutColorEnabled)
-            }, footer: {
+            } footer: {
                 Text("Replaces user interface items that rely solely on color to convey information with alternatives.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Prefer Horizontal Text", isOn: $preferHorizontalTextEnabled)
-            }, footer: {
+            } footer: {
                 Text("Prefer horizontal text in languages that support vertical text.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Classic Invert", isOn: $classicInvertEnabled)
-            }, footer: {
+            } footer: {
                 Text("Classic Invert reverses the colors of the display.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Reduce White Point", isOn: $reduceWhitePointEnabled)
                 if reduceWhitePointEnabled {
                     HStack(spacing: 15) {
                         Slider(value: $whitePoint, in: 25...100)
                         Text("\(whitePoint, specifier: "%.0f")%")
-                        // Changing whitePoint value on Slider sometimes causes 100% CPU and freezes slider
                     }
                 }
-            }, footer: {
+            } footer: {
                 Text("Reduce the intensity of bright colors.")
-            })
+            }
         }
     }
 }
