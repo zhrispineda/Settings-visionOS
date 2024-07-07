@@ -18,23 +18,23 @@ struct CommandsView: View {
                 NavigationLink("All Commands", destination: AllCommandsView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Switch Gesture Handedness", isOn: $switchGestureHandednessEnabled)
-            }, footer: {
+            } footer: {
                 Text("Toggle this setting to swap gestures on your left and right hands, including custom gesture assignments.")
-            })
-            
-            Section(content: {
-                NavigationLink("Touch Gestures", destination: TouchGesturesView())
-                NavigationLink("Keyboard Shortcuts", destination: KeyboardShortcutsView())
-            }, footer: {
-                Text("Commands are prefixed with the VoiceOver modifier key: Control + Option")
-            })
+            }
             
             Section {
-                Button("Reset VoiceOver Commands", action: {
+                NavigationLink("Touch Gestures", destination: TouchGesturesView())
+                NavigationLink("Keyboard Shortcuts", destination: KeyboardShortcutsView())
+            } footer: {
+                Text("Commands are prefixed with the VoiceOver modifier key: Control + Option")
+            }
+            
+            Section {
+                Button("Reset VoiceOver Commands") {
                     showingResetCommandsAlert.toggle()
-                })
+                }
                 .foregroundStyle(.red)
                 .alert("This will restore all\nVoiceOver gestures,\nkeyboard shortcuts and\nBraille shortcuts.", isPresented: $showingResetCommandsAlert) {
                     Button("Reset VoiceOver Commands", role: .destructive) {}

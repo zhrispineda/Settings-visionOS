@@ -14,39 +14,34 @@ struct TargetView: View {
     
     var body: some View {
         CustomList(title: "Target") {
-            
             if selected != "Automatic" {
-                Section(content: {}, footer: {
+                Section {} footer: {
                     Text("Settings will be saved when you go back to the previous page.")
-                })
+                }
             }
             
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        withAnimation {
-                            selected = option
-                        }
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 switch selected {
                 case "Automatic":
                     Text("Dwell will follow the trackpad when in use, otherwise it will follow the system pointer.")
                 default:
                     Text("Dwell will follow the \(selected.lowercased()) only.")
                 }
-            })
+            }
         }
     }
 }
 
 #Preview {
-    TargetView()
+    NavigationStack {
+        TargetView()
+    }
 }

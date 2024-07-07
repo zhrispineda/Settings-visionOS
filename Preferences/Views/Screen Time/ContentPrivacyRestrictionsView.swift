@@ -24,7 +24,7 @@ struct ContentPrivacyRestrictionsView: View {
             }
             .disabled(!contentPrivacyRestrictionsEnabled)
             
-            Section(content: {
+            Section("Privacy") {
                 ListRowNavigationLabel(title: "Location Services", subtitle: "Allow", content: LocationServicesView())
                 ListRowNavigationLabel(title: "Contacts", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Contacts"))
                 ListRowNavigationLabel(title: "Calendars", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Calendars"))
@@ -37,12 +37,10 @@ struct ContentPrivacyRestrictionsView: View {
                 ListRowNavigationLabel(title: "Apple Advertising", subtitle: "Allow", content: AllowDenyView(title: "Apple Advertising"))
                 ListRowNavigationLabel(title: "Allow Apps to Request to Track", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Allow Apps to Request to Track"))
                 ListRowNavigationLabel(title: "Media & Apple Music", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Media & Apple Music"))
-            }, header: {
-                Text("Privacy")
-            })
+            }
             .disabled(!contentPrivacyRestrictionsEnabled)
             
-            Section(content: {
+            Section("Allow Changes:") {
                 ListRowNavigationLabel(title: "Passcode Changes", subtitle: "Allow", content: AllowDenyView(title: "Passcode Changes"))
                 ListRowNavigationLabel(title: "Account Changes", subtitle: "Allow", content: AllowDenyView(title: "Account Changes"))
                 ListRowNavigationLabel(title: "Cellular Data Changes", subtitle: "Allow", content: AllowDenyView(title: "Cellular Data Changes"))
@@ -50,9 +48,7 @@ struct ContentPrivacyRestrictionsView: View {
                 ListRowNavigationLabel(title: "Driving Focus", subtitle: "Allow", content: AllowDenyView(title: "Driving Focus"))
                 ListRowNavigationLabel(title: "TV Provider", subtitle: "Allow", content: AllowDenyView(title: "TV Provider"))
                 ListRowNavigationLabel(title: "Background App Activities", subtitle: "Allow", content: AllowDenyView(title: "Background App Activities"))
-            }, header: {
-                Text("Allow Changes:")
-            })
+            }
             .disabled(!contentPrivacyRestrictionsEnabled)
         }
     }

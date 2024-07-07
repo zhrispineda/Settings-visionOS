@@ -10,17 +10,17 @@ import SwiftUI
 struct PredictiveTextFeedbackView: View {
     var body: some View {
         CustomList(title: "Predictive Text Feedback") {
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "When Predictive Text Appears", subtitle: "Speak, Play Sound", content: VerbosityMethodsView(title: "When Predictive Text Appears", selected: ["Speak", "Play Sound"]))
-            }, footer: {
+            } footer: {
                 Text("VoiceOver will output predictive text when it appears.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "When Predictive Text Feedback is Entered", subtitle: "Speak, Change Pitch", content: VerbosityMethodsView(title: "When Predictive Text Feedback is Entered", selected: ["Speak", "Change Pitch"]))
-            }, footer: {
+            } footer: {
                 Text("VoiceOver will output predictive text when entered.")
-            })
+            }
         }
     }
 }

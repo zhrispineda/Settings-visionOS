@@ -11,46 +11,29 @@ struct TypingFeedbackView: View {
     // Variables
     @State private var softwareKeyboardSelection = "Characters and Words"
     @State private var hardwareKeyboardSelection = "Characters and Words"
-    let softwareKeyboards = ["Nothing", "Characters", "Words", "Characters and Words"]
-    let hardwareKeyboards = ["Nothing", "Characters", "Words", "Characters and Words"]
+    let keyboards = ["Nothing", "Characters", "Words", "Characters and Words"]
     
     var body: some View {
         CustomList(title: "Typing Feedback") {
-            Section(content: {
-                ForEach(softwareKeyboards, id: \.self) { keyboard in
-                    Button(action: {
-                        softwareKeyboardSelection = keyboard
-                    }, label: {
-                        HStack {
-                            Text(keyboard)
-                            Spacer()
-                            if softwareKeyboardSelection == keyboard {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section("Software Keyboards") {
+                Picker("", selection: $softwareKeyboardSelection) {
+                    ForEach(keyboards, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Software Keyboards")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
             
-            Section(content: {
-                ForEach(hardwareKeyboards, id: \.self) { keyboard in
-                    Button(action: {
-                        hardwareKeyboardSelection = keyboard
-                    }, label: {
-                        HStack {
-                            Text(keyboard)
-                            Spacer()
-                            if hardwareKeyboardSelection == keyboard {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section("Hardware Keyboards") {
+                Picker("", selection: $hardwareKeyboardSelection) {
+                    ForEach(keyboards, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Hardware Keyboards")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
         }
     }
 }

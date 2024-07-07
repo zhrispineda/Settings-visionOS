@@ -16,12 +16,12 @@ struct SelectedBrailleTableView: View {
     
     var body: some View {
         CustomList(title: "English (Unified) – System") {
-            Section(content: {
+            Section("System") {
                 ForEach(systemOptions, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         selected = option
                         currentArray = "systemOptions"
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
@@ -29,18 +29,16 @@ struct SelectedBrailleTableView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
-            }, header: {
-                Text("System")
-            })
+            }
             
-            Section(content: {
+            Section("Liblouis") {
                 ForEach(liblouisOptions, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         selected = option
                         currentArray = "liblouisOptions"
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
@@ -48,15 +46,15 @@ struct SelectedBrailleTableView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
-            }, header: {
-                Text("Liblouis")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    SelectedBrailleTableView()
+    NavigationStack {
+        SelectedBrailleTableView()
+    }
 }

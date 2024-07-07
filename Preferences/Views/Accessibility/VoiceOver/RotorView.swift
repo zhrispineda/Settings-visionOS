@@ -18,18 +18,18 @@ struct RotorView: View {
                 NavigationLink("Rotor Items", destination: RotorItemsView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Change Rotor with Item", isOn: $changeRotorItemEnabled)
-            }, footer: {
+            } footer: {
                 Text("Changes the selected rotor based on the VoiceOver focused item.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Edit Apps on Home Screen", isOn: $editAppsHomeScreenEnabled)
                 NavigationLink("Direct Touch Apps", destination: DirectTouchAppsView())
-            }, footer: {
+            } footer: {
                 Text("Direct Touch allows VoiceOver to control an app directly without requiring more interaction.")
-            })
+            }
         }
     }
 }

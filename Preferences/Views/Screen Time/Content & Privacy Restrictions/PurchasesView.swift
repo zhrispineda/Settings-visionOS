@@ -9,40 +9,36 @@ import SwiftUI
 
 struct PurchasesView: View {
     // Variables
-    @State private var selectedOption: String? = "Don't Require"
+    @State private var selected = "Don't Require"
     let options = ["Always Require", "Don't Require"]
     
     var body: some View {
         CustomList(title: "iTunes & App Store Purchases") {
-            Section(content: {
+            Section("Store Purchases & Redownloads") {
                 ListRowNavigationLabel(title: "Installing Apps", subtitle: "Allow", content: AllowDenyView(title: "Installing Apps"))
                 ListRowNavigationLabel(title: "Deleting Apps", subtitle: "Allow", content: AllowDenyView(title: "Deleting Apps"))
                 ListRowNavigationLabel(title: "In-app Purchases", subtitle: "Allow", content: AllowDenyView(title: "In-app Purchases"))
-            }, header: {
-                Text("Store Purchases & Redownloads")
-            })
+            }
             
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: { selectedOption = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedOption == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
                 Text("Require Password")
-            }, footer: {
+            } footer: {
                 Text("Require a password for additional purchases after making a purchase from the iTunes, Book, or App Store.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    PurchasesView()
+    NavigationStack {
+        PurchasesView()
+    }
 }

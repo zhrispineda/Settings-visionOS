@@ -11,8 +11,8 @@ struct HighlightContentView: View {
     // Variables
     @State private var highlightContentEnabled = false
     @State private var selectedHighlightOption = "Words and Sentences"
-    let highlightOptions = ["Words", "Sentences", "Words and Sentences"]
     @State private var selectedHighlightStyle = "Underline"
+    let highlightOptions = ["Words", "Sentences", "Words and Sentences"]
     let highlightStyles = ["Underline", "Background Color"]
     
     var body: some View {
@@ -23,49 +23,33 @@ struct HighlightContentView: View {
             
             if highlightContentEnabled {
                 Section {
-                    ForEach(highlightOptions, id: \.self) { option in
-                        Button(action: {
-                            withAnimation {
-                                selectedHighlightOption = option
-                            }
-                        }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                Image(systemName: "\(selectedHighlightOption == option ? "checkmark" : "")")
-                            }
-                        })
+                    Picker("", selection: $selectedHighlightOption) {
+                        ForEach(highlightOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                 }
                 
                 if selectedHighlightOption != "Words" {
-                    Section(content: {
-                        ForEach(highlightStyles, id: \.self) { option in
-                            Button(action: {
-                                withAnimation {
-                                    selectedHighlightStyle = option
-                                }
-                            }, label: {
-                                HStack {
-                                    Text(option)
-                                    Spacer()
-                                    Image(systemName: "\(selectedHighlightStyle == option ? "checkmark" : "")")
-                                }
-                            })
+                    Section("Sentence Highlight Style") {
+                        Picker("", selection: $selectedHighlightStyle) {
+                            ForEach(highlightStyles, id: \.self) {
+                                Text($0)
+                            }
                         }
-                    }, header: {
-                        Text("Sentence Highlight Style")
-                    })
+                        .pickerStyle(.inline)
+                        .labelsHidden()
+                    }
                 }
                 
-                Section(content: {
+                Section("Highlight Colors") {
                     if selectedHighlightOption == "Words and Sentences" {
                         ListRowNavigationLabel(title: "Word Color", subtitle: "Default", content: WordColorView(title: "Word Color"))
                     }
                     ListRowNavigationLabel(title: "Sentence Color", subtitle: "Default", content: WordColorView(title: "Sentence Color"))
-                }, header: {
-                    Text("Highlight Colors")
-                })
+                }
             }
         }
     }
