@@ -64,8 +64,8 @@ struct StorageView: View {
             }
             
             // Applications Section
-            Section(content: {
-                NavigationLink(destination: AppStorageInfoView(appName: "Calendar"), label: {
+            Section("Applications") {
+                NavigationLink(destination: AppStorageInfoView(appName: "Calendar")) {
                     HStack(spacing: 15) {
                         Image("applecalendar")
                             .resizable()
@@ -79,8 +79,8 @@ struct StorageView: View {
                         }
                     }
                     .padding(.vertical, 5)
-                })
-                NavigationLink(destination: AppStorageInfoView(appName: "Safari"), label: {
+                }
+                NavigationLink(destination: AppStorageInfoView(appName: "Safari")) {
                     HStack(spacing: 15) {
                         Image("applesafari")
                             .resizable()
@@ -94,14 +94,12 @@ struct StorageView: View {
                         }
                     }
                     .padding(.vertical, 5)
-                })
-            }, header: {
-                Text("Applications")
-            })
+                }
+            }
             
             // System Section
             Section {
-                NavigationLink(destination: SystemInfoView(title: "\(UIDevice().systemName) (\(UIDevice().systemVersion)"), label: {
+                NavigationLink(destination: SystemInfoView(title: "\(UIDevice().systemName) (\(UIDevice().systemVersion)")) {
                     HStack(spacing: 15) {
                         Image("applesettings")
                             .resizable()
@@ -115,8 +113,8 @@ struct StorageView: View {
                         }
                     }
                     .padding(.vertical, 5)
-                })
-                NavigationLink(destination: SystemInfoView(title: "System Data"), label: {
+                }
+                NavigationLink(destination: SystemInfoView(title: "System Data")) {
                     HStack(spacing: 15) {
                         Image("applesettings")
                             .resizable()
@@ -130,7 +128,7 @@ struct StorageView: View {
                         }
                     }
                     .padding(.vertical, 5)
-                })
+                }
             }
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer)

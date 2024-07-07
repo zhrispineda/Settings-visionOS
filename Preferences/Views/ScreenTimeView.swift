@@ -10,7 +10,7 @@ import SwiftUI
 struct ScreenTimeView: View {
     var body: some View {
         CustomList(title: "Screen Time") {
-            Section(content: {
+            Section("Restrictions") {
                 NavigationLink(destination: ContentPrivacyRestrictionsView(), label: {
                     HStack {
                         Image("custom.nosign.circle.fill")
@@ -24,27 +24,25 @@ struct ScreenTimeView: View {
                         }
                     }
                 })
-            }, header: {
-                Text("Restrictions")
-            })
+            }
             
-            Section(content: {
-                // TODO: Popover
-                Button("Lock Screen Time Settings", action: {})
-            }, footer: {
+            Section {
+                Button("Lock Screen Time Settings") {}
+            } footer: {
                 Text("Use a passcode to secure Screen Time settings.")
-            })
+            }
             
-            Section(content: {
-                // TODO: Popover
-                Button("Use with Other Devices", action: {})
-            }, footer: {
+            Section {
+                Button("Use with Other Devices") {}
+            } footer: {
                 Text("Sign in to iCloud to report your screen time on any iPad or iPhone, or set up Family Sharing to use Screen Time with your family's devices.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ScreenTimeView()
+    NavigationStack {
+        ScreenTimeView()
+    }
 }

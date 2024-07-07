@@ -13,15 +13,17 @@ struct GameCenterView: View {
     var body: some View {
         CustomList(title: "Game Center") {
             // Game Center Section
-            Section(content: {
+            Section {
                 Toggle("Game Center", isOn: $gameCenterEnabled)
-            }, footer: {
+            } footer: {
                 Text("A social gaming service that lets you interact with friends, track and compare scores and achievements, challenge other players, and compete in multiplayer games.\n[See how your data is managed...](#)")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    GameCenterView()
+    NavigationStack {
+        GameCenterView()
+    }
 }

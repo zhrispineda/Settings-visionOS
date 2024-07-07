@@ -14,17 +14,19 @@ struct WalletApplePayView: View {
     var body: some View {
         CustomList(title: "Wallet & Apple Pay") {
             // Compatible Cards Section
-            Section(content: {
+            Section {
                 Toggle("Compatible Cards", isOn: $compatibleCardsEnabled)
-            }, header: {
+            } header: {
                 Text("Online Payments")
-            }, footer: {
+            } footer: {
                 Text("Verifies that your saved cards in Safari AutoFill are compatible with Apple Pay and allows you to use them in Wallet.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    WalletApplePayView()
+    NavigationStack {
+        WalletApplePayView()
+    }
 }

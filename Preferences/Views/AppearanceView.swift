@@ -19,7 +19,7 @@ struct AppearanceView: View {
                 Toggle("Bold Text", isOn: $boldTextEnabled)
             }
             
-            Section(content: {
+            Section("Brightness") {
                 Group {
                     Slider(value: $brightness,
                            in: 0.0...1.0,
@@ -31,19 +31,17 @@ struct AppearanceView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
-                Text("Brightness")
-            })
+            }
             
-            Section(content: {
+            Section("Display") {
                 ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: DisplayAppearanceView())
-            }, header: {
-                Text("Display")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AppearanceView()
+    NavigationStack {
+        AppearanceView()
+    }
 }

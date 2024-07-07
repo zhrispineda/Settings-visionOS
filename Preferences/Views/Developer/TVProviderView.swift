@@ -14,47 +14,45 @@ struct TVProviderView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 Toggle("Cache Buster", isOn: $cacheBusterEnabled)
-            }, header: {
+            } header: {
                 Text("Options")
-            }, footer: {
+            } footer: {
                 Text("When enabled, the query paramter \u{201C}cachebuster\u{201D} will be added to development TV Provider Auth URLs.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Disable Timeouts", isOn: $disableTimeoutsEnabled)
-            }, footer: {
+            } footer: {
                 Text("When enabled, the default callback timeouts will be disabled in development TV Provider authentication contexts.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Simulate Expired Token", isOn: $simulateExpiredTokenEnabled)
-            }, footer: {
+            } footer: {
                 Text("When enabled, authentication tokens provided to applications and the JavaScript authentication context will have an expiration date in the past.")
-            })
+            }
             
-            Section(content: {
-                Button(action: {
-                    //
-                }, label: {
+            Section("Development TV Providers") {
+                Button {} label: {
                     Text("Add TV Provider")
                         .frame(maxWidth: .infinity)
-                })
-            }, header: {
-                Text("Development TV Providers")
-            })
+                }
+            }
         }
         .padding(.horizontal, 45)
         .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
+            ToolbarItem(placement: .topBarLeading) {
                 Text("TV Provider")
                     .font(.title)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    TVProviderView()
+    NavigationStack {
+        TVProviderView()
+    }
 }

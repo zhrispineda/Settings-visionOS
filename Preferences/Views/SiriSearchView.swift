@@ -21,12 +21,12 @@ struct SiriSearchView: View {
     
     var body: some View {
         CustomList(title: "Siri & Search") {
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English", content: EmptyView())
                     .disabled(true)
                 ListRowNavigationLabel(title: "Siri Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
                 NavigationLink("Siri Responses", destination: SiriResponsesView())
-                Button(action: {}, label: { // TODO: Popover
+                Button {} label: {
                     HStack {
                         Text("My Information")
                         Spacer()
@@ -35,44 +35,42 @@ struct SiriSearchView: View {
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.secondary)
                     }
-                })
+                }
                 NavigationLink("Siri & Dictation History", destination: SiriDictationHistoryView())
                 NavigationLink("Automatically Send Messages", destination: AutomaticallySendMessagesView())
-            }, header: {
+            } header: {
                 Text("Ask Siri")
-            }, footer: {
-                Text("Voice input is processed on \(UIDevice().name), but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)").tint(.cyan)
-            })
+            } footer: {
+                Text("Voice input is processed on \(UIDevice().name), but transcripts of your requests are sent to Apple. [About Ask Siri & Privacy...](#)")
+            }
             
-            Section(content: {
+            Section("Before Searching") {
                 Toggle("Show Suggestions", isOn: $showSuggestionsEnabled)
-                Button("Reset Hidden Suggestions", action: { showingResetHiddenSuggestionsAlert.toggle() })
+                Button("Reset Hidden Suggestions") { showingResetHiddenSuggestionsAlert.toggle() }
                     .alert("Resetting will allow\npreviously hidden\nsuggestions to resume\nshowing up again.", isPresented: $showingResetHiddenSuggestionsAlert) {
                         Button("Reset", role: .destructive) {}
                         Button("Cancel", role: .cancel) {}
                     }
                 Toggle("Show Recents", isOn: $showRecentsEnabled)
-            }, header: {
-                Text("Before Searching")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Show in Look Up", isOn: $showInLookUpEnabled)
                 Toggle("Show in Spotlight", isOn: $showInSpotlightEnabled)
-            }, header: {
+            } header: {
                 Text("Content from Apple")
-            }, footer: {
-                Text("Apple can show content when looking up text or objects in photos, or when searching. [About Siri Suggestions, Search & Privacy...](#)").tint(.cyan)
-            })
+            } footer: {
+                Text("Apple can show content when looking up text or objects in photos, or when searching. [About Siri Suggestions, Search & Privacy...](#)")
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Show When Sharing", isOn: $showWhenSharingEnabled)
                 Toggle("Show When Listening", isOn: $showWhenListeningEnabled)
-            }, header: {
+            } header: {
                 Text("Suggestions from Apple")
-            }, footer: {
-                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)").tint(.cyan)
-            })
+            } footer: {
+                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)")
+            }
             
             Section {
                 ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: SiriSearchAppView(appName: "Calendar"))
@@ -91,5 +89,7 @@ struct SiriSearchView: View {
 }
 
 #Preview {
-    SiriSearchView()
+    NavigationStack {
+        SiriSearchView()
+    }
 }
