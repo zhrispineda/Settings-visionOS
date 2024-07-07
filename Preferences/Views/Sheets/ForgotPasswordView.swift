@@ -32,9 +32,9 @@ struct ForgotPasswordView: View {
                     .listRowBackground(Color.clear)
                     
                     Section {
-                        Button(action: {
+                        Button {
                             showingEmailSentAlert.toggle()
-                        }, label: {
+                        } label: {
                             HStack {
                                 Text("Unlock By Email")
                                 Spacer()
@@ -45,7 +45,7 @@ struct ForgotPasswordView: View {
                                         .foregroundStyle(.secondary)
                                 }
                             }
-                        })
+                        }
                         .alert("Unlock Email Sent",
                                isPresented: $showingEmailSentAlert
                         ) {
@@ -61,17 +61,17 @@ struct ForgotPasswordView: View {
                     }
                 }
                 .toolbar {
-                    ToolbarItem(placement: .topBarLeading, content: {
-                        Button(action: {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
                             showingForgotPasswordSheet.toggle()
-                        }, label: {
+                        } label: {
                             Image(systemName: "xmark.circle.fill")
                                 .font(.extraLargeTitle)
                                 .foregroundStyle(.white, .white.opacity(0.2))
                                 .fontWeight(.thin)
-                        })
+                        }
                         .buttonStyle(.plain)
-                    })
+                    }
                 }
             } else {
                 ZStack {
@@ -94,25 +94,25 @@ struct ForgotPasswordView: View {
                         .listRowBackground(Color.clear)
                     }
                     .toolbar {
-                        ToolbarItem(placement: .topBarLeading, content: {
-                            Button(action: {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
                                 showingForgotPasswordSheet.toggle()
-                            }, label: {
+                            } label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .font(.extraLargeTitle)
                                     .foregroundStyle(.white, .white.opacity(0.2))
                                     .fontWeight(.thin)
-                            })
+                            }
                             .buttonStyle(.plain)
-                        })
+                        }
                     }
                     VStack {
                         Spacer()
-                        Button(action: {
+                        Button {
                             withAnimation {
                                 showingUnlockOptions.toggle()
                             }
-                        }, label: {
+                        } label: {
                             Text("Continue")
                                 .fontWeight(.bold)
                                 .font(.title3)
@@ -121,7 +121,7 @@ struct ForgotPasswordView: View {
                                 .foregroundStyle(username.count < 1 ? .white.opacity(0.1) : Color.white)
                                 .cornerRadius(30)
                                 .shadow(color: username.count < 1 ? Color.clear : Color.blue, radius: 10)
-                        })
+                        }
                         .buttonStyle(.plain)
                         .disabled(username.count < 1)
                     }

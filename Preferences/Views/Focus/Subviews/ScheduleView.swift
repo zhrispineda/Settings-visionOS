@@ -84,9 +84,9 @@ struct ScheduleView: View {
             }
             
             Section {
-                Button("Delete Schedule", action: {
+                Button("Delete Schedule") {
                     showingDeleteAlert.toggle()
-                })
+                }
                 .foregroundStyle(.red)
                 .alert("Do you want to delete this schedule?", isPresented:$showingDeleteAlert) {
                     Button("Delete Schedule", role: .destructive) {}

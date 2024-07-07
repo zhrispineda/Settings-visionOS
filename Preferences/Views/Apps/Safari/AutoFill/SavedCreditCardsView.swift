@@ -10,22 +10,21 @@ import SwiftUI
 struct SavedCreditCardsView: View {
     var body: some View {
         List {
-            // TODO: Popover view
-            Button("Add Credit Card", action: {})
+            Button("Add Credit Card") {}
         }
         .padding(.horizontal, 45)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 HStack {
                     Text("Credit Cards")
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
                     .disabled(true)
-            })
+            }
         }
     }
 }

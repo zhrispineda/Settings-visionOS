@@ -22,14 +22,14 @@ struct WebsiteDataView: View {
         .searchable(text: $searchText, placement: .toolbar)
         .padding(.horizontal, 45)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Website Data")
                     .font(.title)
                     .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
-            })
+            }
         }
     }
 }

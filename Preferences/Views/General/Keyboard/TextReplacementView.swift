@@ -28,28 +28,30 @@ struct TextReplacementView: View {
         .navigationTitle("Text Replacement")
         .searchable(text: $searchText)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 HStack {
                     Text("Text Replacement")
                         .font(.title)
                 }
                 .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
-                NavigationLink(destination: AddTextReplacementView(), label: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink(destination: AddTextReplacementView()) {
                     Image(systemName: "plus")
-                })
-            })
-            ToolbarItem(placement: .bottomBar, content: {
+                }
+            }
+            ToolbarItem(placement: .bottomBar) {
                 HStack {
                     EditButton()
                     Spacer()
                 }
-            })
+            }
         }
     }
 }
 
 #Preview {
-    TextReplacementView()
+    NavigationStack {
+        TextReplacementView()
+    }
 }

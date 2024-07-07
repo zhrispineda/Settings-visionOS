@@ -16,22 +16,22 @@ struct FontsView: View {
                 Text("You can download apps that install fonts from the App Store.")
             }
             .foregroundStyle(.secondary)
-            Button(action: {}, label: {
+            Button {} label: {
                 Text("Open App Store")
-            })
+            }
             .padding(.top, 3)
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Fonts")
                     .font(.title)
                     .frame(maxWidth: .infinity)
                     .offset(x: 15)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
                     .disabled(true)
-            })
+            }
         }
     }
 }

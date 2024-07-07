@@ -13,17 +13,19 @@ struct ClassicSoundsView: View {
     
     var body: some View {
         List(soundNames, id: \.self) { sound in
-            Button(action: {}, label: { Label(sound, systemImage: "empty") })
+            Button {} label: { Label(sound, systemImage: "empty") }
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
+            ToolbarItem(placement: .topBarLeading) {
                 Text("Classic")
                     .font(.title2)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ClassicSoundsView()
+    NavigationStack {
+        ClassicSoundsView()
+    }
 }

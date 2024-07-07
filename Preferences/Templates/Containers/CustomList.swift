@@ -38,9 +38,9 @@ struct CustomList<Content: View>: View {
                     //.offset(x: parentViews.contains(title) ? 0 : (editEnabled ? (editMode == .active ? -5 : -10) : -40)) // Adjust for back button if parent view or not
             }
             if editEnabled {
-                ToolbarItem(placement: .topBarTrailing, content: {
+                ToolbarItem(placement: .topBarTrailing) {
                     EditButton()
-                })
+                }
             }
         }
         .environment(\.editMode, $editMode)

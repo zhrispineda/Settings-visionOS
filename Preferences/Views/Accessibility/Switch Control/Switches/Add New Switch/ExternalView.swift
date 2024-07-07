@@ -22,12 +22,12 @@ struct ExternalView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("External")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40)
-            })
+            }
         }
     }
 }

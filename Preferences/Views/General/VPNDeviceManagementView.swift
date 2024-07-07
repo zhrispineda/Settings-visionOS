@@ -13,16 +13,16 @@ struct VPNDeviceManagementView: View {
     
     var body: some View {
         Color(.clear)
-            .onAppear(perform: {
+            .onAppear {
                 dismiss()
-            })
+            }
             .toolbar {
-                ToolbarItem(placement: .principal, content: {
+                ToolbarItem(placement: .principal) {
                     Text("VPN & Device Management")
                         .font(.title2)
                         .frame(maxWidth: .infinity)
                         .offset(x: -40)
-                })
+                }
             }
     }
     

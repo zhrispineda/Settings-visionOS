@@ -15,18 +15,22 @@ struct PronunciationsView: View {
         .padding(.horizontal, 45)
         // Horizontally-centered title text
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Pronunciations")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
-                Button("", systemImage: "plus", action: {})
-            })
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {} label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
 
 #Preview {
-    PronunciationsView()
+    NavigationStack {
+        PronunciationsView()
+    }
 }

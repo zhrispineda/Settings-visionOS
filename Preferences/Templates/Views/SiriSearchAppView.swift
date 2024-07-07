@@ -54,12 +54,12 @@ struct SiriSearchAppView: View {
         }
        .padding(.horizontal, 45)
        .toolbar {
-           ToolbarItem(placement: .principal, content: {
+           ToolbarItem(placement: .principal) {
                Text("Siri & Search")
                    .font(.title2)
                    .frame(maxWidth: .infinity)
                    .offset(x: -40)
-           })
+           }
        }
     }
 }
