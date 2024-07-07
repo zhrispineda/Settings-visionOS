@@ -23,7 +23,7 @@ struct ControlView: View {
         CustomList(title: "Control") {
             Section {
                 ForEach(options, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         previousSelection = selected
                         if option == "Head" || option == "Eyes" {
                             selected = option
@@ -32,13 +32,13 @@ struct ControlView: View {
                             pendingChoice = option
                             presentingChoiceAlert.toggle()
                         }
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
                             Image(systemName: "\(selected == option ? "checkmark" : "")")
                         }
-                    })
+                    }
                     .alert("Important", isPresented: $presentingSelectionAlert) {
                         Button("Confirm") {}
                             .onAppear {

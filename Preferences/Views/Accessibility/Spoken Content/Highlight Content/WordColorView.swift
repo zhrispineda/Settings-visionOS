@@ -17,9 +17,9 @@ struct WordColorView: View {
         CustomList(title: title) {
             Section {
                 ForEach(colors, id: \.self) { color in
-                    Button(action: {
+                    Button {
                         selected = color
-                    }, label: {
+                    } label: {
                         HStack {
                             Image(systemName: "circle.fill")
                                 .foregroundStyle(Color[color])
@@ -28,7 +28,7 @@ struct WordColorView: View {
                             Spacer()
                             Image(systemName: "\(selected == color ? "checkmark" : "")")
                         }
-                    })
+                    }
                 }
             }
         }
@@ -36,5 +36,7 @@ struct WordColorView: View {
 }
 
 #Preview {
-    WordColorView()
+    NavigationStack {
+        WordColorView()
+    }
 }

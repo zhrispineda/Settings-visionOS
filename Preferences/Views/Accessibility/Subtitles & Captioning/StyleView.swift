@@ -57,17 +57,13 @@ struct StyleView: View {
             .frame(height: 200)
             
             Section {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
+                .pickerStyle(.inline)
+                .labelsHidden()
                 NavigationLink("Create New Style...", destination: StyleView())
             }
         }

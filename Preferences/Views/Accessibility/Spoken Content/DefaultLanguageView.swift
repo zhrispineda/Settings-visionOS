@@ -15,32 +15,30 @@ struct DefaultLanguageView: View {
     var body: some View {
         CustomList(title: "Default Language") {
             Section {
-                Button(action: {
-                    selected = "Current Locale"
-                }, label: {
-                    HStack {
-                        Text("Current Locale")
-                        Spacer()
-                        Image(systemName: "\(selected == "Current Locale" ? "checkmark" : "")")
+                Picker("", selection: $selected) {
+                    ForEach(["Current Locale"], id: \.self) {
+                        Text($0)
                     }
-                })
+                }
+                .pickerStyle(.inline)
+                .labelsHidden()
             }
             
-            ForEach(languages, id: \.self) { language in
-                Button(action: {
-                    selected = language
-                }, label: {
-                    HStack {
-                        Text(language)
-                        Spacer()
-                        Image(systemName: "\(selected == language ? "checkmark" : "")")
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(languages, id: \.self) {
+                        Text($0)
                     }
-                })
+                }
+                .pickerStyle(.inline)
+                .labelsHidden()
             }
         }
     }
 }
 
 #Preview {
-    DefaultLanguageView()
+    NavigationStack {
+        DefaultLanguageView()
+    }
 }

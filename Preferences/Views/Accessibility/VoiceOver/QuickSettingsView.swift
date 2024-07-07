@@ -15,15 +15,15 @@ struct QuickSettingsView: View {
     var body: some View {
         CustomList(title: "Quick Settings") {
             ForEach($settings, id: \.self, editActions: .move) { $setting in
-                Button(action: {
+                Button {
                     if let index = selected.firstIndex(of: setting) {
                         selected.remove(at: index)
                     } else {
                         selected.append(setting)
                     }
-                }, label: {
+                } label: {
                     Label(setting, systemImage: "\(selected.contains(setting) ? "checkmark" : "")")
-                })
+                }
             }
         }
         .environment(\.editMode, Binding.constant(EditMode.active))

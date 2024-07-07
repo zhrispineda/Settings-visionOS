@@ -16,9 +16,9 @@ struct KeyboardColorView: View {
         CustomList(title: "Color") {
             Section {
                 ForEach(colors, id: \.self) { color in
-                    Button(action: {
+                    Button {
                         selected = color
-                    }, label: {
+                    } label: {
                         HStack {
                             Image(systemName: "circle.fill")
                                 .foregroundStyle(Color[color])
@@ -27,7 +27,7 @@ struct KeyboardColorView: View {
                             Spacer()
                             Image(systemName: "\(selected == color ? "checkmark" : "")")
                         }
-                    })
+                    }
                 }
             }
         }
@@ -35,5 +35,7 @@ struct KeyboardColorView: View {
 }
 
 #Preview {
-    KeyboardColorView()
+    NavigationStack {
+        KeyboardColorView()
+    }
 }

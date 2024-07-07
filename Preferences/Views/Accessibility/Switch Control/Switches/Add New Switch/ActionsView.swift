@@ -26,7 +26,7 @@ struct ActionsView: View {
             
             Section {
                 ForEach(scannerItems, id: \.self) { scanner in
-                    Button(scanner, action: {})
+                    Button(scanner) {}
                 }
             } header: {
                 Text("Scanner")

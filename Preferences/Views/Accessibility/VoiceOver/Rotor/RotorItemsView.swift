@@ -15,15 +15,15 @@ struct RotorItemsView: View {
     var body: some View {
         CustomList(title: "Rotor Items") {
             ForEach($rotorItems, id: \.self, editActions: .move) { $item in
-                Button(action: {
+                Button {
                     if let index = selected.firstIndex(of: item) {
                         selected.remove(at: index)
                     } else {
                         selected.append(item)
                     }
-                }, label: {
+                } label: {
                     Label(item, systemImage: "\(selected.contains(item) ? "checkmark" : "")")
-                })
+                }
             }
         }
         .environment(\.editMode, Binding.constant(EditMode.active))
@@ -31,5 +31,7 @@ struct RotorItemsView: View {
 }
 
 #Preview {
-    RotorItemsView()
+    NavigationStack {
+        RotorItemsView()
+    }
 }

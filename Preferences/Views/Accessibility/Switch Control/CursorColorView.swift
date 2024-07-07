@@ -14,9 +14,9 @@ struct CursorColorView: View {
     var body: some View {
         CustomList(title: "Cursor Color") {
             ForEach(colors, id: \.self) { color in
-                Button(action: {
+                Button {
                     selected = color
-                }, label: {
+                } label: {
                     HStack {
                         Image(systemName: "circle.fill")
                             .foregroundStyle(Color[color])
@@ -25,7 +25,7 @@ struct CursorColorView: View {
                         Spacer()
                         Image(systemName: "\(selected == color ? "checkmark" : "")")
                     }
-                })
+                }
             }
         }
     }

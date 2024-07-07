@@ -23,14 +23,9 @@ struct PeopleView: View {
                     ListRowNavigationLabel(title: "Sort Order", subtitle: "Last, First", content: SortOrderView())
                     ListRowNavigationLabel(title: "Display Order", subtitle: "First, Last", content: DisplayOrderView())
                     NavigationLink("Short Name", destination: ShortNameView())
-                    // TODO: Popover for My Info
-                    Button(action: {}, label: {
-                        HStack {
-                            Text("My Info")
-                            Spacer()
-                            Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                        }
-                    })
+                    Button {} label: {
+                        NavigationLink("My Info") {}
+                    }
                     NavigationLink("Blocked Contacts", destination: BlockedContacts())
                 }
             }
@@ -39,5 +34,7 @@ struct PeopleView: View {
 }
 
 #Preview {
-    PeopleView()
+    NavigationStack {
+        PeopleView()
+    }
 }
