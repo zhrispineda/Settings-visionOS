@@ -13,11 +13,11 @@ struct AudioDescriptionsView: View {
     
     var body: some View {
         CustomList(title: "Audio Descriptions") {
-            Section(content: {
+            Section {
                 Toggle("Audio Description", isOn: $audioDescriptionsEnabled)
-            }, footer: {
+            } footer: {
                 Text("When available, automatically play audio descriptions.")
-            })
+            }
         }
     }
 }

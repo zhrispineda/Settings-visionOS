@@ -12,11 +12,9 @@ struct PerAppSettingsView: View {
     
     var body: some View {
         CustomList(title: "Per-App Settings") {
-            Section(content: {
-                Button("Add App", action: {}) // TODO: Popover
-            }, header: {
-                Text("App Customization")
-            })
+            Section("App Customization") {
+                Button("Add App") {}
+            }
         }
     }
 }

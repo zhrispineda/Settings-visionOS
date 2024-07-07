@@ -13,14 +13,14 @@ struct TimeLimitsView: View {
     
     var body: some View {
         CustomList(title: "Time Limits") {
-            Section(content: {
+            Section {
                 ListRowNavigationLabel(title: "Sound", subtitle: "None", content: AlertTonesView(title: "Sound", selected: "None (Default)"))
                 Toggle("Speak", isOn: $speakEnabled)
-            }, header: {
+            } header: {
                 Text("Alarm")
-            }, footer: {
+            } footer: {
                 Text("Play a sound and have the remaining Guided Access time spoken before time ends.")
-            })
+            }
         }
     }
 }

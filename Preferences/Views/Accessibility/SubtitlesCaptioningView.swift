@@ -13,11 +13,11 @@ struct SubtitlesCaptioningView: View {
     
     var body: some View {
         CustomList(title: "Subtitles & Captioning") {
-            Section(content: {
+            Section {
                 Toggle("Closed Captioning + SDH", isOn: $closedCaptionsSDHEnabled)
-            }, footer: {
+            } footer: {
                 Text("When available, prefer captioning or subtitles for the deaf and hard of hearing.")
-            })
+            }
             
             Section {
                 ListRowNavigationLabel(title: "Style", subtitle: "Transparent Background", content: StyleView())

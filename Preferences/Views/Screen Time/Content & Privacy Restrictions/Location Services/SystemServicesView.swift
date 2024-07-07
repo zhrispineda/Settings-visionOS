@@ -39,7 +39,7 @@ struct SystemServicesView: View {
                         showingNetworkingAlert = !networkingWirelessEnabled
                     }
                 Toggle("Setting Time Zone", isOn: $settingTimeZoneEnabled)
-                Toggle(isOn: $suggestionsSearchEnabled, label: {
+                Toggle(isOn: $suggestionsSearchEnabled) {
                     HStack {
                         Text("Suggestions & Search")
                         Spacer()
@@ -47,17 +47,17 @@ struct SystemServicesView: View {
                             .font(.title2)
                             .padding(.trailing)
                     }
-                })
+                }
                 Toggle("System Customization", isOn: $systemCustomizationEnabled)
             }
             
-            Section(content: {
+            Section {
                 Toggle("\(UIDevice().name) Analytics", isOn: $deviceAnalyticsEnabled)
                 Toggle("Routing & Traffic", isOn: $routingTrafficEnabled)
                 Toggle("Improve Maps", isOn: $improveMapsEnabled)
-            }, header: {
+            } header: {
                 Text("Product Improvement")
-            }, footer: {
+            } footer: {
                 VStack(alignment: .leading) {
                     Text("Allow Apple to use your frequent location information to improve Maps. [About Improve Maps & Privacy...](#)").tint(.cyan)
                         .padding(.bottom, 30)
@@ -83,17 +83,19 @@ struct SystemServicesView: View {
                     }
                     .foregroundStyle(.white)
                 }
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Control Center Icon", isOn: $controlCenterIconEnabled)
-            }, footer: {
+            } footer: {
                 Text("Show the Location Services icon in Control Center when the services above request your location.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    SystemServicesView()
+    NavigationStack {
+        SystemServicesView()
+    }
 }

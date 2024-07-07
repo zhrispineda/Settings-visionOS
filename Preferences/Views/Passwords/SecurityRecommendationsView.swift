@@ -13,12 +13,12 @@ struct SecurityRecommendationsView: View {
     
     var body: some View {
         CustomList(title: "Security Recommendations") {
-            Section(content: {
+            Section {
                 Toggle("Detect Compromised Passwords", isOn: $detectCompromisedPasswordsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Vision Pro can securely monitor your passwords and alert you if they appear in known data leaks. [About Passwords & Privacy...](#)")
                     .padding()
-            })
+            }
         }
     }
 }

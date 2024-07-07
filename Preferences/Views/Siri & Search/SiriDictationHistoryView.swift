@@ -14,8 +14,8 @@ struct SiriDictationHistoryView: View {
     
     var body: some View {
         CustomList(title: "Siri & Dictation History") {
-            Section(content: {
-                Button("Delete Siri & Dictation History", action: { showingDeleteHistoryAlert.toggle() })
+            Section {
+                Button("Delete Siri & Dictation History") { showingDeleteHistoryAlert.toggle() }
                     .foregroundStyle(.red)
                     .alert("Delete Siri &\nDictation History", isPresented: $showingDeleteHistoryAlert) {
                         Button("Delete Siri &\nDictation History", role: .destructive) { showingProcessRequestAlert.toggle() }
@@ -28,9 +28,9 @@ struct SiriDictationHistoryView: View {
                     } message: {
                         Text("Your Siri and Dictation history will be deleted.")
                     }
-            }, footer: {
-                Text("Delete Siri & Dictation interactions currently associated with this \(UIDevice().name) from Apple servers. [About Improve Siri & Dictation](#)").tint(.cyan)
-            })
+            } footer: {
+                Text("Delete Siri & Dictation interactions currently associated with this \(UIDevice().name) from Apple servers. [About Improve Siri & Dictation](#)")
+            }
         }
     }
 }
