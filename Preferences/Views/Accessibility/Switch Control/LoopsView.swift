@@ -14,25 +14,23 @@ struct LoopsView: View {
     
     var body: some View {
         CustomList(title: "Loops") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("Hide the cursor after each item on screen has been visited a specific number of times.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    LoopsView()
+    NavigationStack {
+        LoopsView()
+    }
 }

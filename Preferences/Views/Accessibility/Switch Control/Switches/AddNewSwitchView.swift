@@ -10,14 +10,14 @@ import SwiftUI
 struct AddNewSwitchView: View {
     var body: some View {
         CustomList(title: "Source") {
-            Section(content: {
+            Section {
                 NavigationLink("External", destination: ExternalView())
                 NavigationLink("Sound", destination: SoundView())
-            }, header: {
+            } header: {
                 Text("Source")
-            }, footer: {
+            } footer: {
                 Text("Choose a switch source. Some sources may be unavailable until downloads complete.")
-            })
+            }
         }
     }
 }

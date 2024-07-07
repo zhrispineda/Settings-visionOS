@@ -12,7 +12,7 @@ struct AutoScanningTimeView: View {
     
     var body: some View {
         CustomList(title: "Auto Scanning Time") {
-            Section(content: {
+            Section("Auto Scanning Time") {
                 Stepper(
                     value: $time,
                     in: 0.05...25.00,
@@ -25,13 +25,13 @@ struct AutoScanningTimeView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
-                Text("Auto Scanning Time")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AutoScanningTimeView()
+    NavigationStack {
+        AutoScanningTimeView()
+    }
 }

@@ -33,11 +33,11 @@ struct DwellControlView: View {
                 }
             }
             
-            Section(content: {
+            Section {
                 Toggle("Highlight Control", isOn: $highlightControl)
-            }, footer: {
+            } footer: {
                 Text("When enabled, an outline will show around the control that will be pressed when the dwell timer elapses.")
-            })
+            }
         }
     }
 }

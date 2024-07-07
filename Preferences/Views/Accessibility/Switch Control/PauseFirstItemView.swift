@@ -14,11 +14,11 @@ struct PauseFirstItemView: View {
     
     var body: some View {
         CustomList(title: "Pause on First Item") {
-            Section(content: {
+            Section {
                 Toggle("Pause on First Item", isOn: $pauseFirstItemEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("The duration of time auto scanning will wait after input is pressed.")
-            })
+            }
             
             if pauseFirstItemEnabled {
                 Section {

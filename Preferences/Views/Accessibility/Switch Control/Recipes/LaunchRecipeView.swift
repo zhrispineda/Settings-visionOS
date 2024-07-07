@@ -14,25 +14,23 @@ struct LaunchRecipeView: View {
     
     var body: some View {
         CustomList(title: "Launch Recipe") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("Choose a recipe that will be applied automatically when Switch Control starts.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    LaunchRecipeView()
+    NavigationStack {
+        LaunchRecipeView()
+    }
 }

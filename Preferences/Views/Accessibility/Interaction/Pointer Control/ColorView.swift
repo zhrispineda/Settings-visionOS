@@ -32,11 +32,9 @@ struct ColorView: View {
                 }
             }
             
-            Section(content: {
+            Section("Border Width") {
                 Slider(value: $width, in: 0...100)
-            }, header: {
-                Text("Border Width")
-            })
+            }
         }
     }
 }
@@ -71,5 +69,7 @@ extension Color {
 }
 
 #Preview {
-    ColorView()
+    NavigationStack {
+        ColorView()
+    }
 }
