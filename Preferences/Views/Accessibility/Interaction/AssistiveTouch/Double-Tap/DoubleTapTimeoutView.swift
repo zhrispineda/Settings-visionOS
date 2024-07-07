@@ -13,7 +13,7 @@ struct DoubleTapTimeoutView: View {
     
     var body: some View {
         CustomList(title: "Double-Tap Timeout") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $duration,
                     in: 0.10...0.75,
@@ -26,15 +26,17 @@ struct DoubleTapTimeoutView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Double-Tap Timeout")
-            }, footer: {
+            } footer: {
                 Text("The duration of time that two taps must occur within to activate the Double-Tap action.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DoubleTapTimeoutView()
+    NavigationStack {
+        DoubleTapTimeoutView()
+    }
 }

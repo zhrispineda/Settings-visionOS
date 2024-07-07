@@ -12,15 +12,13 @@ struct CustomizeTopLevelMenuView: View {
     
     var body: some View {
         CustomList(title: "Customize Top Level Menu") {
-            Section(content: {
+            Section("Tap an icon to change:") {
                 HStack {
                     ForEach(1...icons, id: \.self) { _ in
-                        Button(action: {
-                            // TODO
-                        }, label: {
+                        Button {} label: {
                             Image(systemName: "square.dotted")
                                 .font(.extraLargeTitle)
-                        })
+                        }
                         .buttonStyle(.plain)
                     }
                 }
@@ -37,17 +35,15 @@ struct CustomizeTopLevelMenuView: View {
                         Text(icons == 1 ? "Icon" : "Icons")
                     }
                 }
-            }, header: {
-                Text("Tap an icon to change:")
-            })
+            }
             
             Section {
-                Button(action: {
+                Button {
                     icons = 6
-                }, label: {
+                } label: {
                     Text("Reset...")
                         .frame(maxWidth: .infinity)
-                })
+                }
             }
         }
     }

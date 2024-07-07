@@ -13,18 +13,20 @@ struct IdleOpacityView: View {
     
     var body: some View {
         CustomList(title: "Idle Opacity") {
-            Section(content: {
+            Section {
                 HStack(spacing: 15) {
                     Slider(value: $opacity, in: 15...100)
                     Text("\(opacity, specifier: "%.0f")%")
                 }
-            }, footer: {
+            } footer: {
                 Text("Reduces the visibility of AssistiveTouch when not in use.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    IdleOpacityView()
+    NavigationStack {
+        IdleOpacityView()
+    }
 }

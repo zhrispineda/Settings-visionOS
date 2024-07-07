@@ -13,7 +13,7 @@ struct DoublePinchTimeoutView: View {
     
     var body: some View {
         CustomList(title: "Double-pinch Timeout") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $timeout,
                     in: 0.25...2.00,
@@ -26,11 +26,11 @@ struct DoublePinchTimeoutView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Double-pinch Timeout")
-            }, footer: {
+            } footer: {
                 Text("Two pinches that occur within the specified timeout will perform a double pinch in VoiceOver.")
-            })
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ struct LongPressDurationView: View {
     
     var body: some View {
         CustomList(title: "Long Press Duration") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $duration,
                     in: 0.20...8.00,
@@ -26,15 +26,17 @@ struct LongPressDurationView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Long Press Duration")
-            }, footer: {
+            } footer: {
                 Text("The duration of time required to activate the Long Press action.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    LongPressDurationView()
+    NavigationStack {
+        LongPressDurationView()
+    }
 }

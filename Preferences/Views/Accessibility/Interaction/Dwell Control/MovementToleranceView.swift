@@ -13,15 +13,17 @@ struct MovementToleranceView: View {
     
     var body: some View {
         CustomList(title: "Movement Tolerance") {
-            Section(content: {
+            Section {
                 Slider(value: $tolerance, in: 0...100)
-            }, footer: {
-                Text("The distance you can move while dwelling on an item. If you move beyond this limit, the dwell action isn't performed.")
-            })
+            } footer: {
+                Text("The distance you can move while dwelling on an item. If you move beyond this limit, the dwell action isn‘t performed.")
+            }
         }
     }
 }
 
 #Preview {
-    MovementToleranceView()
+    NavigationStack {
+        MovementToleranceView()
+    }
 }

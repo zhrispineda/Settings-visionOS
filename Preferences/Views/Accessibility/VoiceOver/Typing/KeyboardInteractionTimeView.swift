@@ -13,7 +13,7 @@ struct KeyboardInteractionTimeView: View {
     
     var body: some View {
         CustomList(title: "Keyboard Interaction Time") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $intervalTime,
                     in: 0.00...4.00,
@@ -26,15 +26,17 @@ struct KeyboardInteractionTimeView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Keyboard Interaction Time")
-            }, footer: {
+            } footer: {
                 Text("The amount of time to wait before VoiceOver can start Slide to Type or make use of alternative keys on the software keyboard.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    KeyboardInteractionTimeView()
+    NavigationStack {
+        KeyboardInteractionTimeView()
+    }
 }

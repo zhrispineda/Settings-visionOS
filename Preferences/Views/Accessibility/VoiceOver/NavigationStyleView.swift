@@ -14,21 +14,17 @@ struct NavigationStyleView: View {
     
     var body: some View {
         CustomList(title: "Navigation Style") {
-            Section(content: {
-                ForEach(styles, id: \.self) { style in
-                    Button(action: {
-                        selected = style
-                    }, label: {
-                        HStack {
-                            Text(style)
-                            Spacer()
-                            Image(systemName: "\(selected == style ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(styles, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("VoiceOver navigates by moving \(selected == "Flat" ? "sequentially through each item on the screen using the move next and previous commands." : "through items and groups of items on the screen.")")
-            })
+            }
         }
     }
 }

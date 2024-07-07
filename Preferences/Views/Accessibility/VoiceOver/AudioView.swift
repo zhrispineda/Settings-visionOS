@@ -19,15 +19,17 @@ struct AudioView: View {
                 Toggle("Audio Ducking", isOn: $audioDuckingEnabled)
             }
             
-            Section(content: {
+            Section {
                 Toggle("Send to HDMI", isOn: $sendHDMIEnabled)
-            }, footer: {
+            } footer: {
                 Text("Any externally connected media devices should be reconnected for this change to take effect.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AudioView()
+    NavigationStack {
+        AudioView()
+    }
 }
