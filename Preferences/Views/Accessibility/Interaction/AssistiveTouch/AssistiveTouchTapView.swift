@@ -25,57 +25,41 @@ struct AssistiveTouchTapView: View {
                 ListRowNavigationLabel(title: "Long Press Duration", subtitle: "\(selected == "None" ? "Off" : "0.75s")", content: LongPressDurationView())
             }
             
-            Section(content: {
-                ForEach(systemOptions, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section("System") {
+                Picker("", selection: $selected) {
+                    ForEach(systemOptions, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("System")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
             
-            Section(content: {
-                ForEach(accessibilityOptions, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section("Accessibility") {
+                Picker("", selection: $selected) {
+                    ForEach(accessibilityOptions, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Accessibility")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
             
-            Section(content: {
-                ForEach(scrollGestures, id: \.self) { option in
-                    Button(action: {
-                        selected = option
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section("Scroll Gestures") {
+                Picker("", selection: $selected) {
+                    ForEach(scrollGestures, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Scroll Gestures")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
         }
     }
 }
 
 #Preview {
-    AssistiveTouchTapView()
+    NavigationStack {
+        AssistiveTouchTapView()
+    }
 }

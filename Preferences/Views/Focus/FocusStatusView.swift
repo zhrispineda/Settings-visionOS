@@ -10,39 +10,41 @@ import SwiftUI
 struct FocusStatusView: View {
     var body: some View {
         List {
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("\u{201C}Share Across Devices\u{201D} must be turned on to share your Focus state to this device.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Share Focus Status", isOn: .constant(true))
-            }, footer: {
+            } footer: {
                 Text("When a Focus is on, apps that you allow can show that you have notifications silenced.")
-            })
+            }
             .disabled(true)
             
-            Section(content: {
+            Section {
                 Toggle("Do Not Disturb", isOn: .constant(true))
                 Toggle("Mindfulness", isOn: .constant(true))
                 Toggle("Personal", isOn: .constant(true))
                 Toggle("Sleep", isOn: .constant(true))
                 Toggle("Work", isOn: .constant(true))
-            }, header: {
+            } header: {
                 Text("Share From")
-            }, footer: {
+            } footer: {
                 Text("Customize which Focus profiles can share that you have notifications silenced.")
-            })
+            }
             .disabled(true)
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
+            ToolbarItem(placement: .topBarLeading) {
                 Text("Focus Status")
                     .font(.title2)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    FocusStatusView()
+    NavigationStack {
+        FocusStatusView()
+    }
 }

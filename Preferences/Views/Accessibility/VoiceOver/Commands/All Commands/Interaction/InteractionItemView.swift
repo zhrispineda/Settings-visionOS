@@ -201,7 +201,7 @@ struct InteractionItemView: View {
     var body: some View {
         CustomList(title: title, editEnabled: true) {
             // MARK: - Touch Gestures
-            Section(content: {
+            Section("Touch Gestures") {
                 switch title {
                 case "Activate":
                     ForEach($activateTouchGestures, id: \.self, editActions: .delete) { $gesture in
@@ -323,12 +323,10 @@ struct InteractionItemView: View {
                     EmptyView()
                 }
                 Button("**Add Gesture**", action: {}) // TODO: Popover
-            }, header: {
-                Text("Touch Gestures")
-            })
+            }
             
             // MARK: - Keyboard Shortcuts
-            Section(content: {
+            Section {
                 switch title {
                 case "Activate":
                     ForEach($activateKeyboardShortcuts, id: \.self, editActions: .delete) { $shortcut in
@@ -780,14 +778,14 @@ struct InteractionItemView: View {
                     } message: {
                         Text("Enter a key combination on your keyboard.")
                     }
-            }, header: {
+            } header: {
                 Text("Keyboard Shortcuts")
-            }, footer: {
+            } footer: {
                 Text("Commands are prefixed with the VoiceOver modifier key: Control + Option")
-            })
+            }
             
             if quickNavShortcutViews.contains(title) {
-                Section(content: {
+                Section("Quick Nav Shortcuts") {
                     Group {
                         switch title {
                         case "Activate":
@@ -826,9 +824,7 @@ struct InteractionItemView: View {
                         }
                     }
                     .foregroundStyle(.secondary)
-                }, header: {
-                    Text("Quick Nav Shortcuts")
-                })
+                }
             }
         }
     }

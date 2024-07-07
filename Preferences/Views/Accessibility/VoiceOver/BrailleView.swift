@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BrailleView: View {
     // Variables
+    @State private var matchInputOutputTables = false
+    @State private var automaticTranslation = false
     @State private var equationsUseNemethCodeEnabled = true
     @State private var showOnscreenKeyboardEnabled = false
     @State private var turnPagesPanningEnabled = true
@@ -21,15 +23,21 @@ struct BrailleView: View {
     var body: some View {
         CustomList(title: "Braille") {
             Section {
-                ListRowNavigationLabel(title: "Output", subtitle: "Six-dot", content: OutputView())
-                ListRowNavigationLabel(title: "Input", subtitle: "Six-dot", content: InputView())
+                Toggle("Match Input and Output Tables", isOn: $matchInputOutputTables)
+                if matchInputOutputTables {
+                    ListRowNavigationLabel(title: "Input and Output", subtitle: "English (Unified, Uncontracted)", content: OutputView())
+                } else {
+                    ListRowNavigationLabel(title: "Output", subtitle: "English (Unified, Uncontracted)", content: OutputView())
+                    ListRowNavigationLabel(title: "Input", subtitle: "English (Unified, Uncontracted)", content: InputView())
+                }
             }
             
             Section {
-                ListRowNavigationLabel(title: "Braille Tables", subtitle: "1", content: BrailleTablesView())
+                ListRowNavigationLabel(title: "Braille Tables", subtitle: "3", content: BrailleTablesView())
             }
             
             Section {
+                Toggle("Automatic Translation", isOn: $automaticTranslation)
                 NavigationLink("Status Cell", destination: StatusCellsView())
                 Toggle("Equations use Nemeth Code", isOn: $equationsUseNemethCodeEnabled)
                 Toggle("Show Onscreen Keyboard", isOn: $showOnscreenKeyboardEnabled)
@@ -41,7 +49,7 @@ struct BrailleView: View {
                 ListRowNavigationLabel(title: "Auto Advance Duration", subtitle: "5s", content: AutoAdvanceDurationView())
             }
             
-            Section(content: {
+            Section {
                 Toggle("Sound Curtain", isOn: $soundCurtainEnabled)
                     .alert("Sound Curtain", isPresented: $showingSoundCurtainAlert) {
                         Button("OK") {}
@@ -49,34 +57,36 @@ struct BrailleView: View {
                     } message: {
                         Text("Sound Curtain will disable all audio including VoiceOver when a Braille display is connected. Are you sure you want to continue?")
                     }
-                    .onChange(of: soundCurtainEnabled, {
+                    .onChange(of: soundCurtainEnabled) {
                         showingSoundCurtainAlert = soundCurtainEnabled
-                    })
-            }, footer: {
+                    }
+            } footer: {
                 Text("Sound Curtain ensures that your \(UIDevice().name) does not play sound from music or sound effects when a Braille display is connected. Emergency alerts will still play sounds.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 Toggle("Enabled Bluetooth on Start", isOn: $enableBluetoothStart)
-            }, footer: {
+            } footer: {
                 Text("Enable Bluetooth when VoiceOver starts so that Braille displays can connect.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 HStack {
                     Text("Searching...")
                     Spacer()
                     ProgressView()
                 }
-            }, header: {
-                Text("CHOOSE A BRAILLE DISPLAY...")
+            } header: {
+                Text("CHOOSE A BRAILLE DISPLAY")
                     .font(.subheadline)
-            })
+            }
             .foregroundStyle(.tertiary)
         }
     }
 }
 
 #Preview {
-    BrailleView()
+    NavigationStack {
+        BrailleView()
+    }
 }

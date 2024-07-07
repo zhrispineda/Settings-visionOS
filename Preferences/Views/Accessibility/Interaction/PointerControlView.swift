@@ -23,27 +23,21 @@ struct PointerControlView: View {
                 ListRowNavigationLabel(title: "Control", subtitle: "Eyes", content: ControlView())
             }
             
-            Section(content: {
+            Section("Appearance") {
                 Toggle("Increase Contrast", isOn: $increaseContrastEnabled)
                 ListRowNavigationLabel(title: "Color", subtitle: "None", content: ColorView())
-            }, header: {
-                Text("Appearance")
-            })
+            }
             
-            Section(content: {
+            Section("Pointer Size") {
                 Slider(value: $size, in: 0...100)
-            }, header: {
-                Text("Pointer Size")
-            })
+            }
             
-            Section(content: {
+            Section("Trackpad") {
                 Toggle("Automatically Hide Pointer", isOn: $automaticallyHidePointerEnabled)
                 Toggle("Pointer Animations", isOn: $pointerAnimationsEnabled)
-            }, header: {
-                Text("Trackpad")
-            })
+            }
             
-            Section(content: {
+            Section("Scrolling Speed") {
                 Group {
                     Slider(value: $speed,
                            in: 0.0...1.0,
@@ -53,9 +47,7 @@ struct PointerControlView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
-                Text("Scrolling Speed")
-            })
+            }
         }
     }
 }

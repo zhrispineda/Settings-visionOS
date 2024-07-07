@@ -14,35 +14,35 @@ struct ActionsView: View {
     
     var body: some View {
         CustomList(title: "Sound") {
-            Section(content: {
-                Button("Practice", action: {})
-            }, footer: {
+            Section {
+                Button("Practice") {}
+            } footer: {
                 Text("Practice sounds before assigning one to an action.")
-            })
+            }
             
-            Section(content: {}, footer: {
+            Section {} footer: {
                 Text("Choose a switch action.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ForEach(scannerItems, id: \.self) { scanner in
                     Button(scanner, action: {})
                 }
-            }, header: {
+            } header: {
                 Text("Scanner")
-            })
+            }
             
-            Section(content: {
+            Section("System") {
                 ForEach(systemItems, id: \.self) { scanner in
-                    Button(scanner, action: {})
+                    Button(scanner) {}
                 }
-            }, header: {
-                Text("System")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ActionsView()
+    NavigationStack {
+        ActionsView()
+    }
 }
