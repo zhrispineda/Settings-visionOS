@@ -15,14 +15,14 @@ struct SmartActivationView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 Toggle("Smart Activation", isOn: $smartActivationEnabled)
-            }, footer: {
+            } footer: {
                 Text("Automatically turn \(focusName) Focus on at relevant times throughout the day based on signals like your location, app usage, and more.")
-            })
+            }
             
             Section {
-                Button("Delete Schedule", action: { showingDeleteAlert.toggle() })
+                Button("Delete Schedule") { showingDeleteAlert.toggle() }
                     .foregroundStyle(.red)
                     .alert("Do you want to delete this schedule?", isPresented: $showingDeleteAlert) {
                         Button("Delete Schedule", role: .destructive) {}
@@ -31,16 +31,18 @@ struct SmartActivationView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Smart Activation")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    SmartActivationView()
+    NavigationStack {
+        SmartActivationView()
+    }
 }

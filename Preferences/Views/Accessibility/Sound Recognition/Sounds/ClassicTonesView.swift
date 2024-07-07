@@ -14,21 +14,23 @@ struct ClassicTonesView: View {
     
     var body: some View {
         List(soundNames, id: \.self) { sound in
-            Button(action: {
+            Button {
                 selected = sound
-            }, label: {
+            } label: {
                 Label(sound, systemImage: selected == sound ? "checkmark" : "")
-            })
+            }
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
+            ToolbarItem(placement: .topBarLeading) {
                 Text("Classic")
                     .font(.title2)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ClassicTonesView()
+    NavigationStack {
+        ClassicTonesView()
+    }
 }

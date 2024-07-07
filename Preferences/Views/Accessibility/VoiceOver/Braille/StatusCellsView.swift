@@ -14,12 +14,10 @@ struct StatusCellsView: View {
     
     var body: some View {
         CustomList(title: "Status Cells") {
-            Section(content: {
-                Button("Left", action: {})
-                Button("Right", action: {})
-            }, header: {
-                Text("Status Cells Position")
-            })
+            Section("Status Cells Position") {
+                Button("Left") {}
+                Button("Right") {}
+            }
             
             Section {
                 Toggle("Show General Status", isOn: $showGeneralStatusEnabled)
@@ -30,5 +28,7 @@ struct StatusCellsView: View {
 }
 
 #Preview {
-    StatusCellsView()
+    NavigationStack {
+        StatusCellsView()
+    }
 }

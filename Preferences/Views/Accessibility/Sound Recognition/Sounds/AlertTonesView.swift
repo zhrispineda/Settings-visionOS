@@ -16,7 +16,7 @@ struct AlertTonesView: View {
     var body: some View {
         List {
             Section {
-                Button(action: {}, label: {
+                Button {} label: {
                     HStack {
                         Text("Haptics")
                         Spacer()
@@ -25,44 +25,46 @@ struct AlertTonesView: View {
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.secondary)
                     }
-                })
+                }
             }
             
             Section {
                 ForEach(soundNames, id: \.self) { sound in
                     if sound == "None (Default)" {
                         if title == "Sound" {
-                            Button(action: {
+                            Button {
                                 selected = sound
-                            }, label: {
+                            } label: {
                                 Label(sound, systemImage: selected == sound ? "checkmark" : "")
-                            })
+                            }
                         }
                     } else {
-                        Button(action: {
+                        Button {
                             selected = sound
-                        }, label: {
+                        } label: {
                             Label(sound, systemImage: selected == sound ? "checkmark" : "")
-                        })
+                        }
                     }
                 }
-                NavigationLink(destination: ClassicTonesView(), label: {
+                NavigationLink(destination: ClassicTonesView()) {
                     Label("Classic", systemImage: "empty")
-                })
+                }
             }
         }
         .navigationTitle(title)
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text(title)
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40) // Adjust for back button if parent view or not
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AlertTonesView()
+    NavigationStack {
+        AlertTonesView()
+    }
 }

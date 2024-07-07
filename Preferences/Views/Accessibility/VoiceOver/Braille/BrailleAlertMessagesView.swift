@@ -15,11 +15,11 @@ struct BrailleAlertMessagesView: View {
     
     var body: some View {
         CustomList(title: "Braille Alert Messages") {
-            Section(content: {
+            Section {
                 Toggle("Braille Alert Messages", isOn: $brailleAlertMessagesEnabled)
-            }, footer: {
+            } footer: {
                 Text("When enabled, your Braille display will show an alert message for the duration specified. If not enabled, alert messages will not be displayed.")
-            })
+            }
             
             if brailleAlertMessagesEnabled {
                 Section {

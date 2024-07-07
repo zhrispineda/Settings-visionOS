@@ -23,14 +23,14 @@ struct ScheduleView: View {
                 Toggle("Schedule", isOn: $scheduleEnabled)
             }
             
-            Section(content: {
+            Section {
                 DatePicker("From", selection: $fromTime, displayedComponents: .hourAndMinute)
                 DatePicker("To", selection: $toTime, displayedComponents: .hourAndMinute)
                 HStack {
                     Text("Repeat")
                     Spacer()
                     ForEach(days, id: \.self) { option in
-                        Button(action: {
+                        Button {
                             if let index = selectedDays.firstIndex(of: option) {
                                 selectedDays.remove(at: index)
                             } else {
@@ -43,7 +43,7 @@ struct ScheduleView: View {
                                     return index1 < index2
                                 }
                             }
-                        }, label: {
+                        } label: {
                             ZStack {
                                 if selectedDays.contains(option) {
                                     Image(systemName: "circle.fill")
@@ -57,13 +57,13 @@ struct ScheduleView: View {
                                 }
                                 Text(option.prefix(1))
                             }
-                        })
+                        }
                         .buttonStyle(.plain)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Time")
-            }, footer: {
+            } footer: {
                 switch selectedDays {
                 case ["Sun", "Sat"]:
                     Text("Weekends")
@@ -81,7 +81,7 @@ struct ScheduleView: View {
                 default:
                     Text("Every day")
                 }
-            })
+            }
             
             Section {
                 Button("Delete Schedule", action: {
@@ -95,16 +95,18 @@ struct ScheduleView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("12:00 AM")
                     .font(.title)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ScheduleView()
+    NavigationStack {
+        ScheduleView()
+    }
 }

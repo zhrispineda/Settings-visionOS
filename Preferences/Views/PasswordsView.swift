@@ -13,7 +13,7 @@ struct PasswordsView: View {
     var body: some View {
         List {
             Section {
-                NavigationLink(destination: SecurityRecommendationsView(), label: {
+                NavigationLink(destination: SecurityRecommendationsView()) {
                     HStack {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
@@ -32,8 +32,8 @@ struct PasswordsView: View {
                         Text("0")
                             .foregroundStyle(.secondary)
                     }
-                })
-                NavigationLink(destination: PasswordOptionsView(), label: {
+                }
+                NavigationLink(destination: PasswordOptionsView()) {
                     HStack {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
@@ -47,29 +47,31 @@ struct PasswordsView: View {
                             Text("Password Options")
                         }
                     }
-                })
+                }
             }
         }
         .padding(.horizontal, 45)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Passwords")
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Passwords")
                     .font(.title)
                     .frame(maxWidth: .infinity)
                     .offset(x: 80)
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
-                Button("\(Image(systemName: "plus"))", action: {})
-            })
-            ToolbarItem(placement: .topBarTrailing, content: {
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("\(Image(systemName: "plus"))") {}
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 EditButton()
-            })
+            }
         }
     }
 }
 
 #Preview {
-    PasswordsView()
+    NavigationStack {
+        PasswordsView()
+    }
 }

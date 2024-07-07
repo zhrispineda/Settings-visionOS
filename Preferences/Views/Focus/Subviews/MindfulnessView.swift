@@ -13,23 +13,25 @@ struct MindfulnessView: View {
     
     var body: some View {
         List {
-            Section(content: {
+            Section {
                 Toggle("Turn On Automatically", isOn: $turnOnAutomaticallyEnabled)
-            }, footer: {
+            } footer: {
                 Text("Mindfulness Focus will be activated automatically when you start a session in the Mindfulness app.")
-            })
+            }
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Mindfulness")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40)
-            })
+            }
         }
     }
 }
 
 #Preview {
-    MindfulnessView()
+    NavigationStack {
+        MindfulnessView()
+    }
 }

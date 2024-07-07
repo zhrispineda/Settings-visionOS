@@ -15,7 +15,7 @@ struct LocationServicesView: View {
     
     var body: some View {
         CustomList(title: "Location Services") {
-            Section(content: {
+            Section {
                 Picker("", selection: $selected) {
                     ForEach(options, id: \.self) {
                         Text($0)
@@ -23,9 +23,9 @@ struct LocationServicesView: View {
                 }
                 .pickerStyle(.inline)
                 .labelsHidden()
-            }, footer: {
+            } footer: {
                 Text("Disallowing changes locks the settings shown below and prevents new apps from using location services.")
-            })
+            }
             
             Section {
                 Toggle("Location Services", isOn: $locationServicesEnabled)

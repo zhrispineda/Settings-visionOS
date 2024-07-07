@@ -38,12 +38,12 @@ struct TextSizeView: View {
                 .padding(.top, 5)
         }
         .toolbar {
-            ToolbarItem(placement: .principal, content: {
+            ToolbarItem(placement: .principal) {
                 Text("Text Size")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .offset(x: -40)
-            })
+            }
         }
     }
 }
