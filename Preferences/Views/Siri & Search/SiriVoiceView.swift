@@ -23,80 +23,58 @@ struct SiriVoiceView: View {
     
     var body: some View {
         CustomList(title: "Siri Voice") {
-            Section(content: {
-                ForEach(varietyOptions, id: \.self) { option in
-                    Button(action: { selectedVariety = option }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            if selectedVariety == option {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+            Section("Variety") {
+                Picker("", selection: $selectedVariety) {
+                    ForEach(varietyOptions, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
-                Text("Variety")
-            })
+                .pickerStyle(.inline)
+                .labelsHidden()
+            }
             
-            Section(content: {
+            Section("Voice") {
                 switch selectedVariety {
                 case "American":
-                    ForEach(AmericanVoiceOptions, id: \.self) { option in
-                        Button(action: { selectedAmericanVoice = option }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                if selectedAmericanVoice == option {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        })
+                    Picker("", selection: $selectedAmericanVoice) {
+                        ForEach(AmericanVoiceOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                 case "British":
-                    ForEach(BritishVoiceOptions, id: \.self) { option in
-                        Button(action: { selectedBritishVoice = option }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                if selectedBritishVoice == option {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        })
+                    Picker("", selection: $selectedBritishVoice) {
+                        ForEach(BritishVoiceOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                 case "Indian":
-                    ForEach(voiceOptions, id: \.self) { option in
-                        Button(action: { selectedIndianVoice = option }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                if selectedIndianVoice == option {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        })
+                    Picker("", selection: $selectedIndianVoice) {
+                        ForEach(voiceOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                 default:
-                    ForEach(voiceOptions, id: \.self) { option in
-                        Button(action: { selectedOtherVoice = option }, label: {
-                            HStack {
-                                Text(option)
-                                Spacer()
-                                if selectedOtherVoice == option {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        })
+                    Picker("", selection: $selectedOtherVoice) {
+                        ForEach(voiceOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                 }
-            }, header: {
-                Text("Voice")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    SiriVoiceView()
+    NavigationStack {
+        SiriVoiceView()
+    }
 }

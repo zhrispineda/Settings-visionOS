@@ -15,23 +15,17 @@ struct GlidingCursorView: View {
     
     var body: some View {
         CustomList(title: "Gliding Cursor") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        withAnimation {
-                            selected = option
-                        }
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, header: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
                 Text("Selection Mode")
-            }, footer: {
+            } footer: {
                 Text("""
                     Single mode allows you to make one vertical and one horizontal selection. This may be faster for larger selection targets.
                     
@@ -39,9 +33,9 @@ struct GlidingCursorView: View {
                     
                     Precise mode adds a final low-speed scan for very precise targeting.
                     """)
-            })
+            }
             
-            Section(content: {
+            Section {
                 Stepper(
                     value: $cursorSpeed,
                     in: 1...120,
@@ -51,15 +45,17 @@ struct GlidingCursorView: View {
                         Text("\(cursorSpeed)")
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Gliding Cursor Speed")
-            }, footer: {
+            } footer: {
                 Text("The speed at which the gliding cursor moves across the screen.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    GlidingCursorView()
+    NavigationStack {
+        GlidingCursorView()
+    }
 }

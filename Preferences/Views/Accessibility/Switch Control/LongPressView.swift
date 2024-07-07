@@ -15,11 +15,11 @@ struct LongPressView: View {
     
     var body: some View {
         CustomList(title: "Long Press") {
-            Section(content: {
+            Section {
                 Toggle("Long Press", isOn: $longPressEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("Use Long Press to add another action to a switch is activated when you hold the switch for longer than the duration specified below.")
-            })
+            }
             
             if longPressEnabled {
                 Section {
@@ -37,16 +37,18 @@ struct LongPressView: View {
                     }
                 }
                 
-                Section(content: {
+                Section {
                     Toggle("Pause Scanning", isOn: $pauseScanning)
-                }, footer: {
+                } footer: {
                     Text("Pause Switch Control Scanning when a long press enabled switch is held down.")
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    LongPressView()
+    NavigationStack {
+        LongPressView()
+    }
 }

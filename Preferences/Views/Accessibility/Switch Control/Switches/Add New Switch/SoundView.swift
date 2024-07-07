@@ -13,19 +13,19 @@ struct SoundView: View {
     
     var body: some View {
         CustomList(title: "Sound") {
-            Section(content: {
-                Button("Practice", action: {})
-            }, footer: {
+            Section {
+                Button("Practice") {}
+            } footer: {
                 Text("Practice sounds before assigning one to an action.")
-            })
+            }
             
-            Section(content: {
+            Section {
                 ForEach(sounds, id: \.self) { sound in
                     NavigationLink(sound, destination: ActionsView())
                 }
-            }, footer: {
+            } footer: {
                 Text("Use Switch Control with voiced and voiceless sounds.")
-            })
+            }
         }
     }
 }

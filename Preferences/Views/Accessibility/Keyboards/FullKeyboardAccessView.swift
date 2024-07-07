@@ -16,7 +16,7 @@ struct FullKeyboardAccessView: View {
     
     var body: some View {
         CustomList(title: "Full Keyboard Access") {
-            Section(content: {
+            Section {
                 Toggle("Full Keyboard Access", isOn: $fullKeyboardAccessEnabled)
                     .alert("Important", isPresented: $showingKeyboardAccessOffAlert) {
                         Button("Yes") {}
@@ -27,7 +27,7 @@ struct FullKeyboardAccessView: View {
                     .onChange(of: fullKeyboardAccessEnabled) {
                         showingKeyboardAccessOffAlert = !fullKeyboardAccessEnabled
                     }
-            }, footer: {
+            } footer: {
                 Text("""
                     **Use an external keyboard to control your \(UIDevice().name).**
                     \u{2022} To show Help: Tab H
@@ -38,20 +38,18 @@ struct FullKeyboardAccessView: View {
                     \u{2022} To use the Control Center: Fn C
                     \u{2022} To use the Notification Center: Fn N
                     """)
-            })
+            }
             
             Section {
                 NavigationLink("Commands", destination: KeyboardCommandsView())
             }
             
-            Section(content: {
+            Section("Appearance") {
                 ListRowNavigationLabel(title: "Auto-Hide", subtitle: "15s", content: AutoHideView())
                 Toggle("Increase Size", isOn: $increaseSizeEnabled)
                 Toggle("High Contrast", isOn: $highContrastEnabled)
                 ListRowNavigationLabel(title: "Color", subtitle: "Default", content: KeyboardColorView())
-            }, header: {
-                Text("Appearance")
-            })
+            }
         }
     }
 }

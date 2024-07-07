@@ -13,28 +13,30 @@ struct SoundRecognitionView: View {
     
     var body: some View {
         CustomList(title: "Sound Recognition") {
-            Section(content: {
+            Section {
                 Toggle("Sound Recognition", isOn: $soundRecognitionEnabled)
                 Text("26.3 MB \(soundRecognitionEnabled ? "Used" : "Required")")
                     .foregroundStyle(.tertiary)
-            }, footer: {
+            } footer: {
                 VStack {
                     Text("Your \(UIDevice().name) will continously listen for certain sounds, and using on-device intelligence, will notify you when sounds may be recognized.")
                     Text("\nSound Recognition should not be relied upon in circumstances where you may be harmed or injured, in high-risk emergency situations, or for navigation.")
                 }
-            })
+            }
             
             if soundRecognitionEnabled {
-                Section(content: {
+                Section {
                     ListRowNavigationLabel(title: "Sounds", subtitle: "None", content: RecognitionSoundsView())
-                }, footer: {
+                } footer: {
                     Text("Choose which sounds to recognize.")
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    SoundRecognitionView()
+    NavigationStack {
+        SoundRecognitionView()
+    }
 }

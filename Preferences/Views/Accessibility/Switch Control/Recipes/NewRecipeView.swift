@@ -26,29 +26,29 @@ struct NewRecipeView: View {
                 }
             }
             
-            Section(content: {
+            Section {
                 if !name.isEmpty && name != "No Switches Assigned" {
                     ForEach($switches, id: \.self, editActions: .delete) { $option in
-                        NavigationLink(destination: NewRecipeView(title: "No Switches Assigned", name: "No Switches Assigned"), label: {
+                        NavigationLink(destination: NewRecipeView(title: "No Switches Assigned", name: "No Switches Assigned")) {
                             HStack {
                                 Text("No Switch Assigned")
                                     .foregroundStyle(option == "Tap Middle of Screen" ? .red : .gray)
                                 Spacer()
                                 Text(option)
                             }
-                        })
+                        }
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Switches")
-            }, footer: {
+            } footer: {
                 if name.isEmpty || name == "No Switches Assigned" {
                     Text("To use Recipes, you must have at least one switch configured.")
                 }
-            })
+            }
             
             if name != "No Switches Assigned" {
-                Section(content: {
+                Section {
                     Toggle("Timeout", isOn: $timeoutEnabled)
                     if timeoutEnabled {
                         Stepper(
@@ -64,11 +64,11 @@ struct NewRecipeView: View {
                             }
                         }
                     }
-                }, header: {
+                } header: {
                     Text("Timeout")
-                }, footer: {
+                } footer: {
                     Text("When a timeout is specified, Switch Control will automatically exit the recipe if no switches have been activated for the length of the timeout.")
-                })
+                }
             }
         }
     }

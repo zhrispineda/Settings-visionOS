@@ -14,11 +14,11 @@ struct GuidedAccessView: View {
     
     var body: some View {
         CustomList(title: "Guided Access") {
-            Section(content: {
+            Section {
                 Toggle("Guided Access", isOn: $guidedAccessEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("Guided Access keeps the \(UIDevice().name) in a single app, and allows you to control which features are available. To start Guided Access, triple-press the Digital Crown in the app you want to use.")
-            })
+            }
             
             if guidedAccessEnabled {
                 Section {
@@ -29,11 +29,11 @@ struct GuidedAccessView: View {
                     NavigationLink("Time Limits", destination: TimeLimitsView())
                 }
                 
-                Section(content: {
+                Section {
                     Toggle("Accessibility Shortcut", isOn: $accessibilityShortcutEnabled)
-                }, footer: {
+                } footer: {
                     Text("When you triple-press the Digital Crown during a Guided Access session, Accessibility Shortcut settings will be displayed.")
-                })
+                }
             }
         }
     }
