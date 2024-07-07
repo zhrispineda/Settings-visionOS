@@ -17,16 +17,14 @@ struct PunctuationView: View {
                 ListRowNavigationLabel(title: "Active Punctuation Group", subtitle: "Some", content: ActivePunctuationGroupView())
             }
             
-            Section(content: {
+            Section("System Groups") {
                 NavigationLink("All", destination: PunctuationAllView())
                 NavigationLink("Some", destination: PunctuationSomeView())
                 NavigationLink("None", destination: PunctuationNoneView())
-            }, header: {
-                Text("System Groups")
-            })
+            }
             
             Section {
-                Button("Add Punctuation Group", action: { showingInitialPunctuationGroupPrompt.toggle() })
+                Button("Add Punctuation Group") { showingInitialPunctuationGroupPrompt.toggle() }
                     .alert("Initial Punctuation Group", isPresented: $showingInitialPunctuationGroupPrompt) {
                         Button("All") {}
                         Button("Some") {}
@@ -38,7 +36,7 @@ struct PunctuationView: View {
             }
             
             Section {
-                Button("Import", action: {})
+                Button("Import") {}
             }
         }
     }

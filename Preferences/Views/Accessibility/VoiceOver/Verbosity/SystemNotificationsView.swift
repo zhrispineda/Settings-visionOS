@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SystemNotificationsView: View {
+    @State private var selected = ["Speak", "Braille"]
     let options = ["Speak", "Braille", "Do Nothing"]
-    @State private var selected = ["Do Nothing"]
     
     var body: some View {
         CustomList(title: "System Notifications") {
-            Section(content: {
+            Section {
                 ForEach(options, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         if option == "Do Nothing" {
                             selected = ["Do Nothing"]
                         } else {
@@ -28,7 +28,7 @@ struct SystemNotificationsView: View {
                                 selected.append(option)
                             }
                         }
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
@@ -36,17 +36,19 @@ struct SystemNotificationsView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
-            }, header: {
+            } header: {
                 Text("Banner Notifications")
-            }, footer: {
-                Text("Determines what VoiceOver will output when a banner\nnotification appears.")
-            })
+            } footer: {
+                Text("Determines what VoiceOver will output when a banner notification appears.")
+            }
         }
     }
 }
 
 #Preview {
-    SystemNotificationsView()
+    NavigationStack {
+        SystemNotificationsView()
+    }
 }

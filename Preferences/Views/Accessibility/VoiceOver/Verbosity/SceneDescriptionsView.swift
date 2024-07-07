@@ -13,11 +13,11 @@ struct SceneDescriptionsView: View {
     
     var body: some View {
         CustomList(title: "Scene Descriptions") {
-            Section(content: {
+            Section {
                 Toggle("Scene Descriptions", isOn: $sceneDescriptionsEnabled)
-            }, footer: {
+            } footer: {
                 Text("Output scenes and objects detected within images.")
-            })
+            }
             
             Section {
                 NavigationLink("Apply to Apps", destination: ApplyAppsView())
@@ -27,5 +27,7 @@ struct SceneDescriptionsView: View {
 }
 
 #Preview {
-    SceneDescriptionsView()
+    NavigationStack {
+        SceneDescriptionsView()
+    }
 }

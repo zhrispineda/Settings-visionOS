@@ -15,15 +15,15 @@ struct DirectTouchAppsView: View {
     
     var body: some View {
         CustomList(title: "Direct Touch Apps") {
-            Section(content: {
+            Section("Apply to") {
                 ForEach($apps, id: \.self) { $app in
-                    Button(action: {
+                    Button {
                         if let index = selected.firstIndex(of: app) {
                             selected.remove(at: index)
                         } else {
                             selected.append(app)
                         }
-                    }, label: {
+                    } label: {
                         HStack(spacing: 15) {
                             Image("apple\(app.lowercased())")
                                 .resizable()
@@ -34,15 +34,15 @@ struct DirectTouchAppsView: View {
                             Spacer()
                             Image(systemName: "\(selected.contains(app) ? "checkmark" : "")")
                         }
-                    })
+                    }
                 }
-            }, header: {
-                Text("Apply to")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    DirectTouchAppsView()
+    NavigationStack {
+        DirectTouchAppsView()
+    }
 }

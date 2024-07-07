@@ -13,7 +13,7 @@ struct AutoAdvanceDurationView: View {
     
     var body: some View {
         CustomList(title: "Auto Advance Duration") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $duration,
                     in: 0.50...20.00,
@@ -26,15 +26,17 @@ struct AutoAdvanceDurationView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Auto Advance Duration")
-            }, footer: {
+            } footer: {
                 Text("Enabling Auto Advance will pan a Braille display repeatedly. Adjust Auto Advance Duration to your preferred reading speed.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    AutoAdvanceDurationView()
+    NavigationStack {
+        AutoAdvanceDurationView()
+    }
 }

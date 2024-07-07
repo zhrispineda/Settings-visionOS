@@ -14,9 +14,9 @@ struct ActivityModifierKeysView: View {
     
     var body: some View {
         CustomList(title: "Modifier Keys") {
-            Section(content: {
+            Section {
                 ForEach(options, id: \.self) { option in
-                    Button(action: {
+                    Button {
                         if let index = selected.firstIndex(of: option) {
                             if selected.count > 1 {
                                 selected.remove(at: index)
@@ -24,7 +24,7 @@ struct ActivityModifierKeysView: View {
                         } else {
                             selected.append(option)
                         }
-                    }, label: {
+                    } label: {
                         HStack {
                             Text(option)
                             Spacer()
@@ -32,15 +32,17 @@ struct ActivityModifierKeysView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
-            }, footer: {
+            } footer: {
                 Text("Choose the modifier keys that must be pressed on a hardware keyboard to activate VoiceOver key commands.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ActivityModifierKeysView()
+    NavigationStack {
+        ActivityModifierKeysView()
+    }
 }

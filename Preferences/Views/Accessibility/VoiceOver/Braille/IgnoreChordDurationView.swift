@@ -13,7 +13,7 @@ struct IgnoreChordDurationView: View {
     
     var body: some View {
         CustomList(title: "Ignore Chord Duration") {
-            Section(content: {
+            Section {
                 Stepper(
                     value: $duration,
                     in: 0.00...1.00,
@@ -26,15 +26,17 @@ struct IgnoreChordDurationView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }, header: {
+            } header: {
                 Text("Ignore Chord Duration")
-            }, footer: {
+            } footer: {
                 Text("The amount of time required before subsequent key presses will be recognized as braille chords.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    IgnoreChordDurationView()
+    NavigationStack {
+        IgnoreChordDurationView()
+    }
 }

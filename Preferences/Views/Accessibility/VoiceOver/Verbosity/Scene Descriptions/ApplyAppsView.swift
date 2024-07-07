@@ -9,22 +9,22 @@ import SwiftUI
 
 struct ApplyAppsView: View {
     // Variables
+    @State private var selected = [""]
     var title = "Apply to Apps"
     let apps = ["Calendar", "Files", "Freeform", "Maps", "News", "Photos", "Reminders", "Safari", "Settings", "Shortcuts"]
     let roundedIcons = ["Files", "Freeform", "Photos", "Safari", "Settings"]
-    @State private var selected = [""]
     
     var body: some View {
         CustomList(title: title) {
-            Section(content: {
+            Section("Apply to") {
                 ForEach(apps, id: \.self) { app in
-                    Button(action: {
+                    Button {
                         if let index = selected.firstIndex(of: app) {
                             selected.remove(at: index)
                         } else {
                             selected.append(app)
                         }
-                    }, label: {
+                    } label: {
                         HStack(spacing: 15) {
                             Image("apple\(app.lowercased())")
                                 .resizable()
@@ -37,15 +37,15 @@ struct ApplyAppsView: View {
                                 Image(systemName: "checkmark")
                             }
                         }
-                    })
+                    }
                 }
-            }, header: {
-                Text("Apply to")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    ApplyAppsView()
+    NavigationStack {
+        ApplyAppsView()
+    }
 }
