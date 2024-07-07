@@ -10,26 +10,20 @@ import SwiftUI
 struct TapBehaviorView: View {
     // Variables
     @State private var selected = "Default"
-    let options = ["Default", "Auto Tap", "Always Tap"]
     @State private var time = 0.75
+    let options = ["Default", "Auto Tap", "Always Tap"]
     
     var body: some View {
         CustomList(title: "Tap Behavior") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        withAnimation {
-                            selected = option
-                        }
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 switch selected {
                 case "Auto Tap":
                     Text("Auto Tap will cause the Select action to automatically tap the screen unless Select is pressed twice to show the Scanner Menu.")
@@ -38,7 +32,7 @@ struct TapBehaviorView: View {
                 default:
                     Text("Tap Behavior describes what happens when the Select action is activated. By default, it will display the Scanner Menu.")
                 }
-            })
+            }
             
             if selected == "Auto Tap" {
                 Section {
@@ -61,5 +55,7 @@ struct TapBehaviorView: View {
 }
 
 #Preview {
-    TapBehaviorView()
+    NavigationStack {
+        TapBehaviorView()
+    }
 }

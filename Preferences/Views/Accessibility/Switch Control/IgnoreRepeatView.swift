@@ -14,11 +14,11 @@ struct IgnoreRepeatView: View {
     
     var body: some View {
         CustomList(title: "Ignore Repeat") {
-            Section(content: {
+            Section {
                 Toggle("Ignore Repeat", isOn: $ignoreRepeatEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("The duration in which multiple presses of input are treated as a single input.\n\nThis duration must be less than the Auto Tap time so that a double input press can be used.")
-            })
+            }
             
             if ignoreRepeatEnabled {
                 Stepper(

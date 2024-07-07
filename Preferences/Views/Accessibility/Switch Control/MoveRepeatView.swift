@@ -14,11 +14,11 @@ struct MoveRepeatView: View {
     
     var body: some View {
         CustomList(title: "Move Repeat") {
-            Section(content: {
+            Section {
                 Toggle("Move Repeat", isOn: $moveRepeatEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("The delay before \u{2018}Move To Next/Previous Item\u{2019} is repeated while a switch remains pressed.")
-            })
+            }
             
             if moveRepeatEnabled {
                 Section {

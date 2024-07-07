@@ -14,27 +14,23 @@ struct FocusedItemAfterTapView: View {
     
     var body: some View {
         CustomList(title: "Focused Item After Tap") {
-            Section(content: {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        withAnimation {
-                            selected = option
-                        }
-                    }, label: {
-                        HStack {
-                            Text(option)
-                            Spacer()
-                            Image(systemName: "\(selected == option ? "checkmark" : "")")
-                        }
-                    })
+            Section {
+                Picker("", selection: $selected) {
+                    ForEach(options, id: \.self) {
+                        Text($0)
+                    }
                 }
-            }, footer: {
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } footer: {
                 Text("The item that Switch Control scans after an item is tapped.")
-            })
+            }
         }
     }
 }
 
 #Preview {
-    FocusedItemAfterTapView()
+    NavigationStack {
+        FocusedItemAfterTapView()
+    }
 }

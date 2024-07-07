@@ -24,7 +24,7 @@ struct SwitchControlSpeechView: View {
                 ListRowNavigationLabel(title: "Voices", subtitle: "Samantha", content: VoiceView(title: "English"))
             }
             
-            Section(content: {
+            Section("Speaking Rate") {
                 Group {
                     Slider(value: $speakingRate,
                            in: 0.0...1.0,
@@ -34,9 +34,7 @@ struct SwitchControlSpeechView: View {
                     )
                 }
                 .imageScale(.large)
-            }, header: {
-                Text("Speaking Rate")
-            })
+            }
             
             Section {
                 Toggle("Speak Item Attributes", isOn: $speakItemAttributesEnabled)

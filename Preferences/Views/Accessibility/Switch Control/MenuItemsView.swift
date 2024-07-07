@@ -19,13 +19,13 @@ struct MenuItemsView: View {
     
     var body: some View {
         CustomList(title: "Menu Items") {
-            Section(content: {
+            Section {
                 ForEach(Array(items.enumerated()), id: \.offset) { index, options in
                     NavigationLink(items[index], destination: MenuItemDetailView(title: items[index], items: itemOptions[index], selected: itemOptions[index]))
                 }
-            }, footer: {
+            } footer: {
                 Text("For each of these menus, you can choose which items to include and the order in which they appear.")
-            })
+            }
         }
     }
 }

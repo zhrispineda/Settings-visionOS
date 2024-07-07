@@ -14,11 +14,11 @@ struct HoldDurationView: View {
     
     var body: some View {
         CustomList(title: "Hold Duration") {
-            Section(content: {
+            Section {
                 Toggle("Hold Duration", isOn: $holdDurationEnabled.animation())
-            }, footer: {
+            } footer: {
                 Text("The duration your input device must be held before a press is recognized.\n\nThis duration must be less than the Auto Tap time so that a double input press can be used.")
-            })
+            }
             
             if holdDurationEnabled {
                 Stepper(
