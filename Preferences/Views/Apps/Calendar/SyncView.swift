@@ -9,27 +9,24 @@ import SwiftUI
 
 struct SyncView: View {
     // Variables
-    @State private var selectedOption: String? = "All Events"
-
+    @State private var selected = "All Events"
     let options = ["Events 2 Weeks Back", "Events 1 Month Back", "Events 3 Months Back", "Events 6 Months Back", "All Events"]
     
     var body: some View {
         CustomList(title: "Sync") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    SyncView()
+    NavigationStack {
+        SyncView()
+    }
 }

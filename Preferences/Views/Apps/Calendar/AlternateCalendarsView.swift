@@ -9,27 +9,24 @@ import SwiftUI
 
 struct AlternateCalendarsView: View {
     // Variables
-    @State private var selectedOption: String? = "Off"
-
+    @State private var selected = "Off"
     let options = ["Off", "Chinese", "Hebrew", "Hijiri"]
     
     var body: some View {
         CustomList(title: "Alternate Calendars") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    AlternateCalendarsView()
+    NavigationStack {
+        AlternateCalendarsView()
+    }
 }

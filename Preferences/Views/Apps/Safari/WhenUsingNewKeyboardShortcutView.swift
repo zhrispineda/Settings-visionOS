@@ -9,25 +9,24 @@ import SwiftUI
 
 struct WhenUsingNewKeyboardShortcutView: View {
     // Variables
-    @State private var selectedOption: String? = "Open Tab"
-
+    @State private var selected = "Open Tab"
     let options = ["Open Tab", "Open Window"]
     
     var body: some View {
         CustomList(title: "When Using New Keyboard Shortcut") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option { Image(systemName: "checkmark") }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    WhenUsingNewKeyboardShortcutView()
+    NavigationStack {
+        WhenUsingNewKeyboardShortcutView()
+    }
 }

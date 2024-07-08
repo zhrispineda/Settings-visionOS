@@ -55,7 +55,7 @@ struct PhotosView: View {
             }
             
             Section {
-                Button("Reset Suggested Memories", action: { showingResetAlert.toggle() })
+                Button("Reset Suggested Memories") { showingResetAlert.toggle() }
                     .alert("Resetting will allow\npreviously blocked places,\ndates, or holidays to once\nagain be included in new\nMemories.", isPresented:$showingResetAlert) {
                         Button("Reset", role: .destructive) {}
                         Button("Cancel", role: .cancel) {}
@@ -74,7 +74,7 @@ struct PhotosView: View {
             }
             
             Section {} footer: {
-                Text("[About Photos & Privacy...](#)").tint(.cyan)
+                Text("[About Photos & Privacy...](#)")
             }
         }
     }
