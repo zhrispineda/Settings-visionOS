@@ -16,19 +16,13 @@ struct InputView: View {
     var body: some View {
         CustomList(title: "Input") {
             Section {
-                ForEach(selections, id: \.self) { selection in
-                    Button(action: {
-                        selected = selection
-                    }, label: {
-                        HStack {
-                            Text(selection)
-                            Spacer()
-                            if selection == selected {
-                                Image(systemName: "checkmark")
-                            }
-                        }
-                    })
+                Picker("", selection: $selected) {
+                    ForEach(selections, id: \.self) {
+                        Text($0)
+                    }
                 }
+                .pickerStyle(.inline)
+                .labelsHidden()
             }
             
             Section {
@@ -40,5 +34,7 @@ struct InputView: View {
 }
 
 #Preview {
-    InputView()
+    NavigationStack {
+        InputView()
+    }
 }

@@ -14,7 +14,7 @@ struct SoundsView: View {
     var body: some View {
         CustomList(title: "Sounds") {
             Section {
-                Button(action: {}, label: {
+                Button {} label: {
                     HStack {
                         Text("Haptics")
                         Spacer()
@@ -23,22 +23,24 @@ struct SoundsView: View {
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.secondary)
                     }
-                })
+                }
             }
             
             Section {
-                Button(action: {}, label: { Label("Reflection (Default)", systemImage: "checkmark") })
+                Button {} label: { Label("Reflection (Default)", systemImage: "checkmark") }
                 ForEach(soundNames, id: \.self) { sound in
-                    Button(action: {}, label: { Label(sound, systemImage: "empty") })
+                    Button {} label: { Label(sound, systemImage: "empty") }
                 }
-                NavigationLink(destination: ClassicSoundsView(), label: {
+                NavigationLink(destination: ClassicSoundsView()) {
                     Label("Classic", systemImage: "empty")
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    SoundsView()
+    NavigationStack {
+        SoundsView()
+    }
 }

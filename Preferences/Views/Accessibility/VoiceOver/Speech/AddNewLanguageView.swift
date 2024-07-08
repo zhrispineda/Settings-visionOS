@@ -13,12 +13,14 @@ struct AddNewLanguageView: View {
     var body: some View {
         CustomList(title: "Add New Language...") {
             ForEach(languages, id: \.self) { language in
-                Button(language, action: {})
+                Button(language) {}
             }
         }
     }
 }
 
 #Preview {
-    AddNewLanguageView()
+    NavigationStack {
+        AddNewLanguageView()
+    }
 }

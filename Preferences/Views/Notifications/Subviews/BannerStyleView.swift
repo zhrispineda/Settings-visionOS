@@ -9,26 +9,24 @@ import SwiftUI
 
 struct BannerStyleView: View {
     // Variables
-    @State private var selectedOption: String? = "Temporary"
+    @State private var selected = "Temporary"
     let options = ["Temporary", "Persistent"]
     
     var body: some View {
         CustomList(title: "Banner Style") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    BannerStyleView()
+    NavigationStack {
+        BannerStyleView()
+    }
 }

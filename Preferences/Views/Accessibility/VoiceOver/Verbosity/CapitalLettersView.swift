@@ -14,23 +14,19 @@ struct CapitalLettersView: View {
     
     var body: some View {
         CustomList(title: "Capital Letters") {
-            ForEach(options, id: \.self) { option in
-                Button(action: {
-                    selected = option
-                }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if option == selected {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    CapitalLettersView()
+    NavigationStack {
+        CapitalLettersView()
+    }
 }

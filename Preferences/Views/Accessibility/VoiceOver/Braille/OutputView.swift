@@ -14,23 +14,19 @@ struct OutputView: View {
     
     var body: some View {
         CustomList(title: "Output") {
-            ForEach(selections, id: \.self) { selection in
-                Button(action: {
-                    selected = selection
-                }, label: {
-                    HStack {
-                        Text(selection)
-                        Spacer()
-                        if selection == selected {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(selections, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    OutputView()
+    NavigationStack {
+        OutputView()
+    }
 }

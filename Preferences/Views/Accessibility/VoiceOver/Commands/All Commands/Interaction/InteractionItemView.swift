@@ -322,7 +322,7 @@ struct InteractionItemView: View {
                 default:
                     EmptyView()
                 }
-                Button("**Add Gesture**", action: {}) // TODO: Popover
+                Button("**Add Gesture**") {}
             }
             
             // MARK: - Keyboard Shortcuts
@@ -771,7 +771,7 @@ struct InteractionItemView: View {
                 default:
                     EmptyView()
                 }
-                Button("**Add Keyboard Shortcut**", action: { showingKeyboardShortcutAlert.toggle() })
+                Button("**Add Keyboard Shortcut**") { showingKeyboardShortcutAlert.toggle() }
                     .alert("Keyboard Shortcut", isPresented: $showingKeyboardShortcutAlert) {
                         Button("Done") {}.disabled(true)
                         Button("Cancel", role: .cancel) {}

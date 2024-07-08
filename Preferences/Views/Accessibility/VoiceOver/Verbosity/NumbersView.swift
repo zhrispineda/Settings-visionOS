@@ -14,23 +14,19 @@ struct NumbersView: View {
     
     var body: some View {
         CustomList(title: "Numbers") {
-            ForEach(options, id: \.self) { option in
-                Button(action: {
-                    selected = option
-                }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selected == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    NumbersView()
+    NavigationStack {
+        NumbersView()
+    }
 }

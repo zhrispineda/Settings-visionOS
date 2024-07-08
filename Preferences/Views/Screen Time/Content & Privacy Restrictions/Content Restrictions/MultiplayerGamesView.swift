@@ -9,26 +9,24 @@ import SwiftUI
 
 struct MultiplayerGamesView: View {
     // Variables
-    @State private var selectedOption = "Allow with Everyone"
+    @State private var selected = "Allow with Everyone"
     let options = ["Don't Allow", "Allow with Friends Only", "Allow with Everyone"]
     
     var body: some View {
         CustomList(title: "Multiplayer Games") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    MultiplayerGamesView()
+    NavigationStack {
+        MultiplayerGamesView()
+    }
 }
