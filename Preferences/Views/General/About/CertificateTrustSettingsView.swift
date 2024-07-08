@@ -15,7 +15,6 @@ struct CertificateTrustSettingsView: View {
                 LabeledContent("Trust Asset Version", value: "1003")
             } footer: {
                 Text("[Learn more about trusted certificates](https://support.apple.com/en-us/HT209143)")
-                    .tint(.cyan)
             }
         }
     }

@@ -80,7 +80,7 @@ struct KeyboardView: View {
             } header: {
                 Text("Dictation")
             } footer: {
-                Text("\(dictationEnabled ? "Dictation processes many voice inputs on \(UIDevice().name). Information will be sent to Apple in some cases. " : "")[About Dictation & Privacy...](#)").tint(.cyan)
+                Text("\(dictationEnabled ? "Dictation processes many voice inputs on \(UIDevice().name). Information will be sent to Apple in some cases. " : "")[About Dictation & Privacy...](#)")
             }
             
             if dictationEnabled {

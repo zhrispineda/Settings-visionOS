@@ -59,7 +59,7 @@ struct SystemServicesView: View {
                 Text("Product Improvement")
             } footer: {
                 VStack(alignment: .leading) {
-                    Text("Allow Apple to use your frequent location information to improve Maps. [About Improve Maps & Privacy...](#)").tint(.cyan)
+                    Text("Allow Apple to use your frequent location information to improve Maps. [About Improve Maps & Privacy...](#)")
                         .padding(.bottom, 30)
                     
                     Group {

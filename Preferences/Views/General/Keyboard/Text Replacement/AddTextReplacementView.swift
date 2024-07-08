@@ -37,7 +37,7 @@ struct AddTextReplacementView: View {
                     .frame(maxWidth: .infinity)
             }
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Save", action: {})
+                Button("Save") {}
                     .disabled(phraseText.isEmpty)
             }
         }

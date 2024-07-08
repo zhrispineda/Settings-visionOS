@@ -38,7 +38,7 @@ struct SafariAdvancedView: View {
             } header: {
                 Text("Privacy")
             } footer: {
-                Text("Allow websites to check if Apple Pay is enabled and if you have an Apple Card account.\n[About Safari & Privacy...](#)").tint(.cyan)
+                Text("Allow websites to check if Apple Pay is enabled and if you have an Apple Card account.\n[About Safari & Privacy...](#)")
             }
             
             Section {

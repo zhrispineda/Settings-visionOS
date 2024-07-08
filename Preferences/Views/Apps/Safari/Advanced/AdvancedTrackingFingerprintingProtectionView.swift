@@ -9,27 +9,24 @@ import SwiftUI
 
 struct AdvancedTrackingFingerprintingProtectionView: View {
     // Variables
-    @State private var selectedOption: String? = "Private Browsing"
-
+    @State private var selected = "Private Browsing"
     let options = ["Off", "Private Browsing", "All Browsing"]
     
     var body: some View {
         CustomList(title: "Advanced Tracking and Fingerprinting Protection") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    AdvancedTrackingFingerprintingProtectionView()
+    NavigationStack {
+        AdvancedTrackingFingerprintingProtectionView()
+    }
 }

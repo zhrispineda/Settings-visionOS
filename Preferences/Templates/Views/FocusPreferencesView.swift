@@ -43,7 +43,7 @@ struct FocusPreferencesView: View {
                         .listRowBackground(Color.clear)
                         .padding(.bottom, 10)
                     if focusName != "Do Not Disturb" {
-                        Button("Edit", action: {})
+                        Button("Edit") {}
                             .padding(.bottom)
                     }
                 }

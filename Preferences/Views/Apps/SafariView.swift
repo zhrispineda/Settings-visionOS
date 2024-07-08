@@ -43,7 +43,7 @@ struct SafariView: View {
             } header: {
                 Text("Search")
             } footer: {
-                Text("\(searchEngineSuggestionsEnabled ? "Private Browsing uses on-device information to provide search suggestions. No data is shared witht he service provider. " : "")[About Siri Suggestions, Search & Privacy...](#)").tint(.cyan)
+                Text("\(searchEngineSuggestionsEnabled ? "Private Browsing uses on-device information to provide search suggestions. No data is shared with the service provider. " : "")[About Siri Suggestions, Search & Privacy...](#)")
             }
             
             // General Section
@@ -108,7 +108,7 @@ struct SafariView: View {
             } header: {
                 Text("Privacy & Security")
             } footer: {
-                Text("[About Safari & Privacy...](#)").tint(.cyan)
+                Text("[About Safari & Privacy...](#)")
             }
             
             // Clear History and Website Data Button

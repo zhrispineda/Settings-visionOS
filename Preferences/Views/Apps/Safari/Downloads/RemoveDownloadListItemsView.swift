@@ -9,24 +9,24 @@ import SwiftUI
 
 struct RemoveDownloadListItemsView: View {
     // Variables
-    @State private var selectedOption: String? = "After one day"
+    @State private var selected = "After one day"
     let options = ["After one day", "Upon successful download", "Manually"]
     
     var body: some View {
         CustomList(title: "Remove Download List Items") {
-            ForEach(options, id: \.self) { option in
-                Button(action: { selectedOption = option }, label: {
-                    HStack {
-                        Text(option)
-                        Spacer()
-                        if selectedOption == option { Image(systemName: "checkmark") }
-                    }
-                })
+            Picker("", selection: $selected) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
             }
+            .pickerStyle(.inline)
+            .labelsHidden()
         }
     }
 }
 
 #Preview {
-    RemoveDownloadListItemsView()
+    NavigationStack {
+        RemoveDownloadListItemsView()
+    }
 }
