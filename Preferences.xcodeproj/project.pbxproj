@@ -32,7 +32,7 @@
 		83080E9E2B61D03400771ACC /* AudioDescriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */; };
 		83080EA02B61D56C00771ACC /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080E9F2B61D56C00771ACC /* InteractionView.swift */; };
 		83080EA22B61D86A00771ACC /* SwitchControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA12B61D86A00771ACC /* SwitchControlView.swift */; };
-		83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA32B61DF7000771ACC /* DigitalCrownView.swift */; };
+		83080EA42B61DF7000771ACC /* AccessibilityDigitalCrownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA32B61DF7000771ACC /* AccessibilityDigitalCrownView.swift */; };
 		83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */; };
 		83080EA82B61E35F00771ACC /* SoundRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA72B61E35F00771ACC /* SoundRecognitionView.swift */; };
 		83080EAA2B61E50F00771ACC /* AudioVisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83080EA92B61E50F00771ACC /* AudioVisualView.swift */; };
@@ -211,6 +211,7 @@
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
 		83AB15B72B44CB39002DCD7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */; };
+		83AC4BE62C4582A6006C7D13 /* DigitalCrownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4BE52C4582A6006C7D13 /* DigitalCrownView.swift */; };
 		83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */; };
 		83AFC1FD2B6B0D0000C16880 /* SafariTabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFC1FC2B6B0D0000C16880 /* SafariTabsAnimation.swift */; };
 		83B28A302B5456DC00474189 /* ListRowNavigationImageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B28A2F2B5456DC00474189 /* ListRowNavigationImageLabel.swift */; };
@@ -312,7 +313,7 @@
 		83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDescriptionsView.swift; sourceTree = "<group>"; };
 		83080E9F2B61D56C00771ACC /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		83080EA12B61D86A00771ACC /* SwitchControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchControlView.swift; sourceTree = "<group>"; };
-		83080EA32B61DF7000771ACC /* DigitalCrownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalCrownView.swift; sourceTree = "<group>"; };
+		83080EA32B61DF7000771ACC /* AccessibilityDigitalCrownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityDigitalCrownView.swift; sourceTree = "<group>"; };
 		83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityKeyboardsView.swift; sourceTree = "<group>"; };
 		83080EA72B61E35F00771ACC /* SoundRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecognitionView.swift; sourceTree = "<group>"; };
 		83080EA92B61E50F00771ACC /* AudioVisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualView.swift; sourceTree = "<group>"; };
@@ -494,6 +495,7 @@
 		83AB15B32B44CB39002DCD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83AB15B62B44CB39002DCD7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83AB15B82B44CB39002DCD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83AC4BE52C4582A6006C7D13 /* DigitalCrownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalCrownView.swift; sourceTree = "<group>"; };
 		83AF69512B4B9D4D00DAB479 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		83AFC1FC2B6B0D0000C16880 /* SafariTabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariTabsAnimation.swift; sourceTree = "<group>"; };
 		83B28A2F2B5456DC00474189 /* ListRowNavigationImageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowNavigationImageLabel.swift; sourceTree = "<group>"; };
@@ -652,7 +654,7 @@
 				83080E9D2B61D03400771ACC /* AudioDescriptionsView.swift */,
 				83080E9F2B61D56C00771ACC /* InteractionView.swift */,
 				83080EA12B61D86A00771ACC /* SwitchControlView.swift */,
-				83080EA32B61DF7000771ACC /* DigitalCrownView.swift */,
+				83080EA32B61DF7000771ACC /* AccessibilityDigitalCrownView.swift */,
 				83080EA52B61E06400771ACC /* AccessibilityKeyboardsView.swift */,
 				83080EA72B61E35F00771ACC /* SoundRecognitionView.swift */,
 				83080EA92B61E50F00771ACC /* AudioVisualView.swift */,
@@ -1276,6 +1278,7 @@
 				837F10522B533F2700CB8FCD /* ScreenTimeView.swift */,
 				837F10502B533E0000CB8FCD /* AccessibilityView.swift */,
 				837F104E2B533B6700CB8FCD /* ControlCenterView.swift */,
+				83AC4BE52C4582A6006C7D13 /* DigitalCrownView.swift */,
 				837F104C2B5330A900CB8FCD /* SiriSearchView.swift */,
 				8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */,
 				8309585A2B5301B000DD47D4 /* AppearanceView.swift */,
@@ -1618,6 +1621,7 @@
 				8347ACE12B4F8750002B980C /* DeveloperView.swift in Sources */,
 				83E7DC382B6095E2002B9087 /* MoviesView.swift in Sources */,
 				834111CD2B5D9D5300366689 /* MapsView.swift in Sources */,
+				83AC4BE62C4582A6006C7D13 /* DigitalCrownView.swift in Sources */,
 				83AF69522B4B9D4D00DAB479 /* SettingsModel.swift in Sources */,
 				83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */,
 				8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */,
@@ -1798,7 +1802,7 @@
 				8372E4B12B64AF4600C1ABDC /* PunctuationNoneView.swift in Sources */,
 				8360DACF2B68659D00AD556A /* SoundView.swift in Sources */,
 				83C1755F2B5EEE8200BA98FA /* FocusPreferencesView.swift in Sources */,
-				83080EA42B61DF7000771ACC /* DigitalCrownView.swift in Sources */,
+				83080EA42B61DF7000771ACC /* AccessibilityDigitalCrownView.swift in Sources */,
 				83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */,
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
 				839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */,

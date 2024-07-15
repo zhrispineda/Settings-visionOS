@@ -28,6 +28,7 @@ enum SettingsModel: String, CaseIterable {
     
     case accessibility = "Accessibility"
     case controlCenter = "Control Center"
+    case digitalCrown = "Digital Crown"
     case siriSearch = "Siri & Search"
     case healthData = "Health Data"
     case privacySecurity = "Privacy & Security"
@@ -60,6 +61,7 @@ enum SettingsModel: String, CaseIterable {
 @MainActor let usageSettings: [SettingsItem] = [
     SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility", color: .blue, destination: AnyView(AccessibilityView())),
     SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
+    SettingsItem(type: .digitalCrown, title: "Digital Crown", icon: "digitalcrown.horizontal.arrow.counterclockwise.fill", color: .blue, destination: AnyView(DigitalCrownView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(SiriSearchView())),
     SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(SiriSearchView())),
     SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),

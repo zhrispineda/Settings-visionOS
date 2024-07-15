@@ -96,7 +96,7 @@ struct SettingsLabel: View {
                 NavigationLink(value: setting.type) {
                     HStack(spacing: 15) {
                         if UIImage(systemName: setting.icon) != nil {
-                            if setting.icon == "accessibility" {
+                            if setting.icon == "accessibility" || setting.icon == "digitalcrown.horizontal.arrow.counterclockwise.fill" {
                                 ZStack {
                                     Circle()
                                         .frame(width: 30, height: 30)

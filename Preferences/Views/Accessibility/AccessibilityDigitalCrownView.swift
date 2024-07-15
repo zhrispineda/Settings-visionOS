@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DigitalCrownView: View {
+struct AccessibilityDigitalCrownView: View {
     // Variables
     @State private var selected = "Default"
     let options = ["Default", "Slow", "Slowest"]
@@ -32,5 +32,7 @@ struct DigitalCrownView: View {
 }
 
 #Preview {
-    DigitalCrownView()
+    NavigationStack {
+        AccessibilityDigitalCrownView()
+    }
 }

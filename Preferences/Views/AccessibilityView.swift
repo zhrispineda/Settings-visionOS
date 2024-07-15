@@ -23,7 +23,7 @@ struct AccessibilityView: View {
             Section {
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "hand.point.up.left.fill", title: "Interaction", content: InteractionView())
                 ListRowNavigationSymbolLabel(color: Color(UIColor.darkGray), symbol: "square.grid.2x2", title: "Switch Control", status: "Off", content: SwitchControlView())
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "digitalcrown.horizontal.press.fill", title: "Digital Crown", content: DigitalCrownView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "digitalcrown.horizontal.press.fill", title: "Digital Crown", content: AccessibilityDigitalCrownView())
                 ListRowNavigationSymbolLabel(color: .gray, symbol: "keyboard", title: "Keyboards", content: AccessibilityKeyboardsView())
             } header: {
                 Text("Physical and Motor")
