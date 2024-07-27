@@ -3,7 +3,7 @@ SwiftUI recreation of the visionOS Settings app.
 
 > [!IMPORTANT]
 > 
-> This project is being worked on using **Xcode 16 beta** and **Swift 6.0**. To use this project on Xcode 15, change the version of Swift to 5.0:
+> This project is being worked on using **Xcode 16 beta** and **Swift 6**. To use this project on Xcode 15, change the version of Swift to 5:
 >
 > (Top of project sidebar) `Preferences` > Under `TARGETS` > `Preferences` > `Build Settings` > (Scroll to bottom) `Swift Compiler - Language` > `Swift Language Version` > Change the value `Swift 6` to `Swift 5`
 >
@@ -14,10 +14,9 @@ SwiftUI recreation of the visionOS Settings app.
 ![An image comparing both app's Apps section](Assets/Apps@2x.png)
 
 ## Information
-- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 2.0 **beta 1** (22N5252n).
+- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 2.0 **beta 4** (22N5286g).
 - The `main` branch will have the latest available version of visionOS; older versions will be available as their own branch.
 - All features within the app are only simulations and have no effect on the device outside of the app.
-- Most views are complete, but lack features such as saving/retrieving data for now.
 - Since this project is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views only on physical devices are not implemented.
 
 ## Usage
