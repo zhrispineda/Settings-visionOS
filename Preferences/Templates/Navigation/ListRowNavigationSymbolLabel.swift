@@ -15,6 +15,7 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
     var color: Color = Color.gray
     var symbol: String = String()
     var title: String = String()
+    var subtitle: String = String()
     var status: String = String()
     var content: Content
     
@@ -37,14 +38,26 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
                                 .fontWeight(.light)
                         }
                     } else {
-                        Image(systemName: symbol)
-                            .font(.title3)
-                            .fontWeight(.light)
-                            .offset(x: symbol == "voiceover" ? 2 : 0)
+                        if symbol == "health.3.stack.3d.fill" {
+                            Image(_internalSystemName: symbol)
+                                .font(.title3)
+                                .fontWeight(.light)
+                                .offset(y: -2)
+                        } else {
+                            Image(systemName: symbol)
+                                .font(.title3)
+                                .fontWeight(.light)
+                                .offset(x: symbol == "voiceover" ? 2 : 0)
+                        }
                     }
                 }
                 VStack(alignment: .leading) {
                     Text(title)
+                    if !subtitle.isEmpty {
+                        Text(subtitle)
+                            .foregroundStyle(.secondary)
+                            .font(.caption)
+                    }
                 }
                 Spacer()
                 if !status.isEmpty {

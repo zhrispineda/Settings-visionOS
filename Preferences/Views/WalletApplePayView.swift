@@ -13,6 +13,10 @@ struct WalletApplePayView: View {
     
     var body: some View {
         CustomList(title: "Wallet & Apple Pay") {
+            Section("Allow Wallet & Apple Pay to Access") {
+                ListRowNavigationImageLabel(isRounded: true, image: "applewallet", title: "Notifications", subtitle: "Deliver Quietly", content: EmptyView())
+            }
+            
             // Compatible Cards Section
             Section {
                 Toggle("Compatible Cards", isOn: $compatibleCardsEnabled)

@@ -33,6 +33,10 @@ struct AppearanceView: View {
                 .imageScale(.large)
             }
             
+            Section("Compatible Apps Appearance") {
+                ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: EmptyView())
+            }
+            
             Section("Display") {
                 ListRowNavigationLabel(title: "Appearance", subtitle: "Large", content: DisplayAppearanceView())
             }

@@ -39,7 +39,6 @@ struct ListRowNavigationImageLabel<Content: View>: View {
                 }
                 VStack(alignment: .leading) {
                     Text(title)
-                        .font(.subheadline)
                     if !subtitle.isEmpty {
                         Text(subtitle)
                             .foregroundStyle(.secondary)
