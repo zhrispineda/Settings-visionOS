@@ -117,6 +117,7 @@
 		834E6D022B648F2B00B81150 /* IgnoreChordDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */; };
 		834E6D042B6490FA00B81150 /* AutoAdvanceDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */; };
 		834E6D062B6495D300B81150 /* VerbosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E6D052B6495D300B81150 /* VerbosityView.swift */; };
+		8350E74E2C66717600D892A8 /* RemoteDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350E74D2C66717600D892A8 /* RemoteDevicesView.swift */; };
 		835B93442B48904A00E96BE3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B93432B48904A00E96BE3 /* AboutView.swift */; };
 		8360DAB22B68350000AD556A /* LongPressDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAB12B68350000AD556A /* LongPressDurationView.swift */; };
 		8360DAB42B68369600AD556A /* IdleOpacityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360DAB32B68369600AD556A /* IdleOpacityView.swift */; };
@@ -398,6 +399,7 @@
 		834E6D012B648F2B00B81150 /* IgnoreChordDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreChordDurationView.swift; sourceTree = "<group>"; };
 		834E6D032B6490FA00B81150 /* AutoAdvanceDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAdvanceDurationView.swift; sourceTree = "<group>"; };
 		834E6D052B6495D300B81150 /* VerbosityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbosityView.swift; sourceTree = "<group>"; };
+		8350E74D2C66717600D892A8 /* RemoteDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDevicesView.swift; sourceTree = "<group>"; };
 		835B93432B48904A00E96BE3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		8360DAB12B68350000AD556A /* LongPressDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressDurationView.swift; sourceTree = "<group>"; };
 		8360DAB32B68369600AD556A /* IdleOpacityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleOpacityView.swift; sourceTree = "<group>"; };
@@ -937,6 +939,7 @@
 				830602EE2B584852007B7529 /* FontsView.swift */,
 				830602F02B5849AB007B7529 /* DictionaryView.swift */,
 				831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */,
+				8350E74D2C66717600D892A8 /* RemoteDevicesView.swift */,
 				831D1F6D2B4C77A90071E539 /* TransferResetView.swift */,
 			);
 			path = General;
@@ -1834,6 +1837,7 @@
 				83FEB7022B5ADC570028D308 /* SavedCreditCardsView.swift in Sources */,
 				837DA16E2B670ADA0038B856 /* DirectTouchAppsView.swift in Sources */,
 				83FF01432B52063000CC2CE8 /* WalletApplePayView.swift in Sources */,
+				8350E74E2C66717600D892A8 /* RemoteDevicesView.swift in Sources */,
 				8360DABB2B683D3900AD556A /* TargetView.swift in Sources */,
 				8306F0BF2B69663E00DBB3CA /* SystemServicesView.swift in Sources */,
 				83080E9C2B61CDEC00771ACC /* SpokenContentView.swift in Sources */,

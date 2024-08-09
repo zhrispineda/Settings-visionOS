@@ -29,7 +29,7 @@ struct GeneralView: View {
                 }
                 
                 Section {
-                    NavigationLink("Remote Devices", destination: EmptyView())
+                    NavigationLink("Remote Devices", destination: RemoteDevicesView())
                 }
                 
                 Section {

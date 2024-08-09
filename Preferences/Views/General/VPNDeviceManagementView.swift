@@ -12,18 +12,13 @@ struct VPNDeviceManagementView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        Color(.clear)
-            .onAppear {
-                dismiss()
-            }
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("VPN & Device Management")
-                        .font(.title2)
-                        .frame(maxWidth: .infinity)
-                        .offset(x: -40)
+        CustomList(title: "VPN & Device Management") {
+            Text(String())
+                .listRowBackground(Color.clear)
+                .onAppear {
+                    dismiss()
                 }
-            }
+        }
     }
     
 }
