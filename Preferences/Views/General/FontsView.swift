@@ -37,5 +37,7 @@ struct FontsView: View {
 }
 
 #Preview {
-    FontsView()
+    NavigationStack {
+        FontsView()
+    }
 }

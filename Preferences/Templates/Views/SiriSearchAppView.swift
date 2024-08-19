@@ -23,7 +23,7 @@ struct SiriSearchAppView: View {
     let showInAppApps = ["Safari", "Calendar", "Maps", "News"]
     
     var body: some View {
-       List {
+        CustomList(title: "Siri & Search") {
             Section {
                 Toggle("Learn from this App", isOn: $learnFromAppEnabled)
             } footer: {
@@ -52,15 +52,6 @@ struct SiriSearchAppView: View {
                 Text("Allow suggestions and content from \u{201C}\(appName)\u{201D} and Shortcuts for the app to appear \(showInAppApps.contains(appName) ? "in the app and " : "")in Search. These suggestions and Shortcuts are based on how you use the app.")
             }
         }
-       .padding(.horizontal, 45)
-       .toolbar {
-           ToolbarItem(placement: .principal) {
-               Text("Siri & Search")
-                   .font(.title2)
-                   .frame(maxWidth: .infinity)
-                   .offset(x: -40)
-           }
-       }
     }
 }
 
