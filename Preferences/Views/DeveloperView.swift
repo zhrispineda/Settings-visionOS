@@ -16,13 +16,13 @@ struct DeveloperView: View {
     var body: some View {
         NavigationStack {
             CustomList(title: "Developer") {
-                Section {
-                    Toggle("Allow Mac Virtual Display", isOn: $macVirtualDisplayEnabled)
-                } header: {
-                    Text("Immersive Experience Testing")
-                } footer: {
-                    Text("Allow access to Mac Virtual Display during an immersive experience.")
-                }
+//                Section {
+//                    Toggle("Allow Mac Virtual Display", isOn: $macVirtualDisplayEnabled)
+//                } header: {
+//                    Text("Immersive Experience Testing")
+//                } footer: {
+//                    Text("Allow access to Mac Virtual Display during an immersive experience.")
+//                }
                 
                 Section {
                     Toggle("Reset Local Data on Next Launch", isOn: $resetNewsLocalDataOnNextLaunch)
@@ -64,6 +64,15 @@ struct DeveloperView: View {
                     Text("Siri Event Suggestions Testing")
                 } footer: {
                     Text("These settings affect Siri Event Suggestions from Mail and Safari. Enable Allow Any Domain to allow e-mails or web pages which have not yet been approved for Siri Event Suggestions by Apple. Enable Allow Unverified Sources to bypass DKIM or SSL authenticity verification for Siri Event Suggestions in Mail and Safari.")
+                }
+                
+                Section {
+                    Toggle("Allow Any Domain", isOn: $allowAnyDomain)
+                    Toggle("Allow Unverified Sources", isOn: $allowUnverifiedSources)
+                } header: {
+                    Text("Siri Bluetooth Car Testing")
+                } footer: {
+                    Text("Allow Siri to change audio route in a bluetooth vehicle. Go to Settings -> Siri & Search -> Siri Responses -> ”When Connected to Car Bluetooth” to change the audio route.")
                 }
             }
         }
