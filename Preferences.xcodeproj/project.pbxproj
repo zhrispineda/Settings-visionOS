@@ -238,6 +238,8 @@
 		83C1756D2B5F0A8000BA98FA /* SmartActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1756C2B5F0A8000BA98FA /* SmartActivationView.swift */; };
 		83C175712B5F11B900BA98FA /* FocusStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C175702B5F11B900BA98FA /* FocusStatusView.swift */; };
 		83C55CAB2B5229E500569896 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55CAA2B5229E500569896 /* StorageView.swift */; };
+		83C824E22C768A7D001C393B /* SystemFontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C824E12C768A7D001C393B /* SystemFontsView.swift */; };
+		83C824E42C768A83001C393B /* MyFontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C824E32C768A83001C393B /* MyFontsView.swift */; };
 		83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAF1382B5A0563007A5E22 /* SearchEngineView.swift */; };
 		83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D4D9642B5DF05000081A31 /* BannerStyleView.swift */; };
 		83D4D9672B5DF05C00081A31 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D4D9662B5DF05C00081A31 /* SoundsView.swift */; };
@@ -523,6 +525,8 @@
 		83C1756C2B5F0A8000BA98FA /* SmartActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartActivationView.swift; sourceTree = "<group>"; };
 		83C175702B5F11B900BA98FA /* FocusStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStatusView.swift; sourceTree = "<group>"; };
 		83C55CAA2B5229E500569896 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
+		83C824E12C768A7D001C393B /* SystemFontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFontsView.swift; sourceTree = "<group>"; };
+		83C824E32C768A83001C393B /* MyFontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFontsView.swift; sourceTree = "<group>"; };
 		83CAF1382B5A0563007A5E22 /* SearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngineView.swift; sourceTree = "<group>"; };
 		83D4D9642B5DF05000081A31 /* BannerStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerStyleView.swift; sourceTree = "<group>"; };
 		83D4D9662B5DF05C00081A31 /* SoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsView.swift; sourceTree = "<group>"; };
@@ -932,6 +936,7 @@
 			isa = PBXGroup;
 			children = (
 				835B93452B48923700E96BE3 /* About */,
+				83C824E02C768A72001C393B /* Fonts */,
 				831485D62B560A21007E72E0 /* Keyboard */,
 				835B93432B48904A00E96BE3 /* AboutView.swift */,
 				831485D72B560A46007E72E0 /* KeyboardView.swift */,
@@ -1359,6 +1364,15 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		83C824E02C768A72001C393B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83C824E12C768A7D001C393B /* SystemFontsView.swift */,
+				83C824E32C768A83001C393B /* MyFontsView.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		83CAF1372B5A0550007A5E22 /* Safari */ = {
 			isa = PBXGroup;
 			children = (
@@ -1629,6 +1643,7 @@
 				83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */,
 				8360DB0C2B68B1BB00AD556A /* StyleView.swift in Sources */,
 				8360DAE82B68849100AD556A /* FocusedItemAfterTapView.swift in Sources */,
+				83C824E22C768A7D001C393B /* SystemFontsView.swift in Sources */,
 				83FEB71B2B5AE99A0028D308 /* ReaderView.swift in Sources */,
 				839EA81B2B59C85E0099BCAA /* FreeformView.swift in Sources */,
 				8360DACD2B68620600AD556A /* ExternalView.swift in Sources */,
@@ -1717,6 +1732,7 @@
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
 				8360DADC2B6878E900AD556A /* AutoScanningTimeView.swift in Sources */,
 				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
+				83C824E42C768A83001C393B /* MyFontsView.swift in Sources */,
 				8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */,
 				834E6CF52B64828800B81150 /* OutputView.swift in Sources */,
 				8360DAE62B68827500AD556A /* TapBehaviorView.swift in Sources */,
