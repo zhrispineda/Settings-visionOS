@@ -69,7 +69,7 @@ enum SettingsModel: String, CaseIterable {
 
 // Device Settings: Appearance, Storage
 @MainActor let deviceSettings: [SettingsItem] = [
-    SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(EnvironmentAppearanceView())),
+    SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(AppearanceView())),
     SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
 ]
 

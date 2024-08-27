@@ -12,6 +12,7 @@ struct DeveloperView: View {
     @State private var resetNewsLocalDataOnNextLaunch = false
     @State private var allowAnyDomain = false
     @State private var allowUnverifiedSources = false
+    @State private var showAudioInput = false
     
     var body: some View {
         NavigationStack {
@@ -67,10 +68,9 @@ struct DeveloperView: View {
                 }
                 
                 Section {
-                    Toggle("Allow Any Domain", isOn: $allowAnyDomain)
-                    Toggle("Allow Unverified Sources", isOn: $allowUnverifiedSources)
+                    Toggle("Show Audio Output in Settings", isOn: $showAudioInput)
                 } header: {
-                    Text("Siri Bluetooth Car Testing")
+                    Text("Siri in Bluetooth Car Testing")
                 } footer: {
                     Text("Allow Siri to change audio route in a bluetooth vehicle. Go to Settings -> Siri & Search -> Siri Responses -> ”When Connected to Car Bluetooth” to change the audio route.")
                 }

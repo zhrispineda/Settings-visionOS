@@ -24,7 +24,7 @@ struct TextSizeView: View {
                 )
                 .padding()
                 .background(
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: 15)
                         .fill(.black)
                         .opacity(0.2)
                         .frame(height: 100)
@@ -36,9 +36,10 @@ struct TextSizeView: View {
                 .opacity(0.6)
                 .multilineTextAlignment(.center)
                 .padding(.top, 5)
+            Spacer()
         }
         .toolbar {
-            ToolbarItem(placement: .principal) {
+            ToolbarItem(placement: .secondaryAction) {
                 Text("Text Size")
                     .font(.title2)
                     .frame(maxWidth: .infinity)

@@ -34,7 +34,7 @@ struct AppearanceView: View {
             }
             
             Section("Compatible Apps Appearance") {
-                ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: EmptyView())
+                ListRowNavigationLabel(title: "Appearance", subtitle: "Light", content: OnOffView(title: "Appearance", selected: "Light", options: ["Light", "Dark"]))
             }
             
             Section("Display") {
