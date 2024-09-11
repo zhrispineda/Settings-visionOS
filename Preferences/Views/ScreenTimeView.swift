@@ -10,6 +10,14 @@ import SwiftUI
 struct ScreenTimeView: View {
     var body: some View {
         CustomList(title: "Screen Time") {
+            Section {} footer: {
+                Text("Use Screen Time to set limits for content, privacy, purchases, and more. Adults can also set parental controls.")
+            }
+            
+            Section("Communication") {
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "bubble.left.and.exclamationmark.bubble.right.fill", title: "Communication Safety", subtitle: "Protect from sensitive content", content: EmptyView())
+            }
+            
             Section("Restrictions") {
                 NavigationLink(destination: ContentPrivacyRestrictionsView(), label: {
                     HStack {

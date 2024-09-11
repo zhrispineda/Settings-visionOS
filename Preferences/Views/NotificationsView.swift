@@ -16,7 +16,7 @@ struct NotificationsView: View {
                 }
                 
                 Section("Notification Style") {
-                    ListRowNavigationImageLabel(image: "appicon", title: "FaceTime", subtitle: "Banners, Sounds, Badges", content: AppNotificationsView(appName: "FaceTime"))
+                    ListRowNavigationImageLabel(image: "applefacetime", title: "FaceTime", subtitle: "Banners, Sounds, Badges", content: AppNotificationsView(appName: "FaceTime"))
                     ListRowNavigationImageLabel(image: "applegamecenter", title: "Game Center", subtitle: "Banners, Sounds, Badges", content: AppNotificationsView(appName: "Game Center"))
                     ListRowNavigationImageLabel(image: "applehome", title: "Home", subtitle: "Deliver Quietly", content: AppNotificationsView(bannersEnabled: false, soundsEnabled: false, badgesEnabled: false, appName: "Home"))
                     ListRowNavigationImageLabel(image: "applephotos", title: "Photos", subtitle: "Banners, Sounds, Badges", content: AppNotificationsView(appName: "Photos"))

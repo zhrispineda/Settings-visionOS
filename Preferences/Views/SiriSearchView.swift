@@ -18,7 +18,6 @@ struct SiriSearchView: View {
         CustomList(title: "Siri & Search") {
             Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English (United States)", content: EmptyView())
-                    .disabled(true)
                 ListRowNavigationLabel(title: "Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
                 NavigationLink("Siri Responses", destination: SiriResponsesView())
                 Button {} label: {
