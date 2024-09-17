@@ -81,6 +81,7 @@
 		832A54742B5C930100BC877C /* AllDayEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54732B5C930100BC877C /* AllDayEventsView.swift */; };
 		832A54762B5C946000BC877C /* DurationNewEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54752B5C946000BC877C /* DurationNewEventsView.swift */; };
 		832A54782B5C950A00BC877C /* StartWeekOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A54772B5C950A00BC877C /* StartWeekOnView.swift */; };
+		833622032C99F096003CA174 /* SiriAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833622022C99F096003CA174 /* SiriAppsView.swift */; };
 		8340C57C2B69D55400C9137D /* Settings.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8340C5792B69D55400C9137D /* Settings.gif */; };
 		8340C57D2B69D55400C9137D /* Apps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8340C57A2B69D55400C9137D /* Apps@2x.png */; };
 		8340C57E2B69D55400C9137D /* General@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8340C57B2B69D55400C9137D /* General@2x.png */; };
@@ -365,6 +366,7 @@
 		832A54732B5C930100BC877C /* AllDayEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDayEventsView.swift; sourceTree = "<group>"; };
 		832A54752B5C946000BC877C /* DurationNewEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationNewEventsView.swift; sourceTree = "<group>"; };
 		832A54772B5C950A00BC877C /* StartWeekOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWeekOnView.swift; sourceTree = "<group>"; };
+		833622022C99F096003CA174 /* SiriAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriAppsView.swift; sourceTree = "<group>"; };
 		8340C5792B69D55400C9137D /* Settings.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Settings.gif; sourceTree = "<group>"; };
 		8340C57A2B69D55400C9137D /* Apps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apps@2x.png"; sourceTree = "<group>"; };
 		8340C57B2B69D55400C9137D /* General@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General@2x.png"; sourceTree = "<group>"; };
@@ -1213,6 +1215,7 @@
 				83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */,
 				83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */,
 				83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */,
+				833622022C99F096003CA174 /* SiriAppsView.swift */,
 			);
 			path = "Siri & Search";
 			sourceTree = "<group>";
@@ -1700,6 +1703,7 @@
 				83E7DC3C2B609747002B9087 /* RestrictionsAppsView.swift in Sources */,
 				834E6CF92B6485BB00B81150 /* BrailleTablesView.swift in Sources */,
 				8360DAFC2B68994500AD556A /* FullKeyboardAccessView.swift in Sources */,
+				833622032C99F096003CA174 /* SiriAppsView.swift in Sources */,
 				83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */,
 				834111D22B5DA0EA00366689 /* WalkingView.swift in Sources */,
 				8360DAE42B68818400AD556A /* LongPressView.swift in Sources */,

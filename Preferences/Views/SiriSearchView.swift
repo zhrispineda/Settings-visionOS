@@ -13,6 +13,8 @@ struct SiriSearchView: View {
     @State private var showingResetHiddenSuggestionsAlert = false
     @State private var showWhenSharingEnabled = true
     @State private var showWhenListeningEnabled = true
+    @State private var showRecentSearches = true
+    @State private var showRelatedContent = true
     
     var body: some View {
         CustomList(title: "Siri & Search") {
@@ -53,18 +55,28 @@ struct SiriSearchView: View {
                 Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)")
             }
             
+            Section {
+                Toggle("Show Recent Searches", isOn: $showRecentSearches)
+                Toggle("Show Related Content", isOn: $showRelatedContent)
+            } header: {
+                Text("Search and Look Up")
+            } footer: {
+                Text("Apple can show content when searching, or when looking up text in objects or photos. [About Siri Suggestions, Search & Privacy...](#)")
+            }
+            
             Section("Siri App Access") {
-                NavigationLink("Apps") {
-                    ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: SiriSearchAppView(appName: "Calendar"))
-                    ListRowNavigationImageLabel(isRounded: true, image: "applefiles", title: "Files", content: SiriSearchAppView(appName: "Files"))
-                    ListRowNavigationImageLabel(isRounded: true, image: "applefreeform", title: "Freeform", content: SiriSearchAppView(appName: "Freeform"))
-                    ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps", content: SiriSearchAppView(appName: "Maps"))
-                    ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News", content: SiriSearchAppView(appName: "News"))
-                    ListRowNavigationImageLabel(isRounded: true, image: "applephotos", title: "Photos", content: SiriSearchAppView(appName: "Photos"))
-                    ListRowNavigationImageLabel(isRounded: false, image: "applereminders", title: "Reminders", content: SiriSearchAppView(appName: "Reminders"))
-                    ListRowNavigationImageLabel(isRounded: true, image: "applesafari", title: "Safari", content: SiriSearchAppView(appName: "Safari"))
-                    ListRowNavigationImageLabel(isRounded: true, image: "applesettings", title: "Settings", content: SiriSearchAppView(appName: "Settings"))
-                    ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts", content: SiriSearchAppView(appName: "Shortcuts"))
+                NavigationLink {
+                    SiriAppsView()
+                } label: {
+                    HStack {
+                        Image("HomeScreen")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
+                            .clipShape(Circle())
+                        Text("Apps")
+                        Spacer()
+                    }
                 }
             }
         }
