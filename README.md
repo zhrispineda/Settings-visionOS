@@ -1,21 +1,21 @@
 #  Settings-visionOS
 SwiftUI recreation of the visionOS Settings app.
 
+## Information
+- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 2.1 **Release** (22N580).
+- The `main` branch will have the latest available version of visionOS; older versions are available as their own branch.
+- All features within the app are only simulations and have no effect on outside of the app.
+- Since this project is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views only on physical devices are not implemented at this time.
+
 ## Examples
 ![A GIF comparing Apple's Settings app and this project's Settings app side-by-side](Assets/Settings.gif)
 ![An image comparing both apps's General section](Assets/General@2x.png)
 ![An image comparing both app's Apps section](Assets/Apps@2x.png)
 
-## Information
-- This personal project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 2.0 **Release** (22N320).
-- The `main` branch will have the latest available version of visionOS; older versions will be available as their own branch.
-- All features within the app are only simulations and have no effect on the device outside of the app.
-- Since this project is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views only on physical devices are not implemented.
-
 ## Usage
-Open the project in Xcode 16 and run with either a Simulator running Apple Vision Pro's visionOS 2.0 or a physical Apple Vision Pro with Developer Mode enabled as a destination.
+Open the project in Xcode 16 and run with either a Simulator running Apple Vision Pro's visionOS 2.1 or a physical Apple Vision Pro with Developer Mode enabled as a destination.
 
-As this is a personal project for learning Swift and SwiftUI, feel free to fork, explore, and make the project your own for any personal purpose!
+This is a personal project for learning Swift and SwiftUI. Feel free to fork, explore, and make the project your own for any personal use!
 
 ## Disclaimers
 - This app is a recreation of one of Apple's own apps and its designs.

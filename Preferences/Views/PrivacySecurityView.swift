@@ -49,7 +49,7 @@ struct PrivacySecurityView: View {
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "megaphone.fill", title: "Apple Advertising", content: AppleAdvertisingView())
             }
             
-            Section("Security") {}
+            //Section("Security") {}
         }
     }
 }
