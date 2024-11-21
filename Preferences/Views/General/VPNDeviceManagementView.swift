@@ -13,11 +13,9 @@ struct VPNDeviceManagementView: View {
     
     var body: some View {
         CustomList(title: "VPN & Device Management") {
-            Text(String())
-                .listRowBackground(Color.clear)
-                .onAppear {
-                    dismiss()
-                }
+            Section {} footer: {
+                Text("No profiles are currently installed.")
+            }
         }
     }
     

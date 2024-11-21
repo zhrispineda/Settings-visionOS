@@ -169,6 +169,7 @@
 		83713AE32B573FFE00948E7A /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE22B573FFE00948E7A /* LanguageView.swift */; };
 		83713AE52B57454F00948E7A /* ModifierKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE42B57454F00948E7A /* ModifierKeysView.swift */; };
 		83713AE72B57477A00948E7A /* KeyboardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83713AE62B57477A00948E7A /* KeyboardTypeView.swift */; };
+		8371BFFE2CEFB76400FA66ED /* LanguageRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371BFFD2CEFB76400FA66ED /* LanguageRegionView.swift */; };
 		8372E4A82B649B5C00C1ABDC /* PunctuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */; };
 		8372E4AB2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AA2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift */; };
 		8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */; };
@@ -455,6 +456,7 @@
 		83713AE22B573FFE00948E7A /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		83713AE42B57454F00948E7A /* ModifierKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierKeysView.swift; sourceTree = "<group>"; };
 		83713AE62B57477A00948E7A /* KeyboardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTypeView.swift; sourceTree = "<group>"; };
+		8371BFFD2CEFB76400FA66ED /* LanguageRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRegionView.swift; sourceTree = "<group>"; };
 		8372E4A72B649B5C00C1ABDC /* PunctuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationView.swift; sourceTree = "<group>"; };
 		8372E4AA2B649C6A00C1ABDC /* ActivePunctuationGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePunctuationGroupView.swift; sourceTree = "<group>"; };
 		8372E4AC2B649E3300C1ABDC /* PunctuationAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctuationAllView.swift; sourceTree = "<group>"; };
@@ -948,6 +950,7 @@
 				831D1F6F2B4C785B0071E539 /* VPNDeviceManagementView.swift */,
 				8350E74D2C66717600D892A8 /* RemoteDevicesView.swift */,
 				831D1F6D2B4C77A90071E539 /* TransferResetView.swift */,
+				8371BFFD2CEFB76400FA66ED /* LanguageRegionView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1620,6 +1623,7 @@
 				83FEB70F2B5AE45A0028D308 /* RemoveDownloadListItemsView.swift in Sources */,
 				83E7DC302B608DA9002B9087 /* MultiplayerGamesView.swift in Sources */,
 				837DA17C2B6732C90038B856 /* TypingView.swift in Sources */,
+				8371BFFE2CEFB76400FA66ED /* LanguageRegionView.swift in Sources */,
 				83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */,
 				83C175652B5EF9E000BA98FA /* FocusAllowedAppsView.swift in Sources */,
 				83080EB42B61FD7500771ACC /* PerAppSettingsView.swift in Sources */,

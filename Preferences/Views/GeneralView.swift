@@ -21,7 +21,7 @@ struct GeneralView: View {
                     NavigationLink("Fonts", destination: FontsView())
                     NavigationLink("Keyboard", destination: KeyboardView())
                     //NavigationLink("Game Controller", destination: GameControllerView())
-                    NavigationLink("Language & Region", destination: EmptyView())
+                    NavigationLink("Language & Region", destination: LanguageRegionView())
                 }
                 
                 Section {
