@@ -63,7 +63,7 @@ enum SettingsModel: String, CaseIterable {
     SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
     SettingsItem(type: .digitalCrown, title: "Digital Crown", icon: "digitalcrown.horizontal.arrow.counterclockwise.fill", color: .blue, destination: AnyView(DigitalCrownView())),
     SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(SiriSearchView())),
-    SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(EmptyView())),
+    SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(HealthDataView())),
     SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),
 ]
 

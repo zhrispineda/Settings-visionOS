@@ -25,7 +25,7 @@ struct ContentPrivacyRestrictionsView: View {
             .disabled(!contentPrivacyRestrictionsEnabled)
             
             Section("Privacy") {
-                ListRowNavigationLabel(title: "Location Services", subtitle: "Allow", content: LocationServicesView())
+                ListRowNavigationLabel(title: "Location Services", subtitle: "Allow", content: LocationServicesRestrictionsView())
                 ListRowNavigationLabel(title: "Contacts", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Contacts"))
                 ListRowNavigationLabel(title: "Calendars", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Calendars"))
                 ListRowNavigationLabel(title: "Reminders", subtitle: "Allow", content: AllowDontAllowChangesView(title: "Reminders"))

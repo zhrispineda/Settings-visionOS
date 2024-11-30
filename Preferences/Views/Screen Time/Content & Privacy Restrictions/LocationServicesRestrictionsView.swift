@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LocationServicesView: View {
+struct LocationServicesRestrictionsView: View {
     // Variables
     @State private var selected = "Allow Changes"
     let options = ["Allow Changes", "Don't Allow Changes"]
@@ -69,6 +69,6 @@ struct LocationServicesView: View {
 
 #Preview {
     NavigationStack {
-        LocationServicesView()
+        LocationServicesRestrictionsView()
     }
 }

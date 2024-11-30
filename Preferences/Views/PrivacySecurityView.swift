@@ -12,8 +12,8 @@ struct PrivacySecurityView: View {
         CustomList(title: "Privacy & Security") {
             // Tracking Section
             Section {
-                ListRowNavigationIconLabel(color: .blue, icon: "location.circle.fill", title: "Location Services", subtitle: "None", content: TrackingView())
-                ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", content: TrackingView())
+                ListRowNavigationIconLabel(color: .blue, icon: "location.circle.fill", title: "Location Services", subtitle: "None", content: LocationServicesView())
+                ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", status: "0", content: TrackingView())
             }
             
             // Apps Privacy Controls Section
@@ -31,10 +31,11 @@ struct PrivacySecurityView: View {
             
             Section {
                 ListRowNavigationIconLabel(color: .blue, icon: "bluetooth", title: "Bluetooth", status: "0", content: AppPermissionView(permissionName: "Bluetooth"))
+                ListRowNavigationIconLabel(color: .gray, icon: "camera.circle.fill", title: "Camera", status: "0", content: AppPermissionView(permissionName: "Camera"))
                 ListRowNavigationIconLabel(color: .blue, icon: "custom.hand.point.up.left.circle.fill", title: "Hand Structures & Movements", status: "0", content: AppPermissionView(permissionName: "Hand Structures & Movements"))
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "network", title: "Local Network", status: "0", content: AppPermissionView(permissionName: "Local Network"))
                 ListRowNavigationSymbolLabel(color: .orange, symbol: "mic.fill", title: "Microphone", status: "0", content: AppPermissionView(permissionName: "Microphone"))
-                ListRowNavigationImageLabel(image: "persona-camera-masked", title: "Persona Virtual Camera", status: "0", content: AppPermissionView(permissionName: "Persona Virtual Camera"))
+//                ListRowNavigationImageLabel(image: "persona-camera-masked", title: "Persona Virtual Camera", status: "0", content: AppPermissionView(permissionName: "Persona Virtual Camera"))
                 ListRowNavigationSymbolLabel(color: .gray, symbol: "waveform", title: "Speech Recognition", status: "0", content: AppPermissionView(permissionName: "Speech Recognition"))
                 ListRowNavigationImageLabel(image: "worldsensing-masked", title: "Surroundings", status: "0", content: AppPermissionView(permissionName: "Surroundings"))
             }
@@ -45,7 +46,7 @@ struct PrivacySecurityView: View {
             
             // Advertising Section
             Section {
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "chart.bar.xaxis", title: "Analytics & Improvements", content: EmptyView())
+                ListRowNavigationSymbolLabel(color: .blue, symbol: "chart.bar.xaxis", title: "Analytics & Improvements", content: AnalyticsImprovementsView())
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "megaphone.fill", title: "Apple Advertising", content: AppleAdvertisingView())
             }
             
