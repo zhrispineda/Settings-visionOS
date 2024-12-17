@@ -41,16 +41,16 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
                         if symbol == "health.3.stack.3d.fill" {
                             Image(_internalSystemName: symbol)
                                 .font(.title3)
-                                .fontWeight(.light)
                                 .offset(y: -2)
                         } else {
-                            Image(systemName: symbol)
+                            Image(_internalSystemName: symbol)
                                 .font(.title3)
-                                .fontWeight(.light)
                                 .offset(x: symbol == "voiceover" ? 2 : 0)
+                                .imageScale(symbol == "keyboard.badge.waveform.fill" ? .small : .medium)
                         }
                     }
                 }
+                
                 VStack(alignment: .leading) {
                     Text(title)
                     if !subtitle.isEmpty {
@@ -59,7 +59,9 @@ struct ListRowNavigationSymbolLabel<Content: View>: View {
                             .font(.caption)
                     }
                 }
+                
                 Spacer()
+                
                 if !status.isEmpty {
                     Text(status).foregroundStyle(.secondary)
                 }

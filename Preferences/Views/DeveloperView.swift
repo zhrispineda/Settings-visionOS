@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeveloperView: View {
-    @State private var macVirtualDisplayEnabled = false
+    @State private var credentialExchange = false
     @State private var resetNewsLocalDataOnNextLaunch = false
     @State private var allowAnyDomain = false
     @State private var allowUnverifiedSources = false
@@ -17,6 +17,13 @@ struct DeveloperView: View {
     var body: some View {
         NavigationStack {
             CustomList(title: "Developer") {
+                Section {
+                    Toggle("Credential Exchange", isOn: $credentialExchange)
+                } header: {
+                    Text("Authentication Services Testing")
+                } footer: {
+                    Text("Enables the credential exchange API in the Authentication Services framework for apps on this device.")
+                }
 //                Section {
 //                    Toggle("Allow Mac Virtual Display", isOn: $macVirtualDisplayEnabled)
 //                } header: {
@@ -33,16 +40,12 @@ struct DeveloperView: View {
                     Text("Reset layouts, images, and other cached elements. Private data will not be affected.")
                 }
                 
-                Section {
+                Section("TV Provider Testing") {
                     NavigationLink("TV Provider", destination: TVProviderView())
-                } header: {
-                    Text("TV Provider Testing")
                 }
                 
-                Section {
+                Section("TV Provider Testing") {
                     NavigationLink("TV App", destination: TVAppView())
-                } header: {
-                    Text("TV Provider Testing")
                 }
                 
 //                Section {
@@ -51,11 +54,9 @@ struct DeveloperView: View {
 //                    Text("Reset Surroundings Awareness Alert")
 //                }
                 
-                Section {
+                Section("CoreSpotlight Testing") {
                     Button("Reindex All Items") {}
                     Button("Reindex all Items with Identifiers") {}
-                } header: {
-                    Text("CoreSpotlight Testing")
                 }
                 
                 Section {
@@ -73,6 +74,14 @@ struct DeveloperView: View {
                     Text("Siri in Bluetooth Car Testing")
                 } footer: {
                     Text("Allow Siri to change audio route in a bluetooth vehicle. Go to Settings -> Siri & Search -> Siri Responses -> ”When Connected to Car Bluetooth” to change the audio route.")
+                }
+                
+                Section {
+                    Button("Sign In") {}
+                } header: {
+                    Text("Sandbox Apple Account")
+                } footer: {
+                    Text("This account will only be used for testing your in-app purchases in sandbox.")
                 }
             }
         }

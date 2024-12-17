@@ -38,7 +38,7 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                             .foregroundStyle(.white.gradient, color.gradient)
                     }
                 } else { // If image asset
-                    if icon == "bluetooth" {
+                    if icon == "bluetooth" || icon == "app.grid.3x3" {
                         ZStack {
                             Circle()
                                 .foregroundStyle(color.gradient)
@@ -46,7 +46,7 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                             Image(_internalSystemName: icon)
                                 .fontWeight(.light)
                                 .imageScale(.large)
-                                .symbolRenderingMode(.palette)
+                                .symbolRenderingMode(icon == "app.grid.3x3" ? .multicolor : .palette)
                                 .foregroundStyle(.white.gradient, color.gradient)
                         }
                     } else {
@@ -65,7 +65,9 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+                
                 Spacer()
+                
                 if !status.isEmpty {
                     if UIImage(systemName: status) != nil {
                         Image(systemName: status)

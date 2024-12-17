@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SiriSearchView: View {
     // Variables
+    @State private var siriEnabled = false
     @State private var showSuggestionsEnabled = true
     @State private var showingResetHiddenSuggestionsAlert = false
     @State private var showWhenSharingEnabled = true
@@ -21,7 +22,11 @@ struct SiriSearchView: View {
             Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English (United States)", content: EmptyView())
                 ListRowNavigationLabel(title: "Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
+                Toggle("", isOn: $siriEnabled)
+                NavigationLink("Talk to Siri", destination: EmptyView())
                 NavigationLink("Siri Responses", destination: SiriResponsesView())
+                NavigationLink("Messaging with Siri", destination: AutomaticallySendMessagesView())
+                NavigationLink("Siri & Dictation History", destination: SiriDictationHistoryView())
                 Button {} label: {
                     HStack {
                         Text("My Information")
@@ -32,8 +37,6 @@ struct SiriSearchView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-                NavigationLink("Siri & Dictation History", destination: SiriDictationHistoryView())
-                NavigationLink("Messaging with Siri", destination: AutomaticallySendMessagesView())
             } header: {
                 Text("Siri Requests")
             } footer: {
@@ -65,19 +68,7 @@ struct SiriSearchView: View {
             }
             
             Section("Siri App Access") {
-                NavigationLink {
-                    SiriAppsView()
-                } label: {
-                    HStack {
-                        Image("HomeScreen")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30)
-                            .clipShape(Circle())
-                        Text("Apps")
-                        Spacer()
-                    }
-                }
+                ListRowNavigationIconLabel(color: .indigo, icon: "app.grid.3x3", title: "Apps", content: SiriAppsView())
             }
         }
     }
