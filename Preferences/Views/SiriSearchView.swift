@@ -21,9 +21,9 @@ struct SiriSearchView: View {
         CustomList(title: "Siri & Search") {
             Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English (United States)", content: EmptyView())
-                ListRowNavigationLabel(title: "Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
-                Toggle("", isOn: $siriEnabled)
                 NavigationLink("Talk to Siri", destination: EmptyView())
+                Toggle("", isOn: $siriEnabled)
+                ListRowNavigationLabel(title: "Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
                 NavigationLink("Siri Responses", destination: SiriResponsesView())
                 NavigationLink("Messaging with Siri", destination: AutomaticallySendMessagesView())
                 NavigationLink("Siri & Dictation History", destination: SiriDictationHistoryView())

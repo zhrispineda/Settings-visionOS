@@ -1225,6 +1225,7 @@
 				832A545A2B5C7E6800BC877C /* CalendarView.swift */,
 				834111CC2B5D9D5300366689 /* MapsView.swift */,
 				834111D72B5DA68B00366689 /* NewsView.swift */,
+				83FF01462B5209D200CC2CE8 /* PasswordsView.swift */,
 				834111D92B5DA8B200366689 /* ShortcutsView.swift */,
 			);
 			path = Apps;
@@ -1317,7 +1318,6 @@
 				8309585C2B53061C00DD47D4 /* PrivacySecurityView.swift */,
 				8309585A2B5301B000DD47D4 /* AppearanceView.swift */,
 				83C55CAA2B5229E500569896 /* StorageView.swift */,
-				83FF01462B5209D200CC2CE8 /* PasswordsView.swift */,
 				83FF01442B52082800CC2CE8 /* GameCenterView.swift */,
 				83FF01422B52063000CC2CE8 /* WalletApplePayView.swift */,
 				8347ACE02B4F8750002B980C /* DeveloperView.swift */,

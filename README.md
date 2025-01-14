@@ -1,4 +1,4 @@
-#  Settings-visionOS
+# Settings-visionOS
 SwiftUI recreation of the visionOS Settings app.
 
 ## Information
@@ -13,7 +13,7 @@ SwiftUI recreation of the visionOS Settings app.
 ![An image comparing both app's Apps section](Assets/Apps@2x.png)
 
 ## Usage
-Open the project in Xcode 16 and run with either a Simulator running Apple Vision Pro's visionOS 2.1 or a physical Apple Vision Pro with Developer Mode enabled as a destination.
+Open the project in Xcode and run with either a Simulator running Apple Vision Pro's visionOS or a physical Apple Vision Pro with Developer Mode enabled as a destination.
 
 This is a personal project for learning Swift and SwiftUI. Feel free to fork, explore, and make the project your own for any personal use!
 
