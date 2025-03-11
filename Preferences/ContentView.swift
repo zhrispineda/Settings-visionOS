@@ -23,7 +23,7 @@ struct ContentView: View {
                     } label: {
                         HStack(alignment: .top) {
                             VStack {
-                                Image("appleAccount")
+                                Image("AppleAccount")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .padding(.leading, -5)
