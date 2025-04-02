@@ -18,7 +18,7 @@ struct SiriSearchView: View {
     @State private var showRelatedContent = true
     
     var body: some View {
-        CustomList(title: "Siri & Search") {
+        CustomList(title: "Apple Intelligence & Siri") {
             Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English (United States)", content: EmptyView())
                 NavigationLink("Talk to Siri", destination: EmptyView())
@@ -40,7 +40,7 @@ struct SiriSearchView: View {
             } header: {
                 Text("Siri Requests")
             } footer: {
-                Text("[About Ask Siri & Privacy...](#)")
+                Text("Voice input is processed on Apple Vision Pro, but transcripts of your requests are sent to Apple. [About Siri & Privacy...](#)")
             }
             
             Section {
@@ -58,16 +58,16 @@ struct SiriSearchView: View {
                 Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)")
             }
             
-            Section {
-                Toggle("Show Recent Searches", isOn: $showRecentSearches)
-                Toggle("Show Related Content", isOn: $showRelatedContent)
-            } header: {
-                Text("Search and Look Up")
-            } footer: {
-                Text("Apple can show content when searching, or when looking up text in objects or photos. [About Siri Suggestions, Search & Privacy...](#)")
-            }
+//            Section {
+//                Toggle("Show Recent Searches", isOn: $showRecentSearches)
+//                Toggle("Show Related Content", isOn: $showRelatedContent)
+//            } header: {
+//                Text("Search and Look Up")
+//            } footer: {
+//                Text("Apple can show content when searching, or when looking up text in objects or photos. [About Siri Suggestions, Search & Privacy...](#)")
+//            }
             
-            Section("Siri App Access") {
+            Section("Apple Intelligence & Siri App Access") {
                 ListRowNavigationIconLabel(color: .indigo, icon: "app.grid.3x3", title: "Apps", content: SiriAppsView())
             }
         }

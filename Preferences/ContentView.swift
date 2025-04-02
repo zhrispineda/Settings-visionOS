@@ -47,11 +47,17 @@ struct ContentView: View {
                 // MARK: Main Section
                 SettingsLabel(selection: $selection, section: mainSettings)
                 
+                // MARK: Usage Section
+                SettingsLabel(selection: $selection, section: usageSettings)
+                
+                // MARK: Input Section
+                SettingsLabel(selection: $selection, section: inputSettings)
+                
                 // MARK: Focus Section
                 SettingsLabel(selection: $selection, section: focusSettings)
                 
-                // MARK: Usage Section
-                SettingsLabel(selection: $selection, section: usageSettings)
+                // MARK: Data Section
+                SettingsLabel(selection: $selection, section: dataSettings)
                 
                 // MARK: Device Section
                 SettingsLabel(selection: $selection, section: deviceSettings)
@@ -89,6 +95,7 @@ struct SettingsLabel: View {
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
     let internalIcons = ["appstore", "environments.fill", "health.3.stack.3d.fill"]
+    let circleSymbols = ["accessibility", "digitalcrown.horizontal.arrow.counterclockwise.fill", "hand.point.up.left.fill"]
     
     var body: some View {
         Section {
@@ -96,7 +103,7 @@ struct SettingsLabel: View {
                 NavigationLink(value: setting.type) {
                     HStack(spacing: 15) {
                         if UIImage(systemName: setting.icon) != nil {
-                            if setting.icon == "accessibility" || setting.icon == "digitalcrown.horizontal.arrow.counterclockwise.fill" {
+                            if circleSymbols.contains(setting.icon) {
                                 ZStack {
                                     Circle()
                                         .frame(width: 30, height: 30)
@@ -125,6 +132,7 @@ struct SettingsLabel: View {
                                 .foregroundStyle(.white.gradient, setting.color.gradient)
                                 .scaledToFit()
                                 .frame(width: 33)
+                                .clipShape(Circle())
                         }
                         Text(setting.id)
                         Spacer()

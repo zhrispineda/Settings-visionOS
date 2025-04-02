@@ -29,11 +29,15 @@ enum SettingsModel: String, CaseIterable {
     case accessibility = "Accessibility"
     case controlCenter = "Control Center"
     case digitalCrown = "Digital Crown"
-    case siriSearch = "Siri & Search"
+    case siriSearch = "Apple Intelligence & Siri"
+    case search = "Search"
     case healthData = "Health Data"
     case privacySecurity = "Privacy & Security"
     
+    case eyesHands = "Eyes & Hands"
+    
     case appearance = "Appearance"
+    case icloud = "iCloud"
     case storage = "Storage"
     
     case gameCenter = "Game Center"
@@ -50,6 +54,21 @@ enum SettingsModel: String, CaseIterable {
     SettingsItem(type: .environments, title: "Environments", icon: "environments.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
 ]
 
+// Usage Settings: Accessibility, Appearance, Siri & Search, Control Center, Digital Crown, Search
+@MainActor let usageSettings: [SettingsItem] = [
+    SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility", color: .blue, destination: AnyView(AccessibilityView())),
+    SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(AppearanceView())),
+    SettingsItem(type: .siriSearch, title: "Apple Intelligence & Siri", icon: "appleintelligence", color: .purple, destination: AnyView(SiriSearchView())),
+    SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
+    SettingsItem(type: .digitalCrown, title: "Digital Crown", icon: "digitalcrown.horizontal.arrow.counterclockwise.fill", color: .blue, destination: AnyView(DigitalCrownView())),
+    SettingsItem(type: .search, title: "Search", icon: "magnifyingglass.circle.fill", color: .gray, destination: AnyView(EmptyView())),
+]
+
+// Input Settings
+@MainActor let inputSettings: [SettingsItem] = [
+    SettingsItem(type: .eyesHands, title: "Eyes & Hands", icon: "hand.point.up.left.fill", color: .blue, destination: AnyView(EmptyView()))
+]
+
 // Focus Settings: Notifications, Focus, Screen Time
 @MainActor let focusSettings: [SettingsItem] = [
     SettingsItem(type: .notifications, title: "Notifications", icon: "bell.badge.circle.fill", color: .red, destination: AnyView(NotificationsView())),
@@ -57,25 +76,21 @@ enum SettingsModel: String, CaseIterable {
     SettingsItem(type: .screenTime, title: "Screen Time", icon: "hourglass.circle.fill", color: .indigo, destination: AnyView(ScreenTimeView())),
 ]
 
-// Usage Settings: Accessibility, Control Center, Siri & Search, Privacy & Security
-@MainActor let usageSettings: [SettingsItem] = [
-    SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility", color: .blue, destination: AnyView(AccessibilityView())),
-    SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
-    SettingsItem(type: .digitalCrown, title: "Digital Crown", icon: "digitalcrown.horizontal.arrow.counterclockwise.fill", color: .blue, destination: AnyView(DigitalCrownView())),
-    SettingsItem(type: .siriSearch, title: "Siri & Search", icon: "applesiri", color: .purple, destination: AnyView(SiriSearchView())),
+// Data Settings: Health Data, Privacy & Security
+@MainActor let dataSettings: [SettingsItem] = [
     SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(HealthDataView())),
-    SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView())),
+        SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView()))
 ]
 
-// Device Settings: Appearance, Storage
+// Device Settings: Storage
 @MainActor let deviceSettings: [SettingsItem] = [
-    SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(AppearanceView())),
     SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
 ]
 
-// Account Settings: Game Center, Wallet & Apple Pay
+// Account Settings: Game Center, iCloud, Wallet & Apple Pay
 @MainActor let accountSettings: [SettingsItem] = [
     SettingsItem(type: .gameCenter, title: "Game Center", icon: "applegamecenter", color: .white, destination: AnyView(GameCenterView())),
+    SettingsItem(type: .icloud, title: "iCloud", icon: "appleicloud", color: .white, destination: AnyView(EmptyView())),
     SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "applewallet", destination: AnyView(WalletApplePayView())),
 ]
 
@@ -85,4 +100,4 @@ enum SettingsModel: String, CaseIterable {
 ]
 
 // Combined Settings Array
-@MainActor let combinedSettings = mainSettings + focusSettings + usageSettings + deviceSettings + accountSettings + developerSettings
+@MainActor let combinedSettings = mainSettings + focusSettings + inputSettings + usageSettings + dataSettings + deviceSettings + accountSettings + developerSettings
