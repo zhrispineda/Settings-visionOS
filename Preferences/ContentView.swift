@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     // Variables
-    @State private var searchText = String()
-    @State private var showingSignInSheet = false
-    @State private var selection: SettingsModel? = .general
     @State private var destination = AnyView(GeneralView())
+    @State private var searchText = ""
+    @State private var selection: SettingsModel? = .general
+    @State private var showingSignInSheet = false
     
     var body: some View {
         NavigationSplitView {
