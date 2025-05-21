@@ -9,19 +9,13 @@ import SwiftUI
 
 struct VersionView: View {
     var body: some View {
-        CustomList(title: "\(UIDevice().systemName) Version") {
-            Section {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("\(UIDevice().systemName) \(UIDevice().systemVersion) (22O251)")
-                        .fontWeight(.heavy)
-                    Text("This update includes improvements and bug fixes for your \(UIDevice().name).")
-                        .foregroundStyle(.secondary)
+        CustomViewController("/System/Library/PrivateFrameworks/Settings/GeneralSettingsUI.framework/GeneralSettingsUI", controller: "PSGSoftwareVersionController")
+            .toolbar {
+                ToolbarItem(placement: .secondaryAction) {
+                    Text("visionOS Version")
+                        .font(.title2)
                 }
-                .padding(.vertical, 0)
-            } header: {
-                Text("\(UIDevice().systemName) Version")
             }
-        }
     }
 }
 

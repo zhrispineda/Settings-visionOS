@@ -36,7 +36,15 @@ struct AboutView: View {
             }
             
             Section {
-                NavigationLink("Certificate Trust Settings", destination: CertificateTrustSettingsView())
+                NavigationLink("Certificate Trust Settings") {
+                    CustomViewController("/System/Library/PrivateFrameworks/Settings/GeneralSettingsUI.framework/GeneralSettingsUI", controller: "PSGCertTrustSettings")
+                        .toolbar {
+                            ToolbarItem(placement: .secondaryAction) {
+                                Text("Certificate Trust Settings")
+                                    .font(.title2)
+                            }
+                        }
+                }
             }
         }
     }

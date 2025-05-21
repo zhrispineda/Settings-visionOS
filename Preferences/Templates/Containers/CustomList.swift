@@ -27,7 +27,6 @@ struct CustomList<Content: View>: View {
         List {
             content
         }
-        //.navigationTitle(title)
         // Horizontal list row padding
         .padding(.horizontal, 45)
         // Horizontally-centered title text
@@ -35,7 +34,6 @@ struct CustomList<Content: View>: View {
             ToolbarItem(placement: .secondaryAction) {
                 Text(title)
                     .font(.title2)
-                    //.offset(x: parentViews.contains(title) ? 0 : (editEnabled ? (editMode == .active ? -5 : -10) : -40)) // Adjust for back button if parent view or not
             }
             if editEnabled {
                 ToolbarItem(placement: .topBarTrailing) {
