@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Variables
     @State private var destination = AnyView(GeneralView())
     @State private var searchText = ""
     @State private var selection: SettingsModel? = .general
@@ -68,8 +67,6 @@ struct ContentView: View {
                 // MARK: Developer Section
                 SettingsLabel(selection: $selection, section: developerSettings)
             }
-            // TODO: Implement search box with capsule/rounded shape
-            //.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     TextField("\(Image(systemName: "mic.fill"))\tSearch", text: $searchText)
