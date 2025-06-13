@@ -12,29 +12,28 @@ struct GeneralView: View {
         NavigationStack {
             CustomList(title: "General") {
                 Section {
-                    NavigationLink("About", destination: AboutView())
+                    SLink("About", color: .gray, icon: "vision.pro", destination: AboutView())
                 }
                 
                 Section {
-                    NavigationLink("AutoFill & Passwords", destination: PasswordOptionsView())
-                    NavigationLink("Dictionary", destination: DictionaryView())
-                    NavigationLink("Fonts", destination: FontsView())
-                    NavigationLink("Keyboard", destination: KeyboardView())
-                    //NavigationLink("Game Controller", destination: GameControllerView())
-                    NavigationLink("Language & Region", destination: LanguageRegionView())
+                    SLink("AutoFill & Passwords", color: .gray, icon: "key.dots.fill", destination: PasswordOptionsView())
+                    SLink("Dictionary", color: .blue, icon: "text.book.closed.fill", destination: DictionaryView())
+                    SLink("Fonts", color: .gray, icon: "textformat", destination: FontsView())
+                    SLink("Keyboard", color: .gray, icon: "keyboard.fill", destination: KeyboardView())
+                    SLink("Language & Region", color: .blue, icon: "globe", destination: LanguageRegionView())
                 }
                 
                 Section {
-                    NavigationLink("VPN & Device Management", destination: VPNDeviceManagementView())
+                    SLink("VPN & Device Management", color: .gray, icon: "gear", destination: VPNDeviceManagementView())
                 }
                 
                 Section {
-                    NavigationLink("Remote Devices", destination: RemoteDevicesView())
+                    SLink("Remote Devices", color: .gray, icon: "macbook", destination: RemoteDevicesView())
                 }
                 
-                Section {
-                    NavigationLink("Transfer or Reset This \(UIDevice().name)", destination: TransferResetView())
-                }
+//                Section {
+//                    NavigationLink("Transfer or Reset This \(UIDevice().name)", destination: TransferResetView())
+//                }
             }
         }
     }

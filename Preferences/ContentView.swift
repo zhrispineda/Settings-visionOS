@@ -91,7 +91,7 @@ struct SettingsLabel: View {
     // Variables
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
-    let internalIcons = ["appstore", "environments.fill", "health.3.stack.3d.fill"]
+    let internalIcons = ["appstore", "health.3.stack.3d.fill"]
     let circleSymbols = ["accessibility", "digitalcrown.horizontal.arrow.counterclockwise.fill", "hand.point.up.left.fill"]
     
     var body: some View {

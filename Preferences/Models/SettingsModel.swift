@@ -51,7 +51,7 @@ enum SettingsModel: String, CaseIterable {
     SettingsItem(type: .general, title: "General", icon: "gear.circle.fill", color: .gray, destination: AnyView(GeneralView())),
     SettingsItem(type: .apps, title: "Apps", icon: "appstore", color: .blue, destination: AnyView(AppsView())),
     SettingsItem(type: .people, title: "People", icon: "person.2.circle.fill", color: .green, destination: AnyView(PeopleView())),
-    SettingsItem(type: .environments, title: "Environments", icon: "environments.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
+    SettingsItem(type: .environments, title: "Environments", icon: "environments.circle.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
 ]
 
 // Usage Settings: Accessibility, Appearance, Siri & Search, Control Center, Digital Crown, Search

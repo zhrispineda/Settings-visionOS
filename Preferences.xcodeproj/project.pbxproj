@@ -216,6 +216,8 @@
 		83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */; };
 		83A9C8F52B62D9EE00CF4C4B /* SiriDictationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */; };
 		83A9C8F72B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */; };
+		83AACA452DFC5DDD00293154 /* SLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AACA442DFC5DDD00293154 /* SLink.swift */; };
+		83AACA472DFC5E4800293154 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AACA462DFC5E4800293154 /* IconView.swift */; };
 		83AB15B02B44CB37002DCD7E /* PreferencesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15AF2B44CB37002DCD7E /* PreferencesApp.swift */; };
 		83AB15B22B44CB37002DCD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB15B12B44CB37002DCD7E /* ContentView.swift */; };
 		83AB15B42B44CB39002DCD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB15B32B44CB39002DCD7E /* Assets.xcassets */; };
@@ -508,6 +510,8 @@
 		83A9C8F22B62D79700CF4C4B /* SiriResponsesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriResponsesView.swift; sourceTree = "<group>"; };
 		83A9C8F42B62D9EE00CF4C4B /* SiriDictationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriDictationHistoryView.swift; sourceTree = "<group>"; };
 		83A9C8F62B62DB8100CF4C4B /* AutomaticallySendMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticallySendMessagesView.swift; sourceTree = "<group>"; };
+		83AACA442DFC5DDD00293154 /* SLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLink.swift; sourceTree = "<group>"; };
+		83AACA462DFC5E4800293154 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		83AB15A82B44CB37002DCD7E /* Preferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AB15AF2B44CB37002DCD7E /* PreferencesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesApp.swift; sourceTree = "<group>"; };
 		83AB15B12B44CB37002DCD7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -743,6 +747,8 @@
 			children = (
 				831BE5AB2DDE3D4400D0BFC4 /* SettingsLogger.swift */,
 				831BE5AD2DDE3EB600D0BFC4 /* UIKitRepresentables.swift */,
+				83AACA442DFC5DDD00293154 /* SLink.swift */,
+				83AACA462DFC5E4800293154 /* IconView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1601,7 +1607,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					83AB15A72B44CB37002DCD7E = {
 						CreatedOnToolsVersion = 15.2;
@@ -1791,6 +1797,7 @@
 				8372E4A82B649B5C00C1ABDC /* PunctuationView.swift in Sources */,
 				832A54642B5C8CD900BC877C /* TimeZoneOverrideView.swift in Sources */,
 				83A9C8F32B62D79700CF4C4B /* SiriResponsesView.swift in Sources */,
+				83AACA472DFC5E4800293154 /* IconView.swift in Sources */,
 				8360DAE22B68800800AD556A /* MoveRepeatView.swift in Sources */,
 				838B5E6C2CFB84F900B1B878 /* AnalyticsImprovementsView.swift in Sources */,
 				83C175692B5EFBE200BA98FA /* ScheduleView.swift in Sources */,
@@ -1886,6 +1893,7 @@
 				8306F0BD2B6964D000DBB3CA /* LocationDetailView.swift in Sources */,
 				8360DABD2B683FEE00AD556A /* MovementToleranceView.swift in Sources */,
 				83BDDE5A2B65B7A4006C0FDC /* CommandsView.swift in Sources */,
+				83AACA452DFC5DDD00293154 /* SLink.swift in Sources */,
 				83CAF1392B5A0563007A5E22 /* SearchEngineView.swift in Sources */,
 				83F114F52B673FE40090FAE8 /* SpokenContentTypingFeedbackView.swift in Sources */,
 				837DA17A2B6730340038B856 /* ActivityModifierKeysView.swift in Sources */,
@@ -1992,6 +2000,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				XROS_DEPLOYMENT_TARGET = 1.0;
@@ -2048,6 +2057,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 				XROS_DEPLOYMENT_TARGET = 1.0;
