@@ -2,20 +2,16 @@
 //  ListRowNavigationImageLabel.swift
 //  Settings-visionOS
 //
-//  A template to have a NavigationLink with an image made to a circle shape and title with an optional subtitle.
-//
-//  Parameters:
-//  isRounded: Bool, image: String, title: String, subtitle: String, status: String, content: Content
-//
 
 import SwiftUI
 
+/// A template to have a NavigationLink with an image made to a circle shape and title with an optional subtitle.
 struct ListRowNavigationImageLabel<Content: View>: View {
     var isRounded: Bool = true
-    var image: String = "applefreeform"
+    var image: String = ""
     var title: String = "Title"
-    var subtitle: String = String()
-    var status: String = String()
+    var subtitle: String = ""
+    var status: String = ""
     var content: Content
     
     var body: some View {

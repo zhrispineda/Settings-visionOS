@@ -88,10 +88,8 @@ struct ContentView: View {
 }
 
 struct SettingsLabel: View {
-    // Variables
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
-    let circleSymbols = ["accessibility", "digitalcrown.horizontal.arrow.counterclockwise.fill", "hand.point.up.left.fill"]
     
     var body: some View {
         Section {
@@ -99,20 +97,11 @@ struct SettingsLabel: View {
                 NavigationLink(value: setting.type) {
                     HStack(spacing: 15) {
                         if UIImage(systemName: setting.icon) != nil {
-                            if circleSymbols.contains(setting.icon) {
-                                ZStack {
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundStyle(setting.color.gradient)
-                                    Image(systemName: setting.icon)
-                                }
-                            } else {
-                                Image(systemName: setting.icon)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .symbolRenderingMode(.palette)
-                                    .foregroundStyle(.white.gradient, setting.color.gradient)
-                            }
+                            Image(systemName: setting.icon)
+                                .font(.largeTitle)
+                                .fontWeight(.light)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white.gradient, setting.color.gradient)
                         } else if setting.icon.contains("com.") {
                             IconView(icon: setting.icon)
                         } else {
