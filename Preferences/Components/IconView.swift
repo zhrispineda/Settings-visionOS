@@ -45,7 +45,6 @@ struct IconView: View {
                     Image(uiImage: ISIcon)
                 }
             } else if icon.contains("com.") {
-                let _ = print(icon)
                 if let ISIcon = UIImage.icon(forBundleID: icon) {
                     Image(uiImage: ISIcon)
                 }

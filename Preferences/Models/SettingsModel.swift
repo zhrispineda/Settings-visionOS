@@ -78,7 +78,7 @@ enum SettingsModel: String, CaseIterable {
 
 // Data Settings: Health Data, Privacy & Security
 @MainActor let dataSettings: [SettingsItem] = [
-    SettingsItem(type: .healthData, title: "Health Data", icon: "health.3.stack.3d.fill", color: .blue, destination: AnyView(HealthDataView())),
+    SettingsItem(type: .healthData, title: "Health Data", icon: "com.apple.graphic-icon.health-data", destination: AnyView(HealthDataView())),
         SettingsItem(type: .privacySecurity, title: "Privacy & Security", icon: "hand.raised.circle.fill", color: .blue, destination: AnyView(PrivacySecurityView()))
 ]
 

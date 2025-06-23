@@ -12,17 +12,17 @@ struct AppsView: View {
         NavigationStack {
             CustomList(title: "Apps") {
                 Section {
-                    ListRowNavigationImageLabel(image: "applepasswords", title: "Passwords", content: PasswordsView())
-                    //ListRowNavigationImageLabel(image: "applefreeform", title: "Freeform", content: FreeformView())
-                    ListRowNavigationImageLabel(image: "applephotos", title: "Photos", content: PhotosView())
-                    ListRowNavigationImageLabel(image: "applesafari", title: "Safari", content: SafariView())
+                    ListRowNavigationImageLabel(image: "com.apple.DocumentsApp", title: "Files", content: EmptyView())
+                    ListRowNavigationImageLabel(image: "com.apple.Passwords", title: "Passwords", content: PasswordsView())
+                    ListRowNavigationImageLabel(image: "com.apple.mobileslideshow", title: "Photos", content: PhotosView())
+                    ListRowNavigationImageLabel(image: "com.apple.mobilesafari", title: "Safari", content: SafariView())
                 }
                 
                 Section("Compatible Apps") {
-                    ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: CalendarView())
-                    ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps", content: MapsView())
-                    ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News", content: NewsView())
-                    ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts", content: ShortcutsView())
+                    ListRowNavigationImageLabel(image: "com.apple.mobilecal", title: "Calendar", content: CalendarView())
+                    ListRowNavigationImageLabel(image: "com.apple.Maps", title: "Maps", content: MapsView())
+                    ListRowNavigationImageLabel(image: "com.apple.news", title: "News", content: NewsView())
+                    ListRowNavigationImageLabel(image: "com.apple.shortcuts", title: "Shortcuts", content: ShortcutsView())
                 }
             }
         }

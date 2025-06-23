@@ -91,7 +91,6 @@ struct SettingsLabel: View {
     // Variables
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
-    let internalIcons = ["health.3.stack.3d.fill"]
     let circleSymbols = ["accessibility", "digitalcrown.horizontal.arrow.counterclockwise.fill", "hand.point.up.left.fill"]
     
     var body: some View {
@@ -113,15 +112,6 @@ struct SettingsLabel: View {
                                     .fontWeight(.light)
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.white.gradient, setting.color.gradient)
-                            }
-                        } else if internalIcons.contains(setting.icon) {
-                            ZStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(setting.color.gradient)
-                                Image(_internalSystemName: setting.icon)
-                                    .imageScale(.small)
-                                    .padding(.bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
                             }
                         } else if setting.icon.contains("com.") {
                             IconView(icon: setting.icon)

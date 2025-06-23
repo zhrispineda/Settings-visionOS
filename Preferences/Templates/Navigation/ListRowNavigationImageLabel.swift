@@ -11,7 +11,6 @@
 import SwiftUI
 
 struct ListRowNavigationImageLabel<Content: View>: View {
-    // Variables
     var isRounded: Bool = true
     var image: String = "applefreeform"
     var title: String = "Title"
@@ -24,7 +23,9 @@ struct ListRowNavigationImageLabel<Content: View>: View {
             content
         } label: {
             HStack(spacing: 15) {
-                if isRounded {
+                if image.contains("com.") {
+                    IconView(icon: image)
+                } else if isRounded {
                     Image(image)
                         .resizable()
                         .scaledToFit()

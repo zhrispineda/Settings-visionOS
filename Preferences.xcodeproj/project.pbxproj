@@ -47,7 +47,6 @@
 		8309A17B2B62F8680039BDEC /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17A2B62F8680039BDEC /* TextSizeView.swift */; };
 		8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */; };
 		8309A17F2B62FE2F0039BDEC /* AppStorageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */; };
-		8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1812B6300F00039BDEC /* SystemInfoView.swift */; };
 		8309A1852B6303BA0039BDEC /* SecurityRecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1842B6303BA0039BDEC /* SecurityRecommendationsView.swift */; };
 		8309A1872B6304470039BDEC /* PasswordOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1862B6304470039BDEC /* PasswordOptionsView.swift */; };
 		8309A1902B63576B0039BDEC /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A18F2B63576B0039BDEC /* TrackingView.swift */; };
@@ -341,7 +340,6 @@
 		8309A17A2B62F8680039BDEC /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
 		8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAppearanceView.swift; sourceTree = "<group>"; };
 		8309A17E2B62FE2F0039BDEC /* AppStorageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageInfoView.swift; sourceTree = "<group>"; };
-		8309A1812B6300F00039BDEC /* SystemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoView.swift; sourceTree = "<group>"; };
 		8309A1842B6303BA0039BDEC /* SecurityRecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityRecommendationsView.swift; sourceTree = "<group>"; };
 		8309A1862B6304470039BDEC /* PasswordOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOptionsView.swift; sourceTree = "<group>"; };
 		8309A18F2B63576B0039BDEC /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
@@ -700,14 +698,6 @@
 				8309A17C2B62FB890039BDEC /* DisplayAppearanceView.swift */,
 			);
 			path = Appearance;
-			sourceTree = "<group>";
-		};
-		8309A1802B6300D80039BDEC /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				8309A1812B6300F00039BDEC /* SystemInfoView.swift */,
-			);
-			path = Storage;
 			sourceTree = "<group>";
 		};
 		8309A1832B63038A0039BDEC /* Passwords */ = {
@@ -1320,7 +1310,6 @@
 				83A9C8EF2B62D45300CF4C4B /* Siri & Search */,
 				8309A18E2B63574B0039BDEC /* Privacy & Security */,
 				8309A1792B62F6D70039BDEC /* Appearance */,
-				8309A1802B6300D80039BDEC /* Storage */,
 				8309A1832B63038A0039BDEC /* Passwords */,
 				83FF013D2B52019500CC2CE8 /* Developer */,
 				834A448A2B45FC2A00690818 /* GeneralView.swift */,
@@ -1739,7 +1728,6 @@
 				8328F51E2B6451F8004C6220 /* SpeechView.swift in Sources */,
 				832A546D2B5C907000BC877C /* DefaultAlertTimesView.swift in Sources */,
 				83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */,
-				8309A1822B6300F00039BDEC /* SystemInfoView.swift in Sources */,
 				83C1756B2B5F085B00BA98FA /* MindfulnessView.swift in Sources */,
 				8360DB092B68B04800AD556A /* SlowKeysView.swift in Sources */,
 				8306F0C92B6970E500DBB3CA /* RecognitionSoundsView.swift in Sources */,
@@ -2089,6 +2077,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Settings;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "To simulate storage-related functionality.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2117,6 +2106,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Settings;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "To simulate storage-related functionality.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

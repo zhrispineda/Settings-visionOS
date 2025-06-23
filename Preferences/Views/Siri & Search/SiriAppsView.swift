@@ -10,16 +10,16 @@ import SwiftUI
 struct SiriAppsView: View {
     var body: some View {
         CustomList(title: "Apps") {
-            ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendar", content: SiriSearchAppView(appName: "Calendar"))
-            ListRowNavigationImageLabel(isRounded: true, image: "applefiles", title: "Files", content: SiriSearchAppView(appName: "Files"))
-            ListRowNavigationImageLabel(isRounded: true, image: "applefreeform", title: "Freeform", content: SiriSearchAppView(appName: "Freeform"))
-            ListRowNavigationImageLabel(isRounded: false, image: "applemaps", title: "Maps", content: SiriSearchAppView(appName: "Maps"))
-            ListRowNavigationImageLabel(isRounded: false, image: "applenews", title: "News", content: SiriSearchAppView(appName: "News"))
-            ListRowNavigationImageLabel(isRounded: true, image: "applephotos", title: "Photos", content: SiriSearchAppView(appName: "Photos"))
-            ListRowNavigationImageLabel(isRounded: false, image: "applereminders", title: "Reminders", content: SiriSearchAppView(appName: "Reminders"))
-            ListRowNavigationImageLabel(isRounded: true, image: "applesafari", title: "Safari", content: SiriSearchAppView(appName: "Safari"))
-            ListRowNavigationImageLabel(isRounded: true, image: "applesettings", title: "Settings", content: SiriSearchAppView(appName: "Settings"))
-            ListRowNavigationImageLabel(isRounded: false, image: "appleshortcuts", title: "Shortcuts", content: SiriSearchAppView(appName: "Shortcuts"))
+            ListRowNavigationImageLabel(image: "com.apple.mobilecal", title: "Calendar", content: SiriSearchAppView(appName: "Calendar"))
+            ListRowNavigationImageLabel(image: "com.apple.DocumentsApp", title: "Files", content: SiriSearchAppView(appName: "Files"))
+            ListRowNavigationImageLabel(image: "com.apple.Maps", title: "Maps", content: SiriSearchAppView(appName: "Maps"))
+            ListRowNavigationImageLabel(image: "com.apple.news", title: "News", content: SiriSearchAppView(appName: "News"))
+            ListRowNavigationImageLabel(image: "com.apple.mobileslideshow", title: "Photos", content: SiriSearchAppView(appName: "Photos"))
+            ListRowNavigationImageLabel(image: "com.apple.reminders", title: "Reminders", content: SiriSearchAppView(appName: "Reminders"))
+            ListRowNavigationImageLabel(image: "com.apple.mobilesafari", title: "Safari", content: SiriSearchAppView(appName: "Safari"))
+            ListRowNavigationImageLabel(image: "com.apple.Preferences", title: "Settings", content: SiriSearchAppView(appName: "Settings"))
+            ListRowNavigationImageLabel(image: "com.apple.shortcuts", title: "Shortcuts", content: SiriSearchAppView(appName: "Shortcuts"))
+            ListRowNavigationImageLabel(image: "com.apple.RealityWidgets", title: "Widgets", content: SiriSearchAppView(appName: "Widgets"))
         }
     }
 }
