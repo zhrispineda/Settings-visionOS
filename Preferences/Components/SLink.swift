@@ -60,7 +60,7 @@ struct SLink<Content: View>: View {
             HStack(spacing: 15) {
                 // Icon
                 if icon != "None" {
-                    IconView(id: text, icon: icon, color: color, iconColor: iconColor)
+                    IconView(icon: icon, color: color, iconColor: iconColor)
                 }
 
                 // Title and subtitle text

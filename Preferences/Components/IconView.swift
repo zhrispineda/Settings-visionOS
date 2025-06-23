@@ -15,12 +15,9 @@ import SwiftUI
 /// - Parameter color: The `Color` of the background.
 /// - Parameter iconColor: The `Color` of the icon itself.
 struct IconView: View {
-    @Environment(\.colorScheme) private var colorScheme
-    let id: String
     let icon: String
-    let color: Color
-    let iconColor: Color
-    let circular: Bool = true
+    var color: Color = .clear
+    var iconColor: Color = .clear
 
     var body: some View {
         ZStack {
@@ -30,7 +27,7 @@ struct IconView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 30)
-            } else {
+            } else if !icon.contains("com") {
                 Image(systemName: "circle.fill")
                     .resizable()
                     .scaledToFit()
@@ -39,29 +36,24 @@ struct IconView: View {
             }
 
             // Check if icon is an SF Symbol or an image asset
-            if UIImage(systemName: icon) != nil || icon == "key.dots.fill" {
+            if UIImage(systemName: icon) != nil {
                 Image(_internalSystemName: icon)
                     .scaledToFit()
                     .foregroundStyle(iconColor)
-            } else if icon.contains("custom") {
-                Image(icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20)
-                    .foregroundStyle(.gray, .white)
+            } else if icon.contains("com.apple.graphic") || icon.contains("com.apple.MR") {
+                if let ISIcon = UIImage.icon(forUTI: icon) {
+                    Image(uiImage: ISIcon)
+                }
+            } else if icon.contains("com.") {
+                let _ = print(icon)
+                if let ISIcon = UIImage.icon(forBundleID: icon) {
+                    Image(uiImage: ISIcon)
+                }
             } else {
                 Image(icon)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 30)
-                    .clipShape(RoundedRectangle(cornerRadius: 6))
-            }
-        }
-        .overlay {
-            // Add outline around icon background
-            if color == .white || color == .black {
-                RoundedRectangle(cornerRadius: 7)
-                    .stroke(color == .white ? Color.black.opacity(0.5) : colorScheme == .dark ? Color.white.opacity(0.5) : Color.black.opacity(0.5), lineWidth: 0.25)
             }
         }
     }

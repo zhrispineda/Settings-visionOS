@@ -49,7 +49,7 @@ enum SettingsModel: String, CaseIterable {
 // Main Settings: General, Apps, People, Environment
 @MainActor let mainSettings: [SettingsItem] = [
     SettingsItem(type: .general, title: "General", icon: "gear.circle.fill", color: .gray, destination: AnyView(GeneralView())),
-    SettingsItem(type: .apps, title: "Apps", icon: "appstore", color: .blue, destination: AnyView(AppsView())),
+    SettingsItem(type: .apps, title: "Apps", icon: "com.apple.AppStore", destination: AnyView(AppsView())),
     SettingsItem(type: .people, title: "People", icon: "person.2.circle.fill", color: .green, destination: AnyView(PeopleView())),
     SettingsItem(type: .environments, title: "Environments", icon: "environments.circle.fill", color: .indigo, destination: AnyView(EnvironmentsView())),
 ]
@@ -58,8 +58,8 @@ enum SettingsModel: String, CaseIterable {
 @MainActor let usageSettings: [SettingsItem] = [
     SettingsItem(type: .accessibility, title: "Accessibility", icon: "accessibility", color: .blue, destination: AnyView(AccessibilityView())),
     SettingsItem(type: .appearance, title: "Appearance", icon: "sun.max.circle.fill", color: .blue, destination: AnyView(AppearanceView())),
-    SettingsItem(type: .siriSearch, title: "Apple Intelligence & Siri", icon: "appleintelligence", color: .purple, destination: AnyView(SiriSearchView())),
-    SettingsItem(type: .controlCenter, title: "Control Center", icon: "custom.switch.2.circle.fill", color: .gray, destination: AnyView(ControlCenterView())),
+    SettingsItem(type: .siriSearch, title: "Apple Intelligence & Siri", icon: "com.apple.graphic-icon.intelligence", destination: AnyView(SiriSearchView())),
+    SettingsItem(type: .controlCenter, title: "Control Center", icon: "com.apple.graphic-icon.control-center", destination: AnyView(ControlCenterView())),
     SettingsItem(type: .digitalCrown, title: "Digital Crown", icon: "digitalcrown.horizontal.arrow.counterclockwise.fill", color: .blue, destination: AnyView(DigitalCrownView())),
     SettingsItem(type: .search, title: "Search", icon: "magnifyingglass.circle.fill", color: .gray, destination: AnyView(EmptyView())),
 ]
@@ -84,7 +84,7 @@ enum SettingsModel: String, CaseIterable {
 
 // Device Settings: Storage
 @MainActor let deviceSettings: [SettingsItem] = [
-    SettingsItem(type: .storage, title: "Storage", icon: "custom.externaldrive.circle.fill", color: .gray, destination: AnyView(StorageView())),
+    SettingsItem(type: .storage, title: "Storage", icon: "com.apple.graphic-icon.internal-drive", destination: AnyView(StorageView())),
 ]
 
 // Account Settings: Game Center, iCloud, Wallet & Apple Pay

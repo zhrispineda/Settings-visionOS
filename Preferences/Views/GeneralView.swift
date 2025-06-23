@@ -12,28 +12,24 @@ struct GeneralView: View {
         NavigationStack {
             CustomList(title: "General") {
                 Section {
-                    SLink("About", color: .gray, icon: "vision.pro", destination: AboutView())
+                    SLink("About", icon: "com.apple.graphic-icon.about-current-device", destination: AboutView())
                 }
                 
                 Section {
-                    SLink("AutoFill & Passwords", color: .gray, icon: "key.dots.fill", destination: PasswordOptionsView())
-                    SLink("Dictionary", color: .blue, icon: "text.book.closed.fill", destination: DictionaryView())
-                    SLink("Fonts", color: .gray, icon: "textformat", destination: FontsView())
-                    SLink("Keyboard", color: .gray, icon: "keyboard.fill", destination: KeyboardView())
-                    SLink("Language & Region", color: .blue, icon: "globe", destination: LanguageRegionView())
+                    SLink("AutoFill & Passwords", icon: "com.apple.graphic-icon.autofill", destination: PasswordOptionsView())
+                    SLink("Dictionary", icon: "com.apple.graphic-icon.dictionary", destination: DictionaryView())
+                    SLink("Fonts", icon: "com.apple.graphic-icon.fonts", destination: FontsView())
+                    SLink("Keyboard", icon: "com.apple.graphic-icon.keyboard", destination: KeyboardView())
+                    SLink("Language & Region", icon: "com.apple.graphic-icon.language", destination: LanguageRegionView())
                 }
                 
                 Section {
-                    SLink("VPN & Device Management", color: .gray, icon: "gear", destination: VPNDeviceManagementView())
+                    SLink("VPN & Device Management", icon: "com.apple.graphic-icon.gear", destination: VPNDeviceManagementView())
                 }
                 
                 Section {
-                    SLink("Remote Devices", color: .gray, icon: "macbook", destination: RemoteDevicesView())
+                    SLink("Remote Devices", icon: "com.apple.MRPreferences.icon.remote-devices", destination: RemoteDevicesView())
                 }
-                
-//                Section {
-//                    NavigationLink("Transfer or Reset This \(UIDevice().name)", destination: TransferResetView())
-//                }
             }
         }
     }

@@ -91,7 +91,7 @@ struct SettingsLabel: View {
     // Variables
     @Binding var selection: SettingsModel?
     var section: [SettingsItem<AnyView>]
-    let internalIcons = ["appstore", "health.3.stack.3d.fill"]
+    let internalIcons = ["health.3.stack.3d.fill"]
     let circleSymbols = ["accessibility", "digitalcrown.horizontal.arrow.counterclockwise.fill", "hand.point.up.left.fill"]
     
     var body: some View {
@@ -120,9 +120,11 @@ struct SettingsLabel: View {
                                     .frame(width: 30, height: 30)
                                     .foregroundStyle(setting.color.gradient)
                                 Image(_internalSystemName: setting.icon)
-                                    .imageScale(setting.icon == "appstore" ? .medium : .small)
+                                    .imageScale(.small)
                                     .padding(.bottom, setting.icon == "health.3.stack.3d.fill" ? 3 : 0)
                             }
+                        } else if setting.icon.contains("com.") {
+                            IconView(icon: setting.icon)
                         } else {
                             Image(setting.icon)
                                 .resizable()
@@ -134,17 +136,6 @@ struct SettingsLabel: View {
                         Text(setting.id)
                         Spacer()
                     }
-                    .overlay(
-                        VStack(alignment: .trailing) {
-                            RoundedRectangle(cornerRadius: 16, style: .circular)
-                                .stroke(.gray, lineWidth: 1)
-                                .opacity(0.5)
-                                .padding(-13.5)
-                                .offset(x: 4)
-                        }
-                        .frame(width: 272)
-                        .opacity(selection == setting.type ? 1 : 0)
-                    )
                 }
             }
         }

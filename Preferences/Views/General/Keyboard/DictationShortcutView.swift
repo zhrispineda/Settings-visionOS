@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DictationShortcutView: View {
-    // Variables
     @State private var selected = "Control"
     let options = ["Control", "Command", "None"]
     
@@ -17,7 +16,7 @@ struct DictationShortcutView: View {
             Section("Press twice to start dictation:") {
                 Picker("", selection: $selected) {
                     ForEach(options, id: \.self) {
-                        Text(Image(systemName: "\($0.lowercased())")) + Text((selected == "None" ? "\t" : "\t") + $0)
+                        Text($0 == "None" ? "\($0)" : "\(Image(systemName: "\($0.lowercased())"))\t\($0)")
                     }
                 }
                 .pickerStyle(.inline)
