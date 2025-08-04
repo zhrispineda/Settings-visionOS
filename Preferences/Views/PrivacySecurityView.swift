@@ -12,13 +12,13 @@ struct PrivacySecurityView: View {
         CustomList(title: "Privacy & Security") {
             // Tracking Section
             Section {
-                ListRowNavigationIconLabel(color: .blue, icon: "location.circle.fill", title: "Location Services", subtitle: "None", content: LocationServicesView())
-                ListRowNavigationIconLabel(color: .orange, icon: "custom.app.connected.to.app.below.circle.fill", title: "Tracking", status: "0", content: TrackingView())
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.location", title: "Location Services", subtitle: "None", content: LocationServicesView())
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.app-tracking-transparency", title: "Tracking", status: "0", content: TrackingView())
             }
             
             // Apps Privacy Controls Section
             Section {
-                ListRowNavigationImageLabel(isRounded: false, image: "applecalendar", title: "Calendars", subtitle: "None", content: AppPermissionView(permissionName: "Calendars"))
+                ListRowNavigationIconLabel(icon: "com.apple.mobilecal", title: "Calendar", subtitle: "None", content: AppPermissionView(permissionName: "Calendars"))
                 ListRowNavigationImageLabel(image: "applecontacts", title: "Contacts", subtitle: "None", content: AppPermissionView(permissionName: "Contacts"))
                 ListRowNavigationImageLabel(image: "applefiles", title: "Files & Folders", subtitle: "None", content: AppPermissionView(permissionName: "Files & Folders"))
                 ListRowNavigationSymbolLabel(color: .indigo, symbol: "moon.fill", title: "Focus", subtitle: "None", content: AppPermissionView(permissionName: "Focus"))

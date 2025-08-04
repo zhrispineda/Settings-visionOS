@@ -11,12 +11,11 @@
 import SwiftUI
 
 struct ListRowNavigationIconLabel<Content: View>: View {
-    // Variables
     var color: Color = Color.gray
-    var icon: String = String()
-    var title: String = String()
-    var subtitle: String = String()
-    var status: String = String()
+    var icon: String = ""
+    var title: String = ""
+    var subtitle: String = ""
+    var status: String = ""
     var content: Content
     
     var body: some View {
@@ -37,26 +36,16 @@ struct ListRowNavigationIconLabel<Content: View>: View {
                             .symbolRenderingMode(.palette)
                             .foregroundStyle(.white.gradient, color.gradient)
                     }
-                } else { // If image asset
-                    if icon == "bluetooth" || icon == "app.grid.3x3" {
-                        ZStack {
-                            Circle()
-                                .foregroundStyle(color.gradient)
-                                .frame(width: 32, height: 32)
-                            Image(_internalSystemName: icon)
-                                .fontWeight(.light)
-                                .imageScale(.large)
-                                .symbolRenderingMode(icon == "app.grid.3x3" ? .multicolor : .palette)
-                                .foregroundStyle(.white.gradient, color.gradient)
-                        }
-                    } else {
-                        Image(icon)
-                            .font(.largeTitle)
-                            .fontWeight(.light)
-                            .symbolRenderingMode(.palette)
-                            .foregroundStyle(.white.gradient, color.gradient)
-                    }
+                } else if icon.contains("com.") {
+                    IconView(icon: icon)
+                } else {
+                    Image(icon)
+                        .font(.largeTitle)
+                        .fontWeight(.light)
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(.white.gradient, color.gradient)
                 }
+                
                 VStack(alignment: .leading) {
                     Text(title)
                     if !subtitle.isEmpty {
