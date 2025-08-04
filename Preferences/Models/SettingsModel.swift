@@ -49,7 +49,7 @@ enum SettingsModel: String, CaseIterable {
 // Main Settings: General, Apps, People, Environment
 @MainActor let mainSettings: [SettingsItem] = [
     SettingsItem(type: .general, title: "General", icon: "com.apple.graphic-icon.gear", destination: AnyView(GeneralView())),
-    SettingsItem(type: .apps, title: "Apps", icon: "com.apple.AppStore", destination: AnyView(AppsView())),
+    SettingsItem(type: .apps, title: "Apps", icon: "apps", destination: AnyView(AppsView())),
     SettingsItem(type: .people, title: "People", icon: "com.apple.MRPreferences.icon.people", destination: AnyView(PeopleView())),
     SettingsItem(type: .environments, title: "Environments", icon: "com.apple.MRPreferences.icon.environments", destination: AnyView(EnvironmentsView())),
 ]
@@ -89,7 +89,7 @@ enum SettingsModel: String, CaseIterable {
 
 // Account Settings: Game Center, iCloud, Wallet & Apple Pay
 @MainActor let accountSettings: [SettingsItem] = [
-    SettingsItem(type: .gameCenter, title: "Game Center", icon: "com.apple.gamecenter", destination: AnyView(GameCenterView())),
+    SettingsItem(type: .gameCenter, title: "Game Center", icon: "com.apple.GameCenterUI.GameCenterHostingContainer", destination: AnyView(GameCenterView())),
     SettingsItem(type: .icloud, title: "iCloud", icon: "com.apple.application-icon.icloud", destination: AnyView(EmptyView())),
     SettingsItem(type: .walletApplePay, title: "Wallet & Apple Pay", icon: "com.apple.PassbookUISceneService", destination: AnyView(WalletApplePayView())),
 ]
