@@ -20,13 +20,13 @@ struct PrivacySecurityView: View {
             Section {
                 ListRowNavigationIconLabel(icon: "com.apple.mobilecal", title: "Calendar", subtitle: "None", content: AppPermissionView(permissionName: "Calendars"))
                 ListRowNavigationImageLabel(image: "applecontacts", title: "Contacts", subtitle: "None", content: AppPermissionView(permissionName: "Contacts"))
-                ListRowNavigationImageLabel(image: "applefiles", title: "Files & Folders", subtitle: "None", content: AppPermissionView(permissionName: "Files & Folders"))
-                ListRowNavigationSymbolLabel(color: .indigo, symbol: "moon.fill", title: "Focus", subtitle: "None", content: AppPermissionView(permissionName: "Focus"))
-                ListRowNavigationSymbolLabel(color: .blue, symbol: "health.3.stack.3d.fill", title: "Health Data", subtitle: "None", content: AppPermissionView(permissionName: "Health Data"))
-                ListRowNavigationImageLabel(image: "VisionDefaultIcon", title: "HomeKit",  subtitle: "None", content: AppPermissionView(permissionName: "HomeKit"))
-                ListRowNavigationImageLabel(image: "VisionDefaultIcon", title: "Media & Apple Music", subtitle: "None", content: AppPermissionView(permissionName: "Media & Apple Music"))
-                ListRowNavigationImageLabel(image: "applephotos", title: "Photos", subtitle: "None", content: AppPermissionView(permissionName: "Photos"))
-                ListRowNavigationImageLabel(isRounded: false, image: "applereminders", title: "Reminders", subtitle: "None", content: AppPermissionView(permissionName: "Reminders"))
+                ListRowNavigationIconLabel(icon: "com.apple.DocumentsApp", title: "Files & Folders", subtitle: "None", content: AppPermissionView(permissionName: "Files & Folders"))
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.focus", title: "Focus", subtitle: "None", content: AppPermissionView(permissionName: "Focus"))
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.health-data", title: "Health Data", subtitle: "None", content: AppPermissionView(permissionName: "Health Data"))
+                ListRowNavigationIconLabel(icon: "com.apple.HomeKit", title: "HomeKit",  subtitle: "None", content: AppPermissionView(permissionName: "HomeKit"))
+                ListRowNavigationIconLabel(icon: "com.apple.Music", title: "Media & Apple Music", subtitle: "None", content: AppPermissionView(permissionName: "Media & Apple Music"))
+                ListRowNavigationIconLabel(icon: "com.apple.mobileslideshow", title: "Photos", subtitle: "None", content: AppPermissionView(permissionName: "Photos"))
+                ListRowNavigationIconLabel(icon: "com.apple.reminders", title: "Reminders", subtitle: "None", content: AppPermissionView(permissionName: "Reminders"))
             }
             
             Section {
