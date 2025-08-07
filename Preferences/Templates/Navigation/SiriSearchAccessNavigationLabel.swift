@@ -18,12 +18,8 @@ struct SiriSearchAccessNavigationLabel: View {
     var body: some View {
         Section {
             NavigationLink(destination: SiriSearchAppView(appName: appName)) {
-                HStack {
-                    Image("applesiri")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 30)
-                        .padding(.horizontal, 2)
+                HStack(spacing: 15) {
+                    IconView(icon: "com.apple.application-icon.siri")
                     Text("Siri & Search")
                 }
             }
@@ -48,5 +44,9 @@ struct SiriSearchAccessNavigationLabel: View {
 }
 
 #Preview {
-    SiriSearchAccessNavigationLabel()
+    NavigationStack {
+        List {
+            SiriSearchAccessNavigationLabel()
+        }
+    }
 }

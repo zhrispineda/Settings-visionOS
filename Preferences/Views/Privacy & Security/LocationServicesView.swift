@@ -21,7 +21,7 @@ struct LocationServicesView: View {
             }
             
             Section {
-                ListRowNavigationImageLabel(isRounded: true, image: "applesiri", title: "Siri", status: "When Shared", content: LocationDetailView(title: "Siri & Dictation"))
+                ListRowNavigationIconLabel(icon: "com.apple.application-icon.siri", title: "Siri", status: "When Shared", content: LocationDetailView(title: "Siri & Dictation"))
                 ListRowNavigationIconLabel(icon: "gear.circle.fill", title: "System Services", status: "location.fill", content: SystemServicesView())
             } footer: {
                 VStack(alignment: .leading) {
@@ -50,5 +50,7 @@ struct LocationServicesView: View {
 }
 
 #Preview {
-    LocationServicesView()
+    NavigationStack {
+        LocationServicesView()
+    }
 }

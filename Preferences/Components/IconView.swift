@@ -40,7 +40,7 @@ struct IconView: View {
                 Image(_internalSystemName: icon)
                     .scaledToFit()
                     .foregroundStyle(iconColor)
-            } else if icon.contains("com.apple.graphic") || icon.contains("com.apple.MR") || icon.contains("icloud") {
+            } else if icon.contains("com.apple.graphic") || icon.contains("com.apple.MR") || icon.contains("icloud") || icon.contains("com.apple.app") {
                 if let ISIcon = UIImage.icon(forUTI: icon) {
                     Image(uiImage: ISIcon)
                 }

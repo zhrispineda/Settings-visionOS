@@ -16,7 +16,6 @@
 import SwiftUI
 
 struct FocusPreferencesView: View {
-    // Variables
     var focusName = String()
     var icon = String()
     var color = Color.gray
@@ -52,10 +51,7 @@ struct FocusPreferencesView: View {
             Section {
                 if focusName == "Sleep" {
                     HStack(alignment: .top) {
-                        Image("applehealth")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 42)
+                        IconView(icon: "applehealth")
                             .padding(.trailing, 3)
                         Text("Sleep Focus follows the Sleep schedule you've set on iPhone. To add or edit your schedule, open the Health app on iPhone, tap Browse, then Sleep.")
                     }

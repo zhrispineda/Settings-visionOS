@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RestrictionsAllowedAppsView: View {
-    // Variables
     @State private var safariEnabled = true
     @State private var siriDictationEnabled = true
     @State private var airDropEnabled = true
@@ -18,27 +17,21 @@ struct RestrictionsAllowedAppsView: View {
     var body: some View {
         CustomList(title: "Allowed Apps") {
             Section {
-                Toggle(isOn: $safariEnabled, label: {
+                Toggle(isOn: $safariEnabled) {
                     HStack(spacing: 15) {
-                        Image("applesafari")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 32)
+                        IconView(icon: "com.apple.mobilesafari")
                         Text("Safari")
                         Spacer()
                     }
-                })
-                Toggle(isOn: $siriDictationEnabled, label: {
+                }
+                Toggle(isOn: $siriDictationEnabled) {
                     HStack(spacing: 15) {
-                        Image("applesiri")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 32)
+                        IconView(icon: "com.apple.application-icon.siri")
                         Text("Siri & Dictation")
                         Spacer()
                     }
-                })
-                Toggle(isOn: $airDropEnabled, label: {
+                }
+                Toggle(isOn: $airDropEnabled) {
                     HStack(spacing: 15) {
                         Image(_internalSystemName: "airdrop.circle.fill")
                             .resizable()
@@ -48,25 +41,24 @@ struct RestrictionsAllowedAppsView: View {
                         Text("AirDrop")
                         Spacer()
                     }
-                })
+                }
             }
             
             Section {
-                Toggle(isOn: $newsEnabled, label: {
+                Toggle(isOn: $newsEnabled) {
                     HStack(spacing: 15) {
-                        Image("applenews")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 32)
+                        IconView(icon: "com.apple.news")
                         Text("News")
                         Spacer()
                     }
-                })
+                }
             }
         }
     }
 }
 
 #Preview {
-    RestrictionsAllowedAppsView()
+    NavigationStack {
+        RestrictionsAllowedAppsView()
+    }
 }

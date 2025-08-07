@@ -37,7 +37,7 @@ struct LocationServicesRestrictionsView: View {
             Section {
                 ListRowNavigationLabel(title: "BulletinBoard.framework", subtitle: "When Shared", content: LocationDetailView(title: "BulletinBoard.framework"))
                 ListRowNavigationLabel(title: "MobileWiFi.framework", subtitle: "When Shared", content: LocationDetailView(title: "MobileWiFi.framework"))
-                ListRowNavigationImageLabel(isRounded: true, image: "applesiri", title: "Siri & Dictation", status: "When Shared", content: LocationDetailView(title: "Siri & Dictation"))
+                ListRowNavigationIconLabel(icon: "com.apple.application-icon.siri", title: "Siri & Dictation", status: "When Shared", content: LocationDetailView(title: "Siri & Dictation"))
                 ListRowNavigationLabel(title: "SystemCustomization.bundle", subtitle: "When Shared", icon: "location.fill", content: LocationDetailView(title: "SystemCustomization.bundle"))
                 ListRowNavigationLabel(title: "Traffic.bundle", subtitle: "When Shared", content: LocationDetailView(title: "Traffic.bundle"))
                 ListRowNavigationIconLabel(icon: "gear.circle.fill", title: "System Services", status: "location.fill", content: SystemServicesView())
