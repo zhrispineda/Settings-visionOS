@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PasswordOptionsView: View {
-    // Variables
     @State private var autoFillPasswordsPasskeysEnabled = true
     @State private var keychainEnabled = true
     @State private var autoFillEnabled = true
@@ -31,11 +30,7 @@ struct PasswordOptionsView: View {
                 Section("AutoFill from:") {
                     Toggle(isOn: $autoFillEnabled) {
                         HStack(spacing: 15) {
-                            Image("applepasswords")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30)
-                                .mask(Circle())
+                            IconView(icon: "com.apple.Passwords")
                             VStack(alignment: .leading) {
                                 Text("Passwords")
                                 Text("Passkeys, passwords, and codes")
@@ -57,7 +52,10 @@ struct PasswordOptionsView: View {
             
             Section {
                 Picker("Set Up Codes In", selection: $selectedPasswordsApp) {
-                    Text("Passwords").tag(passwordsApp.passwords)
+                    HStack {
+                        IconView(icon: "com.apple.Passwords")
+                        Text("Passwords")
+                    }.tag(passwordsApp.passwords)
                 }
             } footer: {
                 Text("Open verification code setup links and QR codes with this app.")

@@ -30,12 +30,11 @@ struct PrivacySecurityView: View {
             }
             
             Section {
-                ListRowNavigationIconLabel(color: .blue, icon: "bluetooth", title: "Bluetooth", status: "0", content: AppPermissionView(permissionName: "Bluetooth"))
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.bluetooth", title: "Bluetooth", status: "0", content: AppPermissionView(permissionName: "Bluetooth"))
                 ListRowNavigationIconLabel(color: .gray, icon: "camera.circle.fill", title: "Camera", status: "0", content: AppPermissionView(permissionName: "Camera"))
-                ListRowNavigationIconLabel(color: .blue, icon: "custom.hand.point.up.left.circle.fill", title: "Hand Structures & Movements", status: "0", content: AppPermissionView(permissionName: "Hand Structures & Movements"))
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.touch", title: "Hand Structures & Movements", status: "0", content: AppPermissionView(permissionName: "Hand Structures & Movements"))
                 ListRowNavigationSymbolLabel(color: .blue, symbol: "network", title: "Local Network", status: "0", content: AppPermissionView(permissionName: "Local Network"))
                 ListRowNavigationSymbolLabel(color: .orange, symbol: "mic.fill", title: "Microphone", status: "0", content: AppPermissionView(permissionName: "Microphone"))
-//                ListRowNavigationImageLabel(image: "persona-camera-masked", title: "Persona Virtual Camera", status: "0", content: AppPermissionView(permissionName: "Persona Virtual Camera"))
                 ListRowNavigationSymbolLabel(color: .gray, symbol: "waveform", title: "Speech Recognition", status: "0", content: AppPermissionView(permissionName: "Speech Recognition"))
                 ListRowNavigationImageLabel(image: "worldsensing-masked", title: "Surroundings", status: "0", content: AppPermissionView(permissionName: "Surroundings"))
             }
