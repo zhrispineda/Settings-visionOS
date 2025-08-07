@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AboutView: View {
+    @State private var modelNumber = ""
+    @State private var regulatoryValue = "LL/A"
     @State private var showingModelNumber = true
     @State private var serialNumber = randomSerialNumber()
     @State private var availableStorage: String = getAvailableStorage() ?? "N/A"
@@ -19,11 +21,15 @@ struct AboutView: View {
                 LabeledContent("Name", value: UIDevice().name)
                 ListRowNavigationLabel(title: "\(UIDevice().systemName) Version", subtitle: UIDevice().systemVersion, content: VersionView())
                 LabeledContent("Model Name", value: UIDevice().name)
-                LabeledContent("Model Number", value: showingModelNumber ? "A2117LL/A" : "A2117")
+                LabeledContent("Model Number", value: showingModelNumber ? "\(modelNumber)\(regulatoryValue)" : modelNumber)
+                    .contentShape(Rectangle())
                     .onTapGesture {
                         showingModelNumber.toggle()
                     }
                 LabeledContent("Serial Number", value: serialNumber)
+            }
+            .onAppear {
+                modelNumber = MGHelper.read(key: "D0cJ8r7U5zve6uA6QbOiLA") ?? "Error"
             }
             
             Section {

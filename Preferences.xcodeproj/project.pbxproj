@@ -274,6 +274,7 @@
 		83F20FF62B5F3F7500164ACF /* AllowDenyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */; };
 		83F20FF82B5F42EB00164ACF /* RestrictionsAllowedAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF72B5F42EB00164ACF /* RestrictionsAllowedAppsView.swift */; };
 		83F20FFA2B5F8A6500164ACF /* ContentRestrictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F20FF92B5F8A6500164ACF /* ContentRestrictionsView.swift */; };
+		83FE458C2E45268200EFAF67 /* MGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE458B2E45268200EFAF67 /* MGHelper.swift */; };
 		83FEB6F92B5AD59D0028D308 /* PrivateSearchEngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6F82B5AD59D0028D308 /* PrivateSearchEngineView.swift */; };
 		83FEB6FD2B5AD7110028D308 /* QuickWebsiteSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */; };
 		83FEB6FF2B5AD9AB0028D308 /* AutoFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */; };
@@ -570,6 +571,7 @@
 		83F20FF52B5F3F7500164ACF /* AllowDenyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowDenyView.swift; sourceTree = "<group>"; };
 		83F20FF72B5F42EB00164ACF /* RestrictionsAllowedAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictionsAllowedAppsView.swift; sourceTree = "<group>"; };
 		83F20FF92B5F8A6500164ACF /* ContentRestrictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRestrictionsView.swift; sourceTree = "<group>"; };
+		83FE458B2E45268200EFAF67 /* MGHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGHelper.swift; sourceTree = "<group>"; };
 		83FEB6F82B5AD59D0028D308 /* PrivateSearchEngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSearchEngineView.swift; sourceTree = "<group>"; };
 		83FEB6FC2B5AD7110028D308 /* QuickWebsiteSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickWebsiteSearchView.swift; sourceTree = "<group>"; };
 		83FEB6FE2B5AD9AB0028D308 /* AutoFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillView.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 				831BE5AD2DDE3EB600D0BFC4 /* UIKitRepresentables.swift */,
 				83AACA442DFC5DDD00293154 /* SLink.swift */,
 				83AACA462DFC5E4800293154 /* IconView.swift */,
+				83FE458B2E45268200EFAF67 /* MGHelper.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1875,6 +1878,7 @@
 				83080EA62B61E06400771ACC /* AccessibilityKeyboardsView.swift in Sources */,
 				83FEB70A2B5AE1860028D308 /* DownloadsView.swift in Sources */,
 				839EA81D2B59CADA0099BCAA /* SiriSearchAccessNavigationLabel.swift in Sources */,
+				83FE458C2E45268200EFAF67 /* MGHelper.swift in Sources */,
 				83080EA82B61E35F00771ACC /* SoundRecognitionView.swift in Sources */,
 				837DA1782B672F710038B856 /* ActivityContextView.swift in Sources */,
 				83F114F72B6744880090FAE8 /* DefaultLanguageView.swift in Sources */,
