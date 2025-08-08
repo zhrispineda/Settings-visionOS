@@ -20,10 +20,12 @@ struct SignInView: View {
         NavigationStack {
             List {
                 VStack(alignment: .center) {
-                    Image("sign-in-header-dark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 80)
+                    if let image = UIImage.asset(path: "/System/Library/PrivateFrameworks/AppleAccountUI.framework", name: "sign-in-header-dark") {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100)
+                    }
                     Text("Apple Account")
                         .font(.extraLargeTitle2)
                     TextField("Email or Phone Number", text: $username)

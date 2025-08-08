@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct AddAccountView: View {
-    // Variables
     let services = ["icloud", "exchange", "gmail", "yahoo-white", "aol-white", "Outlook_Logo"]
     
     var body: some View {
@@ -40,6 +39,7 @@ struct AddAccountView: View {
 }
 
 #Preview {
-    AddAccountView()
-        .padding()
+    NavigationStack {
+        AddAccountView()
+    }
 }
