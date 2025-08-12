@@ -5,7 +5,7 @@ SwiftUI recreation of the visionOS Settings app.
 > This project is currently focused on visionOS 26 beta using Xcode 26 beta. Use an older branch to deploy this project on visionOS 2.5/Xcode 16.4 or earlier.
 
 ## Information
-- This project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 26 **beta 5** (23M5311g).
+- This project is a recreation of Apple's current and default Settings app for Apple Vision Pro **(Simulator)** on visionOS 26 **beta 6** (23M5322b).
 - The `main` branch will have the latest available version of visionOS; older versions are available as their own branch.
 - All features within the app are only simulations and have no effect on outside of the app.
 - Since this project is based off of the Simulator and not a physical Apple Vision Pro, aspects such as simulated controls and views only on physical devices are not implemented at this time.
