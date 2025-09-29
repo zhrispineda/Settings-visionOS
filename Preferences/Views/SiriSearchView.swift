@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SiriSearchView: View {
-    // Variables
     @State private var siriEnabled = false
     @State private var showSuggestionsEnabled = true
     @State private var showingResetHiddenSuggestionsAlert = false
@@ -21,8 +20,6 @@ struct SiriSearchView: View {
         CustomList(title: "Apple Intelligence & Siri") {
             Section {
                 ListRowNavigationLabel(title: "Language", subtitle: "English (United States)", content: EmptyView())
-                NavigationLink("Talk to Siri", destination: EmptyView())
-                Toggle("", isOn: $siriEnabled)
                 ListRowNavigationLabel(title: "Voice", subtitle: "American (Voice 4)", content: SiriVoiceView())
                 NavigationLink("Siri Responses", destination: SiriResponsesView())
                 NavigationLink("Messaging with Siri", destination: AutomaticallySendMessagesView())
@@ -40,7 +37,7 @@ struct SiriSearchView: View {
             } header: {
                 Text("Siri Requests")
             } footer: {
-                Text("Voice input is processed on Apple Vision Pro, but transcripts of your requests are sent to Apple. [About Siri & Privacy...](#)")
+                Text("Voice input is processed on Apple Vision Pro, but transcripts of your requests are sent to Apple. [About Siri & Privacy…](#)")
             }
             
             Section {
@@ -55,20 +52,15 @@ struct SiriSearchView: View {
             } header: {
                 Text("Suggestions")
             } footer: {
-                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy...](#)")
+                Text("Apple can make suggestions in apps, or when sharing, searching, or using Look Up, and Keyboard. [About Siri Suggestions, Search & Privacy…](#)")
             }
             
-//            Section {
-//                Toggle("Show Recent Searches", isOn: $showRecentSearches)
-//                Toggle("Show Related Content", isOn: $showRelatedContent)
-//            } header: {
-//                Text("Search and Look Up")
-//            } footer: {
-//                Text("Apple can show content when searching, or when looking up text in objects or photos. [About Siri Suggestions, Search & Privacy...](#)")
-//            }
-            
-            Section("Apple Intelligence & Siri App Access") {
-                ListRowNavigationIconLabel(color: .indigo, icon: "app.grid.3x3", title: "Apps", content: SiriAppsView())
+            Section {
+                ListRowNavigationIconLabel(icon: "com.apple.graphic-icon.home-screen", title: "Apps", content: SiriAppsView())
+            } header: {
+                Text("Apple Intelligence and Siri App Access")
+            } footer: {
+                Text("Apple Intelligence is built for privacy. Your data is not shared with Apple. [About Apple Intelligence & Privacy…](#)")
             }
         }
     }

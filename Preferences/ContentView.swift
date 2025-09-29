@@ -43,6 +43,10 @@ struct ContentView: View {
                     }
                 }
                 
+                Button("Ready for Apple Intelligence") {
+                    selection = .siriSearch
+                }
+                
                 // MARK: Main Section
                 SettingsLabel(selection: $selection, section: mainSettings)
                 
