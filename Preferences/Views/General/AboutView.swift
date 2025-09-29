@@ -44,6 +44,8 @@ struct AboutView: View {
             Section {
                 NavigationLink("Certificate Trust Settings") {
                     CustomViewController("/System/Library/PrivateFrameworks/Settings/GeneralSettingsUI.framework/GeneralSettingsUI", controller: "PSGCertTrustSettings")
+                        .ignoresSafeArea(edges: .top)
+                        .padding(.horizontal, 70)
                         .toolbar {
                             ToolbarItem(placement: .secondaryAction) {
                                 Text("Certificate Trust Settings")
