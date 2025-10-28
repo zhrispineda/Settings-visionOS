@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// A template for displaying a NavigationLink with a rounded icon and quick information.
+/// A template for displaying a NavigationLink with an icon and quick information.
 ///
 /// ```swift
 /// var body: some View {
 ///     List {
-///         SLink("Settings", color: .gray, icon: "gear") {
+///         SLink("Settings", icon: "com.apple.graphic-icons.gear") {
 ///             Text("My Settings")
 ///         }
 ///     }
@@ -13,8 +13,6 @@ import SwiftUI
 /// ```
 ///
 /// - Parameter text: The `String` name of the link to display.
-/// - Parameter color: The `Color` of the icon's background.
-/// - Parameter iconColor: The `Color` of the icon.
 /// - Parameter icon: The `String` name of the image asset or symbol.
 /// - Parameter subtitle: An optional `String` below the id displaying a short summary.
 /// - Parameter status: An optional `String` on the opposing side displaying its current state.
@@ -22,8 +20,6 @@ import SwiftUI
 /// - Parameter content: The destination `Content` for the `NavigationLink`.
 struct SLink<Content: View>: View {
     var text: String
-    var color: Color
-    var iconColor: Color
     var icon: String
     var circular: Bool
     var subtitle: String
@@ -31,10 +27,8 @@ struct SLink<Content: View>: View {
     var badgeCount: Int
     var destination: Content
 
-    init(_ text: String, color: Color = Color.accent, iconColor: Color = Color.white, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, @ViewBuilder destination: @escaping () -> Content) {
+    init(_ text: String, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, @ViewBuilder destination: @escaping () -> Content) {
         self.text = text
-        self.color = color
-        self.iconColor = iconColor
         self.icon = icon
         self.circular = circular
         self.subtitle = subtitle
@@ -43,10 +37,8 @@ struct SLink<Content: View>: View {
         self.destination = destination()
     }
 
-    init(_ text: String, color: Color = Color.accent, iconColor: Color = Color.white, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, destination: Content) {
+    init(_ text: String, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, destination: Content) {
         self.text = text
-        self.color = color
-        self.iconColor = iconColor
         self.icon = icon
         self.circular = circular
         self.subtitle = subtitle
@@ -58,10 +50,7 @@ struct SLink<Content: View>: View {
     var body: some View {
         NavigationLink(destination: destination) {
             HStack(spacing: 15) {
-                // Icon
-                if icon != "None" {
-                    IconView(icon: icon, color: color, iconColor: iconColor)
-                }
+                IconView(icon: icon)
 
                 // Title and subtitle text
                 VStack(alignment: .leading, spacing: 0) {
@@ -100,9 +89,9 @@ struct SLink<Content: View>: View {
 #Preview {
     NavigationStack {
         List {
-            SLink("First") {}
-            SLink("Second", destination: {})
-            SLink("Third", destination: EmptyView())
+            SLink("First", icon: "com.apple.graphic-icon.gear") {}
+            SLink("Second", icon: "com.apple.graphic-icon.gear", destination: {})
+            SLink("Third", icon: "com.apple.graphic-icon.gear", destination: EmptyView())
         }
     }
 }
