@@ -76,8 +76,8 @@ struct ContentView: View {
                     TextField("\(Image(systemName: "mic.fill"))\tSearch", text: $searchText)
                         .frame(width: 275)
                         .textFieldStyle(.roundedBorder)
-                        .padding(.bottom, -5)
-                        .padding(.horizontal, -5)
+                        .padding([.horizontal, .vertical], -1)
+                        .cornerRadius(22)
                 }
             }
         } detail: {
