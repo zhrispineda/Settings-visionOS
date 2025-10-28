@@ -85,11 +85,8 @@ struct SettingsLabel: View {
             ForEach(section) { setting in
                 NavigationLink(value: setting) {
                     HStack(spacing: 15) {
-                        if setting.icon.contains("com.") {
-                            IconView(icon: setting.icon)
-                        }
+                        IconView(icon: setting.icon)
                         Text(setting.title)
-                        Spacer()
                     }
                 }
             }
