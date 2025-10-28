@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var destination = AnyView(GeneralView())
+    @Environment(SettingsModel.self) private var model
     @State private var searchText = ""
-    @State private var selection: SettingsModel? = .general
     @State private var showingSignInSheet = false
     
     var body: some View {
+        @Bindable var model = model
+        
         NavigationSplitView {
-            List(selection: $selection) {
+            List(selection: $model.selection) {
                 Section {
                     Button {
                         showingSignInSheet.toggle()
@@ -44,32 +45,17 @@ struct ContentView: View {
                 }
                 
                 Button("Ready for Apple Intelligence") {
-                    selection = .siriSearch
+                    model.selection = model.usageSettings[2]
                 }
                 
-                // MARK: Main Section
-                SettingsLabel(selection: $selection, section: mainSettings)
-                
-                // MARK: Usage Section
-                SettingsLabel(selection: $selection, section: usageSettings)
-                
-                // MARK: Input Section
-                SettingsLabel(selection: $selection, section: inputSettings)
-                
-                // MARK: Focus Section
-                SettingsLabel(selection: $selection, section: focusSettings)
-                
-                // MARK: Data Section
-                SettingsLabel(selection: $selection, section: dataSettings)
-                
-                // MARK: Device Section
-                SettingsLabel(selection: $selection, section: deviceSettings)
-                
-                // MARK: Account Section
-                SettingsLabel(selection: $selection, section: accountSettings)
-                
-                // MARK: Developer Section
-                SettingsLabel(selection: $selection, section: developerSettings)
+                SettingsLabel(section: model.mainSettings)
+                SettingsLabel(section: model.usageSettings)
+                SettingsLabel(section: model.inputSettings)
+                SettingsLabel(section: model.focusSettings)
+                SettingsLabel(section: model.dataSettings)
+                SettingsLabel(section: model.deviceSettings)
+                SettingsLabel(section: model.accountSettings)
+                SettingsLabel(section: model.developerSettings)
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
@@ -80,43 +66,29 @@ struct ContentView: View {
                         .cornerRadius(22)
                 }
             }
-        } detail: {
-            destination
-                .onChange(of: selection) { // Change views when selecting sidebar navigation links
-                    if let selectedSettingsItem = combinedSettings.first(where: { $0.type == selection }) {
-                        destination = selectedSettingsItem.destination
-                    }
+            .onAppear {
+                if model.selection == nil {
+                    model.selection = model.mainSettings.first
                 }
+            }
+        } detail: {
+            model.selection?.destination
         }
     }
 }
 
 struct SettingsLabel: View {
-    @Binding var selection: SettingsModel?
-    var section: [SettingsItem<AnyView>]
+    var section: [SettingsItem]
     
     var body: some View {
         Section {
             ForEach(section) { setting in
-                NavigationLink(value: setting.type) {
+                NavigationLink(value: setting) {
                     HStack(spacing: 15) {
-                        if UIImage(systemName: setting.icon) != nil {
-                            Image(systemName: setting.icon)
-                                .font(.largeTitle)
-                                .fontWeight(.light)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
-                        } else if setting.icon.contains("com.") {
+                        if setting.icon.contains("com.") {
                             IconView(icon: setting.icon)
-                        } else {
-                            Image(setting.icon)
-                                .resizable()
-                                .foregroundStyle(.white.gradient, setting.color.gradient)
-                                .scaledToFit()
-                                .frame(width: 33)
-                                .clipShape(Circle())
                         }
-                        Text(setting.id)
+                        Text(setting.title)
                         Spacer()
                     }
                 }
@@ -127,4 +99,5 @@ struct SettingsLabel: View {
 
 #Preview(windowStyle: .plain) {
     ContentView()
+        .environment(SettingsModel())
 }
