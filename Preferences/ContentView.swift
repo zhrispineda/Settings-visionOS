@@ -72,21 +72,41 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            model.selection?.destination
+            NavigationStack(path: $model.path) {
+                model.selection?.destination
+            }
+        }
+        .onChange(of: model.selection) { oldValue, newValue in
+            if newValue == nil {
+                model.selection = oldValue
+            }
         }
     }
 }
 
 struct SettingsLabel: View {
+    @Environment(SettingsModel.self) private var model
     var section: [SettingsItem]
     
     var body: some View {
         Section {
             ForEach(section) { setting in
-                NavigationLink(value: setting) {
-                    HStack(spacing: 15) {
-                        IconView(icon: setting.icon)
-                        Text(setting.title)
+                if model.selection == setting {
+                    Button {
+                        model.path = []
+                    } label: {
+                        HStack(spacing: 15) {
+                            IconView(icon: setting.icon)
+                            Text(setting.title)
+                        }
+                    }
+                    .tag(setting)
+                } else {
+                    NavigationLink(value: setting) {
+                        HStack(spacing: 15) {
+                            IconView(icon: setting.icon)
+                            Text(setting.title)
+                        }
                     }
                 }
             }

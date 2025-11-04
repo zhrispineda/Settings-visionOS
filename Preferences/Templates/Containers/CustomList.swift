@@ -42,6 +42,9 @@ struct CustomList<Content: View>: View {
             }
         }
         .environment(\.editMode, $editMode)
+        .navigationDestination(for: String.self) { key in
+            RouteRegistry.shared.view(for: key)
+        }
     }
 }
 

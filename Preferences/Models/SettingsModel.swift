@@ -12,7 +12,6 @@ struct SettingsItem: Identifiable, Hashable {
     let type: SettingsOptions
     var title: String { type.rawValue }
     let icon: String
-    var color: Color = Color(.gray)
     let destination: AnyView
     
     static func == (lhs: SettingsItem, rhs: SettingsItem) -> Bool {
@@ -239,5 +238,22 @@ enum SettingsOptions: String, CaseIterable {
             )
         ]
 
+    }
+}
+
+final class RouteRegistry {
+    @MainActor static let shared = RouteRegistry()
+    private var registry: [String: () -> AnyView] = [:]
+    
+    func register(_ path: String, builder: @escaping () -> AnyView) {
+        registry[path] = builder
+    }
+    
+    func register<V: View>(_ path: String, builder: @escaping () -> V) {
+        registry[path] = { AnyView(builder()) }
+    }
+    
+    func view(for path: String) -> AnyView? {
+        registry[path]?()
     }
 }

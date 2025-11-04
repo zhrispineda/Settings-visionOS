@@ -20,35 +20,58 @@ import SwiftUI
 /// - Parameter content: The destination `Content` for the `NavigationLink`.
 struct SLink<Content: View>: View {
     var text: String
+    var routeKey: String?
     var icon: String
     var circular: Bool
     var subtitle: String
     var status: String
     var badgeCount: Int
-    var destination: Content
+    private let destinationBuilder: () -> Content
 
-    init(_ text: String, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, @ViewBuilder destination: @escaping () -> Content) {
+    init(
+        _ text: String,
+        routeKey: String? = nil,
+        icon: String = "",
+        circular: Bool = true,
+        subtitle: String = "",
+        status: String = "",
+        badgeCount: Int = 0,
+        @ViewBuilder destination: @escaping () -> Content
+    ) {
         self.text = text
+        self.routeKey = routeKey
         self.icon = icon
         self.circular = circular
         self.subtitle = subtitle
         self.status = status
         self.badgeCount = badgeCount
-        self.destination = destination()
+        self.destinationBuilder = destination
     }
 
-    init(_ text: String, icon: String = "", circular: Bool = true, subtitle: String = "", status: String = "", badgeCount: Int = 0, destination: Content) {
+    init(
+        _ text: String,
+        routeKey: String? = nil,
+        icon: String = "",
+        circular: Bool = true,
+        subtitle: String = "",
+        status: String = "",
+        badgeCount: Int = 0,
+        destination: Content
+    ) {
         self.text = text
+        self.routeKey = routeKey
         self.icon = icon
         self.circular = circular
         self.subtitle = subtitle
         self.status = status
         self.badgeCount = badgeCount
-        self.destination = destination
+        self.destinationBuilder = { destination }
     }
 
     var body: some View {
-        NavigationLink(destination: destination) {
+        let key = routeKey ?? text
+        
+        NavigationLink(value: key) {
             HStack(spacing: 15) {
                 IconView(icon: icon)
 
@@ -82,6 +105,9 @@ struct SLink<Content: View>: View {
                         .imageScale(.large)
                 }
             }
+        }
+        .onAppear {
+            RouteRegistry.shared.register(key) { destinationBuilder() }
         }
     }
 }
