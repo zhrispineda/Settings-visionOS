@@ -21,26 +21,7 @@ struct ContentView: View {
                     Button {
                         showingSignInSheet.toggle()
                     } label: {
-                        HStack(alignment: .top) {
-                            VStack {
-                                Image("AppleAccount")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .padding(.leading, -5)
-                            }
-                            VStack(alignment: .leading) {
-                                Text("Apple Account")
-                                    .font(.subheadline)
-                                    .bold()
-                                Text("Sign in to access your iCloud data, set up the App Store, use Apple services, and more.")
-                                    .font(.footnote)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $showingSignInSheet) {
-                        SignInView()
-                            .frame(width: 650, height: 650)
+                        SignInHeaderView()
                     }
                 }
                 
@@ -79,6 +60,32 @@ struct ContentView: View {
         .onChange(of: model.selection) { oldValue, newValue in
             if newValue == nil {
                 model.selection = oldValue
+            }
+        }
+        .sheet(isPresented: $showingSignInSheet) {
+            SignInView()
+                .frame(width: 650, height: 650)
+        }
+    }
+}
+
+struct SignInHeaderView: View {
+    var body: some View {
+        HStack(alignment: .top) {
+            if let asset = UIImage.asset(path: "/System/Library/PrivateFrameworks/AppleAccountUI.framework", name: "AppleAccount_Icon_Blue") {
+                Image(uiImage: asset)
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .padding(.leading, -5)
+            }
+            VStack(alignment: .leading) {
+                Text("Apple Account")
+                    .font(.subheadline)
+                    .bold()
+                Text("Sign in to access your iCloud data, set up the App Store, use Apple services, and more.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
             }
         }
     }
