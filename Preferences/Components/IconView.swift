@@ -16,11 +16,11 @@ struct IconView: View {
             Image(_internalSystemName: icon)
                 .scaledToFit()
         } else if icon.contains("com.apple.graphic") || icon.contains("com.apple.MR") || icon.contains("icloud") || icon.contains("com.apple.app") {
-            if let ISIcon = UIImage.icon(forUTI: icon) {
+            if let ISIcon = UIImage.icon(for: icon) {
                 Image(uiImage: ISIcon)
             }
         } else if icon.contains("com.") {
-            if let ISIcon = UIImage.icon(forBundleID: icon) {
+            if let ISIcon = UIImage.icon(forBundle: icon) {
                 Image(uiImage: ISIcon)
             }
         } else {

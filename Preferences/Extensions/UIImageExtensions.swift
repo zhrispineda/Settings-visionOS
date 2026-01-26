@@ -6,12 +6,26 @@
 import SwiftUI
 
 extension UIImage {
-    static func icon(forUTI uti: String) -> UIImage? {
+    /// Returns a UIImage icon given a Uniform Type Identifier.
+    /// 
+    /// - Parameter uti: The string Uniform Type Identifier to use.
+    ///
+    /// - Returns: UIImage of an icon or a fallback blank page icon.
+    ///
+    /// - Warning: Do not use this method for public applications. It is not publicly supported.
+    static func icon(for uti: String) -> UIImage? {
         return iconFromPreferencesFramework(selectorName: "ps_synchronousIconWithTypeIdentifier:", argument: uti)
     }
     
-    static func icon(forBundleID bundleID: String) -> UIImage? {
-        return iconFromPreferencesFramework(selectorName: "ps_synchronousIconWithApplicationBundleIdentifier:", argument: bundleID)
+    /// Returns a UIImage icon given a bundle identifier.
+    ///
+    /// - Parameter id: The string bundle identifier to use.
+    ///
+    /// - Returns: UIImage of an icon or a fallback template icon.
+    ///
+    /// - Warning: Do not use this method for public applications. It is not publicly supported.
+    static func icon(forBundle id: String) -> UIImage? {
+        return iconFromPreferencesFramework(selectorName: "ps_synchronousIconWithApplicationBundleIdentifier:", argument: id)
     }
     
     private static func iconFromPreferencesFramework(selectorName: String, argument: String) -> UIImage? {
