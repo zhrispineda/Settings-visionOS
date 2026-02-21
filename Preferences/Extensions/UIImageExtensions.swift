@@ -41,7 +41,8 @@ extension UIImage {
         return image?.takeUnretainedValue() as? UIImage
     }
     
-    @MainActor static func asset(path: String, name: String) -> UIImage? {
+    @MainActor
+    static func asset(path: String, name: String) -> UIImage? {
         var newPath = ""
         
         if UIDevice.IsSimulated {
@@ -61,16 +62,4 @@ extension UIImage {
         
         return nil
     }
-}
-
-extension UIDevice {
-    /// Returns a Bool on whether the host is on a simulator/Mac.
-    static let IsSimulated: Bool = {
-        if let answer = MGHelper.read(key: "ulMliLomP737aAOJ/w/evA") { // IsSimulator key
-            return Bool(answer)!
-        }
-        
-        // Fallback
-        return ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] != nil
-    }()
 }
