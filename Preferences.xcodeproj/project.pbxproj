@@ -53,6 +53,7 @@
 		8309A1922B6358B00039BDEC /* AppPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1912B6358B00039BDEC /* AppPermissionView.swift */; };
 		8309A1942B6374730039BDEC /* AppleAdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309A1932B6374730039BDEC /* AppleAdvertisingView.swift */; };
 		831485D82B560A46007E72E0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831485D72B560A46007E72E0 /* KeyboardView.swift */; };
+		83196CA02F29186000FA7E17 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83196C9F2F29186000FA7E17 /* UIDeviceExtensions.swift */; };
 		831BE5AC2DDE3D4400D0BFC4 /* SettingsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BE5AB2DDE3D4400D0BFC4 /* SettingsLogger.swift */; };
 		831BE5AE2DDE3EB600D0BFC4 /* UIKitRepresentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BE5AD2DDE3EB600D0BFC4 /* UIKitRepresentables.swift */; };
 		831C8B442B677D150039C782 /* AssistiveTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C8B432B677D150039C782 /* AssistiveTouchView.swift */; };
@@ -347,6 +348,7 @@
 		8309A1912B6358B00039BDEC /* AppPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionView.swift; sourceTree = "<group>"; };
 		8309A1932B6374730039BDEC /* AppleAdvertisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAdvertisingView.swift; sourceTree = "<group>"; };
 		831485D72B560A46007E72E0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		83196C9F2F29186000FA7E17 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		831BE5AB2DDE3D4400D0BFC4 /* SettingsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLogger.swift; sourceTree = "<group>"; };
 		831BE5AD2DDE3EB600D0BFC4 /* UIKitRepresentables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitRepresentables.swift; sourceTree = "<group>"; };
 		831C8B432B677D150039C782 /* AssistiveTouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveTouchView.swift; sourceTree = "<group>"; };
@@ -1463,6 +1465,7 @@
 			isa = PBXGroup;
 			children = (
 				83E347092E0918C300DDADCC /* UIImageExtensions.swift */,
+				83196C9F2F29186000FA7E17 /* UIDeviceExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1780,6 +1783,7 @@
 				83D4D9652B5DF05000081A31 /* BannerStyleView.swift in Sources */,
 				8360DADC2B6878E900AD556A /* AutoScanningTimeView.swift in Sources */,
 				8309A17D2B62FB890039BDEC /* DisplayAppearanceView.swift in Sources */,
+				83196CA02F29186000FA7E17 /* UIDeviceExtensions.swift in Sources */,
 				83C824E42C768A83001C393B /* MyFontsView.swift in Sources */,
 				8372E4AD2B649E3300C1ABDC /* PunctuationAllView.swift in Sources */,
 				834E6CF52B64828800B81150 /* OutputView.swift in Sources */,
