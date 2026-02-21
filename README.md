@@ -5,7 +5,7 @@ A **work-in-progress** SwiftUI recreation of the visionOS Settings app.
 > This project is focused on the latest public releases of visionOS and Xcode. Use an older branch for older versions.
 
 ## Information
-- Based on visionOS 26.2 (23N301).
+- Based on visionOS 26.3 (23N620).
 - All features within the app are only simulations and have no effect on the device outside of the app.
 - Layout is based on Simulator and not a physical Apple Vision Pro (for now).
 - Previous versions are available as separate branches, going as far back as 1.0. Fewer features are available in earlier versions.
